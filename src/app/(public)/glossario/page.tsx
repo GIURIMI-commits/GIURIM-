@@ -45,7 +45,7 @@ export default async function GlossaryPage({
                 </div>
 
                 {/* Search (SSR via querystring) */}
-                <form className="w-full md:w-[420px]" action="/glossary" method="get">
+                <form className="w-full md:w-[420px]" action="/glossario" method="get">
                     <div className="flex items-center gap-2 rounded-xl border border-border bg-card px-3 py-2 shadow-sm">
                         <Search className="h-4 w-4 text-muted-foreground" />
                         <input
@@ -56,7 +56,7 @@ export default async function GlossaryPage({
                         />
                         {q ? (
                             <Link
-                                href="/glossary"
+                                href="/glossario"
                                 className="text-xs text-muted-foreground hover:text-foreground"
                             >
                                 Reset
