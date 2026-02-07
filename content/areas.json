@@ -1,0 +1,44 @@
+[
+  {
+    "slug": "area-1-fondamenta",
+    "title": "Fondamenta del Diritto",
+    "description": "Le basi essenziali per capire le regole del gioco.",
+    "order": 1,
+    "icon": "scale"
+  },
+  {
+    "slug": "area-2-costituzionale",
+    "title": "Diritto Costituzionale",
+    "description": "La legge fondamentale e l’organizzazione dello Stato.",
+    "order": 2,
+    "icon": "landmark"
+  },
+  {
+    "slug": "area-3-privato-civile",
+    "title": "Diritto Privato e Civile",
+    "description": "I rapporti tra cittadini: contratti, famiglia, proprietà.",
+    "order": 3,
+    "icon": "users"
+  },
+  {
+    "slug": "area-4-penale",
+    "title": "Diritto Penale",
+    "description": "Reati, pene e garanzie dell’imputato.",
+    "order": 4,
+    "icon": "gavel"
+  },
+  {
+    "slug": "area-5-amministrativo",
+    "title": "Diritto Amministrativo",
+    "description": "Il cittadino e la Pubblica Amministrazione.",
+    "order": 5,
+    "icon": "building"
+  },
+  {
+    "slug": "area-6-sistema-giudiziario",
+    "title": "Sistema Giudiziario e Pratica",
+    "description": "Come funzionano i processi e quando serve un avvocato.",
+    "order": 6,
+    "icon": "balance"
+  }
+]

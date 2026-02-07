@@ -1,0 +1,34 @@
+[
+  {
+    "id": "diritto-oggettivo",
+    "term": "Diritto Oggettivo",
+    "definition_simple": "L'insieme delle regole che valgono per tutti (le leggi).",
+    "definition_technical": "L'insieme delle norme giuridiche che regolano i rapporti sociali.",
+    "examples": [
+      "Il Codice Civile è diritto oggettivo.",
+      "La legge sul divieto di fumo."
+    ],
+    "area": "area-1-fondamenta"
+  },
+  {
+    "id": "diritto-soggettivo",
+    "term": "Diritto Soggettivo",
+    "definition_simple": "Il potere di agire per soddisfare un proprio interesse protetto dalla legge.",
+    "definition_technical": "Situazione giuridica attiva che attribuisce al titolare un potere per la tutela di un proprio interesse.",
+    "examples": [
+      "Il diritto di proprietà sulla tua casa.",
+      "Il diritto di credito verso chi ti deve soldi."
+    ],
+    "area": "area-1-fondamenta"
+  },
+  {
+    "id": "giurisprudenza",
+    "term": "Giurisprudenza",
+    "definition_simple": "L'insieme delle decisioni dei giudici (sentenze).",
+    "definition_technical": "La scienza del diritto e l'insieme delle pronunce degli organi giurisdizionali.",
+    "examples": [
+      "La giurisprudenza della Cassazione ha chiarito questo punto."
+    ],
+    "area": "area-1-fondamenta"
+  }
+]
