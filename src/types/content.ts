@@ -51,3 +51,18 @@ export interface QuizQuestion {
     feedback?: { [key: number]: string }; // for mcq
     expected_points?: string[]; // for open
 }
+
+export interface GlossaryTerm {
+    id: string;
+    term: string;
+    definition_simple: string;
+    definition_technical?: string;
+    examples?: string[];
+    area?: string;
+    tag?: string;
+    sources?: Array<{
+        label: string;
+        href: string;
+        kind?: "normattiva" | "gazzetta" | "cortecost" | "parlamento" | "europa" | "altro";
+    }>;
+}

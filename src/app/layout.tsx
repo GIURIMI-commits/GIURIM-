@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { DM_Sans, Playfair_Display, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import { CookieBanner } from "@/components/CookieBanner";
+import { Analytics } from "@/components/Analytics";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -36,6 +38,8 @@ export default function RootLayout({
         className={`${dmSans.variable} ${playfair.variable} ${jetbrains.variable} antialiased font-sans bg-background text-foreground`}
       >
         {children}
+        <CookieBanner />
+        <Analytics />
       </body>
     </html>
   );

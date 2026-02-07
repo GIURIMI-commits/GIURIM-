@@ -27,6 +27,7 @@ export function Footer() {
                         <h4 className="font-semibold mb-4">Legale</h4>
                         <ul className="space-y-2 text-sm text-neutral-500">
                             <li><Link href="/privacy" className="hover:underline">Privacy Policy</Link></li>
+                            <li><Link href="/privacy/cookie-preferences" className="hover:underline">Preferenze Cookie</Link></li>
                             <li><Link href="/terms" className="hover:underline">Termini di Servizio</Link></li>
                             <li><span className="text-neutral-400">Licenza MIT</span></li>
                         </ul>

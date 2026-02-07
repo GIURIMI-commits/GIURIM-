@@ -8,6 +8,14 @@
       "Il Codice Civile è diritto oggettivo.",
       "La legge sul divieto di fumo."
     ],
+    "sources": [
+      {
+        "label": "Normattiva - C.C.",
+        "href": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1942-03-16;262",
+        "kind": "normattiva"
+      }
+    ],
+    "tag": "Fondamentale",
     "area": "area-1-fondamenta"
   },
   {
@@ -18,6 +26,13 @@
     "examples": [
       "Il diritto di proprietà sulla tua casa.",
       "Il diritto di credito verso chi ti deve soldi."
+    ],
+    "sources": [
+      {
+        "label": "Art. 832 Codice Civile",
+        "href": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1942-03-16;262~art832",
+        "kind": "normattiva"
+      }
     ],
     "area": "area-1-fondamenta"
   },
