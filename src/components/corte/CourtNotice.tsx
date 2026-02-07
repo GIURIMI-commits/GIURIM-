@@ -1,56 +1,58 @@
 import Link from "next/link";
-import { Scale, AlertCircle, HelpCircle } from "lucide-react";
-import { Button } from "@/components/ui/Button";
+import { Scale, Users, FileText } from "lucide-react";
 
 export function CourtNotice() {
     return (
         <div className="space-y-6">
-            {/* Create CTA */}
-            <div className="rounded-xl border border-sidebar-accent bg-sidebar-accent/10 p-5">
-                <div className="flex items-center gap-3 mb-3">
-                    <div className="h-8 w-8 rounded-lg bg-sidebar-accent/20 flex items-center justify-center text-sidebar-foreground">
-                        <Scale className="h-5 w-5" />
-                    </div>
-                    <h3 className="font-semibold text-foreground text-sm">Hai un dubbio?</h3>
+
+            {/* Disclaimer / Intro */}
+            <div className="rounded-xl bg-card border border-border/60 p-5 shadow-sm">
+                <div className="flex items-center gap-2 mb-3 text-amber-600 dark:text-amber-500 font-serif font-bold">
+                    <Scale className="h-5 w-5" />
+                    <span>La Corte</span>
                 </div>
-                <p className="text-xs text-muted-foreground mb-4 leading-relaxed">
-                    Apri una discussione nella CORTE. Altri studenti o tutor potranno aiutarti a chiarire il concetto.
+                <p className="text-xs text-muted-foreground leading-relaxed mb-4">
+                    Benvenuto nell'aula virtuale di GIURIMì. Qui puoi confrontarti con studenti e tutor su dubbi, casi pratici e metodi di studio.
                 </p>
-                <Link href="/corte/nuovo" className="block">
-                    <Button className="w-full rounded-full text-sm font-medium">
-                        Apri un Thread
-                    </Button>
+
+                <div className="flex gap-4 pt-2 border-t border-border/40">
+                    <div className="text-center">
+                        <span className="block text-lg font-bold text-foreground">1.2k</span>
+                        <span className="text-[10px] uppercase text-muted-foreground tracking-wide">Studenti</span>
+                    </div>
+                    <div className="text-center">
+                        <span className="block text-lg font-bold text-foreground">42</span>
+                        <span className="text-[10px] uppercase text-muted-foreground tracking-wide">Esperti</span>
+                    </div>
+                </div>
+            </div>
+
+            {/* Rules (Simplified) */}
+            <div className="rounded-xl bg-muted/30 border border-border/40 p-4">
+                <h4 className="text-xs font-bold text-muted-foreground uppercase mb-3">
+                    Regolamento Rapido
+                </h4>
+                <ul className="space-y-2 text-xs text-muted-foreground/80">
+                    <li className="flex gap-2">
+                        <span>1.</span>
+                        <span>Usa un tono professionale.</span>
+                    </li>
+                    <li className="flex gap-2">
+                        <span>2.</span>
+                        <span>Niente insulti o flame (Ban immediato).</span>
+                    </li>
+                    <li className="flex gap-2">
+                        <span>3.</span>
+                        <span>Cita le fonti quando possibile.</span>
+                    </li>
+                </ul>
+                <Link href="/guidelines" className="block mt-3 text-xs text-primary hover:underline">
+                    Leggi il codice completo →
                 </Link>
             </div>
 
-            {/* Rules */}
-            <div className="rounded-xl border border-border bg-card p-5">
-                <h3 className="text-xs uppercase tracking-widest text-muted-foreground font-semibold mb-3 flex items-center gap-2">
-                    <AlertCircle className="h-3.5 w-3.5" />
-                    Regole dell'aula
-                </h3>
-                <ul className="space-y-3">
-                    <li className="flex gap-2 text-xs text-muted-foreground leading-relaxed">
-                        <span className="text-sidebar-foreground font-bold">•</span>
-                        <span>Usa un tono rispettoso e professionale.</span>
-                    </li>
-                    <li className="flex gap-2 text-xs text-muted-foreground leading-relaxed">
-                        <span className="text-sidebar-foreground font-bold">•</span>
-                        <span>Cita sempre gli articoli o le fonti se parli di legge.</span>
-                    </li>
-                    <li className="flex gap-2 text-xs text-muted-foreground leading-relaxed">
-                        <span className="text-sidebar-foreground font-bold">•</span>
-                        <span>Non chiedere pareri legali personali (è vietato).</span>
-                    </li>
-                </ul>
-            </div>
-
-            {/* Footer Links */}
-            <div className="flex flex-wrap gap-x-4 gap-y-2 text-[10px] text-muted-foreground px-2">
-                <Link href="/privacy" className="hover:underline">Privacy</Link>
-                <Link href="/terms" className="hover:underline">Termini</Link>
-                <Link href="/guidelines" className="hover:underline">Linee Guida</Link>
-                <span>© 2024 GIURIMì</span>
+            <div className="text-[10px] text-muted-foreground/60 text-center px-4">
+                © 2024 GIURIMì Community
             </div>
         </div>
     );

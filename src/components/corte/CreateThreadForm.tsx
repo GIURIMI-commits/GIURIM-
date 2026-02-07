@@ -2,14 +2,19 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { ROOMS } from "@/lib/corte/data";
+import { Room } from "@/lib/corte/types";
 import { checkModeration } from "@/lib/corte/moderation";
+import { createThread } from "@/lib/corte/actions";
 import { Button } from "@/components/ui/Button";
 import { ArrowLeft, AlertTriangle } from "lucide-react";
 import Link from "next/link";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
 
-export default function CreateThreadPage() {
+interface CreateThreadFormProps {
+    rooms: Room[];
+}
+
+export function CreateThreadForm({ rooms }: CreateThreadFormProps) {
     const router = useRouter();
 
     const [title, setTitle] = useState("");
@@ -40,14 +45,21 @@ export default function CreateThreadPage() {
             return;
         }
 
-        // If warning existed but user clicked again (override), or no warning -> proceed
         setLoading(true);
 
-        // Mock submission delay
-        await new Promise(r => setTimeout(r, 1000));
+        const formData = new FormData();
+        formData.append("title", title);
+        formData.append("body", body);
+        formData.append("roomId", roomId);
 
-        // Redirect to feed
-        router.push("/corte");
+        const result = await createThread(formData);
+
+        if (result?.error) {
+            setError(result.error);
+            setLoading(false);
+        } else {
+            router.push("/corte");
+        }
     };
 
     const canSubmit = title.length > 5 && body.length > 20 && roomId !== "" && agreed;
@@ -73,19 +85,19 @@ export default function CreateThreadPage() {
                         <div className="space-y-2">
                             <label className="text-sm font-medium">Scegli l'Aula (Argomento)</label>
                             <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-                                {ROOMS.map(room => (
+                                {rooms.map(room => (
                                     <button
                                         key={room.id}
                                         type="button"
                                         onClick={() => setRoomId(room.id)}
                                         className={`
-                                            flex items-center gap-2 px-3 py-2.5 rounded-lg text-sm border transition-all text-left
+                                            flex items-center gap-2 px-3 py-2.5 rounded-lg text-sm transition-all text-left
                                             ${roomId === room.id
-                                                ? "border-primary bg-primary/5 text-primary ring-1 ring-primary/20"
-                                                : "border-border bg-background hover:bg-muted/50 text-muted-foreground"}
+                                                ? "border-2 border-[#C4A052] bg-[#C4A052]/10 text-[#C4A052] font-bold shadow-sm"
+                                                : "border border-border bg-background hover:bg-muted/50 text-muted-foreground"}
                                         `}
                                     >
-                                        <span className="font-semibold truncate">{room.name}</span>
+                                        <span className="truncate">{room.name}</span>
                                     </button>
                                 ))}
                             </div>

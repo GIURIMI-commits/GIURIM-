@@ -3,10 +3,11 @@
 -- ==============================================================================
 
 -- 1. CLEANUP (For development iterations)
--- drop table if exists public.corte_votes cascade;
--- drop table if exists public.corte_comments cascade;
--- drop table if exists public.corte_threads cascade;
--- drop table if exists public.corte_rooms cascade;
+drop view if exists public.corte_thread_stats;
+drop table if exists public.corte_votes cascade;
+drop table if exists public.corte_comments cascade;
+drop table if exists public.corte_threads cascade;
+drop table if exists public.corte_rooms cascade;
 
 -- 2. TABLES
 
@@ -26,7 +27,7 @@ create table public.corte_rooms (
 create table public.corte_threads (
     id uuid not null default gen_random_uuid() primary key,
     room_id uuid not null references public.corte_rooms(id) on delete cascade,
-    author_id uuid not null references auth.users(id) on delete cascade,
+    author_id uuid not null references public.profiles(id) on delete cascade, -- Link to Profiles for easy join
     title text not null,
     body text not null,
     created_at timestamptz not null default now(),
@@ -37,7 +38,7 @@ create table public.corte_threads (
 create table public.corte_comments (
     id uuid not null default gen_random_uuid() primary key,
     thread_id uuid not null references public.corte_threads(id) on delete cascade,
-    author_id uuid not null references auth.users(id) on delete cascade,
+    author_id uuid not null references public.profiles(id) on delete cascade, -- Link to Profiles
     parent_id uuid references public.corte_comments(id) on delete cascade, -- Null for root comments
     body text not null,
     created_at timestamptz not null default now(),
@@ -47,7 +48,7 @@ create table public.corte_comments (
 -- Voti (Votes)
 create table public.corte_votes (
     id uuid not null default gen_random_uuid() primary key,
-    user_id uuid not null references auth.users(id) on delete cascade,
+    user_id uuid not null references auth.users(id) on delete cascade, -- Keep auth.users for security/uniqueness
     target_type text not null check (target_type in ('thread', 'comment')),
     target_id uuid not null, -- thread_id or comment_id, handled by app logic or composite key checks
     vote_type integer not null check (vote_type in (1, -1)), -- 1 = upvote, -1 = downvote
@@ -136,6 +137,9 @@ from public.corte_threads t
 left join public.corte_votes v on v.target_type = 'thread' and v.target_id = t.id
 left join public.corte_comments c on c.thread_id = t.id
 group by t.id;
+
+-- Grant permissions for View
+grant select on public.corte_thread_stats to anon, authenticated;
 
 
 -- 6. SEED DATA (Initial Rooms)
