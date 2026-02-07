@@ -28,6 +28,10 @@ export function Navbar() {
                         <Link href="/studenti" className="hover:text-foreground transition-colors text-indigo-600 font-semibold dark:text-indigo-400">
                             Studenti
                         </Link>
+                        <Link href="/corte" className="hover:text-foreground transition-colors flex items-center gap-1.5">
+                            <span className="w-1.5 h-1.5 rounded-full bg-amber-500/50"></span>
+                            CORTE
+                        </Link>
                         {/* More links can go here */}
                     </div>
                 </div>
