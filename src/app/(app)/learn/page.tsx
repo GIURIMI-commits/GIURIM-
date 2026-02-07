@@ -9,7 +9,7 @@ export default async function LearnIndexPage() {
     return (
         <div className="space-y-8">
             <div className="max-w-2xl">
-                <h1 className="text-3xl font-serif font-bold mb-4">Il Curriculum di GUIRIMì</h1>
+                <h1 className="text-3xl font-serif font-bold mb-4">Il Curriculum di GIURIMÌ</h1>
                 <p className="text-neutral-500 text-lg">
                     Un percorso strutturato per capire il diritto italiano, dalle basi alla pratica.
                 </p>

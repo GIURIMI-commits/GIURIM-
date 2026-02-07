@@ -14,7 +14,7 @@ export function Navbar() {
                 <div className="flex items-center gap-2">
                     <Link href="/" className="flex items-center gap-2 font-serif text-xl font-bold">
                         <Scale className="h-6 w-6" />
-                        <span>GUIRIMì</span>
+                        <span>GUIRIMÌ</span>
                     </Link>
                 </div>
 

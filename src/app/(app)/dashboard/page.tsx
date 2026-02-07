@@ -16,7 +16,7 @@ export default function DashboardPage() {
         <div className="space-y-8">
             <div>
                 <h1 className="text-3xl font-serif font-bold">Ciao, {profile?.display_name || 'Studente'}! 👋</h1>
-                <p className="text-neutral-500">Ecco i tuoi progressi su GUIRIMì.</p>
+                <p className="text-neutral-500">Ecco i tuoi progressi su GIURIMÌ.</p>
             </div>
 
             {/* STATS */}

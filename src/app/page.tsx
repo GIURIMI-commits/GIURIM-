@@ -46,7 +46,7 @@ export default function Home() {
         <section className="py-24 bg-neutral-50 px-4">
           <div className="container mx-auto">
             <div className="text-center max-w-2xl mx-auto mb-16">
-              <h2 className="text-3xl font-serif font-bold mb-4">Perché GUIRIMì?</h2>
+              <h2 className="text-3xl font-serif font-bold mb-4">Perché GUIRIMÌ?</h2>
               <p className="text-neutral-600 text-lg">
                 Basta "legalese" incomprensibile. Traduciamo la complessità in percorsi accessibili.
               </p>

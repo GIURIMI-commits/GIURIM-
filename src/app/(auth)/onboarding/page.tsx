@@ -50,7 +50,7 @@ export default function OnboardingPage() {
         <div className="min-h-screen flex items-center justify-center bg-neutral-50 px-4 py-8">
             <div className="max-w-2xl w-full space-y-8">
                 <div className="text-center">
-                    <h1 className="text-3xl font-serif font-bold mb-2">Benvenuto su GUIRIMì</h1>
+                    <h1 className="text-3xl font-serif font-bold mb-2">Benvenuto su GIURIMÌ</h1>
                     <p className="text-neutral-500">Personalizziamo il tuo percorso. Chi sei?</p>
                 </div>
 

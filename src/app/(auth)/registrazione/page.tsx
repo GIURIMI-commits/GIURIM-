@@ -53,7 +53,7 @@ export default function RegisterPage() {
                         <Scale className="h-6 w-6" />
                     </div>
                     <CardTitle className="text-2xl font-serif font-bold">Crea Account</CardTitle>
-                    <CardDescription>Unisciti a GUIRIMì e inizia a imparare.</CardDescription>
+                    <CardDescription>Unisciti a GIURIMÌ e inizia a imparare.</CardDescription>
                 </CardHeader>
                 <CardContent>
                     <form onSubmit={handleRegister} className="space-y-4">

@@ -8,7 +8,7 @@ export default function AboutPage() {
 
             <div className="prose prose-lg prose-neutral dark:prose-invert">
                 <p>
-                    GUIRIMì nasce con una missione semplice ma ambiziosa: rendere il diritto italiano accessibile a tutti.
+                    GIURIMÌ nasce con una missione semplice ma ambiziosa: rendere il diritto italiano accessibile a tutti.
                 </p>
                 <p>
                     Crediamo che la conoscenza delle regole che governano la nostra società non debba essere un privilegio di pochi esperti, ma uno strumento nelle mani di ogni cittadino.
@@ -21,9 +21,9 @@ export default function AboutPage() {
             <div className="mt-12 bg-neutral-100 dark:bg-neutral-900 p-8 rounded-xl text-center">
                 <h2 className="text-2xl font-bold mb-4">Vuoi contribuire?</h2>
                 <p className="text-neutral-600 mb-6">
-                    Sei un avvocato, uno studente di legge o uno sviluppatore? Aiutaci a far crescere GUIRIMì.
+                    Sei un avvocato, uno studente di legge o uno sviluppatore? Aiutaci a far crescere GIURIMÌ.
                 </p>
-                <a href="https://github.com/alessiosabatino/guirimi" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/GIURIMI-commits/GIURIM-" target="_blank" rel="noopener noreferrer">
                     <Button>Vai al repository GitHub</Button>
                 </a>
             </div>

@@ -43,7 +43,7 @@ export default function LoginPage() {
                         <Scale className="h-6 w-6" />
                     </div>
                     <CardTitle className="text-2xl font-serif font-bold">Bentornato</CardTitle>
-                    <CardDescription>Accedi al tuo account GUIRIMì</CardDescription>
+                    <CardDescription>Accedi al tuo account GIURIMÌ</CardDescription>
                 </CardHeader>
                 <CardContent>
                     <form onSubmit={handleLogin} className="space-y-4">

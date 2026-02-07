@@ -6,7 +6,7 @@ export function Footer() {
             <div className="container mx-auto px-4 py-8">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                     <div>
-                        <h3 className="font-serif font-bold text-lg mb-4">GUIRIMì</h3>
+                        <h3 className="font-serif font-bold text-lg mb-4">GUIRIMÌ</h3>
                         <p className="text-sm text-neutral-500">
                             Diritto semplice, per tutti.
                             <br />
@@ -34,7 +34,7 @@ export function Footer() {
                 </div>
 
                 <div className="mt-8 pt-8 border-t text-center text-xs text-neutral-400">
-                    <p>&copy; {new Date().getFullYear()} GUIRIMì. Non è consulenza legale.</p>
+                    <p>&copy; {new Date().getFullYear()} GUIRIMÌ. Non è consulenza legale.</p>
                 </div>
             </div>
         </footer>
