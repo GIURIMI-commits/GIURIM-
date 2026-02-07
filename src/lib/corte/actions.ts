@@ -52,7 +52,7 @@ export async function createThread(formData: FormData) {
     return { success: true };
 }
 
-export async function vote(targetType: 'thread' | 'comment', targetId: string, value: 1 | -1) {
+export async function vote(targetType: 'thread' | 'comment', targetId: string, value: 1 | -1 | 0) {
     const cookieStore = await cookies();
     const supabase = createServerClient(
         process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -72,20 +72,32 @@ export async function vote(targetType: 'thread' | 'comment', targetId: string, v
     const { data: { user } } = await supabase.auth.getUser();
     if (!user) return { error: "Unauthorized" };
 
-    // Update or Insert Vote
-    // Upsert logic: if exists, update vote_type.
-    const { error } = await supabase.from("corte_votes").upsert({
-        user_id: user.id,
-        target_type: targetType,
-        target_id: targetId,
-        vote_type: value
-    }, {
-        onConflict: 'user_id, target_type, target_id'
-    });
+    if (value === 0) {
+        // Remove vote
+        const { error } = await supabase.from("corte_votes").delete()
+            .eq('user_id', user.id)
+            .eq('target_type', targetType)
+            .eq('target_id', targetId);
 
-    if (error) {
-        console.error("Vote error:", error);
-        return { error: "Failed to vote" };
+        if (error) {
+            console.error("Vote delete error:", error);
+            return { error: "Failed to remove vote" };
+        }
+    } else {
+        // Update or Insert Vote
+        const { error } = await supabase.from("corte_votes").upsert({
+            user_id: user.id,
+            target_type: targetType,
+            target_id: targetId,
+            vote_type: value
+        }, {
+            onConflict: 'user_id, target_type, target_id'
+        });
+
+        if (error) {
+            console.error("Vote error:", error);
+            return { error: "Failed to vote" };
+        }
     }
 
     revalidatePath("/corte");

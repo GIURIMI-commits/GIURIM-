@@ -1,7 +1,8 @@
 
 import { Comment } from "@/lib/corte/types";
 import { Button } from "@/components/ui/Button";
-import { ThumbsUp, MessageSquare, CornerDownRight } from "lucide-react";
+import { VoteControl } from "@/components/corte/VoteControl";
+import { MessageSquare, CornerDownRight } from "lucide-react";
 
 interface CommentListProps {
     comments: Comment[];
@@ -46,10 +47,15 @@ export function CommentList({ comments }: CommentListProps) {
 
                         {/* Actions */}
                         <div className="flex items-center gap-4 pt-1">
-                            <button className="text-xs font-medium text-muted-foreground hover:text-foreground flex items-center gap-1 transition-colors">
-                                <ThumbsUp className="h-3 w-3" />
-                                <span>Utile</span>
-                            </button>
+                            <div className="scale-90 origin-left">
+                                <VoteControl
+                                    targetId={comment.id}
+                                    targetType="comment"
+                                    initialScore={comment.stats?.score || 0}
+                                    initialVote={comment.stats?.user_vote}
+                                    orientation="horizontal"
+                                />
+                            </div>
                             <button className="text-xs font-medium text-muted-foreground hover:text-foreground flex items-center gap-1 transition-colors">
                                 <CornerDownRight className="h-3 w-3" />
                                 <span>Rispondi</span>

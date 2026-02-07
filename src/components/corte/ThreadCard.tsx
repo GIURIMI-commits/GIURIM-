@@ -2,6 +2,7 @@ import Link from "next/link";
 import { MessageSquare, ThumbsUp, Eye, Share2 } from "lucide-react";
 import { Thread } from "@/lib/corte/types";
 import { Button } from "@/components/ui/Button";
+import { VoteControl } from "@/components/corte/VoteControl";
 
 interface ThreadCardProps {
     thread: Thread;
@@ -40,10 +41,18 @@ export function ThreadCard({ thread }: ThreadCardProps) {
             {/* Actions Bar */}
             <div className="flex items-center justify-between pt-3 border-t border-border/50">
                 <div className="flex items-center gap-1">
-                    <Button variant="ghost" size="sm" className="h-8 rounded-full text-muted-foreground hover:text-foreground hover:bg-muted/50 gap-1.5 px-3">
-                        <ThumbsUp className="h-4 w-4" />
-                        <span className="text-xs font-medium">{thread.stats?.score || 0}</span>
-                    </Button>
+                    {/* Interactive Vote Control */}
+                    <div className="mr-2">
+                        {/* Prevent link navigation when clicking vote */}
+                        <VoteControl
+                            targetId={thread.id}
+                            targetType="thread"
+                            initialScore={thread.stats?.score || 0}
+                            initialVote={thread.stats?.user_vote}
+                            orientation="horizontal"
+                        />
+                    </div>
+
                     <Button variant="ghost" size="sm" className="h-8 rounded-full text-muted-foreground hover:text-foreground hover:bg-muted/50 gap-1.5 px-3">
                         <MessageSquare className="h-4 w-4" />
                         <span className="text-xs font-medium">{thread.stats?.comments_count || 0} commenti</span>

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { MessageSquare, ThumbsUp, Share2, ArrowLeft, Calendar } from "lucide-react";
 import { Thread } from "@/lib/corte/types";
 import { Button } from "@/components/ui/Button";
+import { VoteControl } from "@/components/corte/VoteControl";
 
 interface ThreadDetailProps {
     thread: Thread;
@@ -51,12 +52,19 @@ export function ThreadDetail({ thread }: ThreadDetailProps) {
 
             {/* Actions Footer */}
             <div className="flex items-center justify-between pt-8 mt-8 border-t border-border/50">
-                <div className="flex items-center gap-2">
-                    <Button variant="outline" size="sm" className="rounded-full gap-2 h-9 border-border/60">
-                        <ThumbsUp className="h-4 w-4" />
-                        <span>{thread.stats?.score || 0}</span>
-                    </Button>
-                    <div className="text-sm text-muted-foreground ml-2">
+                <div className="flex items-center gap-4">
+                    <VoteControl
+                        targetId={thread.id}
+                        targetType="thread"
+                        initialScore={thread.stats?.score || 0}
+                        initialVote={thread.stats?.user_vote}
+                        orientation="horizontal"
+                    />
+
+                    <div className="h-6 w-px bg-border"></div>
+
+                    <div className="text-sm text-muted-foreground flex items-center gap-1.5">
+                        <MessageSquare className="h-4 w-4" />
                         {thread.stats?.comments_count || 0} commenti
                     </div>
                 </div>
