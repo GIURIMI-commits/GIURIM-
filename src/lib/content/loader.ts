@@ -98,3 +98,28 @@ export async function getAllGlossaryTerms() {
     if (!fs.existsSync(termsPath)) return [];
     return JSON.parse(fs.readFileSync(termsPath, 'utf8'));
 }
+
+export async function getCurriculum(): Promise<AreaMeta[]> {
+    const areas = await getAreas();
+    const curriculum: AreaMeta[] = [];
+
+    for (const area of areas) {
+        const modules = await getModules(area.slug);
+        const modulesWithLessons: ModuleMeta[] = [];
+
+        for (const mod of modules) {
+            const lessons = await getLessons(area.slug, mod.slug);
+            modulesWithLessons.push({
+                ...mod,
+                lessons: lessons,
+            });
+        }
+
+        curriculum.push({
+            ...area,
+            modules: modulesWithLessons,
+        });
+    }
+
+    return curriculum;
+}

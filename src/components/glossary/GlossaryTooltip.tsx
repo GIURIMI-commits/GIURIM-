@@ -6,6 +6,7 @@ import {
     TooltipContent,
     TooltipProvider,
     TooltipTrigger,
+    TooltipPortal,
 } from "@/components/ui/Tooltip";
 import { useGlossary } from '@/hooks/useGlossary';
 import { cn } from '@/lib/utils';
@@ -30,12 +31,14 @@ export function GlossaryTerm({ id, children }: { id: string; children: React.Rea
                         {/* <Info className="h-3 w-3 self-center opacity-50" /> */}
                     </span>
                 </TooltipTrigger>
-                <TooltipContent className="max-w-xs font-normal normal-case text-neutral-50 dark:text-neutral-900 bg-neutral-900 dark:bg-white">
-                    <p className="font-semibold mb-1">Definizione di {children}</p>
-                    <p className="text-xs opacity-90">
-                        (Qui andrebbe la definizione per ID: {id})
-                    </p>
-                </TooltipContent>
+                <TooltipPortal>
+                    <TooltipContent className="max-w-xs font-normal normal-case text-neutral-50 dark:text-neutral-900 bg-neutral-900 dark:bg-white">
+                        <p className="font-semibold mb-1">Definizione di {children}</p>
+                        <p className="text-xs opacity-90">
+                            (Qui andrebbe la definizione per ID: {id})
+                        </p>
+                    </TooltipContent>
+                </TooltipPortal>
             </Tooltip>
         </TooltipProvider>
     );

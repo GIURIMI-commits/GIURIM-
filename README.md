@@ -2,7 +2,7 @@
   <img src="https://img.shields.io/badge/GUIRIM%C3%AC-Academy-1a1a1a?style=for-the-badge&labelColor=000000&color=333333" alt="GUIRIMì" height="40"/>
 </p>
 
-<h1 align="center">GUIRIMì</h1>
+<h1 align="center">GIURIMÌ</h1>
 
 <p align="center">
   <strong>Diritto semplice, per tutti.</strong><br/>
@@ -28,7 +28,7 @@ Milioni di italiani cercano di capire il diritto ogni giorno. Trovano manuali da
 
 Non esiste una risorsa che sia contemporaneamente gratuita, verificata, interattiva, con percorso guidato e accessibile a chi parte da zero.
 
-**GUIRIMì colma questo vuoto.**
+**GIURIMì colma questo vuoto.**
 
 <br/>
 
@@ -36,9 +36,9 @@ Non esiste una risorsa che sia contemporaneamente gratuita, verificata, interatt
 
 <br/>
 
-## Cos'è GUIRIMì
+## Cos'è GIURIMì
 
-GUIRIMì è un'academy digitale che trasforma il diritto italiano — dalla Costituzione al sistema giudiziario — in percorsi di apprendimento chiari, strutturati e verificati da professionisti legali.
+GIURIMì è un'academy digitale che trasforma il diritto italiano — dalla Costituzione al sistema giudiziario — in percorsi di apprendimento chiari, strutturati e verificati da professionisti legali.
 
 Non è un manuale. Non è consulenza legale. È la **rampa di lancio** che prepara chiunque a comprendere come funziona la legge in Italia.
 
