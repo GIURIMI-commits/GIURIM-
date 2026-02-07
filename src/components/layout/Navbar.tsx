@@ -25,6 +25,9 @@ export function Navbar() {
                         <Link href="/glossario" className="hover:text-foreground transition-colors">
                             Glossario
                         </Link>
+                        <Link href="/studenti" className="hover:text-foreground transition-colors text-indigo-600 font-semibold dark:text-indigo-400">
+                            Studenti
+                        </Link>
                         {/* More links can go here */}
                     </div>
                 </div>

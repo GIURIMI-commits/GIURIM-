@@ -7,6 +7,8 @@ import { Button } from '@/components/ui/Button';
 import { Flame, BookOpen, Trophy } from 'lucide-react';
 import Link from 'next/link';
 
+import { StudentAccessBanner } from '@/components/dashboard/StudentAccessBanner';
+
 export default function DashboardPage() {
     const { profile, loading } = useProfile();
 
@@ -18,6 +20,8 @@ export default function DashboardPage() {
                 <h1 className="text-3xl font-serif font-bold">Ciao, {profile?.display_name || 'Studente'}! 👋</h1>
                 <p className="text-neutral-500">Ecco i tuoi progressi su GIURIMÌ.</p>
             </div>
+
+            <StudentAccessBanner />
 
             {/* STATS */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
