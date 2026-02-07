@@ -91,3 +91,52 @@ export async function vote(targetType: 'thread' | 'comment', targetId: string, v
     revalidatePath("/corte");
     return { success: true };
 }
+
+export async function createComment(formData: FormData) {
+    const cookieStore = await cookies();
+    const supabase = createServerClient(
+        process.env.NEXT_PUBLIC_SUPABASE_URL!,
+        process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+        {
+            cookies: {
+                getAll() { return cookieStore.getAll() },
+                setAll(cookiesToSet) {
+                    cookiesToSet.forEach(({ name, value, options }) =>
+                        cookieStore.set(name, value, options)
+                    );
+                },
+            },
+        }
+    );
+
+    const { data: { user } } = await supabase.auth.getUser();
+    if (!user) {
+        return { error: "Devi essere loggato per commentare." };
+    }
+
+    const body = formData.get("body") as string;
+    const threadId = formData.get("threadId") as string;
+    const parentId = formData.get("parentId") as string | null; // Optional for replies
+
+    if (!body || !threadId) {
+        return { error: "Commento vuoto o non valido." };
+    }
+
+    const { error } = await supabase.from("corte_comments").insert({
+        thread_id: threadId,
+        author_id: user.id,
+        body,
+        parent_id: parentId || null // Ensure null if empty string
+    });
+
+    if (error) {
+        console.error("Create comment error:", error);
+        return { error: "Errore durante l'invio del commento." };
+    }
+
+    // Revalidate the thread page to show new comment
+    // We assume the URL structure is /corte/t/[threadId] but also revalidate the main feed just in case
+    // revalidatePath(`/corte/t/${threadId}`); // Cannot use dynamic ID easily here without knowing path, but we can try
+    revalidatePath("/corte");
+    return { success: true };
+}

@@ -1,6 +1,6 @@
 import { createServerClient } from "@supabase/ssr";
 import { cookies } from "next/headers";
-import { Room, Thread } from "./types";
+import { Room, Thread, Comment } from "./types";
 
 // Helper to get supabase client
 async function getSupabase() {
@@ -73,6 +73,71 @@ export async function getThreads(roomSlug?: string): Promise<Thread[]> {
         stats: {
             score: item.score || 0,
             comments_count: item.comments_count || 0,
+        }
+    }));
+}
+
+export async function getThreadById(id: string): Promise<any> {
+    const supabase = await getSupabase();
+    console.log("Fetching thread:", id);
+    const { data, error } = await supabase
+        .from("corte_feed")
+        .select("*")
+        .eq("id", id)
+        .single();
+
+    if (error) {
+        console.error("Error fetching thread:", error);
+        return null;
+    }
+
+    return {
+        id: data.id,
+        room_id: data.room_id,
+        author_id: data.author_id,
+        title: data.title,
+        body: data.body,
+        created_at: data.created_at,
+        updated_at: data.updated_at,
+        author: { display_name: data.author_name || "Utente" },
+        room: {
+            id: data.room_id,
+            name: data.room_name,
+            slug: data.room_slug,
+            icon: data.room_icon
+        },
+        stats: {
+            score: data.score,
+            comments_count: data.comments_count
+        }
+    };
+}
+
+export async function getComments(threadId: string): Promise<Comment[]> {
+    const supabase = await getSupabase();
+    const { data, error } = await supabase
+        .from("corte_comments")
+        .select(`
+            id, thread_id, parent_id, author_id, body, created_at,
+            author:author_id ( display_name )
+        `)
+        .eq("thread_id", threadId)
+        .order("created_at", { ascending: true });
+
+    if (error) {
+        console.error("Error fetching comments:", error);
+        return [];
+    }
+
+    return data.map((item: any) => ({
+        id: item.id,
+        thread_id: item.thread_id,
+        parent_id: item.parent_id,
+        author_id: item.author_id,
+        body: item.body,
+        created_at: item.created_at,
+        author: {
+            display_name: item.author?.display_name || "Utente"
         }
     }));
 }
