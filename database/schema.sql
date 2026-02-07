@@ -1,15 +1,39 @@
 -- Enable UUID extension
 create extension if not exists "uuid-ossp";
 
--- ENUMS
-create type user_role as enum ('student', 'citizen', 'high_school', 'competitor', 'professional', 'creator', 'teacher');
-create type lesson_status as enum ('not_started', 'in_progress', 'completed');
-create type survey_type as enum ('self_efficacy', 'nps', 'content_feedback');
-create type report_type as enum ('inaccuracy', 'unclear', 'bug', 'suggestion');
-create type report_status as enum ('open', 'reviewing', 'resolved', 'dismissed');
+-- ENUMS (Safe creation)
+do $$ begin
+    create type user_role as enum ('student', 'citizen', 'high_school', 'competitor', 'professional', 'creator', 'teacher');
+exception
+    when duplicate_object then null;
+end $$;
+
+do $$ begin
+    create type lesson_status as enum ('not_started', 'in_progress', 'completed');
+exception
+    when duplicate_object then null;
+end $$;
+
+do $$ begin
+    create type survey_type as enum ('self_efficacy', 'nps', 'content_feedback');
+exception
+    when duplicate_object then null;
+end $$;
+
+do $$ begin
+    create type report_type as enum ('inaccuracy', 'unclear', 'bug', 'suggestion');
+exception
+    when duplicate_object then null;
+end $$;
+
+do $$ begin
+    create type report_status as enum ('open', 'reviewing', 'resolved', 'dismissed');
+exception
+    when duplicate_object then null;
+end $$;
 
 -- PROFILES
-create table profiles (
+create table if not exists profiles (
   id uuid references auth.users(id) on delete cascade primary key,
   display_name text,
   role user_role,
@@ -23,7 +47,7 @@ create table profiles (
 );
 
 -- LESSON PROGRESS
-create table lesson_progress (
+create table if not exists lesson_progress (
   id uuid default uuid_generate_v4() primary key,
   user_id uuid references profiles(id) on delete cascade not null,
   lesson_slug text not null,
@@ -34,7 +58,7 @@ create table lesson_progress (
 );
 
 -- QUIZ ATTEMPTS
-create table quiz_attempts (
+create table if not exists quiz_attempts (
   id uuid default uuid_generate_v4() primary key,
   user_id uuid references profiles(id) on delete cascade not null,
   lesson_slug text not null,
@@ -44,7 +68,7 @@ create table quiz_attempts (
 );
 
 -- SURVEYS
-create table surveys (
+create table if not exists surveys (
   id uuid default uuid_generate_v4() primary key,
   user_id uuid references profiles(id) on delete cascade not null,
   module_slug text,
@@ -55,7 +79,7 @@ create table surveys (
 );
 
 -- RETENTION TESTS
-create table retention_tests (
+create table if not exists retention_tests (
   id uuid default uuid_generate_v4() primary key,
   user_id uuid references profiles(id) on delete cascade not null,
   lesson_slug text not null,
@@ -65,7 +89,7 @@ create table retention_tests (
 );
 
 -- REPORTS
-create table reports (
+create table if not exists reports (
   id uuid default uuid_generate_v4() primary key,
   user_id uuid references profiles(id) on delete cascade not null,
   lesson_slug text,
@@ -76,7 +100,7 @@ create table reports (
 );
 
 -- GLOSSARY TERMS
-create table glossary_terms (
+create table if not exists glossary_terms (
   id uuid default uuid_generate_v4() primary key,
   term text unique not null,
   definition_simple text not null,
@@ -86,7 +110,7 @@ create table glossary_terms (
 );
 
 -- LESSON GLOSSARY MAP (N:N)
-create table lesson_glossary_map (
+create table if not exists lesson_glossary_map (
   lesson_slug text not null,
   term_id uuid references glossary_terms(id) on delete cascade not null,
   primary key (lesson_slug, term_id)
@@ -94,7 +118,7 @@ create table lesson_glossary_map (
 
 -- TRIGGERS
 -- Auto-create profile on signup
-create function public.handle_new_user()
+create or replace function public.handle_new_user()
 returns trigger as $$
 begin
   insert into public.profiles (id, display_name)
@@ -103,12 +127,14 @@ begin
 end;
 $$ language plpgsql security definer;
 
+-- Drop trigger if exists to avoid error on recreation
+drop trigger if exists on_auth_user_created on auth.users;
 create trigger on_auth_user_created
   after insert on auth.users
   for each row execute procedure public.handle_new_user();
 
 -- Updated_at for profiles
-create function public.handle_updated_at()
+create or replace function public.handle_updated_at()
 returns trigger as $$
 begin
   new.updated_at = now();
@@ -116,6 +142,7 @@ begin
 end;
 $$ language plpgsql;
 
+drop trigger if exists on_profiles_updated on public.profiles;
 create trigger on_profiles_updated
   before update on public.profiles
   for each row execute procedure public.handle_updated_at();
