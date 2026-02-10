@@ -99,7 +99,9 @@ export async function getAllGlossaryTerms() {
     return JSON.parse(fs.readFileSync(termsPath, 'utf8'));
 }
 
-export async function getCurriculum(): Promise<AreaMeta[]> {
+import { cache } from 'react';
+
+export const getCurriculum = cache(async (): Promise<AreaMeta[]> => {
     const areas = await getAreas();
     const curriculum: AreaMeta[] = [];
 
@@ -122,4 +124,4 @@ export async function getCurriculum(): Promise<AreaMeta[]> {
     }
 
     return curriculum;
-}
+});

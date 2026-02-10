@@ -4,32 +4,292 @@ title: "Come si interpreta una legge"
 area: "area-1-fondamenta"
 module: "mod-1.3-leggere-una-norma"
 order: 2
-duration_minutes: 12
+duration_minutes: 18
 prerequisites: ["lez-1.3.1"]
 next_lesson: "lez-1.3.3"
-last_verified: "2026-02-07"
+prev_lesson: "lez-1.3.1"
+last_verified: "2026-02-10"
 verified_by: "Da verificare"
 disclaimer_level: "standard"
-source_refs: []
-glossary_terms: []
+
+source_refs:
+  - label: "Gazzetta Ufficiale — Preleggi, Art. 12 (interpretazione della legge)"
+    url: "https://www.gazzettaufficiale.it/atto/serie_generale/caricaArticolo?art.codiceRedazionale=042U0262&art.dataPubblicazioneGazzetta=1942-04-04&art.flagTipoArticolo=1&art.idArticolo=12&art.idGruppo=2&art.idSottoArticolo=1&art.idSottoArticolo1=10&art.progressivo=0&art.versione=1"
+  - label: "Brocardi — Preleggi, Art. 12 (testo + note)"
+    url: "https://www.brocardi.it/preleggi/capo-i/art12.html"
+  - label: "Treccani Enciclopedia — Interpretazione della legge"
+    url: "https://www.treccani.it/enciclopedia/interpretazione-della-legge/"
+
+media:
+  - type: "video"
+    title: "Interpretazione della norma giuridica (introduzione)"
+    url: "https://www.youtube.com/watch?v=19HNaOn5i-U"
+    source: "YouTube (lezione breve)"
+    timestamp: "0:00-3:20"
+    position: "after-spiegazione"
+  - type: "video"
+    title: "Preleggi e criteri di interpretazione (lezione più ampia)"
+    url: "https://www.youtube.com/watch?v=AJCR0GVFJlM"
+    source: "YouTube (lezione su Preleggi)"
+    timestamp: "0:00-8:30"
+    position: "after-tecnica"
+
+glossary_terms:
+  - "interpretazione"
+  - "criterio-letterale"
+  - "criterio-sistematico"
+  - "criterio-teleologico"
+  - "intenzione-del-legislatore"
+  - "analogia"
+  - "principi-generali"
+
 quiz:
-  questions: []
+  questions:
+    - type: "mcq"
+      prompt: "Qual è il primo criterio che l’art. 12 Preleggi richiama nell’applicare la legge?"
+      choices:
+        - "Il significato proprio delle parole secondo la connessione di esse"
+        - "L’opinione della dottrina"
+        - "La soluzione più equa"
+      correctIndex: 0
+      feedback:
+        0: "Corretto: l’interpretazione parte dal testo (parole + connessione)."
+        1: "No: dottrina e commentari aiutano, ma non sono il criterio primario dell’art. 12."
+        2: "No: l’equità non è il primo criterio e non sostituisce la norma."
+    - type: "mcq"
+      prompt: "Se manca una disposizione precisa per decidere una controversia, quale passaggio indica l’art. 12?"
+      choices:
+        - "Applicare sempre l’analogia"
+        - "Guardare alle disposizioni su casi simili o materie analoghe; se resta dubbio, principi generali"
+        - "Decidere a discrezione del giudice"
+      correctIndex: 1
+      feedback:
+        0: "No: l’analogia è uno step, ma non è ‘sempre’ e non è l’unico."
+        1: "Esatto: prima casi simili/materie analoghe, poi (se ancora dubbio) principi generali."
+        2: "No: l’art. 12 non autorizza scelte libere; dà una sequenza di criteri."
+    - type: "open"
+      prompt: "Scenario: il testo di un comma sembra chiaro, ma letto insieme ad altri articoli crea una contraddizione. Che tipo di interpretazione attivi e perché?"
+      expected_points:
+        - "Richiamo al criterio sistematico"
+        - "Coerenza del sistema e lettura coordinata"
+        - "Evitare letture isolate che producono conflitti"
 ---
 
-<Hook>
-Inserisci qui il gancio iniziale...
-</Hook>
+<HookBlock>
+  <div className="space-y-3">
+    <p>
+      Interpretare una legge non significa “dare un’opinione”.
+      Significa applicare <strong>regole di lettura</strong> per capire
+      cosa la norma <em>vuole davvero dire</em> in un caso concreto.
+    </p>
+    <p>
+      Se impari la sequenza giusta, smetti di perderti tra “secondo me” e “dipende”.
+      E inizi a ragionare come un giurista.
+    </p>
+  </div>
+</HookBlock>
 
-<Objective>
-Inserisci qui l'obiettivo della lezione...
-</Objective>
+<section className="mt-6 rounded-2xl border border-white/10 p-5 bg-gradient-to-br from-white/8 via-white/5 to-transparent">
+  <div className="flex flex-wrap items-center gap-2 text-sm">
+    <span className="rounded-full border border-white/10 px-3 py-1 bg-white/5">Area 1 — Fondamenta</span>
+    <span className="opacity-60">›</span>
+    <span className="rounded-full border border-white/10 px-3 py-1 bg-white/5">Mod 1.3 — Leggere una norma</span>
+    <span className="opacity-60">›</span>
+    <span className="rounded-full border border-white/10 px-3 py-1 bg-white/5">Lez 1.3.2</span>
+  </div>
 
----
+  <p className="mt-3">
+    Nella lezione 1.3.1 hai imparato com’è fatto un articolo (commi, lettere, rinvii).
+    Ora impari <strong>come si “estrae” il significato giuridico</strong> in modo controllabile.
+  </p>
+</section>
 
-## 1) Titolo sezione
+<section className="mt-8 space-y-6">
+  <div className="space-y-2">
+    <h2 className="text-xl font-semibold">1) Che cos’è l’interpretazione</h2>
+    <p>
+      L’<GlossaryTerm id="interpretazione">interpretazione</GlossaryTerm> è il processo con cui
+      colleghi un testo normativo (astratto) a un caso (concreto), seguendo criteri riconosciuti.
+    </p>
+    <p>
+      Non è creatività: è metodo. Il riferimento di base nel nostro ordinamento è l’<strong>art. 12 Preleggi</strong>.
+    </p>
+  </div>
 
-Contenuto...
+  <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+    <h3 className="text-lg font-semibold">2) La sequenza “da manuale” (art. 12 Preleggi)</h3>
 
-<Quiz />
+    <div className="mt-4 space-y-3">
+      <div className="rounded-xl border border-white/10 p-4 bg-gradient-to-br from-white/12 to-transparent">
+        <p className="font-semibold">Step A — Testo</p>
+        <p className="opacity-90">
+          Parti dal <GlossaryTerm id="criterio-letterale">significato delle parole</GlossaryTerm>
+          e dalla loro connessione. Qui stai chiedendo: “Cosa dice il testo, davvero?”
+        </p>
+      </div>
 
-<Resources />
+      <div className="rounded-xl border border-white/10 p-4 bg-white/5">
+        <p className="font-semibold">Step B — Intenzione</p>
+        <p className="opacity-90">
+          Consideri l’<GlossaryTerm id="intenzione-del-legislatore">intenzione del legislatore</GlossaryTerm>:
+          non “cosa penso io”, ma qual è la finalità che rende coerente la norma.
+        </p>
+      </div>
+
+      <div className="rounded-xl border border-white/10 p-4 bg-white/5">
+        <p className="font-semibold">Step C — Se manca la norma: analogia</p>
+        <p className="opacity-90">
+          Se non c’è una disposizione precisa, guardi a casi simili o materie analoghe:
+          è l’<GlossaryTerm id="analogia">analogia</GlossaryTerm> (prima “legis”, poi se serve “iuris”).
+        </p>
+      </div>
+
+      <div className="rounded-xl border border-white/10 p-4 bg-white/5">
+        <p className="font-semibold">Step D — Principi generali</p>
+        <p className="opacity-90">
+          Se resta ancora dubbio, decidi secondo i
+          <GlossaryTerm id="principi-generali">principi generali dell’ordinamento</GlossaryTerm>.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div className="grid md:grid-cols-2 gap-4">
+    <div className="rounded-2xl border border-white/10 p-5 bg-white/5 space-y-2">
+      <h3 className="text-lg font-semibold">Interpretazione letterale</h3>
+      <p>
+        È la base. Si lavora su parole, punteggiatura, connessioni (“e”, “o”, “salvo che”),
+        definizioni interne e rinvii.
+      </p>
+      <p className="opacity-80">
+        Errore tipico: leggere solo una parola senza la frase completa.
+      </p>
+    </div>
+
+    <div className="rounded-2xl border border-white/10 p-5 bg-white/5 space-y-2">
+      <h3 className="text-lg font-semibold">Interpretazione sistematica</h3>
+      <p>
+        Qui guardi la norma nel suo “ecosistema”: titolo, capo, articoli vicini,
+        definizioni sparse, e coerenza complessiva.
+      </p>
+      <p className="opacity-80">
+        Errore tipico: isolare un comma e creare contraddizioni con il resto.
+      </p>
+    </div>
+  </div>
+
+  <div className="rounded-2xl border border-white/10 p-5 bg-white/5 space-y-2">
+    <h3 className="text-lg font-semibold">Interpretazione teleologica</h3>
+    <p>
+      È l’idea di scopo: quale problema la norma vuole risolvere?
+      Serve per scegliere, tra più letture plausibili, quella che rende la norma “funzionante”.
+    </p>
+    <p className="opacity-80">
+      Nota: teleologica non significa “morale” o “quella che mi piace”.
+      Deve restare compatibile col testo e col sistema.
+    </p>
+  </div>
+</section>
+
+<VideoEmbed
+  url="https://www.youtube.com/watch?v=19HNaOn5i-U"
+  title="Interpretazione della norma giuridica (introduzione)"
+  source="YouTube (lezione breve)"
+  note="Ottimo per fissare in pochi minuti: perché interpretazione ≠ opinione e quali sono i criteri base."
+/>
+
+<TechnicalBlock>
+  <div className="space-y-4">
+    <h3 className="text-lg font-semibold">Versione tecnica (art. 12 Preleggi al centro)</h3>
+
+    <div className="rounded-2xl border border-white/10 p-5 bg-white/5 space-y-2">
+      <p className="font-semibold">Art. 12 Preleggi (idea chiave)</p>
+      <p className="opacity-90">
+        L’articolo imposta una gerarchia operativa: prima testo (parole + connessione),
+        poi intenzione del legislatore; se manca la norma, analogia; se persiste il dubbio,
+        principi generali.
+      </p>
+      <p className="opacity-80 text-sm">
+        È per questo che, in un ragionamento serio, devi poter dire “su quale criterio” stai basando la tua lettura.
+      </p>
+    </div>
+
+    <div className="rounded-2xl border border-white/10 p-5 bg-white/5 space-y-2">
+      <p className="font-semibold">Due regole pratiche (da portarsi all’esame)</p>
+      <ul className="list-disc pl-5 space-y-2">
+        <li>
+          <strong>Non saltare i passaggi</strong>: se il testo è chiaro e coerente, non puoi partire dall’analogia.
+        </li>
+        <li>
+          <strong>Motiva il criterio</strong>: “letterale”, “sistematico”, “teleologico” non sono etichette,
+          ma scelte argomentative controllabili.
+        </li>
+      </ul>
+    </div>
+  </div>
+</TechnicalBlock>
+
+<VideoEmbed
+  url="https://www.youtube.com/watch?v=AJCR0GVFJlM"
+  title="Preleggi e criteri di interpretazione (lezione più ampia)"
+  source="YouTube (lezione su Preleggi)"
+  note="Qui trovi spiegati i criteri interpretativi collegati alle Preleggi: utile come rinforzo dopo la parte tecnica."
+/>
+
+<section className="mt-8 space-y-4">
+  <h2 className="text-xl font-semibold">Esempi “da orale”: lineari e convincenti</h2>
+
+  <ExampleCard type="positive" title="Testo chiaro + sistema coerente">
+    Il comma dice “X è vietato salvo Y”. Leggendo anche i commi successivi capisci che Y è un’eccezione dettagliata.
+    Applichi letterale + sistematico e arrivi a una conclusione netta senza inventarti nulla.
+  </ExampleCard>
+
+  <ExampleCard type="borderline" title="Due letture plausibili: scegli quella che fa funzionare la norma">
+    Una parola può essere letta in senso stretto o ampio. Entrambe le letture sono compatibili col testo,
+    ma una rende l’articolo incoerente con il resto del capo. Qui usi sistematico e, se serve,
+    teleologico per scegliere la lettura che mantiene coerenza.
+  </ExampleCard>
+
+  <ExampleCard type="negative" title="Analogia usata male (errore tipico)">
+    Non trovi una norma precisa e vai direttamente ai “principi generali”.
+    È un salto logico: l’art. 12 ti chiede prima di cercare casi simili o materie analoghe.
+  </ExampleCard>
+</section>
+
+<ResourceFooter>
+  <div className="space-y-3">
+    <p className="font-semibold">Risorse</p>
+
+    <ul className="list-disc pl-5 space-y-2">
+      <li>
+        <a className="underline" href="https://www.gazzettaufficiale.it/atto/serie_generale/caricaArticolo?art.codiceRedazionale=042U0262&art.dataPubblicazioneGazzetta=1942-04-04&art.flagTipoArticolo=1&art.idArticolo=12&art.idGruppo=2&art.idSottoArticolo=1&art.idSottoArticolo1=10&art.progressivo=0&art.versione=1">
+          Preleggi — Art. 12 (Gazzetta Ufficiale)
+        </a>
+      </li>
+      <li>
+        <a className="underline" href="https://www.brocardi.it/preleggi/capo-i/art12.html">
+          Brocardi — Art. 12 Preleggi (note)
+        </a>
+      </li>
+      <li>
+        <a className="underline" href="https://www.treccani.it/enciclopedia/interpretazione-della-legge/">
+          Treccani — Interpretazione della legge
+        </a>
+      </li>
+      <li>
+        <a className="underline" href="https://www.youtube.com/watch?v=19HNaOn5i-U">
+          Video — Interpretazione della norma giuridica (intro)
+        </a>
+      </li>
+      <li>
+        <a className="underline" href="https://www.youtube.com/watch?v=AJCR0GVFJlM">
+          Video — Preleggi e criteri di interpretazione
+        </a>
+      </li>
+    </ul>
+
+    <p className="text-sm opacity-80">
+      Contenuto a scopo esclusivamente educativo. Non costituisce consulenza legale.
+    </p>
+  </div>
+</ResourceFooter>

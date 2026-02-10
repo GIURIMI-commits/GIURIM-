@@ -1,35 +1,216 @@
 ---
 slug: "lez-2.2.1"
-title: "Il Parlamento e come si fanno le leggi"
+title: "Il Parlamento: come si fanno le leggi"
 area: "area-2-costituzionale"
 module: "mod-2.2-organi-dello-stato"
 order: 1
-duration_minutes: 12
+duration_minutes: 20
 prerequisites: ["lez-2.1.3"]
 next_lesson: "lez-2.2.2"
-last_verified: "2026-02-07"
-verified_by: "Da verificare"
+prev_lesson: "lez-2.1.3"
+last_verified: "2026-02-10"
+verified_by: "Guirimì Team"
 disclaimer_level: "standard"
-source_refs: []
-glossary_terms: []
+
+source_refs:
+  - label: "Normattiva — Art. 70-74 Costituzione (La formazione delle leggi)"
+    url: "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:costituzione#art70"
+  - label: "Camera dei Deputati — L'iter legislativo"
+    url: "https://www.camera.it/leg18/382"
+  - label: "Brocardi — Il procedimento legislativo ordinario"
+    url: "https://www.brocardi.it/costituzione/parte-ii/titolo-i/sezione-ii/"
+
+media:
+  - type: "video"
+    title: "Come nasce una legge: l'iter legislativo spiegato"
+    url: "https://www.youtube.com/watch?v=f-BstWzRkXo"
+    source: "Edizioni Simone — Diritto a pillole"
+    timestamp: "0:00-09:30"
+    position: "after-spiegazione"
+
+glossary_terms:
+  - "parlamento"
+  - "bicameralismo-perfetto"
+  - "iter-legis"
+  - "iniziativa-legislativa"
+  - "navette"
+  - "promulgazione"
+  - "vacatio-legis"
+  - "commissione-parlamentare"
+
 quiz:
-  questions: []
+  questions:
+    - type: "mcq"
+      prompt: "Cosa si intende per 'bicameralismo perfetto' in Italia?"
+      choices:
+        - "Che le due Camere hanno lo stesso numero di parlamentari."
+        - "Che Camera e Senato hanno identici poteri e ogni legge deve essere approvata da entrambe nello stesso identico testo."
+        - "Che le Camere votano sempre insieme in un'unica aula."
+      correctIndex: 1
+      feedback:
+        0: "Sbagliato. Camera (400) e Senato (200) hanno numeri diversi."
+        1: "Esatto! È la caratteristica principale del nostro sistema: finché il testo non è identico per entrambi, la legge non nasce."
+        2: "No. Salvo casi rari (Parlamento in seduta comune), lavorano separatamente."
+    - type: "mcq"
+      prompt: "Cosa succede durante la cosiddetta 'navette'?"
+      choices:
+        - "La legge viene trasportata fisicamente dal Quirinale al Parlamento."
+        - "Il testo della legge viaggia da una Camera all'altra finché entrambe non approvano la versione identica."
+        - "I parlamentari viaggiano verso i loro collegi elettorali."
+      correctIndex: 1
+      feedback:
+        0: "Sbagliato. Il Quirinale interviene solo alla fine (promulgazione)."
+        1: "Corretto! Se il Senato cambia anche solo una virgola di un testo già approvato dalla Camera, il testo deve tornare alla Camera."
+        2: "No. È un termine tecnico che indica il palleggio legislativo tra i due rami del Parlamento."
+    - type: "mcq"
+      prompt: "Chi ha il potere di iniziativa legislativa (può proporre una legge)?"
+      choices:
+        - "Solo il Governo."
+        - "Governo, ogni parlamentare, 50.000 elettori, Consigli Regionali e il CNEL."
+        - "Qualsiasi cittadino che scriva una mail al Parlamento."
+      correctIndex: 1
+      feedback:
+        0: "No, il Governo ha l'iniziativa principale, ma non è l'unico."
+        1: "Esatto. La Costituzione (Art. 71) distribuisce questo potere tra vari soggetti."
+        2: "Sbagliato. Un cittadino singolo non può, servono almeno 50.000 firme (iniziativa popolare)."
+    - type: "open"
+      prompt: "Perché la fase della 'Vacatio Legis' (solitamente di 15 giorni) è fondamentale per i cittadini?"
+      expected_points:
+        - "Permette ai cittadini di venire a conoscenza della nuova norma."
+        - "Garantisce il principio 'ignorantia legis non excusat' (la legge non ammette ignoranza)."
+        - "Dà tempo ai professionisti (avvocati, commercialisti) di adeguarsi."
 ---
 
-<Hook>
-Inserisci qui il gancio iniziale...
-</Hook>
+<HookBlock>
+  <div className="space-y-3">
+    <p>
+      Ti sei mai chiesto perché una multa per eccesso di velocità costa proprio quella cifra o perché le tasse scadono in quel giorno preciso? Dietro ogni comando dello Stato c'è un lungo viaggio iniziato come un semplice foglio di carta in un ufficio di Roma.
+    </p>
+    <p>
+      Oggi entriamo nella "fabbrica delle leggi". Scoprirai che creare una regola non è un atto autoritario, ma un percorso a ostacoli fatto di discussioni, modifiche e controlli, pensato per proteggerti da leggi scritte male o troppo in fretta.
+    </p>
+  </div>
+</HookBlock>
 
-<Objective>
-Inserisci qui l'obiettivo della lezione...
-</Objective>
+<section className="mt-6 rounded-2xl border border-white/10 p-5 bg-gradient-to-br from-white/8 via-white/5 to-transparent">
+  <div className="flex flex-wrap items-center gap-2 text-sm">
+    <span className="rounded-full border border-white/10 px-3 py-1 bg-white/5">Area 2 — Costituzionale</span>
+    <span className="opacity-60">›</span>
+    <span className="rounded-full border border-white/10 px-3 py-1 bg-white/5">Mod 2.2 — Organi dello Stato</span>
+    <span className="opacity-60">›</span>
+    <span className="rounded-full border border-white/10 px-3 py-1 bg-white/5">Lez 2.2.1</span>
+  </div>
 
----
+  <p className="mt-3">
+    Abbiamo studiato la Costituzione come "regola base". Ora vediamo il <GlossaryTerm id="parlamento">Parlamento</GlossaryTerm>, l'organo che esercita la funzione legislativa. In Italia abbiamo il <strong><GlossaryTerm id="bicameralismo-perfetto">bicameralismo perfetto</GlossaryTerm></strong>: due Camere con gli stessi identici poteri.
+  </p>
+</section>
 
-## 1) Titolo sezione
+<section className="mt-8 space-y-6">
+  <div className="space-y-2">
+    <h2 className="text-xl font-semibold">1) Le 4 Fasi del Viaggio: L'Iter Legis</h2>
+    <p>
+      Il percorso che trasforma un'idea in legge si chiama <strong><GlossaryTerm id="iter-legis">iter legis</GlossaryTerm></strong> e si divide in quattro momenti fondamentali:
+    </p>
+    <ol className="list-decimal pl-5 space-y-4">
+      <li>
+        <strong><GlossaryTerm id="iniziativa-legislativa">Iniziativa</GlossaryTerm>:</strong> Qualcuno presenta un progetto di legge (se presentato dal Governo si chiama "Disegno di Legge"). Oltre al Governo e ai parlamentari, anche tu puoi farlo insieme ad altri 49.999 cittadini.
+      </li>
+      <li>
+        <strong>Istruttoria e Discussione:</strong> La legge non va subito in aula. Prima passa in una <strong><GlossaryTerm id="commissione-parlamentare">commissione parlamentare</GlossaryTerm></strong> (un gruppo ristretto di esperti di quella materia) che la esamina e la corregge. Solo dopo arriva al voto di tutti.
+      </li>
+      <li>
+        <strong>Approvazione e <GlossaryTerm id="navette">Navette</GlossaryTerm>:</strong> Qui sta il cuore del sistema italiano. Poiché le due Camere sono "gemelle", devono approvare lo stesso identico testo. Se la Camera approva e il Senato cambia anche solo una parola, il testo torna alla Camera. Questo "palleggio" continua finché il testo non è identico per entrambi.
+      </li>
+      <li>
+        <strong>Promulgazione e Pubblicazione:</strong> Una volta approvata dal Parlamento, la legge va dal Presidente della Repubblica per la <strong><GlossaryTerm id="promulgazione">promulgazione</GlossaryTerm></strong>. Infine, viene pubblicata sulla Gazzetta Ufficiale.
+      </li>
+    </ol>
+  </div>
 
-Contenuto...
+  <div className="space-y-2">
+    <h2 className="text-xl font-semibold">2) Quando diventa obbligatoria?</h2>
+    <p>
+      La legge non entra in vigore l'istante dopo la pubblicazione. Esiste un periodo di "riposo" chiamato <strong><GlossaryTerm id="vacatio-legis">vacatio legis</GlossaryTerm></strong>, che di norma dura 15 giorni. 
+    </p>
+    <p>
+      Questo tempo serve a te, agli avvocati e alle imprese per leggere la nuova regola e capire come comportarsi. Passati i 15 giorni, la legge "non ammette ignoranza": sei obbligato a rispettarla anche se non sapevi che fosse stata pubblicata.
+    </p>
+  </div>
 
-<Quiz />
+  
 
-<Resources />
+  <div className="rounded-2xl border border-white/10 bg-white/5 p-6 space-y-4">
+    <h3 className="text-lg font-semibold">Perché questo sistema così lento?</h3>
+    <p className="text-sm opacity-90">
+      Molti criticano la lentezza della "navette". Tuttavia, i padri costituenti l'hanno voluta per due motivi:
+    </p>
+    <ul className="grid md:grid-cols-2 gap-4 text-sm">
+      <li className="p-4 rounded-xl border border-white/10 bg-white/5">
+        <strong>Riflessione:</strong> Obbliga i politici a rivedere i propri errori. Se una Camera scrive una norma assurda, l'altra ha il compito di correggerla.
+      </li>
+      <li className="p-4 rounded-xl border border-white/10 bg-white/5">
+        <strong>Mediazione:</strong> Impedisce che una maggioranza risicata approvi leggi radicali senza un confronto reale con l'altra ala del Parlamento.
+      </li>
+    </ul>
+  </div>
+</section>
+
+<VideoEmbed 
+  url="https://www.youtube.com/watch?v=f-BstWzRkXo" 
+  title="L'iter legislativo spiegato semplice" 
+  source="Edizioni Simone" 
+  note="Un video molto chiaro che sintetizza graficamente tutti i passaggi, dall'iniziativa alla Gazzetta Ufficiale." 
+/>
+
+<TechnicalBlock>
+  <div className="space-y-4">
+    <h3 className="text-lg font-semibold">Focus Tecnico: Gli Articoli 70-74</h3>
+    <div className="rounded-2xl border border-white/10 p-5 bg-white/5 space-y-2 text-sm">
+      <p className="font-bold">Art. 70: La funzione legislativa è esercitata collettivamente dalle due Camere.</p>
+      <p>Questa singola riga fonda il bicameralismo perfetto italiano.</p>
+      
+      <p className="font-bold mt-4">Art. 74: Il potere di rinvio del Presidente.</p>
+      <p>Il Presidente della Repubblica non è un semplice "notaio". Se ritiene che una legge sia palesemente incostituzionale o manchi di copertura economica, può rimandarla alle Camere con un messaggio motivato. Se però le Camere la approvano di nuovo identica, il Presidente è obbligato a promulgarla.</p>
+    </div>
+  </div>
+</TechnicalBlock>
+
+<section className="mt-8 space-y-4">
+  <h2 className="text-xl font-semibold">Esempi Reali: La legge alla prova dei fatti</h2>
+
+  <ExampleCard type="positive" title="Una legge approvata: Il Codice della Strada">
+    <div className="space-y-2">
+      <p><strong>Scenario:</strong> Il Governo propone nuove norme per la sicurezza stradale (es. limiti per i monopattini).</p>
+      <p><strong>Analisi:</strong> Il testo viene discusso nelle Commissioni Trasporti di Camera e Senato, emendato (corretto) e infine votato identico dai due rami.</p>
+      <p><strong>Esito:</strong> La legge viene promulgata, pubblicata e dopo 15 giorni le forze dell'ordine possono iniziare a fare le multe basandosi sulle nuove regole.</p>
+    </div>
+  </ExampleCard>
+
+  <ExampleCard type="negative" title="La legge che si blocca: Il DDL Zan (2021)">
+    <div className="space-y-2">
+      <p><strong>Scenario:</strong> Una proposta di legge contro l'omotransfobia approvata dalla Camera arriva al Senato.</p>
+      <p><strong>Analisi:</strong> Al Senato, le forze politiche non trovano l'accordo. Viene votata la cosiddetta "tagliola" (una procedura tecnica per non procedere all'esame degli articoli).</p>
+      <p><strong>Esito:</strong> L'iter si interrompe. Senza l'approvazione del Senato, la legge "muore" o torna nel cassetto, dimostrando il potere di veto reciproco tra le Camere.</p>
+    </div>
+  </ExampleCard>
+
+  <ExampleCard type="borderline" title="Il rinvio presidenziale">
+    <div className="space-y-2">
+      <p><strong>Scenario:</strong> Il Parlamento approva una legge che prevede una spesa enorme ma non dice dove prendere i soldi.</p>
+      <p><strong>Analisi:</strong> Il Presidente della Repubblica esercita il potere dell'Art. 74 e rimanda la legge indietro dicendo: "Manca la copertura finanziaria".</p>
+      <p><strong>Esito:</strong> Il Parlamento deve ridiscutere la legge per trovare i fondi o ridurne la portata, evitando un danno ai conti dello Stato.</p>
+    </div>
+  </ExampleCard>
+</section>
+
+<ResourceFooter>
+  <div className="space-y-3">
+    <p className="font-semibold">Risorse Ufficiali</p>
+    <ul className="list-disc pl-5 space-y-2">
+      <li><a className="underline" href="https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:costituzione#art70">Articoli 70-82 Costituzione (Normattiva)</a></li>
+      <li><a className="underline" href="https://www.camera.it/leg18/382">Guida interattiva all'iter legislativo (Camera.it)</a></li>
+    </ul>
+    <p className="text-xs opacity-70">Ultima verifica: 10 Febbraio 2026 | Verificatore: Guirimì Team</p>
+  </div>
+</ResourceFooter>

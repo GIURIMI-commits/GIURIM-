@@ -10,6 +10,10 @@ export type UserRole =
 export interface UserProfile {
     id: string;
     display_name: string | null;
+    email?: string;
+    email_domain?: string;
+    student_status?: 'none' | 'pending' | 'verified' | 'rejected';
+    cookie_preferences?: CookiePreferences;
     role: UserRole | null;
     onboarding_completed: boolean;
     preferred_path: string[] | null;
@@ -18,6 +22,12 @@ export interface UserProfile {
     last_active_at: string | null;
     created_at: string;
     updated_at: string;
+}
+
+export interface CookiePreferences {
+    functional: boolean;
+    analytics: boolean;
+    marketing: boolean;
 }
 
 export type LessonStatus = 'not_started' | 'in_progress' | 'completed';

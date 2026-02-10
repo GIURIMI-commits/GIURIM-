@@ -3,7 +3,7 @@
 -- ==============================================================================
 
 -- 1. CLEANUP (For development iterations)
-drop view if exists public.corte_thread_stats;
+drop view if exists public.corte_thread_stats cascade;
 drop table if exists public.corte_votes cascade;
 drop table if exists public.corte_comments cascade;
 drop table if exists public.corte_threads cascade;
@@ -82,15 +82,15 @@ on public.corte_threads for select using (true);
 
 create policy "Authenticated users can create threads" 
 on public.corte_threads for insert 
-with check (auth.uid() = author_id);
+with check ((select auth.uid()) = author_id);
 
 create policy "Users can update own threads" 
 on public.corte_threads for update 
-using (auth.uid() = author_id);
+using ((select auth.uid()) = author_id);
 
 create policy "Users can delete own threads" 
 on public.corte_threads for delete 
-using (auth.uid() = author_id);
+using ((select auth.uid()) = author_id);
 
 -- Comments: Public Read, Auth Write
 create policy "Comments are viewable by everyone" 
@@ -98,15 +98,15 @@ on public.corte_comments for select using (true);
 
 create policy "Authenticated users can create comments" 
 on public.corte_comments for insert 
-with check (auth.uid() = author_id);
+with check ((select auth.uid()) = author_id);
 
 create policy "Users can update own comments" 
 on public.corte_comments for update 
-using (auth.uid() = author_id);
+using ((select auth.uid()) = author_id);
 
 create policy "Users can delete own comments" 
 on public.corte_comments for delete 
-using (auth.uid() = author_id);
+using ((select auth.uid()) = author_id);
 
 -- Votes: Public Read, Auth Write
 create policy "Votes are viewable by everyone" 
@@ -114,20 +114,20 @@ on public.corte_votes for select using (true);
 
 create policy "Authenticated users can vote" 
 on public.corte_votes for insert 
-with check (auth.uid() = user_id);
+with check ((select auth.uid()) = user_id);
 
 create policy "Users can update own votes" 
 on public.corte_votes for update 
-using (auth.uid() = user_id);
+using ((select auth.uid()) = user_id);
 
 create policy "Users can delete own votes" 
 on public.corte_votes for delete 
-using (auth.uid() = user_id);
+using ((select auth.uid()) = user_id);
 
 
 -- 5. VIEWS (Stats aggregation)
 -- Simplified view to get thread stats efficiently
-create or replace view public.corte_thread_stats as
+create or replace view public.corte_thread_stats with (security_invoker = true) as
 select 
     t.id as thread_id,
     coalesce(sum(v.vote_type), 0) as score,
@@ -159,3 +159,4 @@ insert into public.corte_rooms (slug, name, description, icon, category, "order"
     -- COMMUNITY
     ('cafe', 'Caffè Giuridico', 'Chiacchiere, consigli esami e supporto.', 'coffee', 'community', 10)
 on conflict (slug) do nothing;
+ 

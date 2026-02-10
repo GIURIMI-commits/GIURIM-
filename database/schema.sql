@@ -269,28 +269,26 @@ alter table institution_verification_requests enable row level security;
 
 -- PROFILES
 drop policy if exists "Users can view own profile" on profiles;
-create policy "Users can view own profile" on profiles for select using (auth.uid() = id);
+create policy "Users can view own profile" on profiles for select using ((select auth.uid()) = id);
 
 drop policy if exists "Users can update own profile" on profiles;
-create policy "Users can update own profile" on profiles for update using (auth.uid() = id);
+create policy "Users can update own profile" on profiles for update using ((select auth.uid()) = id);
 
 -- INSTITUTION DOMAINS
 drop policy if exists "Public read access to domains" on institution_domains;
 create policy "Public read access to domains" on institution_domains for select to authenticated using (true);
 
-drop policy if exists "Admin write access to domains" on institution_domains;
-create policy "Admin write access to domains" on institution_domains for all using (false); -- Admin only (bypass RLS or specific role)
+-- Admin only write access (handled by default deny)
 
 -- ENTITLEMENTS
 drop policy if exists "Users can view own entitlements" on entitlements;
-create policy "Users can view own entitlements" on entitlements for select using (auth.uid() = user_id);
+create policy "Users can view own entitlements" on entitlements for select using ((select auth.uid()) = user_id);
 
-drop policy if exists "No user write access to entitlements" on entitlements;
-create policy "No user write access to entitlements" on entitlements for all using (false); -- System/Admin only
+-- System/Admin only write access (handled by default deny)
 
 -- REQUESTS
 drop policy if exists "Users can view own requests" on institution_verification_requests;
-create policy "Users can view own requests" on institution_verification_requests for select using (auth.uid() = user_id);
+create policy "Users can view own requests" on institution_verification_requests for select using ((select auth.uid()) = user_id);
 
 drop policy if exists "Users can create requests" on institution_verification_requests;
-create policy "Users can create requests" on institution_verification_requests for insert with check (auth.uid() = user_id);
+create policy "Users can create requests" on institution_verification_requests for insert with check ((select auth.uid()) = user_id);

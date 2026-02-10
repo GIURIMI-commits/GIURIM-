@@ -4,32 +4,170 @@ title: "La Corte Costituzionale"
 area: "area-2-costituzionale"
 module: "mod-2.2-organi-dello-stato"
 order: 3
-duration_minutes: 10
-prerequisites: ["lez-2.2.2"]
+duration_minutes: 20
+prerequisites: ["lez-2.1.3", "lez-2.2.2"]
 next_lesson: "lez-2.3.1"
-last_verified: "2026-02-07"
-verified_by: "Da verificare"
+prev_lesson: "lez-2.2.2"
+last_verified: "2026-02-10"
+verified_by: "Guirimì Team"
 disclaimer_level: "standard"
-source_refs: []
-glossary_terms: []
+
+source_refs:
+  - label: "Normattiva — Art. 134-137 Costituzione"
+    url: "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:costituzione#art134"
+  - label: "Corte Costituzionale — Sito Ufficiale (Le Funzioni)"
+    url: "https://www.cortecostituzionale.it"
+  - label: "Brocardi — Il giudizio di legittimità costituzionale"
+    url: "https://www.brocardi.it/costituzione/parte-ii/titolo-vi/sezione-i/"
+
+media:
+  - type: "video"
+    title: "Conoscere la Corte: le funzioni"
+    url: "https://www.youtube.com/watch?v=KE7hdGF7ubs"
+    source: "Canale Ufficiale Corte Costituzionale"
+    timestamp: "0:00-08:26"
+    position: "after-spiegazione"
+
+glossary_terms:
+  - "corte-costituzionale"
+  - "legittimita-costituzionale"
+  - "giudizio-incidentale"
+  - "giudizio-principale"
+  - "conflitti-di-attribuzione"
+  - "giudice-a-quo"
+  - "incostituzionalita"
+
 quiz:
-  questions: []
+  questions:
+    - type: "mcq"
+      prompt: "Un singolo cittadino può scrivere direttamente alla Corte Costituzionale per far annullare una legge?"
+      choices:
+        - "Sì, se ritiene che la legge violi i suoi diritti."
+        - "No, deve passare attraverso un giudice durante un processo (giudizio incidentale)."
+        - "Sì, ma solo se raccoglie 50.000 firme."
+      correctIndex: 1
+      feedback:
+        0: "Sbagliato. In Italia non esiste il ricorso diretto del cittadino alla Corte."
+        1: "Esatto! È il giudice del processo (giudice a quo) che deve inviare le carte alla Corte se ha un dubbio serio."
+        2: "No. Le firme servono per le leggi di iniziativa popolare, non per i ricorsi alla Corte."
+    - type: "mcq"
+      prompt: "Cosa succede a una legge quando la Corte la dichiara 'incostituzionale'?"
+      choices:
+        - "Viene modificata dal Parlamento entro 30 giorni."
+        - "Cessa di avere efficacia dal giorno successivo alla pubblicazione della sentenza."
+        - "Resta valida ma il giudice può decidere di non usarla."
+      correctIndex: 1
+      feedback:
+        0: "No, il Parlamento può rifarla, ma la legge vecchia muore all'istante."
+        1: "Corretto. La legge viene letteralmente 'espulsa' dall'ordinamento e nessuno può più applicarla."
+        2: "Sbagliato. Se è incostituzionale, scompare per tutti, non solo per quel giudice."
+    - type: "mcq"
+      prompt: "Quanti sono i giudici della Corte Costituzionale?"
+      choices:
+        - "12"
+        - "15"
+        - "25"
+      correctIndex: 1
+      feedback:
+        0: "Sbagliato. Il numero è fisso a 15, per garantire equilibrio tra le varie nomine."
+        1: "Esatto! 5 nominati dal PdR, 5 dal Parlamento e 5 dalle supreme magistrature."
+        2: "No, 25 sono troppi per un organo così delicato."
+    - type: "open"
+      prompt: "Spiega perché la Corte Costituzionale viene definita il 'Giudice delle leggi' e non un semplice tribunale per cittadini."
+      expected_points:
+        - "Non giudica le persone, ma la conformità delle leggi alla Costituzione."
+        - "Ha il potere di annullare atti del Parlamento."
+        - "È un organo di garanzia che sta 'sopra' la politica."
 ---
 
-<Hook>
-Inserisci qui il gancio iniziale...
-</Hook>
+<HookBlock>
+  <div className="space-y-3">
+    <p>
+      Immagina di partecipare a un torneo dove l'arbitro decide improvvisamente di cambiare le regole a metà partita per favorire una squadra. Sarebbe ingiusto, vero? In Italia, i politici possono fare le leggi, ma non possono fare "quello che vogliono".
+    </p>
+    <p>
+      Esiste un tribunale speciale, che non giudica le persone ma le leggi stesse. Se il Parlamento scrive una regola che calpesta la Costituzione, questo tribunale ha il potere di premere il tasto "CANC" e far sparire quella legge per sempre. Benvenuto nel mondo della <strong>Corte Costituzionale</strong>, l'ultimo baluardo della tua libertà.
+    </p>
+  </div>
+</HookBlock>
 
-<Objective>
-Inserisci qui l'obiettivo della lezione...
-</Objective>
+### Mappa di Posizione
+Nelle lezioni precedenti hai visto come il Parlamento crea le leggi e come il Governo le esegue. Ora incontriamo chi controlla che nessuno dei due esca dai binari: la <GlossaryTerm id="corte-costituzionale">Corte Costituzionale</GlossaryTerm>.
 
 ---
 
-## 1) Titolo sezione
+## 1. Il Giudice delle Leggi: Un Arbitro fuori dalla mischia
+La Corte Costituzionale (spesso chiamata "la Consulta" dal nome del palazzo dove risiede) non è un tribunale come gli altri. Non ci vai se hai litigato con il vicino. La Corte giudica se una legge è conforme alla Costituzione.
 
-Contenuto...
+È composta da **15 giudici** scelti tra i migliori giuristi del Paese. La loro nomina è divisa in tre parti per garantire che nessuno "comandi" sulla Corte:
+* 5 sono scelti dal Presidente della Repubblica.
+* 5 sono eletti dal Parlamento.
+* 5 sono eletti dalle alte magistrature (i giudici più importanti).
 
-<Quiz />
+---
 
-<Resources />
+## 2. Come si attiva il "tasto Canc"?
+La Corte non si sveglia la mattina e decide di annullare una legge. Qualcuno deve chiederglielo. Esistono due strade principali:
+
+1.  **<GlossaryTerm id="giudizio-incidentale">Giudizio Incidentale</GlossaryTerm>**: È la strada più comune. Durante un processo normale (es. per una multa o un contratto), il giudice o una delle parti sospetta che la legge da applicare sia incostituzionale. Se il dubbio è serio, il giudice (detto **<GlossaryTerm id="giudice-a-quo">giudice a quo</GlossaryTerm>**) sospende tutto e manda le carte alla Corte.
+2.  **<GlossaryTerm id="giudizio-principale">Giudizio Principale</GlossaryTerm>**: Succede quando lo Stato pensa che una Regione abbia invaso il suo campo, o viceversa. In questo caso, il ricorso è diretto.
+
+### Cosa può decidere la Corte?
+* **Sentenza di accoglimento**: La legge è incostituzionale. Viene annullata e scompare dall'ordinamento.
+* **Sentenza di rigetto**: La Corte dice che la legge va bene così com'è.
+
+
+
+<VideoEmbed 
+  url="https://www.youtube.com/watch?v=KE7hdGF7ubs" 
+  title="Conoscere la Corte: le funzioni" 
+  source="Corte Costituzionale" 
+  note="Questo video istituzionale spiega perfettamente i quattro compiti della Corte: leggi, conflitti tra poteri, referendum e reati del Presidente." 
+/>
+
+---
+
+## 3. Gli altri compiti della Corte
+Oltre a giudicare le leggi, la Corte fa altre tre cose fondamentali:
+1.  **<GlossaryTerm id="conflitti-di-attribuzione">Conflitti di attribuzione</GlossaryTerm>**: Risolve i litigi tra i poteri dello Stato (es. tra Parlamento e Magistratura) su "chi deve fare cosa".
+2.  **Referendum**: Decide se i quesiti dei referendum abrogativi sono ammissibili o se violano la Costituzione.
+3.  **Giustizia Politica**: Giudica il Presidente della Repubblica se viene accusato di alto tradimento o attentato alla Costituzione.
+
+---
+
+<TechnicalBlock>
+### Approfondimento Tecnico: Articolo 134 e 136
+
+**Articolo 134 Cost.**
+> "La Corte costituzionale giudica: sulle controversie relative alla legittimità costituzionale delle leggi e degli atti, aventi forza di legge, dello Stato e delle Regioni..."
+
+**Articolo 136 Cost. (L'efficacia)**
+> "Quando la Corte dichiara l'incostituzionalità di una norma di legge o di atto avente forza di legge, la norma cessa di avere efficacia dal giorno successivo alla pubblicazione della decisione."
+
+**Il concetto di "Efficacia Retroattiva"**
+A differenza delle leggi normali che valgono per il futuro, la sentenza della Corte che annulla una legge è retroattiva: è come se quella legge non fosse mai esistita per tutti i processi ancora aperti. L'unica eccezione sono i "rapporti esauriti" (sentenze già definitive), tranne in materia penale dove, se una persona è in carcere per una legge annullata, deve essere liberata immediatamente.
+</TechnicalBlock>
+
+---
+
+## Esempi Reali: Quando la Corte ha cambiato la storia
+
+<ExampleCard type="positive" title="Annullamento del 'Legittimo Impedimento'">
+**Scenario**: Una legge permetteva al Presidente del Consiglio di non presentarsi ai processi a causa dei suoi impegni istituzionali.
+**Analisi**: La Corte ha stabilito che questo violava il principio di uguaglianza (Art. 3): la legge non può creare "scudi" speciali solo per alcune cariche.
+**Esito**: La legge è stata parzialmente annullata, ribadendo che la legge è uguale per tutti.
+</ExampleCard>
+
+<ExampleCard type="negative" title="Il caso dell'ergastolo ostativo">
+**Scenario**: Una legge impediva certi benefici ai detenuti condannati per mafia che non collaboravano con la giustizia.
+**Analisi**: La Corte ha dichiarato la norma incostituzionale perché la pena deve sempre tendere alla rieducazione (Art. 27).
+**Esito**: Il Parlamento ha dovuto riscrivere la legge per bilanciare la lotta alla mafia con i diritti inviolabili del detenuto.
+</ExampleCard>
+
+<ExampleCard type="borderline" title="Ammissibilità dei Referendum">
+**Scenario**: Un gruppo di cittadini propone un referendum per legalizzare una sostanza o cambiare una legge fiscale.
+**Analisi**: La Corte blocca il referendum se il quesito è poco chiaro o se tocca materie "proibite" (come le tasse, Art. 75).
+**Esito**: Anche se milioni di persone hanno firmato, la Corte ha l'ultima parola tecnica: se il quesito è scritto male o viola i limiti, il referendum non si fa.
+</ExampleCard>
+
+<ResourceFooter />

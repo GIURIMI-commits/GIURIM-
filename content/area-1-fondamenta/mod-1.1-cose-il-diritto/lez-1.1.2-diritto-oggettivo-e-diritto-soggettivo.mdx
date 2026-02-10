@@ -8,163 +8,297 @@ duration_minutes: 12
 prerequisites: ["lez-1.1.1"]
 next_lesson: "lez-1.1.3"
 prev_lesson: "lez-1.1.1"
-last_verified: "2026-02-07"
+last_verified: "2026-02-10"
 verified_by: "Da verificare"
 disclaimer_level: "standard"
+
 source_refs:
-  - label: "Costituzione della Repubblica Italiana – Art. 24"
+  - label: "Normattiva — Costituzione, Art. 24 (vigente)"
+    url: "https://www.normattiva.it/uri-res/N2Ls?urn%3Anir%3Astato%3Acostituzione%3A1947-12-27~art24="
+  - label: "Senato.it — Costituzione, Art. 24"
     url: "https://www.senato.it/istituzione/la-costituzione/parte-i/titolo-i/articolo-24"
-  - label: "Codice Civile – Art. 832"
-    url: "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:codice.civile:1942-03-16;262!vig=art.832"
-  - label: "Treccani – Diritto soggettivo"
+  - label: "Gazzetta Ufficiale — Codice Civile, Art. 832 (testo)"
+    url: "https://www.gazzettaufficiale.it/atto/serie_generale/caricaArticolo?art.codiceRedazionale=042U0262&art.dataPubblicazioneGazzetta=1942-04-04&art.flagTipoArticolo=2&art.idArticolo=832&art.idGruppo=104&art.idSottoArticolo=1&art.idSottoArticolo1=10&art.progressivo=0&art.versione=1"
+  - label: "Brocardi — Codice Civile, Art. 832"
+    url: "https://www.brocardi.it/codice-civile/libro-terzo/titolo-ii/capo-i/art832.html"
+  - label: "Treccani — Diritto soggettivo (Enciclopedia)"
     url: "https://www.treccani.it/enciclopedia/diritto-soggettivo/"
-  - label: "Treccani – Diritto oggettivo"
-    url: "https://www.treccani.it/enciclopedia/diritto-oggettivo/"
+  - label: "Treccani — Soggettivo (Vocabolario, nota giuridica)"
+    url: "https://www.treccani.it/vocabolario/soggettivo/"
+
 glossary_terms:
   - "diritto-oggettivo"
   - "diritto-soggettivo"
-  - "norma-giuridica"
   - "interesse-legittimo"
+  - "norma-giuridica"
+
 quiz:
   questions:
     - type: "mcq"
-      prompt: "Che cosa si intende per diritto oggettivo?"
+      prompt: "Se esiste un 'diritto soggettivo' (es. proprietà), cosa deve esserci a monte per renderlo reale e tutelabile?"
       choices:
-        - "Il potere del singolo di agire in giudizio"
-        - "L’insieme delle norme giuridiche che regolano la società"
-        - "Un diritto che dipende dalla volontà personale"
+        - "Solo un accordo verbale tra privati."
+        - "Un insieme di regole (diritto oggettivo) che lo riconosce e lo protegge."
+        - "Una regola sociale condivisa (tipo 'si è sempre fatto così')."
       correctIndex: 1
       feedback:
-        0: "Questo riguarda il diritto soggettivo, non quello oggettivo."
-        1: "Corretto: il diritto oggettivo è l’insieme delle norme giuridiche."
-        2: "Non è corretto: il diritto oggettivo non dipende dal singolo."
+        0: "No: un accordo privato può creare obblighi, ma un diritto tutelato 'davanti allo Stato' richiede una base normativa."
+        1: "Esatto: il diritto soggettivo vive dentro il diritto oggettivo, che lo definisce e lo rende azionabile."
+        2: "No: una regola sociale può influenzare i comportamenti, ma non basta per la tutela giuridica."
     - type: "mcq"
-      prompt: "Da cosa nasce il diritto soggettivo?"
+      prompt: "Quale frase descrive meglio la differenza tra diritto oggettivo e diritto soggettivo?"
       choices:
-        - "Dalla forza del singolo"
-        - "Dal diritto oggettivo"
-        - "Dalle regole morali"
+        - "Oggettivo = opinioni morali; soggettivo = regole dello Stato."
+        - "Oggettivo = insieme di norme; soggettivo = potere/facoltà riconosciuta a una persona."
+        - "Oggettivo = regole non scritte; soggettivo = regole scritte."
       correctIndex: 1
       feedback:
-        0: "Il diritto non nasce dalla forza."
-        1: "Esatto: il diritto soggettivo nasce sempre da una norma."
-        2: "La morale non è sufficiente a creare un diritto soggettivo."
+        0: "No: la morale è diversa dal diritto. Qui parliamo di norme (oggettivo) e poteri del singolo (soggettivo)."
+        1: "Sì: è la distinzione centrale della lezione."
+        2: "No: entrambe le dimensioni possono avere regole scritte o interpretazioni, ma la differenza non è 'scritto/non scritto'."
+    - type: "mcq"
+      prompt: "Quando ha senso parlare (anche solo per cenno) di 'interesse legittimo'?"
+      choices:
+        - "Quando pretendi un bene come se fosse tuo, senza alcuna regola."
+        - "Quando la tua posizione dipende dall'esercizio del potere della Pubblica Amministrazione e chiedi che sia esercitato correttamente."
+        - "Quando vuoi convincere qualcuno con buone maniere."
+      correctIndex: 1
+      feedback:
+        0: "No: senza una base normativa non c'è tutela. Qui serve un collegamento con l'azione della PA e con le regole."
+        1: "Esatto: è la posizione di chi non chiede 'una cosa già sua', ma chiede legalità/correttezza nell'azione amministrativa."
+        2: "No: le buone maniere sono regole sociali, non posizioni giuridiche tutelate."
     - type: "open"
-      prompt: "Spiega con un esempio come un diritto soggettivo nasce da una norma giuridica."
+      prompt: "Scenario: il proprietario di un appartamento vuole affittarlo, ma il regolamento comunale impone requisiti per la sicurezza e la destinazione d’uso. Spiega (1) qual è il diritto soggettivo coinvolto, (2) quale diritto oggettivo lo limita/organizza, (3) dove potrebbe emergere un interesse legittimo."
       expected_points:
-        - "Presenza di una norma"
-        - "Attribuzione di un potere al singolo"
-        - "Possibilità di tutela da parte dello Stato"
+        - "Individuazione del diritto soggettivo (proprietà: godere/disporre)."
+        - "Collegamento a norme (limiti/obblighi: ordinamento, regolamenti, requisiti)."
+        - "Interesse legittimo: richiesta che la PA applichi correttamente regole/procedura (es. autorizzazione, controlli)."
 ---
 
-<Hook>
-Dire "ho diritto a qualcosa" non significa solo volerlo. 
-Significa che puoi pretendere quel comportamento dagli altri perché una regola te lo permette.
-</Hook>
+<HookBlock>
+  <div className="space-y-3">
+    <p>
+      Ti è mai capitato di dire: “Ho diritto a…”, e dall’altra parte qualcuno risponde: “Sì, ma dove sta scritto?”
+      In quel secondo, senza accorgertene, hai già messo sul tavolo due piani diversi del diritto.
+    </p>
+    <p>
+      Uno è il piano delle regole che valgono per tutti. L’altro è il piano di ciò che tu, come singolo, puoi pretendere.
+      Capire la differenza ti evita metà delle confusioni “da vita reale”.
+    </p>
+  </div>
+</HookBlock>
 
-<Objective>
-In questa lezione imparerai la distinzione fondamentale tra **law** (sistema) e **right** (pretesa), e come l'uno genera l'altro.
-</Objective>
+<section className="mt-6 rounded-2xl border border-white/10 p-5 bg-white/5">
+  <div className="text-sm opacity-80">
+    <span className="font-semibold">Area 1</span> → <span>Mod 1.1</span> → <span>Lez 1.1.2</span>
+  </div>
+  <p className="mt-2">
+    Nella lezione precedente hai visto perché esistono le regole. Ora facciamo un passo avanti:
+    distinguiamo tra il diritto come “sistema di regole” e il diritto come “potere del singolo”.
+    Ti serve per capire cosa puoi davvero pretendere, e perché.
+  </p>
+</section>
 
----
+<section className="mt-8 space-y-6">
+  <div className="space-y-2">
+    <h2 className="text-xl font-semibold">1) Due parole uguali, due idee diverse</h2>
+    <p>
+      Nel linguaggio quotidiano “diritto” è una parola elastica: a volte indica le regole (“il diritto italiano…”),
+      altre volte indica una tua posizione personale (“ho diritto al rimborso…”).
+      Nel linguaggio giuridico questa differenza viene resa chiara con due etichette:
+      <GlossaryTerm id="diritto-oggettivo">diritto oggettivo</GlossaryTerm> e
+      <GlossaryTerm id="diritto-soggettivo">diritto soggettivo</GlossaryTerm>.
+    </p>
+    <p>
+      Non è una finezza da manuale: è un modo pratico per non litigare a vuoto.
+      Perché puoi dire “ho diritto” solo se esiste una regola che lo rende riconoscibile e tutelabile.
+    </p>
+  </div>
 
-## 1) Una parola, due significati
-Nel linguaggio comune usiamo la parola "diritto" per tutto. Nel linguaggio giuridico, dobbiamo essere precisi come chirurghi.
-
-<div className="grid md:grid-cols-2 gap-8 my-8">
-    <div className="bg-neutral-100 dark:bg-neutral-900/50 p-6 rounded-lg border-l-4 border-indigo-500">
-        <h3 className="font-serif font-bold text-xl mb-2 text-indigo-700 dark:text-indigo-400">Diritto Oggettivo</h3>
-        <div className="font-mono text-sm leading-relaxed text-neutral-600 dark:text-neutral-400">
-            [LAW] <br/>
-            L'insieme delle norme giuridiche che organizzano la società.<br/>
-            È il sistema.
-        </div>
+  <div className="grid md:grid-cols-2 gap-4">
+    <div className="rounded-2xl border border-white/10 p-5 space-y-2">
+      <h3 className="text-lg font-semibold">Diritto oggettivo: la “mappa” comune</h3>
+      <p>
+        Il <GlossaryTerm id="diritto-oggettivo">diritto oggettivo</GlossaryTerm> è l’insieme delle
+        <GlossaryTerm id="norma-giuridica">norme giuridiche</GlossaryTerm> che valgono in un ordinamento:
+        è la parte “esterna” del diritto, quella che sta fuori da te e si applica a tutti.
+      </p>
+      <p>
+        È come una mappa: ti dice cosa è permesso, cosa è vietato, quali sono le procedure e quali conseguenze scattano.
+        Senza mappa, ognuno inventa la sua versione e la convivenza diventa imprevedibile.
+      </p>
     </div>
-    <div className="bg-neutral-100 dark:bg-neutral-900/50 p-6 rounded-lg border-l-4 border-emerald-500">
-        <h3 className="font-serif font-bold text-xl mb-2 text-emerald-700 dark:text-emerald-400">Diritto Soggettivo</h3>
-        <div className="font-mono text-sm leading-relaxed text-neutral-600 dark:text-neutral-400">
-            [RIGHT] <br/>
-            Il potere di agire per soddisfare un proprio interesse protetto dall'ordinamento.<br/>
-            È la pretesa.
-        </div>
+
+    <div className="rounded-2xl border border-white/10 p-5 space-y-2">
+      <h3 className="text-lg font-semibold">Diritto soggettivo: il “potere” del singolo</h3>
+      <p>
+        Il <GlossaryTerm id="diritto-soggettivo">diritto soggettivo</GlossaryTerm> è una posizione tua:
+        è la facoltà/potere riconosciuto dall’ordinamento di fare qualcosa o di pretendere qualcosa,
+        anche contro l’opposizione di altri.
+      </p>
+      <p>
+        Esempio intuitivo: dire “questa cosa è mia” non è solo una sensazione.
+        Diventa un diritto vero quando la legge lo riconosce e ti dà strumenti per difenderlo.
+      </p>
     </div>
-</div>
+  </div>
 
----
+  <div className="space-y-2">
+    <h2 className="text-xl font-semibold">2) La regola fondamentale: il soggettivo nasce dall’oggettivo</h2>
+    <p>
+      La relazione tra i due è sempre la stessa: il diritto soggettivo non “galleggia” nel vuoto.
+      Esiste perché c’è una regola (diritto oggettivo) che lo crea, lo definisce e lo protegge.
+    </p>
+    <p>
+      Se domani sparissero le regole sulla proprietà, dire “è mio” perderebbe gran parte del suo significato pratico:
+      potresti crederci quanto vuoi, ma non avresti un sistema che lo fa rispettare.
+      È per questo che, quando qualcuno contesta un tuo “diritto”, la domanda decisiva è: “qual è la norma?”
+    </p>
+  </div>
 
-## 2) L'architettura del sistema
-Il <GlossaryTerm id="diritto-oggettivo">diritto oggettivo</GlossaryTerm> è l'impianto base. Vale per tutti, anche per chi non lo conosce.
+  <div className="space-y-2">
+    <h2 className="text-xl font-semibold">3) Un cenno che ti salva dagli equivoci: l’interesse legittimo</h2>
+    <p>
+      A volte non stai dicendo “questa cosa mi spetta già”, ma stai dicendo “la Pubblica Amministrazione deve decidere
+      seguendo le regole”. Qui entra in gioco l’<GlossaryTerm id="interesse-legittimo">interesse legittimo</GlossaryTerm>:
+      non è identico a un diritto soggettivo classico, ma è comunque una posizione tutelata quando c’è di mezzo
+      un potere pubblico che deve essere esercitato correttamente.
+    </p>
+    <p>
+      In pratica: non pretendi un risultato “per forza”, pretendi legalità, correttezza, motivazione e procedura.
+      (Lo approfondiremo meglio quando parleremo di diritto pubblico e diritto amministrativo.)
+    </p>
+  </div>
+</section>
 
-<CardBlock title="Definizione formale" className="bg-white dark:bg-neutral-900 border-2">
-    <div className="font-mono text-sm md:text-base p-4 bg-neutral-50 dark:bg-neutral-950 rounded border border-neutral-200 dark:border-neutral-800 text-neutral-700 dark:text-neutral-300">
-        NORMA = Regola di condotta<br/>
-        ORDINAMENTO = Insieme delle norme<br/>
-        DIRITTO OGGETTIVO = La "macchina" che le fa funzionare.
+<TechnicalBlock>
+  <div className="space-y-4">
+    <h3 className="text-lg font-semibold">Versione tecnica (con riferimenti normativi)</h3>
+
+    <div className="rounded-2xl border border-white/10 p-5 space-y-2">
+      <p className="font-semibold">Costituzione, Art. 24 (estratto testuale)</p>
+      <p className="italic">
+        “Tutti possono agire in giudizio per la tutela dei propri diritti e interessi legittimi.”
+      </p>
+      <p>
+        L’art. 24 Cost. è utile qui perché “mette sullo stesso piano” (quanto a tutela giudiziaria)
+        sia i <strong>diritti</strong> sia gli <strong>interessi legittimi</strong>: entrambi possono essere portati davanti a un giudice,
+        secondo le regole del sistema.
+      </p>
     </div>
-</CardBlock>
 
-Non dipende dalla tua volontà. Tu "subisci" o "usi" il diritto oggettivo, ma non lo crei (a meno che tu non sia il Parlamento).
+    <div className="rounded-2xl border border-white/10 p-5 space-y-2">
+      <p className="font-semibold">Codice civile, Art. 832 (estratto testuale)</p>
+      <p className="italic">
+        “Il proprietario ha diritto di godere e disporre delle cose in modo pieno ed esclusivo…”
+      </p>
+      <p>
+        L’art. 832 c.c. è un esempio “da manuale” di <strong>diritto soggettivo</strong>: descrive il contenuto del potere del proprietario.
+        Ma la stessa norma ricorda anche che questo potere non è illimitato: esiste “entro i limiti” e con l’osservanza degli obblighi
+        stabiliti dall’ordinamento.
+      </p>
+    </div>
 
----
+    <p>
+      In sintesi tecnica: il <strong>diritto oggettivo</strong> è il sistema delle norme; il <strong>diritto soggettivo</strong>
+      è la posizione giuridica attiva del singolo riconosciuta da quelle norme; l’<strong>interesse legittimo</strong> è una posizione
+      di tutela tipicamente legata al corretto esercizio del potere pubblico, e l’art. 24 Cost. ne sancisce la difendibilità in giudizio.
+    </p>
+  </div>
+</TechnicalBlock>
 
-## 3) Dal sistema alla tua tasca
-Il <GlossaryTerm id="diritto-soggettivo">diritto soggettivo</GlossaryTerm> è quando il sistema scende dal cielo e tocca **te**.
+<section className="mt-8 space-y-4">
+  <h2 className="text-xl font-semibold">Esempi reali: dove la distinzione ti serve subito</h2>
 
-<Concept title="Meccanismo di Attribuzione">
-Il diritto soggettivo non nasce dal nulla.  
-Nasce **SE E SOLO SE** c'è una norma oggettiva che te lo riconosce.
-</Concept>
+  <ExampleCard type="positive" title="Proprietà: il tuo ‘potere’ esiste perché c’è una regola">
+    <div className="space-y-2">
+      <p>
+        <strong>Scenario:</strong> Comprì una bici e qualcuno te la prende “perché tanto era lì”.
+        Tu dici: “È mia, ridammela”.
+      </p>
+      <p>
+        <strong>Analisi:</strong> Il tuo è un <GlossaryTerm id="diritto-soggettivo">diritto soggettivo</GlossaryTerm> (proprietà):
+        non è un’opinione, è un potere riconosciuto dall’ordinamento. La base è nel
+        <GlossaryTerm id="diritto-oggettivo">diritto oggettivo</GlossaryTerm>, che definisce cosa significa “essere proprietario”
+        e quali strumenti hai per tutelarti.
+      </p>
+      <p>
+        <strong>Esito:</strong> Non “vinci perché sei convincente”: vinci perché c’è una norma che ti tutela e un sistema che la applica.
+      </p>
+    </div>
+  </ExampleCard>
 
-Guarda come funziona il passaggio:
+  <ExampleCard type="borderline" title="Concorso pubblico: non pretendi il posto, pretendi regole corrette">
+    <div className="space-y-2">
+      <p>
+        <strong>Scenario:</strong> Fai un concorso e noti criteri confusi, tempi non rispettati, graduatoria senza motivazione.
+      </p>
+      <p>
+        <strong>Analisi:</strong> Qui spesso emerge un <GlossaryTerm id="interesse-legittimo">interesse legittimo</GlossaryTerm>:
+        non è detto che tu “abbia diritto” al posto a prescindere, ma hai diritto che la PA eserciti il potere rispettando le regole
+        (procedura, imparzialità, motivazione).
+      </p>
+      <p>
+        <strong>Esito:</strong> La tutela non punta (solo) al risultato, ma alla legalità del percorso decisionale.
+      </p>
+    </div>
+  </ExampleCard>
 
-<div className="my-10">
-    <Steps>
-        <Step number="A" title="Norma (Oggettivo)">
-            L'art. 832 c.c. dice che il proprietario può godere delle cose.
-        </Step>
-        <Step number="B" title="Fatto">
-            Tu compri legittimamente una bicicletta.
-        </Step>
-        <Step number="C" title="Diritto (Soggettivo)">
-            Ora TU hai il potere di usare quella bici ed escludere gli altri.
-        </Step>
-    </Steps>
-</div>
+  <ExampleCard type="negative" title="‘Ho diritto perché è giusto’: quando manca la base normativa">
+    <div className="space-y-2">
+      <p>
+        <strong>Scenario:</strong> In un gruppo amici decidi che “chi arriva in ritardo paga da bere” e poi lo vuoi imporre per forza.
+      </p>
+      <p>
+        <strong>Analisi:</strong> È una regola sociale, non una norma giuridica. Senza una base nel
+        <GlossaryTerm id="diritto-oggettivo">diritto oggettivo</GlossaryTerm>, non puoi trasformarla automaticamente in un
+        <GlossaryTerm id="diritto-soggettivo">diritto soggettivo</GlossaryTerm> esigibile “con lo Stato”.
+      </p>
+      <p>
+        <strong>Esito:</strong> Puoi discutere, convincere, mediare. Ma non hai gli strumenti tipici della tutela giuridica.
+      </p>
+    </div>
+  </ExampleCard>
+</section>
 
-Senza la norma A, il fatto B non produrrebbe l'effetto C.
+<ResourceFooter>
+  <div className="space-y-3">
+    <p className="font-semibold">Risorse (ufficiali + di supporto)</p>
 
----
+    <ul className="list-disc pl-5 space-y-2">
+      <li>
+        <a className="underline" href="https://www.normattiva.it/uri-res/N2Ls?urn%3Anir%3Astato%3Acostituzione%3A1947-12-27~art24=">
+          Normattiva — Costituzione, Art. 24
+        </a>
+      </li>
+      <li>
+        <a className="underline" href="https://www.senato.it/istituzione/la-costituzione/parte-i/titolo-i/articolo-24">
+          Senato.it — Art. 24 (pagina di consultazione)
+        </a>
+      </li>
+      <li>
+        <a
+          className="underline"
+          href="https://www.gazzettaufficiale.it/atto/serie_generale/caricaArticolo?art.codiceRedazionale=042U0262&art.dataPubblicazioneGazzetta=1942-04-04&art.flagTipoArticolo=2&art.idArticolo=832&art.idGruppo=104&art.idSottoArticolo=1&art.idSottoArticolo1=10&art.progressivo=0&art.versione=1"
+        >
+          Gazzetta Ufficiale — Codice Civile, Art. 832 (testo)
+        </a>
+      </li>
+      <li>
+        <a className="underline" href="https://www.brocardi.it/codice-civile/libro-terzo/titolo-ii/capo-i/art832.html">
+          Brocardi — Art. 832 c.c. (spiegazione)
+        </a>
+      </li>
+      <li>
+        <a className="underline" href="https://www.treccani.it/enciclopedia/diritto-soggettivo/">
+          Treccani — “Diritto soggettivo” (Enciclopedia)
+        </a>
+      </li>
+    </ul>
 
-## 4) Esempi pratici
-
-<Row>
-    <Example type="positive" title="Proprietà (Diritto Soggettivo)">
-        Io pretendo che nessuno entri in casa mia.  
-        Perché? Perché l'ordinamento (oggettivo) punisce la violazione di domicilio.
-    </Example>
-    
-    <Example type="negative" title="Desiderio (Non è Diritto)">
-        Io vorrei parcheggiare davanti al negozio.  
-        Ma non c'è nessuna norma che mi riserva quel posto.  
-        È un interesse di fatto, non un diritto.
-    </Example>
-</Row>
-
----
-
-<Technical>
-<div className="font-mono text-xs md:text-sm text-neutral-500 mb-2 uppercase tracking-widest">
-    Dalla Costituzione
-</div>
-<div className="border-l-2 border-neutral-300 pl-4 italic text-neutral-700 dark:text-neutral-300">
-    «Tutti possono agire in giudizio per la tutela dei propri diritti e interessi legittimi» (Art. 24 Cost.)
-</div>
-<br/>
-Questo articolo è il "ponte" supremo: trasforma la pretesa sostanziale in potere processuale (azione).
-</Technical>
-
----
-
-<Quiz />
-
-<Resources />
+    <p className="text-sm opacity-80">
+      Questa lezione ha scopo esclusivamente educativo. Non costituisce consulenza legale.
+      Per decisioni importanti, rivolgiti a un professionista qualificato.
+    </p>
+  </div>
+</ResourceFooter>

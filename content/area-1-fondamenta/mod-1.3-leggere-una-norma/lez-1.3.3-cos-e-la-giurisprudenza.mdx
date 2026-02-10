@@ -1,35 +1,311 @@
 ---
 slug: "lez-1.3.3"
-title: "Cos'è la giurisprudenza"
+title: "Cos’è la giurisprudenza"
 area: "area-1-fondamenta"
 module: "mod-1.3-leggere-una-norma"
 order: 3
-duration_minutes: 10
+duration_minutes: 17
 prerequisites: ["lez-1.3.2"]
-next_lesson: "lez-2.1.1"
-last_verified: "2026-02-07"
+next_lesson: "lez-1.3.4"
+prev_lesson: "lez-1.3.2"
+last_verified: "2026-02-10"
 verified_by: "Da verificare"
 disclaimer_level: "standard"
-source_refs: []
-glossary_terms: []
+
+source_refs:
+  - label: "Treccani — Giurisprudenza (definizione)"
+    url: "https://www.treccani.it/enciclopedia/giurisprudenza/"
+  - label: "Treccani Vocabolario — Giurisprudenza (significato)"
+    url: "https://www.treccani.it/vocabolario/giurisprudenza/"
+  - label: "Giustizia Amministrativa — Funzione nomofilattica (documento)"
+    url: "https://www.giustizia-amministrativa.it/documents/20142/32851513/La%2Bfunzione%2Bnomofilattica%2B%281%29%2Bmontedoro.docx/e76d6b83-8e64-582e-6e0f-84145dd519a5"
+
+media:
+  - type: "video"
+    title: "Cosa è la giurisprudenza (non solo la facoltà!)"
+    url: "https://www.youtube.com/watch?v=ezSF7kVa-XY"
+    source: "YouTube (lezione divulgativa)"
+    timestamp: "0:00-5:20"
+    position: "after-spiegazione"
+  - type: "video"
+    title: "Mini lezione: che cosa è il diritto (contesto utile per capire giudici e decisioni)"
+    url: "https://www.youtube.com/watch?v=4CylrN9rQgk"
+    source: "YouTube (mini-lezione universitaria)"
+    timestamp: "0:00-6:30"
+    position: "after-tecnica"
+
+glossary_terms:
+  - "giurisprudenza"
+  - "sentenza"
+  - "massima"
+  - "ratio-decidendi"
+  - "obiter-dictum"
+  - "precedente"
+  - "nomofilachia"
+  - "cassazione"
+
 quiz:
-  questions: []
+  questions:
+    - type: "mcq"
+      prompt: "In senso tecnico, che cosa indica ‘giurisprudenza’?"
+      choices:
+        - "Il testo delle leggi approvate dal Parlamento"
+        - "L’insieme delle decisioni dei giudici che interpretano e applicano le norme"
+        - "Le opinioni personali degli avvocati"
+      correctIndex: 1
+      feedback:
+        0: "No: quello è legislazione (fonti normative)."
+        1: "Esatto: giurisprudenza = decisioni/sentenze che applicano la legge ai casi concreti."
+        2: "No: pareri e opinioni non sono giurisprudenza."
+    - type: "mcq"
+      prompt: "Che cosa significa ‘funzione nomofilattica’ (in modo semplice)?"
+      choices:
+        - "Fare nuove leggi"
+        - "Garantire interpretazione uniforme della legge e unità del diritto"
+        - "Sostituire il Parlamento"
+      correctIndex: 1
+      feedback:
+        0: "No: fare le leggi è funzione legislativa."
+        1: "Corretto: è il compito di assicurare uniformità interpretativa."
+        2: "No: non c’è sostituzione del Parlamento."
+    - type: "open"
+      prompt: "Scenario: due tribunali decidono in modo opposto su casi simili. Perché la giurisprudenza ‘di vertice’ è importante e che ruolo ha la Cassazione?"
+      expected_points:
+        - "Problema: disuniformità e incertezza"
+        - "Ruolo della Cassazione: indirizzo interpretativo (nomofilachia)"
+        - "Effetto pratico: maggiore prevedibilità delle decisioni"
 ---
 
-<Hook>
-Inserisci qui il gancio iniziale...
-</Hook>
+<HookBlock>
+  <div className="space-y-3">
+    <p>
+      “La legge dice X”, ma poi scopri che i giudici, in casi simili, hanno deciso Y o Z.
+      È qui che entra in gioco la <strong>giurisprudenza</strong>.
+    </p>
+    <p>
+      In questa lezione capisci cos’è, a cosa serve,
+      e come leggerla senza confonderla con la legge.
+    </p>
+  </div>
+</HookBlock>
 
-<Objective>
-Inserisci qui l'obiettivo della lezione...
-</Objective>
+<section className="mt-6 rounded-2xl border border-white/10 p-5 bg-gradient-to-br from-white/8 via-white/5 to-transparent">
+  <div className="flex flex-wrap items-center gap-2 text-sm">
+    <span className="rounded-full border border-white/10 px-3 py-1 bg-white/5">Area 1 — Fondamenta</span>
+    <span className="opacity-60">›</span>
+    <span className="rounded-full border border-white/10 px-3 py-1 bg-white/5">Mod 1.3 — Leggere una norma</span>
+    <span className="opacity-60">›</span>
+    <span className="rounded-full border border-white/10 px-3 py-1 bg-white/5">Lez 1.3.3</span>
+  </div>
 
----
+  <p className="mt-3">
+    Dopo “anatomia della norma” (1.3.1) e “interpretazione” (1.3.2),
+    completi il quadro: cosa fanno i giudici quando applicano le norme ai casi concreti.
+  </p>
+</section>
 
-## 1) Titolo sezione
+<section className="mt-8 space-y-6">
+  <div className="space-y-2">
+    <h2 className="text-xl font-semibold">1) Definizione: che cos’è la giurisprudenza</h2>
+    <p>
+      In senso tecnico, la <GlossaryTerm id="giurisprudenza">giurisprudenza</GlossaryTerm>
+      è l’insieme delle decisioni (sentenze, ordinanze, ecc.) con cui i giudici
+      <strong>interpretano</strong> e <strong>applicano</strong> la legge ai casi concreti.
+    </p>
+    <p className="opacity-90">
+      Attenzione: non è una “fonte” identica alla legge. È il modo in cui il diritto vive nella pratica:
+      mostra quali letture della norma vengono effettivamente adottate.
+    </p>
+  </div>
 
-Contenuto...
+  <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+    <h3 className="text-lg font-semibold">2) Giurisprudenza ≠ legge: cosa cambia</h3>
 
-<Quiz />
+    <div className="mt-4 grid md:grid-cols-2 gap-4">
+      <div className="rounded-xl border border-white/10 p-4 bg-gradient-to-br from-white/12 to-transparent">
+        <p className="font-semibold">Legge (norma)</p>
+        <p className="opacity-90">
+          È un testo astratto: regola situazioni generali.
+          Vale “per tutti” in base al suo rango (Costituzione, legge, regolamento…).
+        </p>
+      </div>
 
-<Resources />
+      <div className="rounded-xl border border-white/10 p-4 bg-white/5">
+        <p className="font-semibold">Giurisprudenza (decisioni)</p>
+        <p className="opacity-90">
+          È applicazione concreta: spiega come una norma viene letta in un caso specifico
+          e quali argomenti convincono i giudici.
+        </p>
+      </div>
+    </div>
+
+    <p className="mt-4 opacity-90">
+      In pratica: la legge ti dice <em>la regola</em>; la giurisprudenza ti mostra <em>come quella regola viene usata</em>.
+    </p>
+  </div>
+
+  <div className="space-y-2">
+    <h2 className="text-xl font-semibold">3) Come si legge una sentenza in modo “smart”</h2>
+    <p>
+      Una <GlossaryTerm id="sentenza">sentenza</GlossaryTerm> completa può essere lunga.
+      Per non perderti, cerca questi blocchi:
+    </p>
+
+    <div className="mt-4 space-y-3">
+      <div className="rounded-xl border border-white/10 p-4 bg-white/5">
+        <p className="font-semibold">A) Il fatto</p>
+        <p className="opacity-90">Cosa è successo? Qual è il problema concreto?</p>
+      </div>
+
+      <div className="rounded-xl border border-white/10 p-4 bg-white/5">
+        <p className="font-semibold">B) La questione giuridica</p>
+        <p className="opacity-90">Quale norma è in gioco e qual è il dubbio interpretativo?</p>
+      </div>
+
+      <div className="rounded-xl border border-white/10 p-4 bg-white/5">
+        <p className="font-semibold">C) La motivazione</p>
+        <p className="opacity-90">
+          Qui c’è la sostanza: come il giudice collega norma e fatto.
+          È il pezzo che ti interessa per “capire la giurisprudenza”.
+        </p>
+      </div>
+
+      <div className="rounded-xl border border-white/10 p-4 bg-white/5">
+        <p className="font-semibold">D) Il dispositivo</p>
+        <p className="opacity-90">È l’esito finale: accoglie/rigetta/annulla/condanna ecc.</p>
+      </div>
+    </div>
+  </div>
+
+  <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+    <h3 className="text-lg font-semibold">4) Massima, ratio decidendi, obiter: le 3 parole che fanno la differenza</h3>
+
+    <div className="mt-4 grid md:grid-cols-3 gap-4">
+      <div className="rounded-xl border border-white/10 p-4 bg-gradient-to-br from-white/12 to-transparent">
+        <strong><GlossaryTerm id="massima">Massima</GlossaryTerm></strong>
+        <p className="mt-2 opacity-90">
+          Riassunto (spesso editoriale) del principio espresso.
+          È utile, ma non sostituisce la lettura della motivazione.
+        </p>
+      </div>
+
+      <div className="rounded-xl border border-white/10 p-4 bg-white/5">
+        <strong><GlossaryTerm id="ratio-decidendi">Ratio decidendi</GlossaryTerm></strong>
+        <p className="mt-2 opacity-90">
+          Il “cuore” della decisione: l’argomento giuridico necessario per arrivare a quel risultato.
+        </p>
+      </div>
+
+      <div className="rounded-xl border border-white/10 p-4 bg-white/5">
+        <strong><GlossaryTerm id="obiter-dictum">Obiter dictum</GlossaryTerm></strong>
+        <p className="mt-2 opacity-90">
+          Considerazioni “in più”, non indispensabili per decidere.
+          Interessanti, ma meno solide come guida.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<VideoEmbed
+  url="https://www.youtube.com/watch?v=ezSF7kVa-XY"
+  title="Cosa è la giurisprudenza (non solo la facoltà!)"
+  source="YouTube (lezione divulgativa)"
+  note="Video breve e chiaro: utile per fissare la definizione e distinguere legge vs giurisprudenza."
+/>
+
+<TechnicalBlock>
+  <div className="space-y-4">
+    <h3 className="text-lg font-semibold">Versione tecnica: perché esiste la ‘giurisprudenza di vertice’</h3>
+
+    <div className="rounded-2xl border border-white/10 p-5 bg-white/5 space-y-2">
+      <p className="font-semibold">Uniformità interpretativa (nomofilachia)</p>
+      <p className="opacity-90">
+        In uno Stato, se i giudici interpretano la stessa norma in modi troppo diversi,
+        cresce l’incertezza: casi simili → esiti diversi.
+      </p>
+      <p className="opacity-90">
+        La funzione <GlossaryTerm id="nomofilachia">nomofilattica</GlossaryTerm> è proprio questo:
+        favorire un’interpretazione uniforme e l’unità del diritto.
+      </p>
+      <p className="opacity-80 text-sm">
+        (Idea chiave: non “fare la legge”, ma dare un indirizzo interpretativo più stabile.)
+      </p>
+    </div>
+
+    <div className="rounded-2xl border border-white/10 p-5 bg-white/5 space-y-2">
+      <p className="font-semibold">Ruolo della Cassazione</p>
+      <p className="opacity-90">
+        La <GlossaryTerm id="cassazione">Corte di cassazione</GlossaryTerm> ha un ruolo centrale nel sistema:
+        aiuta a ridurre divergenze interpretative e a offrire una guida unitaria agli operatori del diritto.
+      </p>
+    </div>
+  </div>
+</TechnicalBlock>
+
+<VideoEmbed
+  url="https://www.youtube.com/watch?v=4CylrN9rQgk"
+  title="Mini lezione: che cosa è il diritto (contesto utile)"
+  source="YouTube (mini-lezione universitaria)"
+  note="Se ti serve contesto: istituzioni, regole, decisioni e ‘come funziona’ il diritto nella realtà."
+/>
+
+<section className="mt-8 space-y-4">
+  <h2 className="text-xl font-semibold">Esempi concreti (da orale)</h2>
+
+  <ExampleCard type="positive" title="Perché ti serve la giurisprudenza">
+    Hai una norma con due letture plausibili.
+    Leggi 3–5 decisioni su casi simili e capisci qual è l’interpretazione più seguita
+    e quali argomenti vengono considerati più forti.
+  </ExampleCard>
+
+  <ExampleCard type="borderline" title="Il rischio della ‘massima’ letta da sola">
+    Leggi solo la massima e ti fai un’idea troppo netta.
+    Poi nella motivazione scopri che quella frase valeva solo “a certe condizioni”.
+    Regola pratica: la massima guida, la motivazione decide.
+  </ExampleCard>
+
+  <ExampleCard type="negative" title="Errore classico: trattare la giurisprudenza come se fosse legge">
+    Dire “vale così perché lo dice una sentenza” è incompleto:
+    devi spiegare come il giudice ci arriva (ratio) e in che contesto.
+    La legge resta la base; la giurisprudenza orienta l’applicazione.
+  </ExampleCard>
+</section>
+
+<ResourceFooter>
+  <div className="space-y-3">
+    <p className="font-semibold">Risorse</p>
+
+    <ul className="list-disc pl-5 space-y-2">
+      <li>
+        <a className="underline" href="https://www.treccani.it/enciclopedia/giurisprudenza/">
+          Treccani — Giurisprudenza (enciclopedia)
+        </a>
+      </li>
+      <li>
+        <a className="underline" href="https://www.treccani.it/vocabolario/giurisprudenza/">
+          Treccani — Giurisprudenza (vocabolario)
+        </a>
+      </li>
+      <li>
+        <a className="underline" href="https://www.giustizia-amministrativa.it/documents/20142/32851513/La%2Bfunzione%2Bnomofilattica%2B%281%29%2Bmontedoro.docx/e76d6b83-8e64-582e-6e0f-84145dd519a5">
+          Giustizia Amministrativa — Funzione nomofilattica
+        </a>
+      </li>
+      <li>
+        <a className="underline" href="https://www.youtube.com/watch?v=ezSF7kVa-XY">
+          Video — Cosa è la giurisprudenza
+        </a>
+      </li>
+      <li>
+        <a className="underline" href="https://www.youtube.com/watch?v=4CylrN9rQgk">
+          Video — Mini lezione (contesto)
+        </a>
+      </li>
+    </ul>
+
+    <p className="text-sm opacity-80">
+      Contenuto a scopo esclusivamente educativo. Non costituisce consulenza legale.
+    </p>
+  </div>
+</ResourceFooter>

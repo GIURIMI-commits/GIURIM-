@@ -7,12 +7,21 @@ order: 1
 duration_minutes: 12
 prerequisites: []
 next_lesson: "lez-1.1.2"
-last_verified: "2026-02-07"
+prev_lesson: null
+last_verified: "2026-02-10"
 verified_by: "Da verificare"
 disclaimer_level: "standard"
 source_refs:
-  - label: "Costituzione della Repubblica Italiana – Art. 1"
-    url: "https://www.senato.it/istituzione/la-costituzione/principi-fondamentali/articolo-1"
+  - label: "Normattiva — Costituzione, Art. 1 (vigente)"
+    url: "https://www.normattiva.it/uri-res/N2Ls?urn%3Anir%3Astato%3Acostituzione%3A1947-12-27%3B~art1%21vig="
+  - label: "Brocardi — Costituzione, Art. 1"
+    url: "https://www.brocardi.it/costituzione/principi-fondamentali/art1.html"
+  - label: "Treccani Enciclopedia — Norma giuridica"
+    url: "https://www.treccani.it/enciclopedia/norma-giuridica/"
+  - label: "Treccani Enciclopedia — Ordinamento giuridico"
+    url: "https://www.treccani.it/enciclopedia/ordinamento-giuridico/"
+  - label: "Treccani Vocabolario — Diritto (mappa)"
+    url: "https://www.treccani.it/vocabolario/diritto/"
 glossary_terms:
   - "diritto"
   - "norma-giuridica"
@@ -21,184 +30,241 @@ glossary_terms:
 quiz:
   questions:
     - type: "mcq"
-      prompt: "Qual è la funzione principale delle regole giuridiche?"
+      prompt: "Qual è la differenza più pratica tra una regola sociale e una regola giuridica?"
       choices:
-        - "Punire i comportamenti sbagliati"
-        - "Rendere prevedibili i comportamenti nella convivenza sociale"
-        - "Sostituire morale ed educazione"
+        - "La regola sociale è sempre scritta, quella giuridica no."
+        - "La regola giuridica può essere fatta valere con l’intervento dello Stato, anche contro la tua volontà."
+        - "La regola sociale vale solo in famiglia, quella giuridica vale solo al lavoro."
       correctIndex: 1
       feedback:
-        0: "No. La punizione è uno strumento, non la funzione principale."
-        1: "Corretto. Il diritto serve prima di tutto a creare prevedibilità."
-        2: "No. Il diritto convive con morale ed educazione."
+        0: "Non è questo: molte regole sociali non sono scritte, e anche molte regole giuridiche sono scritte. Riprendi la sezione su regole sociali vs regole giuridiche."
+        1: "Esatto: la regola giuridica ha un ‘dietro le quinte’ istituzionale (Stato/autorità) e può essere fatta rispettare anche forzando la situazione."
+        2: "No: le regole sociali esistono in tanti contesti (scuola, sport, lavoro) e non dipendono dal luogo, ma dal gruppo."
     - type: "mcq"
-      prompt: "Quando una regola può dirsi giuridica?"
+      prompt: "Perché una società ha bisogno di regole, anche quando ‘tutti vorrebbero comportarsi bene’?"
       choices:
-        - "Quando è condivisa dalla maggioranza"
-        - "Quando è scritta"
-        - "Quando è imposta dall’ordinamento e accompagnata da una sanzione"
-      correctIndex: 2
+        - "Perché senza regole non esiste alcun conflitto."
+        - "Perché le regole riducono incertezza e conflitti: rendono prevedibili le conseguenze."
+        - "Perché le regole servono solo a punire chi sbaglia."
+      correctIndex: 1
       feedback:
-        0: "Il consenso non basta a renderla giuridica."
-        1: "Non tutte le regole scritte sono giuridiche."
-        2: "Esatto. Sanzione e imposizione statale sono decisive."
+        0: "Al contrario: senza regole i conflitti aumentano, perché non sai ‘chi ha ragione’ e non sai come si risolve una disputa."
+        1: "Giusto: le regole servono soprattutto a prevenire caos e litigi, creando un quadro comune e prevedibile."
+        2: "Parziale: punire è solo una parte. Prima di tutto, le regole organizzano la convivenza e prevengono problemi."
+    - type: "mcq"
+      prompt: "Che cos’è una sanzione, nel senso più semplice?"
+      choices:
+        - "Un consiglio su come comportarsi."
+        - "Una conseguenza prevista quando una regola viene violata."
+        - "Un premio per chi rispetta la regola."
+      correctIndex: 1
+      feedback:
+        0: "No: un consiglio non ha ‘conseguenze’. Torna al punto in cui distinguiamo regole e sanzioni."
+        1: "Esatto: la sanzione è la ‘conseguenza’ collegata alla violazione, che rende la regola efficace."
+        2: "Non proprio: un premio può esistere, ma la sanzione è tipicamente una conseguenza negativa o correttiva."
+    - type: "open"
+      prompt: "Racconta un episodio quotidiano (anche banale) in cui una regola sociale e una regola giuridica sembrano sovrapporsi. Spiega quale delle due ‘vince’ e perché."
+      expected_points:
+        - "Esempio concreto (condominio, scuola, strada, locale, sport, lavoro)."
+        - "Distinzione: regola sociale (gruppo/abitudine) vs regola giuridica (Stato/autorità)."
+        - "Motivazione: la regola giuridica prevale quando entra in gioco l’intervento dell’autorità e la tutela di interessi pubblici."
 ---
 
-<Hook>
-Quando le persone non sanno cosa aspettarsi dagli altri, la convivenza diventa instabile.  
-Le regole servono prima di tutto a evitare il caos.
-</Hook>
+<HookBlock>
+Immagina una giornata senza regole: niente code, niente precedenze, niente “turni”, niente accordi.
+Non sarebbe “più libero”: sarebbe solo più imprevedibile.
 
-<Objective>
-In questa lezione capirai la **struttura logica** del diritto e cosa distingue una "regola seria" da un semplice consiglio.
-</Objective>
+Le regole esistono perché la vita insieme funziona solo se tutti capiamo **cosa ci si aspetta**
+e **cosa succede** quando qualcuno non risporta il patto.
+</HookBlock>
 
----
+<section className="space-y-6">
+  <div className="space-y-2">
+    <h2 className="text-xl font-semibold">1) Regole: non per complicare, ma per far funzionare</h2>
+    <p>
+      Una società (anche piccola: una classe, una squadra, un condominio) ha bisogno di regole per un motivo molto semplice:
+      ridurre i conflitti e rendere prevedibili le conseguenze.
+    </p>
+    <p>
+      Se so che “chi arriva prima viene servito prima”, evito litigi.
+      Se so che “chi rompe paga”, evito discussioni infinite su chi deve rimediare.
+      Le regole trasformano il caos in **ordine minimo**.
+    </p>
+  </div>
 
-## 1) Quando la buona volontà non basta
+  <div className="grid md:grid-cols-2 gap-4">
+    <div className="rounded-2xl border border-white/10 p-5 space-y-2">
+      <h3 className="text-lg font-semibold">Quando le regole funzionano</h3>
+      <p>
+        Tutti sanno cosa fare, anche senza pensarci troppo: la regola diventa “automatico”.
+        Questo libera energia: meno tensione, più fiducia.
+      </p>
+    </div>
 
-<div className="bg-neutral-100 dark:bg-neutral-800 p-6 rounded-xl border border-neutral-200 dark:border-neutral-700 italic text-neutral-600 dark:text-neutral-400 mb-8 font-serif text-lg leading-relaxed">
-"Il conflitto è inevitabile. La domanda è: come lo risolviamo senza forza e violenza?"
-</div>
-
-Viviamo costantemente a contatto con gli altri: in strada, a scuola, al lavoro, online.  
-Finché c’è accordo, sembra che la convivenza si regga "da sola".
-
-Ma appena nasce un conflitto — un patto non rispettato, un danno, un abuso — l’opinione personale non basta.  
-Serve un criterio **esterno**, valido per tutti, che stabilisca cosa è lecito e cosa accade quando non lo è.
-
-<Concept title="Cos’è il Diritto (in una frase)">
-Il <GlossaryTerm id="diritto">diritto</GlossaryTerm> è un sistema di regole che rende la convivenza **prevedibile** e risolve i conflitti evitando la “legge del più forte”.
-</Concept>
-
----
-
-## 2) Non tutte le regole fanno lo stesso lavoro
-
-Molte regole sembrano simili, ma hanno funzioni diverse.  
-Il vero test è: **cosa succede se non collabori?**
-
-<Row>
-  <Col>
-    <CardBlock title="Regole Sociali" className="bg-blue-50/50 dark:bg-blue-900/10 border-blue-100 dark:border-blue-800">
-      <div className="flex flex-col gap-2">
-        <span className="text-sm font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wider">Base: Contesto</span>
-        <p>Dipendono dalle aspettative del gruppo.</p>
-        <div className="mt-2 text-sm bg-white dark:bg-neutral-900 p-2 rounded border border-blue-100 dark:border-blue-900/50">
-          <em>Esempio:</em> Salutare, fare la fila.
-        </div>
-        <p className="text-sm text-neutral-500 mt-1"><strong>Sanzione:</strong> Disapprovazione sociale.</p>
-      </div>
-    </CardBlock>
-
-    <CardBlock title="Regole Morali" className="bg-emerald-50/50 dark:bg-emerald-900/10 border-emerald-100 dark:border-emerald-800">
-      <div className="flex flex-col gap-2">
-        <span className="text-sm font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider">Base: Coscienza</span>
-        <p>Dipendono dai valori individuali.</p>
-        <div className="mt-2 text-sm bg-white dark:bg-neutral-900 p-2 rounded border border-emerald-100 dark:border-emerald-900/50">
-          <em>Esempio:</em> Aiutare un amico, mantenere una promessa.
-        </div>
-        <p className="text-sm text-neutral-500 mt-1"><strong>Sanzione:</strong> Senso di colpa (rimorso).</p>
-      </div>
-    </CardBlock>
-  </Col>
-
-  <Col className="h-full">
-    <CardBlock title="Norme Giuridiche" className="h-full bg-white dark:bg-neutral-900 border-indigo-200 dark:border-indigo-800 border-2 shadow-lg shadow-indigo-500/5 relative overflow-hidden">
-      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-indigo-500"></div>
-      <div className="flex flex-col h-full justify-between gap-6">
-        <div>
-           <span className="text-sm font-bold text-indigo-600 dark:text-indigo-400 uppercase tracking-wider">Base: Ordinamento</span>
-           <p className="mt-2 text-lg">Valgono **sempre** e per **tutti**, indipendentemente da cosa ne pensi o dalla tua volontà.</p>
-           <div className="mt-4 text-sm bg-indigo-50 dark:bg-indigo-900/30 p-3 rounded border border-indigo-100 dark:border-indigo-800">
-             <em>Esempio:</em> Fermarsi al semaforo rosso.
-           </div>
-        </div>
-        
-        <div className="p-4 bg-neutral-100 dark:bg-neutral-800 rounded-lg text-center border border-neutral-200 dark:border-neutral-700">
-          <p className="font-bold text-foreground mb-1">Coercibilità</p>
-          <p className="text-sm text-neutral-500">Se violate, segue una conseguenza imposta dallo Stato (Sanzione).</p>
-        </div>
-      </div>
-    </CardBlock>
-  </Col>
-</Row>
-
-Le <GlossaryTerm id="norma-giuridica">norme giuridiche</GlossaryTerm> sono le uniche progettate per **reggere il conflitto**: se uno non collabora, la regola può comunque essere imposta con la forza legittima.
-
----
-
-## 3) La formula della "Regola Seria"
-
-Perché rispettiamo il semaforo rosso anche alle 3 di notte, quando non c’è nessuno?
-
-<div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-8 items-center">
-  <div className="space-y-4">
-    <p>Non solo per senso civico: perché sappiamo che, se lo ignoriamo, rischiamo una conseguenza.</p>
-    <p>La <GlossaryTerm id="sanzione">sanzione</GlossaryTerm> non serve a “vendicarsi” del colpevole.</p>
-    <div className="pl-4 border-l-4 border-amber-400">
-       Serve a creare <Highlight color="blue">prevedibilità</Highlight> per tutti gli altri.
+    <div className="rounded-2xl border border-white/10 p-5 space-y-2">
+      <h3 className="text-lg font-semibold">Quando le regole mancano</h3>
+      <p>
+        Ogni situazione diventa una trattativa: “perché io sì e tu no?”.
+        E quando non c’è un criterio comune, decide chi urla più forte o chi ha più forza.
+      </p>
     </div>
   </div>
-  
-  <div className="bg-white dark:bg-neutral-900 p-6 rounded-xl border shadow-sm">
-    <Steps>
-      <Step number="1" title="Regola">
-        Esiste un comando generale e astratto.
-      </Step>
-      <Step number="2" title="Violazione">
-        Qualcuno non rispetta il comando.
-      </Step>
-      <Step number="3" title="Conseguenza">
-        Scatta la sanzione prevista (multa, arresto, risarcimento).
-      </Step>
-      <Step number="4" title="Ordine Sociale">
-        La certezza della pena ristabilisce la fiducia nel sistema.
-      </Step>
-    </Steps>
+
+  <div className="space-y-2">
+    <h2 className="text-xl font-semibold">2) Regole sociali, morali e giuridiche: sembrano simili, ma non lo sono</h2>
+    <p>
+      Nella vita quotidiana convivono tanti tipi di regole. Alcune sono “non scritte” e cambiano da gruppo a gruppo.
+      Altre invece fanno parte del <GlossaryTerm id="ordinamento-giuridico">ordinamento giuridico</GlossaryTerm>:
+      non dipendono dal gusto del gruppo, ma dallo Stato.
+    </p>
+
+    <div className="rounded-2xl border border-white/10 p-5 space-y-4">
+      <div className="space-y-1">
+        <h3 className="text-lg font-semibold">Regole sociali</h3>
+        <p>
+          Sono le regole del “buon vivere” in un gruppo: come ci si veste in un certo posto, come si parla,
+          come si sta in fila. Se le violi, spesso la conseguenza è sociale (ti guardano male, ti escludono, perdi reputazione).
+        </p>
+      </div>
+
+      <div className="space-y-1">
+        <h3 className="text-lg font-semibold">Regole morali</h3>
+        <p>
+          Riguardano ciò che “ritieni giusto” anche quando nessuno ti vede.
+          La conseguenza è soprattutto interna (senso di colpa, incoerenza con i tuoi valori) o nella relazione con gli altri.
+        </p>
+      </div>
+
+      <div className="space-y-1">
+        <h3 className="text-lg font-semibold">Regole giuridiche</h3>
+        <p>
+          Sono regole che lo Stato riconosce e impone: la <GlossaryTerm id="norma-giuridica">norma giuridica</GlossaryTerm>
+          non è solo “un consiglio”, ma una regola che può essere fatta rispettare anche quando una persona non vuole.
+        </p>
+      </div>
+    </div>
   </div>
+
+  <div className="space-y-2">
+    <h2 className="text-xl font-semibold">3) La sanzione: la “spina” che rende reale una regola</h2>
+    <p>
+      Una regola, da sola, può rimanere un desiderio. Per diventare efficace serve spesso una
+      <GlossaryTerm id="sanzione">sanzione</GlossaryTerm>: cioè una conseguenza prevista quando la regola viene violata.
+    </p>
+    <p>
+      Attenzione: la sanzione non è “cattiveria”. Serve a proteggere tutti, perché rende più conveniente rispettare la regola
+      che infrangerla. In pratica: mantiene il patto in piedi anche quando qualcuno prova a “fare il furbo”.
+    </p>
+  </div>
+</section>
+
+<TechnicalBlock>
+### Versione tecnica (senza entrare ancora nei dettagli del corso)
+
+In termini generali, il <GlossaryTerm id="diritto">diritto</GlossaryTerm> è spesso descritto come un insieme ordinato di norme
+che regolano i rapporti fondamentali su cui si regge la società (familiari, economici, politici),
+prevedendo anche strumenti per prevenire danni e risolvere conflitti.
+
+La definizione di <GlossaryTerm id="norma-giuridica">norma giuridica</GlossaryTerm> sottolinea che essa trae forza imperativa
+dall’<GlossaryTerm id="ordinamento-giuridico">ordinamento giuridico</GlossaryTerm>, cioè dal sistema complessivo che rende quelle norme
+“obbligatorie” e non solo “auspicabili”.
+
+<div className="rounded-2xl border border-white/10 p-5 space-y-2 my-4">
+  **Cenno costituzionale (Art. 1 Cost.)**
+  
+  *“L'Italia è una Repubblica democratica, fondata sul lavoro. La sovranità appartiene al popolo,
+  che la esercita nelle forme e nei limiti della Costituzione.”*
+  
+  Qui il punto, per questa lezione introduttiva, è semplice: le regole “più alte” non sono arbitrarie,
+  ma si collegano all’idea di sovranità e di forme condivise (Costituzione) entro cui il potere si esercita.
 </div>
+</TechnicalBlock>
 
-<Concept title="Idea Chiave">
-Il diritto non serve a dire cosa è "moralmente giusto".  
-Serve a stabilire **cosa succede** (conseguenza certa) quando una regola viene violata.
-</Concept>
+<section className="space-y-4">
+  <h2 className="text-xl font-semibold">Esempi reali: quando capisci subito che “servono”</h2>
 
----
+  <div className="space-y-4">
+    <ExampleCard type="positive" title="Condominio: regola chiara, conflitto evitato">
+      <div className="space-y-2">
+        <p>
+          In un condominio c’è una regola semplice: orari precisi per lavori rumorosi.
+          Non è “simpatica”, ma evita discussioni continue.
+        </p>
+        <p>
+          Risultato: ognuno può organizzarsi, e se qualcuno sgarra, non si litiga sul “secondo me”:
+          si guarda la regola e si applica la conseguenza prevista.
+        </p>
+      </div>
+    </ExampleCard>
 
-## 4) Esempi Concreti
+    <ExampleCard type="negative" title="Fila ‘creativa’: senza criterio, decide la forza">
+      <div className="space-y-2">
+        <p>
+          Immagina un negozio affollato senza criterio di fila. Qualcuno si infila, qualcuno protesta,
+          si alza la voce, parte la tensione.
+        </p>
+        <p>
+          Qui vedi il cuore della lezione: senza un criterio comune, la soluzione non è “più libertà”,
+          ma più conflitto. E spesso vince chi si impone di più.
+        </p>
+      </div>
+    </ExampleCard>
 
-<Row>
-  <Example type="positive" title="L'incrocio regolato">
-    Un incrocio senza segnaletica genera esitazioni, accelerazioni improvvise, incidenti.  
-    Quando vengono introdotti segnali e precedenze, il traffico diventa più fluido.
-    
-    Non perché tutti siano diventati più gentili, ma perché **tutti sanno cosa accadrà** se ignorano la regola.
-  </Example>
+    <ExampleCard type="positive" title="Strada: precedenze e responsabilità">
+      <div className="space-y-2">
+        <p>
+          Le regole di precedenza non servono a “fare i difficili”: servono a evitare incidenti.
+          Quando tutti sanno chi passa e quando, la strada è più sicura.
+        </p>
+        <p>
+          E quando qualcosa va storto, la regola aiuta anche a capire come si gestisce il problema:
+          non si discute all’infinito su chi “aveva ragione”, si applicano criteri condivisi.
+        </p>
+      </div>
+    </ExampleCard>
+  </div>
+</section>
 
-  <Example type="negative" title="La regola che non regge">
-    In un condominio esiste una regola informale: "niente rumori dopo mezzanotte".  
-    Quando un nuovo inquilino la ignora, nascono discussioni infinite.
-    
-    La regola "c'è", ma non regge il conflitto: manca la **sanzione certa** imposta da un'autorità esterna.
-  </Example>
-</Row>
+<ResourceFooter>
+  <div className="space-y-3">
+    <p className="font-semibold">Risorse utili (per approfondire, senza complicarsi la vita)</p>
 
----
+    <ul className="list-disc pl-5 space-y-2">
+      <li>
+        Costituzione, Art. 1 (testo vigente su Normattiva):
+        <a className="underline" href="https://www.normattiva.it/uri-res/N2Ls?urn%3Anir%3Astato%3Acostituzione%3A1947-12-27%3B~art1%21vig=">
+          Normattiva — Art. 1
+        </a>
+      </li>
+      <li>
+        Commento e spiegazione (Brocardi):
+        <a className="underline" href="https://www.brocardi.it/costituzione/principi-fondamentali/art1.html">
+          Brocardi — Art. 1 Cost.
+        </a>
+      </li>
+      <li>
+        Definizione enciclopedica di “norma giuridica”:
+        <a className="underline" href="https://www.treccani.it/enciclopedia/norma-giuridica/">
+          Treccani — Norma giuridica
+        </a>
+      </li>
+      <li>
+        Definizione enciclopedica di “ordinamento giuridico”:
+        <a className="underline" href="https://www.treccani.it/enciclopedia/ordinamento-giuridico/">
+          Treccani — Ordinamento giuridico
+        </a>
+      </li>
+      <li>
+        Mappa “Diritto” (Treccani Vocabolario, versione chiara):
+        <a className="underline" href="https://www.treccani.it/vocabolario/diritto/">
+          Treccani — Diritto (mappa)
+        </a>
+      </li>
+    </ul>
 
-<Technical>
-La dottrina giuridica distingue la norma giuridica dalle altre norme sociali proprio per la sua **coercibilità**: la possibilità di essere imposta coattivamente (con la forza pubblica) anche contro la volontà del destinatario.
-
-La legittimazione di questo potere si fonda sull'Articolo 1 della Costituzione:
-<div className="mt-4 p-4 bg-white dark:bg-neutral-950 font-serif text-center italic border border-neutral-200 dark:border-neutral-800 rounded">
-«La sovranità appartiene al popolo, che la esercita nelle forme e nei limiti della Costituzione»
-</div>
-
-Il diritto, quindi, non è un insieme di suggerimenti, ma un sistema normativo che pretende **efficacia generale** e **stabilità**.
-</Technical>
-
----
-
-<Quiz />
-
-<Resources />
+    <p className="text-sm opacity-80">
+      Questa lezione ha scopo educativo e introduttivo. Non costituisce consulenza legale.
+      Per decisioni legali importanti, rivolgiti a un professionista qualificato.
+    </p>
+  </div>
+</ResourceFooter>

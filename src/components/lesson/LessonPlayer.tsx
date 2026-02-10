@@ -12,6 +12,7 @@ import { ConceptBlock } from './ConceptBlock';
 import { FlowBlock } from './FlowBlock';
 import { Row, Col, Highlight, CardBlock, Steps, Step } from './LayoutBlocks';
 import { Objective, Compare } from './NewBlocks';
+import { VideoEmbed } from './VideoEmbed';
 
 const components = {
     // Custom blocks
@@ -28,6 +29,7 @@ const components = {
     CardBlock,
     Steps,
     Step,
+    VideoEmbed,
 
     // Aliases & New Shorthands (User Code Support)
     Hook: HookBlock,

@@ -1,6 +1,6 @@
 -- View to combine Thread + Author + Room + Stats
 -- This avoids the "Could not find relationship" error when joining views in Supabase
-create or replace view public.corte_feed as
+create or replace view public.corte_feed with (security_invoker = true) as
 select 
     t.id,
     t.title,

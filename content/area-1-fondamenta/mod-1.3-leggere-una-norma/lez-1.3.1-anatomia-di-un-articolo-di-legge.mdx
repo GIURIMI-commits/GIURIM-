@@ -4,32 +4,185 @@ title: "Anatomia di un articolo di legge"
 area: "area-1-fondamenta"
 module: "mod-1.3-leggere-una-norma"
 order: 1
-duration_minutes: 10
+duration_minutes: 15
 prerequisites: ["lez-1.2.4"]
 next_lesson: "lez-1.3.2"
-last_verified: "2026-02-07"
+prev_lesson: "lez-1.2.4"
+last_verified: "2026-02-10"
 verified_by: "Da verificare"
 disclaimer_level: "standard"
-source_refs: []
-glossary_terms: []
+
+source_refs:
+  - label: "Preleggi — Art. 1 (fonti del diritto)"
+    url: "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:codice.civile:1942;262~art1"
+  - label: "Codice Civile — struttura degli articoli"
+    url: "https://www.normattiva.it"
+  - label: "Treccani — Articolo di legge"
+    url: "https://www.treccani.it/enciclopedia/articolo-di-legge/"
+
+media:
+  - type: "video"
+    title: "Com’è fatto un articolo di legge"
+    url: "https://www.youtube.com/watch?v=bezWzeYGpYw"
+    source: "HUB Scuola (YouTube)"
+    timestamp: "0:00-7:30"
+    position: "after-spiegazione"
+
+glossary_terms:
+  - "articolo-di-legge"
+  - "comma"
+  - "capoverso"
+  - "lettera"
+  - "precetto"
+  - "sanzione"
+
 quiz:
-  questions: []
+  questions:
+    - type: "mcq"
+      prompt: "Qual è l’unità base di una legge?"
+      choices:
+        - "Il comma"
+        - "L’articolo"
+        - "Il capoverso"
+      correctIndex: 1
+      feedback:
+        0: "No: il comma è una parte dell’articolo."
+        1: "Corretto: l’articolo è l’unità base della norma."
+        2: "No: il capoverso è una specificazione interna."
+    - type: "mcq"
+      prompt: "A cosa servono i commi?"
+      choices:
+        - "A dividere logicamente il contenuto dell’articolo"
+        - "A indicare la sanzione"
+        - "A richiamare altre leggi"
+      correctIndex: 0
+      feedback:
+        0: "Esatto: i commi organizzano il contenuto normativo."
+        1: "No: la sanzione non è sempre presente."
+        2: "No: i richiami sono eventuali."
+    - type: "open"
+      prompt: "Scenario: stai leggendo un articolo con 5 commi. Come fai a capire quale ti riguarda?"
+      expected_points:
+        - "Identificare l’oggetto dell’articolo"
+        - "Analizzare i singoli commi"
+        - "Verificare il soggetto destinatario"
 ---
 
-<Hook>
-Inserisci qui il gancio iniziale...
-</Hook>
+<HookBlock>
+  <div className="space-y-3">
+    <p>
+      Apri una legge e vedi numeri, lettere, parentesi, rimandi.
+      Sembra scritta apposta per confondere.
+    </p>
+    <p>
+      In realtà ogni articolo ha una struttura precisa.
+      Se impari a leggerla, la norma smette di fare paura.
+    </p>
+  </div>
+</HookBlock>
 
-<Objective>
-Inserisci qui l'obiettivo della lezione...
-</Objective>
+<section className="mt-6 rounded-2xl border border-white/10 p-5 bg-white/5">
+  <div className="flex flex-wrap items-center gap-2 text-sm">
+    <span className="rounded-full border border-white/10 px-3 py-1">Area 1 — Fondamenta</span>
+    <span>›</span>
+    <span className="rounded-full border border-white/10 px-3 py-1">Mod 1.3 — Leggere una norma</span>
+    <span>›</span>
+    <span className="rounded-full border border-white/10 px-3 py-1">Lez 1.3.1</span>
+  </div>
 
----
+  <p className="mt-3">
+    Nel modulo precedente hai visto da dove nascono le norme.
+    Ora impari a <strong>leggerle dall’interno</strong>.
+  </p>
+</section>
 
-## 1) Titolo sezione
+<section className="mt-8 space-y-6">
+  <div className="space-y-2">
+    <h2 className="text-xl font-semibold">1) L’articolo di legge</h2>
+    <p>
+      L’<GlossaryTerm id="articolo-di-legge">articolo di legge</GlossaryTerm>
+      è l’unità base di ogni testo normativo.
+      Ogni articolo disciplina una situazione,
+      un comportamento o una conseguenza giuridica.
+    </p>
+    <p>
+      Non va letto di corsa: va scomposto.
+    </p>
+  </div>
 
-Contenuto...
+  <div className="rounded-2xl border border-white/10 p-5 bg-white/5">
+    <h3 className="text-lg font-semibold">2) Commi, lettere e capoversi</h3>
+    <p className="mt-2">
+      Un articolo può essere diviso in più
+      <GlossaryTerm id="comma">commi</GlossaryTerm>,
+      ciascuno con una funzione precisa.
+    </p>
+    <p>
+      Alcuni commi contengono elenchi indicati con
+      <GlossaryTerm id="lettera">lettere</GlossaryTerm>,
+      altri aggiungono precisazioni (capoversi).
+    </p>
+  </div>
 
-<Quiz />
+  <div className="rounded-2xl border border-white/10 p-5 bg-white/5">
+    <h3 className="text-lg font-semibold">3) Precetto e (eventuale) sanzione</h3>
+    <p className="mt-2">
+      Molti articoli contengono un
+      <GlossaryTerm id="precetto">precetto</GlossaryTerm>:
+      dicono cosa si deve o non si deve fare.
+    </p>
+    <p>
+      La <GlossaryTerm id="sanzione">sanzione</GlossaryTerm>
+      non è sempre nello stesso articolo:
+      spesso si trova altrove.
+    </p>
+  </div>
+</section>
 
-<Resources />
+<VideoEmbed
+  url="https://www.youtube.com/watch?v=bezWzeYGpYw"
+  title="Com’è fatto un articolo di legge"
+  source="HUB Scuola (YouTube)"
+  note="Video utile per visualizzare la struttura interna di un articolo."
+/>
+
+<TechnicalBlock>
+  <div className="space-y-4">
+    <p className="font-semibold">Versione tecnica</p>
+    <p>
+      L’articolazione in articoli e commi consente
+      precisione normativa e interpretazione sistematica.
+      La numerazione non è casuale: serve al richiamo
+      e al coordinamento tra norme.
+    </p>
+  </div>
+</TechnicalBlock>
+
+<section className="mt-8 space-y-4">
+  <h2 className="text-xl font-semibold">Esempi</h2>
+
+  <ExampleCard type="positive" title="Articolo chiaro">
+    Un articolo con pochi commi e un precetto diretto
+    è facilmente applicabile.
+  </ExampleCard>
+
+  <ExampleCard type="borderline" title="Articolo frammentato">
+    Molti commi e rinvii rendono la lettura più complessa,
+    ma non impossibile se segui la struttura.
+  </ExampleCard>
+</section>
+
+<ResourceFooter>
+  <div className="space-y-3">
+    <ul className="list-disc pl-5 space-y-2">
+      <li><a href="https://www.normattiva.it">Normattiva — Testi di legge</a></li>
+      <li><a href="https://www.treccani.it/enciclopedia/articolo-di-legge/">Treccani — Articolo di legge</a></li>
+      <li><a href="https://www.youtube.com/watch?v=bezWzeYGpYw">Video HUB Scuola</a></li>
+    </ul>
+
+    <p className="text-sm opacity-80">
+      Questa lezione ha scopo esclusivamente educativo.
+      Non costituisce consulenza legale.
+    </p>
+  </div>
+</ResourceFooter>

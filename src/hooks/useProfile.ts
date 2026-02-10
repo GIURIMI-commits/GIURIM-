@@ -1,33 +1,35 @@
 "use client";
 
-import { useState, useEffect } from 'react';
+import useSWR from 'swr';
 import { createClient } from '@/lib/supabase/client';
 import { UserProfile } from '@/types/user';
+import { useEffect, useState } from 'react';
+
+const fetchProfile = async () => {
+    const supabase = createClient();
+    const { data: { user } } = await supabase.auth.getUser();
+
+    if (!user) return null;
+
+    const { data, error } = await supabase
+        .from('profiles')
+        .select('*')
+        .eq('id', user.id)
+        .single();
+
+    if (error) throw error;
+    return data as UserProfile;
+};
 
 export function useProfile() {
-    const [profile, setProfile] = useState<UserProfile | null>(null);
-    const [loading, setLoading] = useState(true);
-    const supabase = createClient();
+    const { data: profile, error, isLoading } = useSWR('user-profile', fetchProfile, {
+        revalidateOnFocus: false, // Don't refetch on window focus to save requests
+        shouldRetryOnError: false
+    });
 
-    useEffect(() => {
-        async function fetchProfile() {
-            const { data: { user } } = await supabase.auth.getUser();
-            if (!user) {
-                setLoading(false);
-                return;
-            }
-
-            const { data } = await supabase
-                .from('profiles')
-                .select('*')
-                .eq('id', user.id)
-                .single();
-
-            if (data) setProfile(data as UserProfile);
-            setLoading(false);
-        }
-        fetchProfile();
-    }, []);
-
-    return { profile, loading };
+    return {
+        profile: profile || null,
+        loading: isLoading,
+        error
+    };
 }

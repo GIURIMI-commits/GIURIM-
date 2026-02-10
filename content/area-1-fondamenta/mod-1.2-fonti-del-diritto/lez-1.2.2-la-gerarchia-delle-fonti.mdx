@@ -4,32 +4,344 @@ title: "La gerarchia delle fonti"
 area: "area-1-fondamenta"
 module: "mod-1.2-fonti-del-diritto"
 order: 2
-duration_minutes: 12
+duration_minutes: 15
 prerequisites: ["lez-1.2.1"]
 next_lesson: "lez-1.2.3"
-last_verified: "2026-02-07"
+prev_lesson: "lez-1.2.1"
+last_verified: "2026-02-10"
 verified_by: "Da verificare"
 disclaimer_level: "standard"
-source_refs: []
-glossary_terms: []
+
+source_refs:
+  - label: "Senato.it — Costituzione, Art. 134 (giudizio di legittimità costituzionale)"
+    url: "https://www.senato.it/istituzione/la-costituzione/parte-ii/titolo-vi/articolo-134"
+  - label: "Senato.it — Costituzione, Art. 136 (effetti della sentenza di illegittimità)"
+    url: "https://www.senato.it/istituzione/la-costituzione/parte-ii/titolo-vi/articolo-136"
+  - label: "Gazzetta Ufficiale — Preleggi, Art. 15 (Abrogazione delle leggi)"
+    url: "https://www.gazzettaufficiale.it/atto/serie_generale/caricaArticolo?art.codiceRedazionale=042U0262&art.dataPubblicazioneGazzetta=1942-04-04&art.flagTipoArticolo=1&art.idArticolo=15&art.idGruppo=2&art.idSottoArticolo=1&art.idSottoArticolo1=10&art.progressivo=0&art.versione=1"
+  - label: "Brocardi — Preleggi, Art. 15 (testo + note)"
+    url: "https://www.brocardi.it/preleggi/capo-ii/art15.html"
+  - label: "Treccani Enciclopedia — Gerarchia delle fonti"
+    url: "https://www.treccani.it/enciclopedia/gerarchia-delle-fonti/"
+
+media:
+  - type: "video"
+    title: "La gerarchia delle fonti del diritto"
+    url: "https://www.youtube.com/watch?v=UGKCGdkswD4"
+    source: "HUB Scuola (YouTube)"
+    timestamp: "0:00-6:30"
+    position: "after-spiegazione"
+  - type: "video"
+    title: "Cosa sono le fonti del diritto e come funzionano"
+    url: "https://www.youtube.com/watch?v=7ag3jHuV4Tg"
+    source: "Avv. Angelo Greco (YouTube)"
+    timestamp: "0:00-10:00"
+    position: "after-tecnica"
+
+glossary_terms:
+  - "gerarchia-delle-fonti"
+  - "costituzione"
+  - "legge-ordinaria"
+  - "regolamento"
+  - "abrogazione"
+  - "illegittimita-costituzionale"
+  - "corte-costituzionale"
+  - "criterio-cronologico"
+
 quiz:
-  questions: []
+  questions:
+    - type: "mcq"
+      prompt: "Se una norma di regolamento contraddice una legge, cosa ti aspetti in base alla gerarchia delle fonti?"
+      choices:
+        - "Vale il regolamento, perché è più vicino alla realtà."
+        - "Vale la legge: la fonte inferiore non può contraddire la superiore."
+        - "Vale quella che è stata applicata più spesso."
+      correctIndex: 1
+      feedback:
+        0: "No: la vicinanza alla pratica non supera la gerarchia. Il punto è il rango della fonte."
+        1: "Esatto: prima di discutere il merito, guardi il livello della fonte. La legge prevale sul regolamento."
+        2: "No: la prassi può aiutare a capire, ma non sostituisce la gerarchia delle fonti."
+    - type: "mcq"
+      prompt: "Tra due leggi ordinarie incompatibili, quale criterio usi per orientarti in prima battuta?"
+      choices:
+        - "Il criterio cronologico: la legge più recente abroga la precedente, se incompatibili."
+        - "Il criterio della simpatia: quella che ti sembra più giusta."
+        - "Il criterio della velocità: quella più facile da applicare."
+      correctIndex: 0
+      feedback:
+        0: "Corretto: se sono sullo stesso livello, il tempo conta. Poi valuti anche quanto è reale l’incompatibilità."
+        1: "No: non si sceglie a sensazione."
+        2: "No: la praticità non può decidere la validità di una norma."
+    - type: "mcq"
+      prompt: "Quale frase descrive meglio cosa succede quando la Corte costituzionale dichiara illegittima una norma?"
+      choices:
+        - "La norma resta valida, ma si applica meno."
+        - "La norma cessa di avere efficacia dal giorno successivo alla pubblicazione della decisione."
+        - "La norma viene riscritta automaticamente dal giudice ordinario."
+      correctIndex: 1
+      feedback:
+        0: "No: se è dichiarata illegittima, non è una questione di ‘applicarla meno’: perde efficacia."
+        1: "Esatto: è la conseguenza tipica indicata dall’art. 136 Cost."
+        2: "No: la riscrittura non avviene così. La Corte elimina l’efficacia della norma; il legislatore può intervenire dopo."
+    - type: "open"
+      prompt: "Scenario: un Comune emana un regolamento che vieta ciò che una legge statale consente. Spiega quali fonti sono in gioco e perché una prevale sull’altra."
+      expected_points:
+        - "Individuazione: regolamento vs legge."
+        - "Applicazione del criterio gerarchico."
+        - "Conclusione: prevale la legge; il regolamento può risultare illegittimo/contestabile secondo gli strumenti previsti."
 ---
 
-<Hook>
-Inserisci qui il gancio iniziale...
-</Hook>
+<HookBlock>
+  <div className="space-y-3">
+    <p>
+      Ti dicono: “Non si può fare”. Poi apri un sito ufficiale e trovi una norma che sembra dire il contrario.
+      Inizia il classico corto circuito: chi ha ragione?
+    </p>
+    <p>
+      La risposta non è un’opinione. Dipende da una regola semplice: quando le fonti litigano,
+      vince quella che sta più in alto.
+    </p>
+  </div>
+</HookBlock>
 
-<Objective>
-Inserisci qui l'obiettivo della lezione...
-</Objective>
+<section className="mt-6 rounded-2xl border border-white/10 p-5 bg-gradient-to-br from-white/8 via-white/5 to-transparent">
+  <div className="flex flex-wrap items-center gap-2 text-sm">
+    <span className="rounded-full border border-white/10 px-3 py-1 bg-white/5">Area 1 — Fondamenta</span>
+    <span className="opacity-60">›</span>
+    <span className="rounded-full border border-white/10 px-3 py-1 bg-white/5">Mod 1.2 — Fonti del diritto</span>
+    <span className="opacity-60">›</span>
+    <span className="rounded-full border border-white/10 px-3 py-1 bg-white/5">Lez 1.2.2</span>
+  </div>
 
----
+  <p className="mt-3">
+    Nella lezione 1.2.1 hai imparato a riconoscere da dove nasce una regola.
+    Ora fai il passo decisivo: capire quale regola pesa di più quando due testi dicono cose diverse.
+  </p>
+</section>
 
-## 1) Titolo sezione
+<section className="mt-8 space-y-6">
+  <div className="space-y-2">
+    <h2 className="text-xl font-semibold">La domanda che risolve metà dei dubbi</h2>
+    <p>
+      Quando ti trovi davanti a due regole in conflitto, la domanda non è “qual è più sensata”.
+      La domanda è: <strong>chi la può imporre</strong> e <strong>con che forza</strong>.
+    </p>
+    <p>
+      Questo schema si chiama
+      <GlossaryTerm id="gerarchia-delle-fonti">gerarchia delle fonti</GlossaryTerm>:
+      una fonte di grado inferiore non può contraddire una fonte superiore.
+    </p>
+  </div>
 
-Contenuto...
+  <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+    <div className="flex items-center justify-between gap-3 flex-wrap">
+      <h3 className="text-lg font-semibold">La piramide, vista come “controllo”</h3>
+      <span className="text-xs rounded-full bg-white/10 border border-white/10 px-3 py-1">
+        regola pratica: prima il rango, poi il resto
+      </span>
+    </div>
 
-<Quiz />
+    <div className="mt-4 space-y-3">
+      <div className="rounded-xl border border-white/10 p-4 bg-gradient-to-br from-white/12 to-transparent">
+        <div className="flex items-center justify-between gap-3 flex-wrap">
+          <strong><GlossaryTerm id="costituzione">Costituzione</GlossaryTerm></strong>
+          <span className="text-xs rounded-full bg-white/10 border border-white/10 px-2 py-0.5">vertice</span>
+        </div>
+        <p className="mt-2 opacity-90">
+          È il livello più alto. Se una legge la contraddice, esiste un controllo dedicato.
+        </p>
+      </div>
 
-<Resources />
+      <div className="rounded-xl border border-white/10 p-4 bg-white/5">
+        <strong><GlossaryTerm id="legge-ordinaria">Legge ordinaria</GlossaryTerm></strong>
+        <p className="mt-2 opacity-90">
+          Regola generale prodotta dal Parlamento. Deve rispettare la Costituzione.
+        </p>
+      </div>
+
+      <div className="rounded-xl border border-white/10 p-4 bg-white/5">
+        <strong><GlossaryTerm id="regolamento">Regolamenti</GlossaryTerm></strong>
+        <p className="mt-2 opacity-90">
+          Atti che servono ad attuare o dettagliare, ma non possono rovesciare ciò che dice la legge.
+        </p>
+      </div>
+
+      <div className="rounded-xl border border-white/10 p-4 bg-white/5">
+        <strong>Usi</strong>
+        <p className="mt-2 opacity-90">
+          Possono contare solo dove hanno spazio e solo se compatibili con le fonti superiori.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div className="grid md:grid-cols-2 gap-4">
+    <div className="rounded-2xl border border-white/10 p-5 bg-white/5 space-y-2">
+      <h3 className="text-lg font-semibold">Se il livello è diverso</h3>
+      <p>
+        Usi il criterio gerarchico: la fonte inferiore deve cedere.
+        Non stai ancora “interpretando”: stai scegliendo la scala giusta.
+      </p>
+    </div>
+
+    <div className="rounded-2xl border border-white/10 p-5 bg-white/5 space-y-2">
+      <h3 className="text-lg font-semibold">Se il livello è lo stesso</h3>
+      <p>
+        Entra il <GlossaryTerm id="criterio-cronologico">criterio cronologico</GlossaryTerm>:
+        tra norme di pari grado, la più recente può abrogare la precedente se incompatibile.
+      </p>
+    </div>
+  </div>
+</section>
+
+<VideoEmbed
+  url="https://www.youtube.com/watch?v=UGKCGdkswD4"
+  title="La gerarchia delle fonti del diritto"
+  source="HUB Scuola (YouTube)"
+  note="Video mirato sulla piramide e sul criterio gerarchico. Guardalo dopo aver letto la sezione sulla struttura a livelli."
+/>
+
+<TechnicalBlock>
+  <div className="space-y-4">
+    <h3 className="text-lg font-semibold">Versione tecnica (che cosa succede davvero quando una norma “non regge”)</h3>
+
+    <div className="rounded-2xl border border-white/10 p-5 bg-white/5 space-y-2">
+      <p className="font-semibold">Costituzione, Art. 134 (estratto)</p>
+      <p className="italic">
+        “La Corte costituzionale giudica sulle controversie relative alla legittimità costituzionale delle leggi e degli atti aventi forza di legge…”
+      </p>
+      <p>
+        La gerarchia qui non è un concetto astratto: è garantita da un giudice dedicato.
+        Se una legge entra in contrasto con la Costituzione, esiste un meccanismo per verificarlo.
+      </p>
+    </div>
+
+    <div className="rounded-2xl border border-white/10 p-5 bg-white/5 space-y-2">
+      <p className="font-semibold">Costituzione, Art. 136 (estratto)</p>
+      <p className="italic">
+        “Quando la Corte dichiara l’illegittimità costituzionale di una norma… questa cessa di avere efficacia dal giorno successivo alla pubblicazione della decisione.”
+      </p>
+      <p>
+        Qui vedi la conseguenza pratica: una norma incompatibile con la Costituzione perde efficacia.
+        Questa è la logica del “livello più alto” tradotta in effetti concreti.
+      </p>
+    </div>
+
+    <div className="rounded-2xl border border-white/10 p-5 bg-white/5 space-y-2">
+      <p className="font-semibold">Preleggi, Art. 15 (testo)</p>
+      <p className="italic">
+        “Le leggi non sono abrogate che da leggi posteriori per dichiarazione espressa… o per incompatibilità… o perché la nuova legge regola l’intera materia…”
+      </p>
+      <p>
+        Questo articolo è il cuore del criterio cronologico nel diritto positivo:
+        ti dice come una legge può perdere vigore per effetto di una legge successiva.
+      </p>
+    </div>
+  </div>
+</TechnicalBlock>
+
+<VideoEmbed
+  url="https://www.youtube.com/watch?v=7ag3jHuV4Tg"
+  title="Cosa sono le fonti del diritto e come funzionano"
+  source="Avv. Angelo Greco (YouTube)"
+  note="Video utile per fissare la differenza tra legge e regolamento e per vedere esempi pratici di conflitto tra fonti."
+/>
+
+<section className="mt-8 space-y-4">
+  <h2 className="text-xl font-semibold">Esempi completi: tre mini-storie</h2>
+
+  <ExampleCard type="positive" title="Sara e la norma che non può essere ignorata">
+    <div className="space-y-2">
+      <p>
+        <strong>Scenario:</strong> Sara legge sul sito di un ente una “regola” che limita un suo comportamento.
+        Poi trova una legge che disciplina la stessa cosa in modo diverso.
+      </p>
+      <p>
+        <strong>Analisi:</strong> Prima di discutere cosa è “più giusto”, Sara fa la domanda corretta: qual è la fonte?
+        Se la “regola” dell’ente è un atto inferiore e la legge è superiore, la legge guida l’esito.
+      </p>
+      <p>
+        <strong>Esito:</strong> La gerarchia le fa risparmiare tempo: capisce subito quale testo ha forza maggiore.
+      </p>
+    </div>
+  </ExampleCard>
+
+  <ExampleCard type="negative" title="Marco e il regolamento che prova a fare la legge">
+    <div className="space-y-2">
+      <p>
+        <strong>Scenario:</strong> Marco vuole avviare una piccola attività. Un regolamento comunale vieta ciò che una legge statale consente.
+      </p>
+      <p>
+        <strong>Analisi:</strong> Qui il conflitto è tra livelli diversi: regolamento sotto, legge sopra.
+        Il punto non è “interpretare creativamente”, ma riconoscere che una fonte inferiore non può contraddire una superiore.
+      </p>
+      <p>
+        <strong>Esito:</strong> Marco si aspetta che prevalga la legge e che il regolamento sia contestabile secondo gli strumenti previsti.
+      </p>
+    </div>
+  </ExampleCard>
+
+  <ExampleCard type="borderline" title="Due leggi, stesso livello: Chiara deve capire quale è ancora viva">
+    <div className="space-y-2">
+      <p>
+        <strong>Scenario:</strong> Chiara trova due leggi ordinarie: una più vecchia e una più recente. Dicono cose incompatibili sullo stesso punto.
+      </p>
+      <p>
+        <strong>Analisi:</strong> Qui il rango è lo stesso, quindi la gerarchia non basta.
+        Entra il criterio cronologico e la regola dell’abrogazione: la norma successiva può abrogare la precedente se c’è incompatibilità reale.
+      </p>
+      <p>
+        <strong>Esito:</strong> Chiara non sceglie “a sensazione”: cerca quale disposizione è successiva e come incide su quella precedente.
+      </p>
+    </div>
+  </ExampleCard>
+</section>
+
+<ResourceFooter>
+  <div className="space-y-3">
+    <p className="font-semibold">Risorse</p>
+
+    <ul className="list-disc pl-5 space-y-2">
+      <li>
+        <a className="underline" href="https://www.senato.it/istituzione/la-costituzione/parte-ii/titolo-vi/articolo-134">
+          Costituzione — Art. 134 (Corte costituzionale)
+        </a>
+      </li>
+      <li>
+        <a className="underline" href="https://www.senato.it/istituzione/la-costituzione/parte-ii/titolo-vi/articolo-136">
+          Costituzione — Art. 136 (effetti della decisione)
+        </a>
+      </li>
+      <li>
+        <a className="underline" href="https://www.gazzettaufficiale.it/atto/serie_generale/caricaArticolo?art.codiceRedazionale=042U0262&art.dataPubblicazioneGazzetta=1942-04-04&art.flagTipoArticolo=1&art.idArticolo=15&art.idGruppo=2&art.idSottoArticolo=1&art.idSottoArticolo1=10&art.progressivo=0&art.versione=1">
+          Preleggi — Art. 15 (testo in Gazzetta Ufficiale)
+        </a>
+      </li>
+      <li>
+        <a className="underline" href="https://www.brocardi.it/preleggi/capo-ii/art15.html">
+          Brocardi — Preleggi, Art. 15 (note)
+        </a>
+      </li>
+      <li>
+        <a className="underline" href="https://www.treccani.it/enciclopedia/gerarchia-delle-fonti/">
+          Treccani — Gerarchia delle fonti
+        </a>
+      </li>
+      <li>
+        <a className="underline" href="https://www.youtube.com/watch?v=UGKCGdkswD4">
+          Video — La gerarchia delle fonti (HUB Scuola)
+        </a>
+      </li>
+      <li>
+        <a className="underline" href="https://www.youtube.com/watch?v=7ag3jHuV4Tg">
+          Video — Fonti del diritto: come funzionano (Avv. Angelo Greco)
+        </a>
+      </li>
+    </ul>
+
+    <p className="text-sm opacity-80">
+      Questa lezione ha scopo esclusivamente educativo. Non costituisce consulenza legale.
+      Per decisioni importanti, rivolgiti a un professionista qualificato.
+    </p>
+  </div>
+</ResourceFooter>

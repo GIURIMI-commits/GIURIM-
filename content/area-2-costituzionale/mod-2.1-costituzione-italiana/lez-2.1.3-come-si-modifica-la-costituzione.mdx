@@ -4,32 +4,205 @@ title: "Come si modifica la Costituzione"
 area: "area-2-costituzionale"
 module: "mod-2.1-costituzione-italiana"
 order: 3
-duration_minutes: 10
-prerequisites: ["lez-2.1.2"]
+duration_minutes: 18
+prerequisites: ["lez-2.1.1"]
 next_lesson: "lez-2.2.1"
-last_verified: "2026-02-07"
-verified_by: "Da verificare"
+prev_lesson: "lez-2.1.2"
+last_verified: "2026-02-10"
+verified_by: "Guirimì Team"
 disclaimer_level: "standard"
-source_refs: []
-glossary_terms: []
+
+source_refs:
+  - label: "Normattiva — Art. 138 e 139 Costituzione della Repubblica Italiana"
+    url: "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:costituzione"
+  - label: "Brocardi — Articolo 138: Il procedimento di revisione"
+    url: "https://www.brocardi.it/costituzione/parte-ii/titolo-vi/sezione-ii/art138.html"
+  - label: "Senato della Repubblica — Percorso storico delle riforme"
+    url: "https://www.senato.it/istituzione/la-costituzione/le-riforme-costituzionali"
+  - label: "Corte Costituzionale — Sentenza n. 1146/1988 sui Principi Supremi"
+    url: "https://www.cortecostituzionale.it"
+
+media:
+  - type: "video"
+    title: "Diritto Costituzionale: il procedimento di revisione (Art. 138)"
+    url: "https://www.youtube.com/watch?v=D7CNvQ_vx3g"
+    source: "Edizioni Simone — Approfondimento Giuridico"
+    timestamp: "0:00-11:11"
+    position: "after-spiegazione"
+
+glossary_terms:
+  - "revisione-costituzionale"
+  - "legge-costituzionale"
+  - "maggioranza-assoluta"
+  - "maggioranza-qualificata"
+  - "referendum-confermativo"
+  - "principi-supremi"
+  - "doppia-deliberazione"
+  - "procedimento-aggravato"
+
 quiz:
-  questions: []
+  questions:
+    - type: "mcq"
+      prompt: "Se una riforma costituzionale viene approvata con la maggioranza dei 2/3 dei componenti in seconda votazione, cosa prevede l'ordinamento?"
+      choices:
+        - "La legge viene pubblicata ma resta sospesa per l'eventuale referendum."
+        - "La legge viene promulgata immediatamente e non è ammesso il referendum."
+        - "La legge decade automaticamente se non c'è l'unanimità."
+      correctIndex: 1
+      feedback:
+        0: "Sbagliato. La sospensione per il referendum avviene solo se si raggiunge la maggioranza assoluta ma non quella dei 2/3."
+        1: "Esatto! Il consenso dei 2/3 (maggioranza qualificata) esprime un accordo così vasto da rendere superfluo il passaggio referendario."
+        2: "No. L'unanimità non è mai richiesta per le riforme costituzionali."
+    - type: "mcq"
+      prompt: "Qual è il limite 'esplicito' imposto dall'Articolo 139 alla modifica della Costituzione?"
+      choices:
+        - "Il numero di regioni a statuto speciale."
+        - "La forma repubblicana dello Stato."
+        - "Il diritto di sciopero."
+      correctIndex: 1
+      feedback:
+        0: "Sbagliato. Le regioni e i loro statuti possono essere modificati tramite legge costituzionale."
+        1: "Corretto! L'articolo 139 chiude la Costituzione blindando la scelta repubblicana fatta dal popolo nel 1946."
+        2: "No. I diritti fondamentali sono protetti dai limiti 'impliciti', mentre l'Art. 139 cita solo la Repubblica."
+    - type: "mcq"
+      prompt: "Perché tra la prima e la seconda deliberazione parlamentare devono passare 3 mesi?"
+      choices:
+        - "Per permettere alla Corte Costituzionale di controllare il testo."
+        - "Per garantire una 'pausa di riflessione' ed evitare riforme emotive o affrettate."
+        - "Per attendere lo scioglimento delle Camere."
+      correctIndex: 1
+      feedback:
+        0: "No. La Corte interviene solitamente dopo l'entrata in vigore, non durante l'iter legislativo."
+        1: "Esatto. È uno degli elementi che rendono 'aggravato' il procedimento, assicurando stabilità al sistema."
+        2: "Sbagliato. Lo scioglimento delle Camere semmai interrompe l'iter delle leggi non ancora approvate."
+    - type: "open"
+      prompt: "Spiega brevemente la differenza tra referendum abrogativo (Art. 75) e referendum costituzionale (Art. 138) in termini di quorum."
+      expected_points:
+        - "Il referendum abrogativo richiede il quorum del 50% + 1 degli aventi diritto (validità)."
+        - "Il referendum costituzionale non prevede alcun quorum: vince chi ha più voti (confermativo)."
+        - "La differenza nasce per proteggere la Costituzione: chi vuole difenderla deve andare a votare."
 ---
 
-<Hook>
-Inserisci qui il gancio iniziale...
-</Hook>
+<HookBlock>
+  <div className="space-y-3">
+    <p>
+      Immagina di aver costruito una casa con fondamenta progettate per durare secoli. Se vuoi cambiare il colore delle tende basta un attimo, ma se vuoi abbattere un muro portante, devi parlarne con tutti i condomini, aspettare mesi e assicurarti che nessuno sia contrario.
+    </p>
+    <p>
+      La nostra Costituzione è quella casa. Oggi scopriamo l'Articolo 138: la "chiave" di sicurezza che permette all'Italia di evolversi senza mai crollare, proteggendo il patto sociale dai capricci di una maggioranza momentanea.
+    </p>
+  </div>
+</HookBlock>
 
-<Objective>
-Inserisci qui l'obiettivo della lezione...
-</Objective>
+<section className="mt-6 rounded-2xl border border-white/10 p-5 bg-gradient-to-br from-white/8 via-white/5 to-transparent">
+  <div className="flex flex-wrap items-center gap-2 text-sm">
+    <span className="rounded-full border border-white/10 px-3 py-1 bg-white/5">Area 2 — Costituzionale</span>
+    <span className="opacity-60">›</span>
+    <span className="rounded-full border border-white/10 px-3 py-1 bg-white/5">Mod 2.1 — La Costituzione</span>
+    <span className="opacity-60">›</span>
+    <span className="rounded-full border border-white/10 px-3 py-1 bg-white/5">Lez 2.1.3</span>
+  </div>
 
----
+  <p className="mt-3">
+    Nelle lezioni precedenti abbiamo visto che la Costituzione è "rigida". Ora entriamo nell'officina tecnica delle riforme per capire come si produce una <strong><GlossaryTerm id="legge-costituzionale">legge costituzionale</GlossaryTerm></strong> seguendo il cosiddetto <strong><GlossaryTerm id="procedimento-aggravato">procedimento aggravato</GlossaryTerm></strong>.
+  </p>
+</section>
 
-## 1) Titolo sezione
+<section className="mt-8 space-y-6">
+  <div className="space-y-2">
+    <h2 className="text-xl font-semibold">1) L'Iter dell'Articolo 138: La Regola della "Doppia Chiave"</h2>
+    <p>
+      A differenza delle leggi ordinarie, che richiedono un solo passaggio in ogni Camera, le leggi di <strong><GlossaryTerm id="revisione-costituzionale">revisione costituzionale</GlossaryTerm></strong> richiedono una <strong><GlossaryTerm id="doppia-deliberazione">doppia deliberazione</GlossaryTerm></strong>. 
+    </p>
+    <p>
+      Camera e Senato devono approvare lo stesso testo **due volte ciascuna**, con un intervallo non inferiore a **tre mesi** tra la prima e la seconda votazione. Questo intervallo è una garanzia di ponderatezza: serve a verificare che la volontà di cambiare la legge fondamentale sia solida e non frutto di un'emergenza passeggera.
+    </p>
+  </div>
 
-Contenuto...
+  <div className="space-y-2">
+    <h2 className="text-xl font-semibold">2. Le due strade della seconda votazione</h2>
+    <p>
+      Nella seconda votazione, il numero di voti favorevoli determina se il popolo debba essere consultato:
+    </p>
+    <ul className="list-disc pl-5 space-y-3">
+      <li>
+        <strong>La <GlossaryTerm id="maggioranza-qualificata">Maggioranza dei 2/3</GlossaryTerm>:</strong> Se i due terzi dei componenti di ogni camera votano sì, la legge è approvata definitivamente. Si presume che, se maggioranza e opposizione sono d'accordo, la riforma sia condivisa dall'intera nazione.
+      </li>
+      <li>
+        <strong>La <GlossaryTerm id="maggioranza-assoluta">Maggioranza Assoluta</GlossaryTerm> (50% + 1):</strong> Se la riforma passa ma non raggiunge i due terzi, entra in gioco il <strong><GlossaryTerm id="referendum-confermativo">referendum confermativo</GlossaryTerm></strong>. Entro tre mesi, 500.000 elettori, 5 Consigli Regionali o 1/5 dei parlamentari possono chiedere che sia il popolo a decidere.
+      </li>
+    </ul>
+    <p>
+      **Importante**: Nel referendum costituzionale **non esiste il quorum**. La riforma passa se i "Sì" superano i "No", a prescindere da quanti cittadini partecipino al voto.
+    </p>
+  </div>
 
-<Quiz />
+  <div className="rounded-2xl border border-white/10 bg-white/5 p-6 space-y-4">
+    <h3 className="text-lg font-semibold">I Limiti della Revisione: Cosa è "Intoccabile"?</h3>
+    <div className="grid md:grid-cols-2 gap-4">
+      <div className="p-4 rounded-xl border border-white/10 bg-red-500/5">
+        <p className="font-bold">Limite Esplicito (Art. 139)</p>
+        <p className="text-sm">"La forma repubblicana non può essere oggetto di revisione". Non si può votare per tornare alla Monarchia. Questa è la decisione definitiva del 1946.</p>
+      </div>
+      <div className="p-4 rounded-xl border border-white/10 bg-blue-500/5">
+        <p className="font-bold">Limiti Impliciti (<GlossaryTerm id="principi-supremi">Principi Supremi</GlossaryTerm>)</p>
+        <p className="text-sm">La Corte Costituzionale (Sent. 1146/1988) ha chiarito che non si possono toccare i diritti inviolabili dell'uomo. Cambiarli significherebbe distruggere la Costituzione, non rivederla.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-<Resources />
+<VideoEmbed 
+  url="https://www.youtube.com/watch?v=D7CNvQ_vx3g" 
+  title="Il procedimento di revisione costituzionale spiegato" 
+  source="Edizioni Simone" 
+  note="Un'analisi tecnica dettagliata condotta da esperti legali, ideale per visualizzare graficamente le maggioranze richieste." 
+/>
+
+<TechnicalBlock>
+  <div className="space-y-4 text-sm">
+    <h3 className="text-lg font-semibold text-blue-400">Approfondimento Tecnico: La Sentenza 1146/1988</h3>
+    <p>
+      La Corte Costituzionale ha stabilito che la Costituzione italiana contiene alcuni <strong>Principi Supremi</strong> che non possono essere sovvertiti o modificati nel loro contenuto essenziale neppure da leggi di revisione costituzionale. 
+    </p>
+    <div className="rounded-xl border border-white/10 p-4 bg-white/5 space-y-2">
+      <p>Questi principi includono:</p>
+      <ul className="list-disc pl-5">
+        <li>La sovranità popolare (Art. 1).</li>
+        <li>L'unità e indivisibilità della Repubblica (Art. 5).</li>
+        <li>La tutela dei diritti inviolabili dell'uomo (Art. 2).</li>
+      </ul>
+      <p>Se una legge costituzionale violasse questi principi, la Corte potrebbe dichiararla incostituzionale, nonostante sia una fonte di pari rango.</p>
+    </div>
+  </div>
+</TechnicalBlock>
+
+<section className="mt-8 space-y-4">
+  <h2 className="text-xl font-semibold">Esempi Reali: La Storia delle Riforme</h2>
+
+  <ExampleCard type="positive" title="Referendum del 2020: Taglio dei Parlamentari">
+    <div className="space-y-2">
+      <p><strong>Scenario:</strong> Il Parlamento approva la riduzione di deputati e senatori. Viene chiesto il referendum confermativo.</p>
+      <p><strong>Analisi:</strong> La riforma ha toccato l'ordinamento (Parte II) senza ledere i principi supremi di democrazia.</p>
+      <p><strong>Esito:</strong> Il popolo ha approvato col 70% dei voti. La Costituzione è stata aggiornata legittimamente tramite l'Art. 138.</p>
+    </div>
+  </ExampleCard>
+
+  <ExampleCard type="negative" title="Referendum del 2016: Riforma Renzi-Boschi">
+    <div className="space-y-2">
+      <p><strong>Scenario:</strong> Una proposta massiccia per superare il bicameralismo perfetto e cambiare il Senato.</p>
+      <p><strong>Analisi:</strong> Nonostante l'approvazione parlamentare a maggioranza assoluta, il popolo è stato chiamato a decidere.</p>
+      <p><strong>Esito:</strong> Il 59% dei votanti ha bocciato la riforma. Questo dimostra come il referendum sia un 'freno di emergenza' efficace contro riforme non condivise.</p>
+    </div>
+  </ExampleCard>
+
+  <ExampleCard type="borderline" title="L'ambiente in Costituzione (2022)">
+    <div className="space-y-2">
+      <p><strong>Scenario:</strong> Inserimento della tutela dell'ambiente tra i Principi Fondamentali (Art. 9).</p>
+      <p><strong>Analisi:</strong> È una modifica di 'espansione' dei principi, non di negazione.</p>
+      <p><strong>Esito:</strong> Approvata con la maggioranza dei 2/3: non è stato necessario alcun referendum perché il consenso politico era pressoché totale.</p>
+    </div>
+  </ExampleCard>
+</section>
+
+<ResourceFooter />
