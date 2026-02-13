@@ -97,9 +97,9 @@ quiz:
 
 <section className="mt-6 rounded-2xl border border-white/10 p-5 bg-gradient-to-br from-white/8 via-white/5 to-transparent">
   <div className="flex flex-wrap items-center gap-2 text-sm">
-    <span className="rounded-full border border-white/10 px-3 py-1 bg-white/5">Area 3 — Privato</span>
+    <span className="rounded-full border border-white/10 px-3 py-1 bg-white/5">Area 3 — Privato/Civile</span>
     <span className="opacity-60">›</span>
-    <span className="rounded-full border border-white/10 px-3 py-1 bg-white/5">Mod 3.2 — Il Contratto</span>
+    <span className="rounded-full border border-white/10 px-3 py-1 bg-white/5">Mod 3.2 — Contratto</span>
     <span className="opacity-60">›</span>
     <span className="rounded-full border border-white/10 px-3 py-1 bg-white/5">Lez 3.2.2</span>
   </div>
@@ -118,7 +118,7 @@ quiz:
     <p>
       Succede quando il contratto ha un difetto strutturale gravissimo (es. manca la firma scritta per la vendita di una casa) o è contrario a <strong><GlossaryTerm id="norme-imperative">norme imperative</GlossaryTerm></strong> (es. vendita di droga, organi, armi vietate).
     </p>
-    <div className="rounded-xl bg-red-500/10 border border-red-500/20 p-4 text-sm">
+    <div className="rounded-xl bg-red-500/10 border border-red-500/20 p-4 text-sm mt-2">
       <strong>Regola d'oro:</strong> La nullità protegge l'interesse generale. Per questo può essere rilevata da chiunque (anche da un terzo interessato) e persino dal giudice d'ufficio. Inoltre, non scade mai (è imprescrittibile).
     </div>
   </div>
@@ -131,9 +131,9 @@ quiz:
     <p>
       Finché il giudice non pronuncia la sentenza, il contratto resta valido. Succede principalmente in due casi:
     </p>
-    <ul className="list-disc pl-5 space-y-2">
+    <ul className="list-disc pl-5 space-y-2 mt-2">
       <li><strong>Incapacità:</strong> Una parte era minorenne o incapace di intendere e di volere.</li>
-      <li><strong><GlossaryTerm id="vizi-del-consenso">Vizi del consenso</GlossaryTerm>:</strong> La volontà c'è, ma si è formata male (errore, violenza o dolo).</li>
+      <li><strong><GlossaryTerm id="vizi-del-consenso">Vizi del consenso</GlossaryTerm>:</strong> La volontà c'è, ma si è formata male (<GlossaryTerm id="errore">errore</GlossaryTerm>, <GlossaryTerm id="violenza">violenza</GlossaryTerm>, <GlossaryTerm id="dolo">dolo</GlossaryTerm>).</li>
     </ul>
   </div>
 
@@ -141,15 +141,15 @@ quiz:
     <h3 className="text-lg font-semibold mb-3">I tre virus della volontà</h3>
     <div className="grid md:grid-cols-3 gap-4 text-sm">
       <div className="p-3 rounded-lg border border-white/10 bg-white/5">
-        <strong className="text-blue-300"><GlossaryTerm id="errore">Errore</GlossaryTerm></strong>
+        <strong className="text-blue-300">Errore</strong>
         <br/>Ho sbagliato a capire (es. credevo fosse oro, era ottone). Deve essere essenziale e riconoscibile.
       </div>
       <div className="p-3 rounded-lg border border-white/10 bg-white/5">
-        <strong className="text-purple-300"><GlossaryTerm id="violenza">Violenza</GlossaryTerm></strong>
+        <strong className="text-purple-300">Violenza</strong>
         <br/>Minaccia psicologica ("firma o ti brucio il negozio"). È la causa più grave di annullamento.
       </div>
       <div className="p-3 rounded-lg border border-white/10 bg-white/5">
-        <strong className="text-orange-300"><GlossaryTerm id="dolo">Dolo</GlossaryTerm></strong>
+        <strong className="text-orange-300">Dolo</strong>
         <br/>Inganno. L'altra parte mi ha raggirato (es. contachilometri scalato).
       </div>
     </div>
@@ -160,21 +160,18 @@ quiz:
   url="https://www.youtube.com/watch?v=jzn9iyqQZ-s" 
   title="L'invalidità del contratto: nullità e annullabilità" 
   source="Edizioni Simone" 
-  note="Un confronto chiaro e schematico tra i due istituti, ideale per fissare le differenze di disciplina (chi può agire, prescrizione, effetti)." 
+  note="Un confronto chiaro e schematico tra i due istituti, ideale per fissare le differenze di disciplina." 
 />
 
-<TechnicalBlock>
-  <div className="space-y-4">
-    <h3 className="text-lg font-semibold">Focus Tecnico: Differenze Operative</h3>
+<TechnicalBlock title="Focus Tecnico: Differenze Operative">
+  <div className="space-y-4 text-sm">
+    <p><strong>Art. 1418 c.c. (Cause di nullità)</strong>: Il contratto è nullo quando è contrario a norme imperative, o manca di uno dei requisiti dell'art. 1325.</p>
     
-    <div className="rounded-2xl border border-white/10 p-5 bg-white/5 space-y-2 text-sm">
-      <p className="font-bold">Art. 1418 CC (Cause di nullità)</p>
-      <p>"Il contratto è nullo quando è contrario a norme imperative, salvo che la legge disponga diversamente. Producono nullità del contratto la mancanza di uno dei requisiti indicati dall'art. 1325..."</p>
-      
-      <p className="mt-4 font-bold">Prescrizione (Art. 1422 vs 1442 CC)</p>
-      <ul className="list-disc pl-5">
-        <li><strong>Nullità:</strong> L'azione è <em>imprescrittibile</em> (puoi farla valere anche tra 50 anni, salvi gli effetti dell'usucapione).</li>
-        <li><strong>Annullamento:</strong> L'azione si prescrive in <em>5 anni</em>. Se non agisci entro 5 anni, il contratto si "sanifica" e resta valido per sempre.</li>
+    <div className="mt-2 border-t border-white/10 pt-2">
+      <p><strong>Prescrizione (Art. 1422 vs 1442 c.c.)</strong></p>
+      <ul className="list-disc pl-5 space-y-1">
+        <li><strong>Nullità:</strong> Azione <em>imprescrittibile</em> (puoi agire sempre).</li>
+        <li><strong>Annullamento:</strong> Si prescrive in <em>5 anni</em>. Se non agisci in tempo, il contratto si sana.</li>
       </ul>
     </div>
   </div>
@@ -184,21 +181,27 @@ quiz:
   <h2 className="text-xl font-semibold">Esempi Reali</h2>
 
   <ExampleCard type="positive" title="Nullità: Vendita di immobile abusivo">
-    <p><strong>Scenario:</strong> Compri una casa costruita totalmente senza permessi (abusiva) e non sanabile. L'atto notarile non cita i permessi.</p>
-    <p><strong>Analisi:</strong> Il contratto è <strong>nullo</strong> per violazione di norme imperative urbanistiche e impossibilità dell'oggetto giuridico.</p>
-    <p><strong>Esito:</strong> La proprietà non è mai passata. Hai diritto alla restituzione dei soldi, anche se sono passati anni.</p>
+    <div className="space-y-2">
+      <p><strong>Scenario:</strong> Compri una casa abusiva non sanabile.</p>
+      <p><strong>Analisi:</strong> Il contratto è <strong>nullo</strong> per impossibilità/illiceità.</p>
+      <p><strong>Esito:</strong> La proprietà non è mai passata. Hai diritto alla restituzione dei soldi.</p>
+    </div>
   </ExampleCard>
 
   <ExampleCard type="positive" title="Annullabilità: L'anello falso">
-    <p><strong>Scenario:</strong> Compri un anello che il gioielliere ti garantisce essere diamante puro. Scopri che è uno zircone.</p>
-    <p><strong>Analisi:</strong> È un caso di <strong>dolo</strong> (inganno) determinante del consenso.</p>
-    <p><strong>Esito:</strong> Il contratto è valido finché non vai dal giudice. Hai 5 anni dalla scoperta dell'inganno per chiedere l'annullamento e riavere i soldi.</p>
+    <div className="space-y-2">
+      <p><strong>Scenario:</strong> Compri uno zircone garantito come diamante.</p>
+      <p><strong>Analisi:</strong> È <strong>dolo</strong> (inganno).</p>
+      <p><strong>Esito:</strong> Il contratto è valido finché non chiedi l'annullamento (hai 5 anni).</p>
+    </div>
   </ExampleCard>
 
-  <ExampleCard type="borderline" title="Errore sul prezzo online">
-    <p><strong>Scenario:</strong> Un e-commerce mette in vendita una TV da 1000€ a 10€ per errore di digitazione.</p>
-    <p><strong>Analisi:</strong> È un <strong>errore ostativo</strong>. Se l'errore è <em>riconoscibile</em> (chiunque capirebbe che 10€ è assurdo), il venditore può chiedere l'annullamento.</p>
-    <p><strong>Esito:</strong> Spesso il contratto viene annullato, non basta aver cliccato "compra".</p>
+  <ExampleCard type="positive" title="Errore sul prezzo online">
+    <div className="space-y-2">
+      <p><strong>Scenario:</strong> TV da 1000€ venduta a 10€ per errore di digitazione.</p>
+      <p><strong>Analisi:</strong> <strong>Errore ostativo</strong> riconoscibile.</p>
+      <p><strong>Esito:</strong> Il venditore può chiedere l'annullamento se l'errore era evidente per una persona di media diligenza.</p>
+    </div>
   </ExampleCard>
 </section>
 
@@ -208,6 +211,6 @@ quiz:
       <li><a className="underline" href="https://www.brocardi.it/codice-civile/libro-quarto/titolo-ii/capo-xi/sezione-i/">Artt. 1418 ss. (Nullità) su Brocardi</a></li>
       <li><a className="underline" href="https://www.treccani.it/enciclopedia/nullita-diritto-civile/">Treccani — Voce Nullità</a></li>
     </ul>
-    <p className="text-sm opacity-80">Verificato il: 2026-02-13 | Verificatore: Guirimì Team</p>
+    <p className="text-sm opacity-80">Verificato il: 13 Febbraio 2026 | Verificatore: Guirimì Team</p>
   </div>
 </ResourceFooter>

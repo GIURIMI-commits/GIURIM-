@@ -4,32 +4,198 @@ title: "Effetti del contratto e inadempimento"
 area: "area-3-privato-civile"
 module: "mod-3.2-contratto"
 order: 3
-duration_minutes: 12
+duration_minutes: 15
 prerequisites: ["lez-3.2.2"]
 next_lesson: "lez-3.3.1"
-last_verified: "2026-02-07"
-verified_by: "Da verificare"
+last_verified: "2026-02-13"
+verified_by: "[Nome]"
 disclaimer_level: "standard"
-source_refs: []
-glossary_terms: []
+
+source_refs:
+  - label: "Art. 1372 c.c. — Efficacia del contratto (Brocardi)"
+    url: "https://www.brocardi.it/codice-civile/libro-quarto/titolo-ii/capo-v/sezione-i/art1372.html"
+  - label: "Art. 1218 c.c. — Responsabilità del debitore (Brocardi)"
+    url: "https://www.brocardi.it/codice-civile/libro-quarto/titolo-i/capo-iii/art1218.html"
+  - label: "Art. 1453 c.c. — Risoluzione per inadempimento (Brocardi)"
+    url: "https://www.brocardi.it/codice-civile/libro-quarto/titolo-ii/capo-xiv/sezione-i/art1453.html"
+  - label: "Treccani — Inadempimento"
+    url: "https://www.treccani.it/enciclopedia/inadempimento/"
+
+glossary_terms:
+  - "efficacia-del-contratto"
+  - "forza-di-legge"
+  - "inadempimento"
+  - "responsabilita-contrattuale"
+  - "risoluzione"
+  - "risarcimento-del-danno"
+  - "mora-del-debitore"
+
 quiz:
-  questions: []
+  questions:
+    - type: "mcq"
+      prompt: "Cosa significa che il contratto ha “forza di legge tra le parti” (art. 1372 c.c.)?"
+      choices:
+        - "Che è una legge approvata dal Parlamento."
+        - "Che le parti sono vincolate a rispettarlo come se fosse una legge, e non possono scioglierlo unilateralmente (salvo eccezioni)."
+        - "Che vale per tutti i cittadini, anche per chi non l’ha firmato."
+      correctIndex: 1
+      feedback:
+        0: "No: il contratto è un atto di autonomia privata, non una legge statale."
+        1: "Esatto: una volta firmato, il vincolo è sacro e obbligatorio."
+        2: "No: il contratto ha efficacia relativa (solo tra le parti), non assoluta (erga omnes)."
+    - type: "mcq"
+      prompt: "Se il debitore non esegue la prestazione dovuta, cosa succede secondo l’art. 1218 c.c.?"
+      choices:
+        - "Nulla, se non aveva voglia di adempiere."
+        - "Deve risarcire il danno, a meno che provi che l’inadempimento deriva da impossibilità a lui non imputabile."
+        - "Viene arrestato immediatamente."
+      correctIndex: 1
+      feedback:
+        0: "Falso: l’inadempimento genera responsabilità civile."
+        1: "Corretto: è il principio cardine della responsabilità contrattuale."
+        2: "No: l’inadempimento contrattuale (di regola) non è reato, ma illecito civile."
+    - type: "mcq"
+      prompt: "Che cos’è la risoluzione del contratto?"
+      choices:
+        - "Lo scioglimento del vincolo contrattuale a causa di un difetto sopravvenuto (es. inadempimento)."
+        - "La correzione di un errore di battitura nel testo."
+        - "La conclusione del contratto."
+      correctIndex: 0
+      feedback:
+        0: "Sì: la risoluzione “scioglie” il contratto quando il rapporto si inceppa (per inadempimento, impossibilità sopravvenuta o eccessiva onerosità)."
+        1: "No: quella è la rettifica."
+        2: "No: quella è la stipulazione."
+    - type: "open"
+      prompt: "Spiega la differenza tra il contratto che “nasce male” (nullità/annullabilità) e il contratto che “muore” dopo (risoluzione)."
+      expected_points:
+        - "Nullità/annullabilità riguardano vizi genetici (presenti alla nascita del contratto)."
+        - "Risoluzione riguarda problemi funzionali (sopravvenuti durante la vita del contratto, come l’inadempimento)."
 ---
 
-<Hook>
-Inserisci qui il gancio iniziale...
-</Hook>
+<HookBlock>
+  <div className="space-y-3">
+    <p>
+      Hai firmato il contratto: è valido, non è nullo, nessuno ti ha ingannato. Tutto perfetto.
+      Ma ora... l'altra persona non fa quello che ha promesso. Non ti consegna la merce, non ti paga l'affitto, non finisce i lavori.
+      Che succede? Il contratto è una "gabbia" da cui non puoi uscire, o hai delle armi per difenderti?
+    </p>
+  </div>
+</HookBlock>
 
-<Objective>
-Inserisci qui l'obiettivo della lezione...
-</Objective>
+<section className="mt-6 rounded-2xl border border-white/10 p-5 bg-gradient-to-br from-white/8 via-white/5 to-transparent">
+  <div className="flex flex-wrap items-center gap-2 text-sm">
+    <span className="rounded-full border border-white/10 px-3 py-1 bg-white/5">Area 3 — Privato/Civile</span>
+    <span className="opacity-60">›</span>
+    <span className="rounded-full border border-white/10 px-3 py-1 bg-white/5">Mod 3.2 — Contratto</span>
+    <span className="opacity-60">›</span>
+    <span className="rounded-full border border-white/10 px-3 py-1 bg-white/5">Lez 3.2.3</span>
+  </div>
 
----
+  <p className="mt-3">
+    Fino a qui abbiamo visto come il contratto nasce (lez 3.2.1) e quando nasce male (lez 3.2.2).
+    Ora guardiamo la sua "vita": gli effetti che produce e cosa accade se il rapporto si rompe.
+  </p>
+</section>
 
-## 1) Titolo sezione
+<section className="mt-8 space-y-6">
+  <div className="space-y-2">
+    <h2 className="text-xl font-semibold">1) Forza di legge tra le parti</h2>
+    <p>
+      L’art. 1372 c.c. usa un’espressione solenne:
+    </p>
+    <div className="pl-4 border-l-2 border-primary/50 italic text-muted-foreground my-2">
+      Il contratto ha <strong><GlossaryTerm id="forza-di-legge">forza di legge</GlossaryTerm></strong> tra le parti.
+    </div>
+    <p>Significa due cose fondamentali:</p>
+    <ul className="list-disc pl-5 space-y-1">
+      <li><strong>Vincolatività:</strong> Una volta firmato, non puoi ripensarci (salvo casi specifici di recesso). Devi adempiere.</li>
+      <li><strong>Relatività:</strong> Il contratto vincola solo chi l'ha firmato. Non può creare obblighi per terzi estranei.</li>
+    </ul>
+  </div>
 
-Contenuto...
+  <div className="space-y-2">
+    <h2 className="text-xl font-semibold">2) Se qualcosa va storto: l'Inadempimento</h2>
+    <p>
+      Se una parte non esegue la prestazione (o la esegue male/in ritardo), siamo di fronte all'<strong><GlossaryTerm id="inadempimento">inadempimento</GlossaryTerm></strong>.
+    </p>
+    <p>
+      L'art. 1218 c.c. pone una regola severa: il debitore che non adempie è tenuto al <strong><GlossaryTerm id="risarcimento-del-danno">risarcimento del danno</GlossaryTerm></strong>, a meno che provi che l'inadempimento è stato determinato da <strong>impossibilità della prestazione</strong> derivante da causa a lui non imputabile (es. il vaso unico al mondo è andato distrutto per un terremoto).
+    </p>
+  </div>
 
-<Quiz />
+  <div className="space-y-2">
+    <h2 className="text-xl font-semibold">3) I rimedi: la Risoluzione</h2>
+    <p>
+      Se l'altra parte non adempie, tu (parte fedele) non sei costretto a restare vincolato per sempre. Hai tre strade principali (art. 1453 c.c.):
+    </p>
+    <ol className="list-decimal pl-5 space-y-2">
+      <li><strong>Chiedere l'adempimento:</strong> Vai dal giudice e chiedi di condannare l'altro a eseguire la prestazione (se ancora possibile).</li>
+      <li><strong>Chiedere la risoluzione:</strong> Chiedi al giudice di sciogliere il contratto. Ti liberi dai tuoi obblighi e il rapporto finisce qui.</li>
+      <li><strong>Chiedere (sempre) il risarcimento:</strong> In entrambi i casi, hai diritto ai danni subiti.</li>
+    </ol>
+  </div>
 
-<Resources />
+  <div className="grid md:grid-cols-2 gap-4 mt-4">
+    <div className="p-4 rounded-xl border border-blue-500/20 bg-blue-500/5">
+      <p className="font-bold text-blue-500">Recesso</p>
+      <p className="text-sm mt-2">Diritto (previsto dalla legge o dal contratto) di sciogliersi unilateralmente.</p>
+      <p className="text-xs mt-1">Es. mi dimetto dal lavoro; restituisco un acquisto online entro 14 giorni.</p>
+    </div>
+    <div className="p-4 rounded-xl border border-purple-500/20 bg-purple-500/5">
+      <p className="font-bold text-purple-500">Risoluzione</p>
+      <p className="text-sm mt-2">Scioglimento "patologico" perché qualcosa non ha funzionato (inadempimento, impossibilità, ecc.).</p>
+    </div>
+  </div>
+</section>
+
+<TechnicalBlock title="Versione tecnica (Codice Civile)">
+  <div className="space-y-4 text-sm">
+    <p><strong>Art. 1372 c.c.:</strong> Efficacia del contratto. Non può essere sciolto che per mutuo consenso o per cause ammesse dalla legge.</p>
+    <p><strong>Art. 1218 c.c.:</strong> Responsabilità del debitore. Inverte l'onere della prova: è il debitore a dover provare l'impossibilità, altrimenti deve risarcire.</p>
+    <p><strong>Art. 1453 c.c.:</strong> Risolubilità per inadempimento. Importante: se chiedi la risoluzione, non puoi più chiedere l'adempimento. Se chiedi l'adempimento, puoi cambiare idea e chiedere la risoluzione.</p>
+  </div>
+</TechnicalBlock>
+
+{/* VIDEO PLACEHOLDER: inserire solo se autore con nome e qualifica verificabile, canale universitario o istituzionale, contenuto aggiornato, nessuna promozione. Search query: "inadempimento risoluzione contratto diritto privato". */}
+
+<section className="mt-8 space-y-4">
+  <h2 className="text-xl font-semibold">Esempi Pratici</h2>
+
+  <ExampleCard type="positive" title="Inadempimento e Risoluzione">
+    <div className="space-y-2">
+      <p><strong>Scenario:</strong> Ordini una cucina su misura. Il falegname non la consegna entro la data stabilita e sparisce.</p>
+      <p><strong>Analisi:</strong> È inadempimento grave.</p>
+      <p><strong>Esito:</strong> Chiedi la <strong>risoluzione</strong> del contratto (per non doverla più pagare se arriva tra 10 anni) + <strong>risarcimento danni</strong> (per aver dovuto mangiare al ristorante per un mese).</p>
+    </div>
+  </ExampleCard>
+
+  <ExampleCard type="negative" title="Impossibilità non imputabile">
+    <div className="space-y-2">
+      <p><strong>Scenario:</strong> Devi consegnare un quadro antico. Un'alluvione imprevedibile distrugge il magazzino.</p>
+      <p><strong>Analisi:</strong> La prestazione è diventata impossibile per causa non imputabile al debitore.</p>
+      <p><strong>Esito:</strong> L'obbligazione si estingue. Non devi risarcire il danno, ma il contratto si risolve (non riceverai il pagamento).</p>
+    </div>
+  </ExampleCard>
+</section>
+
+<ResourceFooter
+  disclaimerLevel="standard"
+  primarySources={[
+    {
+      label: "Brocardi — Art. 1372 c.c. (Efficacia del contratto)",
+      url: "https://www.brocardi.it/codice-civile/libro-quarto/titolo-ii/capo-v/sezione-i/art1372.html"
+    },
+    {
+      label: "Brocardi — Art. 1218 c.c. (Responsabilità del debitore)",
+      url: "https://www.brocardi.it/codice-civile/libro-quarto/titolo-i/capo-iii/art1218.html"
+    }
+  ]}
+  secondarySources={[
+    {
+      label: "Treccani — Inadempimento",
+      url: "https://www.treccani.it/enciclopedia/inadempimento/"
+    }
+  ]}
+>
+Questa lezione ha finalità didattica e non costituisce consulenza legale.
+</ResourceFooter>
