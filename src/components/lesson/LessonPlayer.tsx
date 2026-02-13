@@ -53,6 +53,7 @@ const components = {
     },
 
     Quiz: () => null, // Placeholder to prevent crash if user writes <Quiz /> in MDX manually
+    QuizBlock: () => null, // Prevents crash if <QuizBlock /> is in MDX (rendered at bottom via props)
 
     ResourceFooter: (props: any) => (
         <div className="mt-12 p-6 bg-neutral-100 dark:bg-neutral-900 rounded-lg text-sm text-neutral-600 dark:text-neutral-400">
