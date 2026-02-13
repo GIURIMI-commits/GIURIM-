@@ -4,32 +4,197 @@ title: "Incapacità, tutela e curatela"
 area: "area-3-privato-civile"
 module: "mod-3.1-persone-capacita"
 order: 2
-duration_minutes: 12
+duration_minutes: 15
 prerequisites: ["lez-3.1.1"]
 next_lesson: "lez-3.2.1"
-last_verified: "2026-02-07"
-verified_by: "Da verificare"
-disclaimer_level: "standard"
-source_refs: []
-glossary_terms: []
+prev_lesson: "lez-3.1.1"
+last_verified: "2026-02-13"
+verified_by: "[Nome]"
+disclaimer_level: "elevated"
+
+source_refs:
+  - label: "Artt. 414-432 c.c. — Interdizione e inabilitazione (Brocardi, indice)"
+    url: "https://www.brocardi.it/codice-civile/libro-primo/titolo-xii/"
+  - label: "Legge 6/2004 — Amministrazione di sostegno (Normattiva)"
+    url: "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2004-01-09;6"
+  - label: "Artt. 404-413 c.c. — Amministrazione di sostegno (Brocardi, indice)"
+    url: "https://www.brocardi.it/codice-civile/libro-primo/titolo-xii/capo-i/"
+  - label: "Treccani — Amministrazione di sostegno"
+    url: "https://www.treccani.it/enciclopedia/amministrazione-di-sostegno/"
+  - label: "Art. 428 c.c. — Atti compiuti da incapace naturale (Brocardi)"
+    url: "https://www.brocardi.it/codice-civile/libro-primo/titolo-xii/capo-ii/art428.html"
+
+glossary_terms:
+  - "incapacita-legale"
+  - "incapacita-naturale"
+  - "interdizione"
+  - "inabilitazione"
+  - "amministrazione-di-sostegno"
+  - "tutore"
+  - "curatore"
+  - "amministratore-di-sostegno"
+  - "emancipazione"
+
 quiz:
-  questions: []
+  questions:
+    - type: "mcq"
+      prompt: "Qual è la differenza principale tra incapacità legale e incapacità naturale?"
+      choices:
+        - "La prima dipende da una dichiarazione del giudice; la seconda è uno stato di fatto al momento dell’atto."
+        - "La prima riguarda solo i minori; la seconda solo gli anziani."
+        - "Sono la stessa cosa: cambiano solo i termini."
+      correctIndex: 0
+      feedback:
+        0: "Esatto: l’incapacità legale deriva da un provvedimento/condizione prevista dalla legge; l’incapacità naturale è una situazione di fatto che incide sulla validità dell’atto (es. art. 428 c.c.)."
+        1: "No: entrambe possono riguardare situazioni diverse (minori, adulti, stati transitori)."
+        2: "No: sono categorie diverse con presupposti e conseguenze differenti."
+    - type: "mcq"
+      prompt: "Quale istituto, dopo la riforma del 2004, è pensato come strumento flessibile e oggi preferito per proteggere persone fragili senza azzerarne l’autonomia?"
+      choices:
+        - "Interdizione"
+        - "Amministrazione di sostegno"
+        - "Inabilitazione"
+      correctIndex: 1
+      feedback:
+        0: "No: l’interdizione è una misura più rigida, tendenzialmente residuale."
+        1: "Sì: è lo strumento introdotto/rafforzato dalla L. 6/2004, costruito su misura in base ai bisogni della persona."
+        2: "No: l’inabilitazione è una misura di incapacità parziale con assistenza del curatore."
+    - type: "mcq"
+      prompt: "Che cosa descrive meglio la curatela (in logica generale)?"
+      choices:
+        - "Sostituzione totale della persona in tutti gli atti"
+        - "Assistenza della persona per gli atti più rilevanti, mentre conserva autonomia per gli atti di ordinaria amministrazione"
+        - "Una misura solo sanitaria senza effetti giuridici"
+      correctIndex: 1
+      feedback:
+        0: "Questa è la logica della sostituzione piena (più vicina alla tutela/interdizione), non della curatela."
+        1: "Esatto: la curatela è legata a una capacità limitata/assistita, non a una sostituzione totale."
+        2: "No: è un istituto giuridico con effetti sulla capacità di compiere atti."
+    - type: "open"
+      prompt: "Fai un esempio in cui useresti l’amministrazione di sostegno anziché una misura più rigida, spiegando perché."
+      expected_points:
+        - "Indicare una fragilità parziale (es. gestione conto, pagamenti, contratti)."
+        - "Spiegare la misura “su misura” e la preservazione dell’autonomia residua."
+        - "Richiamare l’idea di protezione senza azzerare la capacità."
 ---
 
-<Hook>
-Inserisci qui il gancio iniziale...
-</Hook>
 
-<Objective>
-Inserisci qui l'obiettivo della lezione...
-</Objective>
+<HookBlock>
+  <div className="space-y-3">
+    <p>
+      Tua nonna ha 87 anni. È lucida, ma ultimamente dimentica di pagare le bollette e ha firmato un contratto telefonico che non voleva.
+      Chi la protegge? E soprattutto: proteggerla significa toglierle tutti i diritti?
+      La risposta del diritto italiano è cambiata radicalmente nel 2004.
+    </p>
+  </div>
+</HookBlock>
 
----
+<section className="mt-6 rounded-2xl border border-white/10 p-5 bg-gradient-to-br from-white/8 via-white/5 to-transparent">
+  <div className="flex flex-wrap items-center gap-2 text-sm">
+    <span className="rounded-full border border-white/10 px-3 py-1 bg-white/5">Area 3 — Privato/Civile</span>
+    <span className="opacity-60">›</span>
+    <span className="rounded-full border border-white/10 px-3 py-1 bg-white/5">Mod 3.1 — Persone e capacità</span>
+    <span className="opacity-60">›</span>
+    <span className="rounded-full border border-white/10 px-3 py-1 bg-white/5">Lez 3.1.2</span>
+  </div>
 
-## 1) Titolo sezione
+  <p className="mt-3">
+    Nella lezione 3.1.1 hai visto la differenza tra capacit giuridica (si “ha” dalla nascita) e capacit di agire (si “esercita” dai 18 anni). Ora facciamo il passo successivo: <strong>cosa succede quando la capacità di agire non è piena o viene limitata per proteggere la persona?</strong>
+  </p>
+</section>
 
-Contenuto...
+<section className="mt-8 space-y-6">
+  <div className="space-y-2">
+    <h2 className="text-xl font-semibold">1) Due categorie diverse: incapacità legale vs incapacità naturale</h2>
+    
+    <div className="grid md:grid-cols-2 gap-4 mt-4">
+      <div className="p-4 rounded-xl border border-white/10 bg-white/5">
+        <p className="font-bold text-blue-400">Incapacità Legale</p>
+        <p className="text-sm mt-2">“Lo dice la legge / lo decide il giudice”.</p>
+        <p className="text-sm">L’ordinamento prevede che una persona <strong>non possa compiere atti</strong> perché è minore o sottoposta a misure (interdizione, inabilitazione, ADS).</p>
+      </div>
+      <div className="p-4 rounded-xl border border-white/10 bg-white/5">
+        <p className="font-bold text-yellow-500">Incapacità Naturale</p>
+        <p className="text-sm mt-2">“Di fatto, in quel momento”.</p>
+        <p className="text-sm">Riguarda chi <strong>in concreto</strong>, al momento dell’atto, <strong>non è in grado di intendere o di volere</strong> (shock, ubriachezza, ecc.), pur essendo legalmente capace.</p>
+      </div>
+    </div>
+  </div>
 
-<Quiz />
+  <div className="space-y-2">
+    <h2 className="text-xl font-semibold">2) I tre strumenti “classici” (e perché oggi conta l'ultimo)</h2>
+    
+    <ul className="list-disc pl-5 space-y-3">
+      <li>
+        <strong>Minore età:</strong> Il caso più comune. Agiscono i genitori o tutori.
+      </li>
+      <li>
+        <strong><GlossaryTerm id="interdizione">Interdizione</GlossaryTerm>:</strong> Misura rigida (<strong>incapacità totale</strong>). La persona viene sostituita da un <strong><GlossaryTerm id="tutore">tutore</GlossaryTerm></strong>. Oggi è considerata residuale perché annulla l'autonomia.
+      </li>
+      <li>
+        <strong><GlossaryTerm id="inabilitazione">Inabilitazione</GlossaryTerm>:</strong> Misura intermedia (<strong>incapacità parziale</strong>). La persona è assistita da un <strong><GlossaryTerm id="curatore">curatore</GlossaryTerm></strong> per gli atti importanti.
+      </li>
+      <li>
+        <strong><GlossaryTerm id="amministrazione-di-sostegno">Amministrazione di Sostegno (ADS)</GlossaryTerm>:</strong> Introdotta dalla L. 6/2004. È lo strumento moderno e flessibile. 
+        Il giudice costruisce un intervento <strong>mirato</strong>, nominando un amministratore con poteri limitati solo a ciò che serve. 
+        <strong>Protezione + Autonomia residua</strong>.
+      </li>
+    </ul>
+  </div>
 
-<Resources />
+  <div className="space-y-2">
+    <h2 className="text-xl font-semibold">3) Emancipazione</h2>
+    <p>
+      Riguarda il caso particolare del minore che si sposa (con autorizzazione del giudice). Acquisisce una <strong>capacità limitata</strong>: può compiere atti di ordinaria amministrazione, ma resta assistito per quelli straordinari.
+    </p>
+  </div>
+</section>
+
+<TechnicalBlock title="Versione tecnica (Riferimenti Normativi)">
+  <div className="space-y-4 text-sm">
+    <p><strong>Cornice generale:</strong> Titolo XII del Libro I c.c. disciplina gli strumenti di protezione.</p>
+    
+    <p><strong>Interdizione e inabilitazione (artt. 414-432 c.c.):</strong> Misure tradizionali, basate su rigidità e standardizzazione.</p>
+    
+    <p><strong>Amministrazione di sostegno (L. 6/2004; artt. 404-413 c.c.):</strong> Misura flessibile, calibrata sul bisogno concreto (art. 404 c.c.).</p>
+    
+    <p><strong>Incapacità naturale (art. 428 c.c.):</strong> Disciplina degli atti compiuti da chi, pur legalmente capace, era privo in concreto della capacità di intendere o di volere (annullabilità se c'è grave pregiudizio e malafede dell'altro contraente).</p>
+  </div>
+</TechnicalBlock>
+
+<section className="mt-8 space-y-4">
+  <h2 className="text-xl font-semibold">Esempi Pratici</h2>
+
+  <ExampleCard type="positive" title="Amministratore di sostegno per l’anziano">
+    <div className="space-y-2">
+      <p><strong>Scenario:</strong> Un'anziana con Alzheimer lieve rischia errori nei pagamenti, ma è autonoma nel quotidiano.</p>
+      <p><strong>Analisi:</strong> Il giudice nomina un <strong><GlossaryTerm id="amministratore-di-sostegno">amministratore di sostegno</GlossaryTerm></strong> solo per gestire il conto e le bollette.</p>
+      <p><strong>Esito:</strong> Per tutto il resto, la signora decide da sola. È una protezione “chirurgica”.</p>
+    </div>
+  </ExampleCard>
+
+  <ExampleCard type="negative" title="Contratto firmato in stato confusionale">
+    <div className="space-y-2">
+      <p><strong>Scenario:</strong> Una persona firma una vendita immobiliare durante un grave malore temporaneo.</p>
+      <p><strong>Analisi:</strong> Non c'è un'interdizione preventiva, ma c'è <strong><GlossaryTerm id="incapacita-naturale">incapacità naturale</GlossaryTerm></strong> al momento dell'atto.</p>
+      <p><strong>Esito:</strong> L'atto può essere annullato se si dimostra il grave pregiudizio e la malafede della controparte (Art. 428 c.c.).</p>
+    </div>
+  </ExampleCard>
+
+  <ExampleCard type="positive" title="Emancipazione del sedicenne">
+    <div className="space-y-2">
+      <p><strong>Scenario:</strong> Un ragazzo di 16 anni si sposa con autorizzazione del tribunale.</p>
+      <p><strong>Analisi:</strong> Diventa <strong><GlossaryTerm id="emancipazione">emancipato</GlossaryTerm></strong>. Acquista capacità parziale.</p>
+      <p><strong>Esito:</strong> Può compiere atti ordinari da solo, ma serve il curatore per quelli straordinari.</p>
+    </div>
+  </ExampleCard>
+</section>
+
+<div className="mt-12 p-6 bg-neutral-100 dark:bg-neutral-900 rounded-lg text-sm text-neutral-600 dark:text-neutral-400">
+  <h4 className="font-bold mb-2 text-neutral-900 dark:text-neutral-200">Fonti e Risorse</h4>
+  <ul className="list-disc pl-5 space-y-2">
+    <li><a className="underline" href="https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2004-01-09;6">Legge 6/2004 (Amministrazione di sostegno)</a></li>
+    <li><a className="underline" href="https://www.brocardi.it/codice-civile/libro-primo/titolo-xii/">Titolo XII Libro I c.c. (Brocardi)</a></li>
+  </ul>
+  <p className="mt-4 text-xs">Ultima verifica: 13 Febbraio 2026 | Verificatore: Guirimì Team</p>
+</div>
