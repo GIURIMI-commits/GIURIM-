@@ -2,34 +2,216 @@
 slug: "lez-2.4.1"
 title: "Come funziona il voto in Italia"
 area: "area-2-costituzionale"
-module: "mod-2.4-elezioni-partecipazione"
+module: "mod-2.4-elezioni-e-partecipazione"
 order: 1
-duration_minutes: 10
+duration_minutes: 18
 prerequisites: ["lez-2.3.2"]
 next_lesson: "lez-2.4.2"
-last_verified: "2026-02-07"
-verified_by: "Da verificare"
+prev_lesson: "lez-2.3.2"
+last_verified: "2026-02-13"
+verified_by: "Guirimì Team"
 disclaimer_level: "standard"
-source_refs: []
-glossary_terms: []
+
+source_refs:
+  - label: "Normattiva — Art. 48 Costituzione (Il diritto di voto)"
+    url: "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:costituzione#art48"
+  - label: "Normattiva — Art. 56-57 Costituzione (Composizione Camere)"
+    url: "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:costituzione#art56"
+  - label: "Ministero dell'Interno — Portale Elegendo"
+    url: "https://elezioni.interno.gov.it/"
+  - label: "Brocardi — Commento all'Articolo 48"
+    url: "https://www.brocardi.it/costituzione/parte-i/titolo-iv/art48.html"
+
+media:
+  - type: "video"
+    title: "Il diritto di voto e l'Articolo 48"
+    url: "https://www.youtube.com/watch?v=F0S_v7nAnx0"
+    source: "Edizioni Simone — Diritto a pillole"
+    timestamp: "0:00-08:45"
+    position: "after-spiegazione"
+
+glossary_terms:
+  - "elettorato-attivo"
+  - "elettorato-passivo"
+  - "suffragio-universale"
+  - "voto-di-scambio"
+  - "circoscrizione-elettorale"
+  - "personalita-del-voto"
+
 quiz:
-  questions: []
+  questions:
+    - type: "mcq"
+      prompt: "Cosa si intende oggi per 'suffragio universale' in Italia?"
+      choices:
+        - "Che possono votare tutti i residenti in Italia da almeno 5 anni."
+        - "Che il diritto di voto è riconosciuto a tutti i cittadini, uomini e donne, che hanno raggiunto la maggiore età."
+        - "Che il voto è aperto a chiunque paghi le tasse nello Stato."
+      correctIndex: 1
+      feedback:
+        0: "Sbagliato. La cittadinanza è un requisito fondamentale per le elezioni politiche nazionali."
+        1: "Esatto! Dal 1946 in Italia vige il suffragio universale maschile e femminile."
+        2: "No. Il censo (la ricchezza) non è più un requisito per votare dal secolo scorso."
+    - type: "mcq"
+      prompt: "Quale di queste affermazioni sulle caratteristiche del voto è corretta?"
+      choices:
+        - "Il voto è pubblico: tutti devono sapere per chi hai votato."
+        - "Il voto è segreto: nessuno può costringerti a rivelare la tua scelta o controllarla."
+        - "Si può votare per delega mandando un amico al proprio posto."
+      correctIndex: 1
+      feedback:
+        0: "Sbagliato. La segretezza è una garanzia di libertà contro le pressioni esterne."
+        1: "Corretto! La segretezza assicura che il cittadino sia libero da condizionamenti."
+        2: "No. Il voto è 'personale', non si può delegare nessuno."
+    - type: "mcq"
+      prompt: "A che età si può votare per il Senato della Repubblica?"
+      choices:
+        - "25 anni."
+        - "18 anni."
+        - "21 anni."
+      correctIndex: 1
+      feedback:
+        0: "Era così fino al 2021. Ora la soglia è stata abbassata."
+        1: "Esatto! Grazie a una recente riforma costituzionale, oggi a 18 anni voti sia per la Camera che per il Senato."
+        2: "No. La maggiore età (18 anni) è l'unica soglia per l'elettorato attivo nazionale."
+    - type: "open"
+      prompt: "Spiega perché l'Articolo 48 definisce il voto come un 'dovere civico' invece che come un obbligo di legge."
+      expected_points:
+        - "Non ci sono sanzioni penali o pecuniarie per chi non vota (libertà di astensione)."
+        - "Rappresenta un impegno morale verso la comunità democratica."
+        - "Serve a sottolineare l'importanza della partecipazione per il funzionamento dello Stato."
 ---
 
-<Hook>
-Inserisci qui il gancio iniziale...
-</Hook>
+<HookBlock>
+  <div className="space-y-3">
+    <p>
+      Quando entri in quella cabina elettorale, con una matita in mano e una scheda di carta, hai in mano lo stesso identico potere del milionario più influente o del politico più famoso d'Italia. Il tuo voto vale esattamente quanto il loro: uno.
+    </p>
+    <p>
+      Ma come siamo arrivati a questo equilibrio? E come fa quel segno su un pezzo di carta a decidere chi siederà in Parlamento? In questa lezione scopriremo le regole del gioco della democrazia e perché il tuo voto è protetto da "quattro mura" invisibili.
+    </p>
+  </div>
+</HookBlock>
 
-<Objective>
-Inserisci qui l'obiettivo della lezione...
-</Objective>
+<section className="mt-6 rounded-2xl border border-white/10 p-5 bg-gradient-to-br from-white/8 via-white/5 to-transparent">
+  <div className="flex flex-wrap items-center gap-2 text-sm">
+    <span className="rounded-full border border-white/10 px-3 py-1 bg-white/5">Area 2 — Costituzionale</span>
+    <span className="opacity-60">›</span>
+    <span className="rounded-full border border-white/10 px-3 py-1 bg-white/5">Mod 2.4 — Elezioni e partecipazione</span>
+    <span className="opacity-60">›</span>
+    <span className="rounded-full border border-white/10 px-3 py-1 bg-white/5">Lez 2.4.1</span>
+  </div>
 
----
+  <p className="mt-3">
+    Nelle lezioni precedenti abbiamo visto come funzionano le istituzioni. Ora vediamo come i cittadini scelgono chi le deve comporre. Parliamo di <strong><GlossaryTerm id="elettorato-attivo">elettorato attivo</GlossaryTerm></strong> (il tuo diritto di votare) e delle regole che rendono il voto libero.
+  </p>
+</section>
 
-## 1) Titolo sezione
+<section className="mt-8 space-y-6">
+  <div className="space-y-2">
+    <h2 className="text-xl font-semibold">1) Chi può votare? Il cammino verso il 18</h2>
+    <p>
+      Oggi in Italia vige il <strong><GlossaryTerm id="suffragio-universale">suffragio universale</GlossaryTerm></strong>. Significa che non contano il censo (quanti soldi hai), l'istruzione o il sesso. Per votare servono solo due requisiti:
+    </p>
+    <ul className="list-disc pl-5 space-y-2">
+      <li><strong>Cittadinanza:</strong> Devi essere cittadino italiano (per le elezioni politiche nazionali).</li>
+      <li><strong>Maggiore età:</strong> Devi aver compiuto 18 anni.</li>
+    </ul>
+    
+    <div className="rounded-xl border border-blue-500/20 bg-blue-500/5 p-4 text-sm italic">
+      <strong>Aggiornamento Riforma 2021:</strong> Fino a pochi anni fa, per votare al Senato servivano 25 anni. Oggi, con il compimento dei 18 anni, ricevi entrambe le schede: quella per la Camera (400 deputati) e quella per il Senato (200 senatori).
+    </div>
+  </div>
 
-Contenuto...
+  <div className="space-y-4">
+    <h2 className="text-xl font-semibold">2) Le 4 caratteristiche del voto (Art. 48)</h2>
+    <p>
+      La Costituzione protegge il tuo voto definendolo con quattro aggettivi precisi. Se ne manca uno, la democrazia è in pericolo:
+    </p>
+    <div className="grid md:grid-cols-2 gap-4">
+      <div className="p-4 rounded-xl border border-white/10 bg-white/5">
+        <p className="font-bold text-blue-400">Personale</p>
+        <p className="text-xs">Devi andare tu fisicamente. Non esiste la delega: nessuno può votare "al posto tuo".</p>
+      </div>
+      <div className="p-4 rounded-xl border border-white/10 bg-white/5">
+        <p className="font-bold text-green-400">Eguale</p>
+        <p className="text-xs">Non esiste il voto "plurimo". Il voto del Presidente del Consiglio vale 1, esattamente come il tuo.</p>
+      </div>
+      <div className="p-4 rounded-xl border border-white/10 bg-white/5">
+        <p className="font-bold text-purple-400">Libero</p>
+        <p className="text-xs">Non puoi essere costretto o minacciato. Il <GlossaryTerm id="voto-di-scambio">voto di scambio</GlossaryTerm> (promettere soldi o favori per un voto) è un reato.</p>
+      </div>
+      <div className="p-4 rounded-xl border border-white/10 bg-white/5">
+        <p className="font-bold text-red-400">Segreto</p>
+        <p className="text-xs">La cabina elettorale garantisce che nessuno sappia cosa hai scritto. Se la segretezza viene violata, il voto è nullo.</p>
+      </div>
+    </div>
+  </div>
 
-<Quiz />
+  <div className="space-y-2">
+    <h2 className="text-xl font-semibold">3) Camera e Senato: cosa cambia?</h2>
+    <p>
+      Anche se oggi li votiamo alla stessa età, Camera e Senato restano due organi distinti.
+      La <strong>Camera dei Deputati</strong> viene eletta su base nazionale, mentre il <strong>Senato della Repubblica</strong> viene eletto su base regionale (Art. 57). Questo serve a garantire che le diverse parti d'Italia abbiano una rappresentanza specifica anche nel "palazzo" centrale.
+    </p>
+  </div>
+</section>
 
-<Resources />
+
+
+<VideoEmbed 
+  url="https://www.youtube.com/watch?v=F0S_v7nAnx0" 
+  title="Il diritto di voto e l'Articolo 48" 
+  source="Edizioni Simone" 
+  note="Un video sintetico che riassume i concetti di elettorato attivo e passivo e le garanzie costituzionali del voto." 
+/>
+
+<TechnicalBlock>
+  <div className="space-y-4">
+    <h3 className="text-lg font-semibold text-blue-400">Analisi Tecnica: L'Articolo 48</h3>
+    <div className="rounded-2xl border border-white/10 p-5 bg-white/5 space-y-2 text-sm">
+      <p className="italic">"Sono elettori tutti i cittadini, uomini e donne, che hanno raggiunto la maggiore età. Il voto è personale ed eguale, libero e segreto. Il suo esercizio è dovere civico."</p>
+      
+      <p className="mt-4 font-bold">Limitazioni al voto:</p>
+      <p>Il diritto di voto può essere limitato solo per: incapacità civile (oggi quasi del tutto superata per i malati di mente), per sentenza penale irrevocabile (i condannati a certe pene perdono il diritto di voto temporaneamente o per sempre) o per indegnità morale nei casi previsti dalla legge.</p>
+    </div>
+  </div>
+</TechnicalBlock>
+
+<section className="mt-8 space-y-4">
+  <h2 className="text-xl font-semibold">Esempi Reali: Proteggere la tua scelta</h2>
+
+  <ExampleCard type="positive" title="La matita copiativa e la cabina">
+    <div className="space-y-2">
+      <p><strong>Scenario:</strong> Entri nel seggio, ti danno una matita che non si può cancellare e ti chiudi in cabina.</p>
+      <p><strong>Analisi:</strong> Questi strumenti servono a garantire tecnicamente la <strong>segretezza</strong> e l'immutabilità del voto.</p>
+      <p><strong>Esito:</strong> La tua volontà è protetta da manipolazioni esterne. Se portassi il cellulare per fotografare la scheda, commetteresti un reato perché violeresti il principio di segretezza.</p>
+    </div>
+  </ExampleCard>
+
+  <ExampleCard type="negative" title="Il voto di scambio">
+    <div className="space-y-2">
+      <p><strong>Scenario:</strong> Un candidato promette un posto di lavoro a un cittadino in cambio della foto della scheda votata.</p>
+      <p><strong>Analisi:</strong> Qui vengono violati i principi di <strong>libertà</strong> e <strong>segretezza</strong> del voto.</p>
+      <p><strong>Esito:</strong> Entrambi rischiano il carcere. Il voto non è una merce, ma un diritto inviolabile che non può essere venduto.</p>
+    </div>
+  </ExampleCard>
+
+  <ExampleCard type="borderline" title="Il voto dei residenti all'estero">
+    <div className="space-y-2">
+      <p><strong>Scenario:</strong> Un cittadino italiano vive a Londra e vota per posta.</p>
+      <p><strong>Analisi:</strong> La Costituzione prevede la "Circoscrizione Estero" per permettere a chi è lontano di esercitare il proprio diritto.</p>
+      <p><strong>Esito:</strong> È un esempio di come l'Italia cerchi di rendere il voto il più universale possibile, anche se la segretezza del voto per posta è spesso oggetto di dibattito tecnico.</p>
+    </div>
+  </ExampleCard>
+</section>
+
+<ResourceFooter>
+  <div className="space-y-3">
+    <p className="font-semibold">Risorse Utili</p>
+    <ul className="list-disc pl-5 space-y-2">
+      <li><a className="underline" href="https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:costituzione#art48">Art. 48 su Normattiva</a></li>
+      <li><a className="underline" href="https://elezioni.interno.gov.it/">Portale Eligendo (Ministero dell'Interno)</a></li>
+    </ul>
+    <p className="text-xs opacity-70">Verificato il: 13 Febbraio 2026 | Verificatore: Guirimì Team</p>
+  </div>
+</ResourceFooter>

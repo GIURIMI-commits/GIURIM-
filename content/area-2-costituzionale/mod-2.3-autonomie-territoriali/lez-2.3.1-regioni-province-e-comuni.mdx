@@ -4,32 +4,182 @@ title: "Regioni, Province e Comuni"
 area: "area-2-costituzionale"
 module: "mod-2.3-autonomie-territoriali"
 order: 1
-duration_minutes: 10
+duration_minutes: 20
 prerequisites: ["lez-2.2.3"]
 next_lesson: "lez-2.3.2"
-last_verified: "2026-02-07"
-verified_by: "Da verificare"
+prev_lesson: "lez-2.2.3"
+last_verified: "2026-02-13"
+verified_by: "Guirimì Team"
 disclaimer_level: "standard"
-source_refs: []
-glossary_terms: []
+
+source_refs:
+  - label: "Normattiva — Art. 5 Costituzione (Unità e Decentramento)"
+    url: "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:costituzione#art5"
+  - label: "Normattiva — Art. 114-118 Costituzione (Titolo V)"
+    url: "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:costituzione#art114"
+  - label: "Brocardi — Commento al Titolo V: Le Regioni e gli Enti Locali"
+    url: "https://www.brocardi.it/costituzione/parte-ii/titolo-v/"
+
+media:
+  - type: "video"
+    title: "Gli enti locali: Comuni, Province e Regioni"
+    url: "https://www.youtube.com/watch?v=QoKJS_4jyos"
+    source: "Hub Scuola"
+    timestamp: "0:00-05:00"
+    position: "after-spiegazione"
+
+glossary_terms:
+  - "autonomia-locale"
+  - "decentramento"
+  - "sussidiarieta"
+  - "potesta-legislativa"
+  - "potesta-amministrativa"
+  - "enti-locali"
+  - "titolo-v"
+
 quiz:
-  questions: []
+  questions:
+    - type: "mcq"
+      prompt: "Secondo l'Articolo 114, chi costituisce la Repubblica Italiana?"
+      choices:
+        - "Solo lo Stato centrale con sede a Roma."
+        - "I Comuni, le Province, le Città metropolitane, le Regioni e lo Stato."
+        - "Solo le Regioni e il Governo."
+      correctIndex: 1
+      feedback:
+        0: "Sbagliato. Questa era l'idea pre-repubblicana. Oggi la Repubblica è un insieme di più enti pari grado."
+        1: "Esatto! Lo Stato è solo uno degli elementi; la Repubblica 'partendo dal basso' include tutti gli enti locali."
+        2: "No. Ti sei dimenticato dei Comuni e delle Province, che sono alla base del sistema."
+    - type: "mcq"
+      prompt: "Cosa significa il principio di 'Sussidiarietà'?"
+      choices:
+        - "Che lo Stato deve dare sussidi economici a tutti i cittadini."
+        - "Che le decisioni e i servizi devono essere gestiti dall'ente più vicino ai cittadini (il Comune), a meno che non serva un livello superiore."
+        - "Che le Regioni comandano sui Comuni."
+      correctIndex: 1
+      feedback:
+        0: "No, non ha a che fare con i bonus o i sussidi monetari."
+        1: "Corretto! La sussidiarietà (Art. 118) dice che il Comune è il primo custode dei bisogni del cittadino."
+        2: "Sbagliato. Non è una gerarchia di comando, ma di efficienza del servizio."
+    - type: "open"
+      prompt: "Spiega brevemente il concetto di 'Italia una e indivisibile' contenuto nell'Articolo 5, in relazione alla concessione di autonomie locali."
+      expected_points:
+        - "Lo Stato non si frammenta (unità)."
+        - "L'autonomia non è indipendenza/secessione."
+        - "Il decentramento serve ad avvicinare lo Stato al cittadino, non a dividerlo."
 ---
 
-<Hook>
-Inserisci qui il gancio iniziale...
-</Hook>
+<HookBlock>
+  <div className="space-y-3">
+    <p>
+      Quando devi rifare la carta d'identità, non vai al Ministero a Roma. Se un autobus non passa o se l'ospedale della tua città ha bisogno di fondi, la risposta non arriva dal Parlamento, ma dai palazzi che hai a pochi chilometri da casa. 
+    </p>
+    <p>
+      L'Italia è come un grande condominio: c'è un regolamento generale per tutto l'edificio (lo Stato), ma ogni piano gestisce i propri spazi per vivere meglio. In questa lezione scopri come questo "condominio" si divide i compiti per non lasciarti solo davanti alla burocrazia.
+    </p>
+  </div>
+</HookBlock>
 
-<Objective>
-Inserisci qui l'obiettivo della lezione...
-</Objective>
+<section className="mt-6 rounded-2xl border border-white/10 p-5 bg-gradient-to-br from-white/8 via-white/5 to-transparent">
+  <div className="flex flex-wrap items-center gap-2 text-sm">
+    <span className="rounded-full border border-white/10 px-3 py-1 bg-white/5">Area 2 — Costituzionale</span>
+    <span className="opacity-60">›</span>
+    <span className="rounded-full border border-white/10 px-3 py-1 bg-white/5">Mod 2.3 — Autonomie territoriali</span>
+    <span className="opacity-60">›</span>
+    <span className="rounded-full border border-white/10 px-3 py-1 bg-white/5">Lez 2.3.1</span>
+  </div>
 
----
+  <p className="mt-3">
+    Nelle lezioni precedenti abbiamo analizzato il "centro" del potere a Roma. Ora scopriamo la periferia: come il potere viene distribuito sul territorio attraverso le <strong><GlossaryTerm id="autonomia-locale">autonomie locali</GlossaryTerm></strong>.
+  </p>
+</section>
 
-## 1) Titolo sezione
+<section className="mt-8 space-y-6">
+  <div className="space-y-2">
+    <h2 className="text-xl font-semibold">1) L'Unità che si decentra (Art. 5)</h2>
+    <p>
+      L'Italia è "una e indivisibile", ma la Costituzione dice che la Repubblica promuove le autonomie locali e attua il <strong><GlossaryTerm id="decentramento">decentramento</GlossaryTerm></strong>. 
+      L'idea è semplice: lo Stato non può vedere tutto. Per essere efficienti, bisogna delegare funzioni a chi vive vicino ai problemi.
+    </p>
+    <p>
+      Non è una divisione del Paese, ma un modo per far funzionare meglio la macchina pubblica, portando i servizi "alla porta" del cittadino.
+    </p>
+  </div>
 
-Contenuto...
+  <div className="rounded-2xl border border-white/10 p-5 bg-white/5 space-y-3">
+    <h3 className="text-lg font-semibold">2) La Squadra della Repubblica (Art. 114)</h3>
+    <p>
+      La Repubblica non coincide solo con lo "Stato" centrale. È un sistema integrato di <GlossaryTerm id="enti-locali">enti locali</GlossaryTerm> con pari dignità:
+    </p>
+    <ul className="grid md:grid-cols-2 gap-4 text-sm">
+      <li className="p-4 rounded-xl border border-white/10 bg-white/5">
+        <strong>Comuni:</strong> Gestiscono la vita quotidiana (anagrafe, rifiuti, asili).
+      </li>
+      <li className="p-4 rounded-xl border border-white/10 bg-white/5">
+        <strong>Regioni:</strong> Hanno il potere di fare leggi (<strong><GlossaryTerm id="potesta-legislativa">potestà legislativa</GlossaryTerm></strong>) su sanità e trasporti.
+      </li>
+      <li className="p-4 rounded-xl border border-white/10 bg-white/5">
+        <strong>Province e Città Metropolitane:</strong> Si occupano di strade provinciali e scuole superiori.
+      </li>
+      <li className="p-4 rounded-xl border border-white/10 bg-white/5">
+        <strong>Stato:</strong> Si riserva le grandi materie (difesa, giustizia, moneta).
+      </li>
+    </ul>
+  </div>
 
-<Quiz />
+  <div className="space-y-2">
+    <h2 className="text-xl font-semibold">3) Il Motore: la Sussidiarietà (Art. 118)</h2>
+    <p>
+      La <strong><GlossaryTerm id="sussidiarieta">sussidiarietà</GlossaryTerm></strong> è la bussola del sistema. Dice che l'amministrazione deve essere gestita dall'ente più vicino al cittadino (il Comune). 
+    </p>
+    <p>
+      Solo se il Comune non può farcela (perché il compito è troppo grande), la funzione sale alla Provincia, poi alla Regione e infine allo Stato. È la logica del "chi è più vicino risolve meglio".
+    </p>
+  </div>
+</section>
 
-<Resources />
+<VideoEmbed 
+  url="https://www.youtube.com/watch?v=QoKJS_4jyos" 
+  title="Gli enti locali: Comuni, Province e Regioni" 
+  source="Hub Scuola" 
+  note="Video didattico che illustra la struttura e le funzioni degli enti locali secondo il Titolo V." 
+/>
+
+<TechnicalBlock>
+  <div className="space-y-4">
+    <h3 className="text-lg font-semibold">Versione Tecnica: Il Titolo V</h3>
+    <div className="rounded-2xl border border-white/10 p-5 bg-white/5 space-y-2 text-sm">
+      <p className="font-bold">Art. 114 Costituzione</p>
+      <p className="italic">"La Repubblica è costituita dai Comuni, dalle Province, dalle Città metropolitane, dalle Regioni e dallo Stato."</p>
+      <p className="mt-4 font-bold">Art. 117 — La divisione dei poteri</p>
+      <p>Lo Stato ha potestà esclusiva su materie come difesa e moneta. Stato e Regioni hanno potestà concorrente (lo Stato fissa i principi, la Regione i dettagli) su materie come la Sanità.</p>
+    </div>
+  </div>
+</TechnicalBlock>
+
+<section className="mt-8 space-y-4">
+  <h2 className="text-xl font-semibold">Esempi Reali</h2>
+
+  <ExampleCard type="positive" title="Gestione della Sanità">
+    <p><strong>Scenario:</strong> Ogni Regione ha il suo sistema sanitario, con ticket e prenotazioni diverse.</p>
+    <p><strong>Analisi:</strong> È l'effetto dell'autonomia regionale. Lo Stato garantisce i livelli minimi di assistenza, ma la Regione decide come organizzare gli ospedali sul territorio.</p>
+  </ExampleCard>
+
+  <ExampleCard type="negative" title="Conflitti di competenza">
+    <p><strong>Scenario:</strong> Lo Stato emana una norma sull'ambiente che una Regione ritiene troppo invasiva.</p>
+    <p><strong>Analisi:</strong> Spesso le competenze si sovrappongono. Se non c'è accordo, interviene la Corte Costituzionale per decidere chi ha ragione.</p>
+  </ExampleCard>
+</section>
+
+<ResourceFooter>
+  <div className="space-y-3">
+    <ul className="list-disc pl-5 space-y-2">
+      <li><a className="underline" href="https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:costituzione#art114">Normattiva — Art. 114 ss. (Titolo V)</a></li>
+      <li><a className="underline" href="https://www.brocardi.it/costituzione/parte-ii/titolo-v/">Brocardi — Commento tecnico alle Autonomie</a></li>
+    </ul>
+
+    <p className="text-sm opacity-80">
+      Questa lezione ha scopo esclusivamente educativo. Non costituisce consulenza legale.
+    </p>
+  </div>
+</ResourceFooter>

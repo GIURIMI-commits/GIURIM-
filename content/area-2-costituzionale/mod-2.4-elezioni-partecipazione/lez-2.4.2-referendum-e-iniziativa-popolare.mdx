@@ -2,34 +2,237 @@
 slug: "lez-2.4.2"
 title: "Referendum e iniziativa popolare"
 area: "area-2-costituzionale"
-module: "mod-2.4-elezioni-partecipazione"
+module: "mod-2.4-elezioni-e-partecipazione"
 order: 2
-duration_minutes: 10
+duration_minutes: 20
 prerequisites: ["lez-2.4.1"]
 next_lesson: "lez-2.4.3"
-last_verified: "2026-02-07"
-verified_by: "Da verificare"
+prev_lesson: "lez-2.4.1"
+last_verified: "2026-02-13"
+verified_by: "Guirimì Team"
 disclaimer_level: "standard"
-source_refs: []
-glossary_terms: []
+
+source_refs:
+  - label: "Normattiva — Art. 75 Costituzione (Referendum abrogativo)"
+    url: "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:costituzione#art75"
+  - label: "Normattiva — Art. 71 Costituzione (Iniziativa popolare)"
+    url: "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:costituzione#art71"
+  - label: "Corte Costituzionale — Giudizio di ammissibilità"
+    url: "https://www.cortecostituzionale.it"
+  - label: "Ministero dell'Interno — Archivio Storico Referendum"
+    url: "https://elezioni.interno.gov.it/referendum"
+
+media:
+  - type: "video"
+    title: "Il Referendum Abrogativo spiegato semplice"
+    url: "https://www.youtube.com/watch?v=HuI_4-i_hXY"
+    source: "Edizioni Simone — Diritto Costituzionale"
+    timestamp: "0:00-05:40"
+    position: "after-spiegazione"
+
+glossary_terms:
+  - "democrazia-diretta"
+  - "referendum-abrogativo"
+  - "quorum-strutturale"
+  - "iniziativa-popolare"
+  - "corte-di-cassazione"
+  - "ufficio-centrale-referendum"
+
 quiz:
-  questions: []
+  questions:
+    - type: "mcq"
+      prompt: "Qual è l'effetto principale di un referendum abrogativo (Art. 75) se vince il SÌ?"
+      choices:
+        - "Il Parlamento è obbligato a scrivere una nuova legge migliore."
+        - "La legge (o la parte di essa) oggetto del quesito viene eliminata dall'ordinamento."
+        - "Il Governo deve dimettersi."
+      correctIndex: 1
+      feedback:
+        0: "Sbagliato. Il referendum abrogativo è uno strumento 'distruttivo', non costruttivo."
+        1: "Esatto! La norma viene cancellata (abrogata) e non è più valida dal giorno successivo al decreto del Presidente della Repubblica."
+        2: "No. Il referendum riguarda le leggi, non la fiducia al Governo."
+    - type: "mcq"
+      prompt: "Perché molti referendum falliscono anche se la maggioranza dei votanti dice SÌ?"
+      choices:
+        - "Perché non si raggiunge il quorum (non va a votare il 50% + 1 degli aventi diritto)."
+        - "Perché il Parlamento pone il veto."
+        - "Perché le schede bianche vengono contate come NO."
+      correctIndex: 0
+      feedback:
+        0: "Corretto. Nel referendum abrogativo, se non va a votare la metà degli elettori, il voto è nullo, anche se il 100% dei votanti ha detto SÌ."
+        1: "No, il Parlamento non può bloccare l'esito del voto."
+        2: "Sbagliato. Le schede bianche sono voti non validi per il conteggio, ma contano per il quorum."
+    - type: "mcq"
+      prompt: "Su quali materie NON è possibile chiedere un referendum abrogativo?"
+      choices:
+        - "Sulla caccia e sull'ambiente."
+        - "Su leggi tributarie (tasse), di bilancio, amnistia/indulto e trattati internazionali."
+        - "Sui diritti dei lavoratori."
+      correctIndex: 1
+      feedback:
+        0: "Sbagliato. Ci sono stati referendum sulla caccia e sul nucleare."
+        1: "Esatto! L'Art. 75 vieta il referendum su queste materie per evitare che il popolo paralizzi lo Stato (es. abolendo le tasse)."
+        2: "No. Si sono svolti referendum storici sui diritti dei lavoratori (es. Articolo 18)."
+    - type: "open"
+      prompt: "Spiega la differenza fondamentale tra il Quorum del Referendum Abrogativo (Art. 75) e quello del Referendum Costituzionale (Art. 138)."
+      expected_points:
+        - "Referendum Abrogativo (Art. 75): Richiede il quorum del 50% + 1 degli aventi diritto per essere valido."
+        - "Referendum Costituzionale (Art. 138): NON richiede quorum (vince chi ha più voti)."
+        - "Motivazione: nell'abrogativo si cancella una legge vigente (serve alta partecipazione); nel costituzionale si conferma/respinge una riforma (basta la volontà di chi partecipa)."
 ---
 
-<Hook>
-Inserisci qui il gancio iniziale...
-</Hook>
+<HookBlock>
+  <div className="space-y-3">
+    <p>
+      Ti è mai capitato di pensare: "Questa legge è assurda, andrebbe cancellata!"?
+      In Italia, tu e gli altri cittadini avete il potere di farlo davvero, senza aspettare che si muovano i politici.
+    </p>
+    <p>
+      Si chiama <strong><GlossaryTerm id="democrazia-diretta">democrazia diretta</GlossaryTerm></strong>. A differenza delle elezioni (dove deleghi qualcuno a decidere), qui decidi tu. Ma attenzione: è un'arma potente che ha le sue istruzioni di sicurezza. In questa lezione scopriamo come si impugna la "gomma da cancellare" della Repubblica.
+    </p>
+  </div>
+</HookBlock>
 
-<Objective>
-Inserisci qui l'obiettivo della lezione...
-</Objective>
+<section className="mt-6 rounded-2xl border border-white/10 p-5 bg-gradient-to-br from-white/8 via-white/5 to-transparent">
+  <div className="flex flex-wrap items-center gap-2 text-sm">
+    <span className="rounded-full border border-white/10 px-3 py-1 bg-white/5">Area 2 — Costituzionale</span>
+    <span className="opacity-60">›</span>
+    <span className="rounded-full border border-white/10 px-3 py-1 bg-white/5">Mod 2.4 — Elezioni e partecipazione</span>
+    <span className="opacity-60">›</span>
+    <span className="rounded-full border border-white/10 px-3 py-1 bg-white/5">Lez 2.4.2</span>
+  </div>
 
----
+  <p className="mt-3">
+    Nella lezione precedente hai imparato a votare per eleggere i tuoi rappresentanti. Ora vediamo gli strumenti con cui il popolo interviene direttamente sulle leggi: il <strong><GlossaryTerm id="referendum-abrogativo">referendum abrogativo</GlossaryTerm></strong> e l'<strong><GlossaryTerm id="iniziativa-popolare">iniziativa popolare</GlossaryTerm></strong>.
+  </p>
+</section>
 
-## 1) Titolo sezione
+<section className="mt-8 space-y-6">
+  <div className="space-y-2">
+    <h2 className="text-xl font-semibold">1) Il Referendum Abrogativo (Art. 75): La Gomma da Cancellare</h2>
+    <p>
+      In Italia non esiste il referendum "propositivo" (per creare una nuova legge dal nulla). Esiste però il potere di <strong>abrogare</strong> (cancellare) in tutto o in parte una legge esistente.
+    </p>
+    <p>
+      Per attivarlo servono i numeri:
+    </p>
+    <ul className="list-disc pl-5 space-y-2">
+      <li><strong>500.000 firme</strong> di elettori;</li>
+      <li>oppure la richiesta di <strong>5 Consigli Regionali</strong>.</li>
+    </ul>
+    <p>
+      Ma non basta raccogliere le firme. C'è un percorso a ostacoli prima di arrivare alle urne.
+    </p>
+  </div>
 
-Contenuto...
+  
 
-<Quiz />
+  <div className="rounded-2xl border border-white/10 bg-white/5 p-5 space-y-4">
+    <h3 className="text-lg font-semibold">I due grandi ostacoli</h3>
+    
+    <div className="grid md:grid-cols-2 gap-4">
+      <div className="p-4 rounded-xl border border-white/10 bg-red-500/5">
+        <p className="font-bold">1. Le Materie Vietate</p>
+        <p className="text-sm">La Corte Costituzionale ferma tutto se il referendum tocca: tasse, bilancio dello Stato, amnistia/indulto o trattati internazionali. Non puoi votare per non pagare le tasse!</p>
+      </div>
+      <div className="p-4 rounded-xl border border-white/10 bg-blue-500/5">
+        <p className="font-bold">2. Il Quorum (L'incubo)</p>
+        <p className="text-sm">Perché il voto sia valido, deve andare alle urne il <strong>50% + 1</strong> degli aventi diritto (<GlossaryTerm id="quorum-strutturale">quorum strutturale</GlossaryTerm>). Se vota il 49%, anche se sono tutti "SÌ", la legge resta com'è.</p>
+      </div>
+    </div>
+  </div>
 
-<Resources />
+  <div className="space-y-2">
+    <h2 className="text-xl font-semibold">2) L'Iniziativa Legislativa Popolare (Art. 71)</h2>
+    <p>
+      E se volessi proporre una legge nuova invece di cancellarne una vecchia?
+      Puoi farlo raccogliendo <strong>50.000 firme</strong> su un progetto di legge scritto articolo per articolo.
+    </p>
+    <p>
+      <strong>Il problema pratico:</strong> La Costituzione obbliga il Parlamento a <em>ricevere</em> la proposta, ma non lo obbliga a <em>discuterla o approvarla</em> in tempi brevi. Spesso queste proposte finiscono nei cassetti delle commissioni parlamentari.
+    </p>
+  </div>
+</section>
+
+<VideoEmbed 
+  url="https://www.youtube.com/watch?v=HuI_4-i_hXY" 
+  title="Il Referendum Abrogativo spiegato semplice" 
+  source="Edizioni Simone" 
+  note="Video essenziale che illustra i passaggi chiave dell'Art. 75, dal controllo della Cassazione a quello della Corte Costituzionale." 
+/>
+
+<TechnicalBlock>
+  <div className="space-y-4">
+    <h3 className="text-lg font-semibold">Focus Tecnico: I due tipi di Referendum a confronto</h3>
+    <div className="overflow-x-auto">
+      <table className="w-full text-sm text-left opacity-90">
+        <thead className="bg-white/10">
+          <tr>
+            <th className="p-3 rounded-tl-lg">Caratteristica</th>
+            <th className="p-3">Referendum Abrogativo (Art. 75)</th>
+            <th className="p-3 rounded-tr-lg">Referendum Costituzionale (Art. 138)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr className="border-b border-white/5">
+            <td className="p-3 font-semibold">Scopo</td>
+            <td className="p-3">Cancellare una legge ordinaria</td>
+            <td className="p-3">Confermare/Bocciare una riforma della Costituzione</td>
+          </tr>
+          <tr className="border-b border-white/5">
+            <td className="p-3 font-semibold">Firme necessarie</td>
+            <td className="p-3">500.000</td>
+            <td className="p-3">500.000</td>
+          </tr>
+          <tr>
+            <td className="p-3 font-semibold">Quorum</td>
+            <td className="p-3 text-red-400 font-bold">SÌ (50% + 1 aventi diritto)</td>
+            <td className="p-3 text-green-400 font-bold">NO (basta 1 voto in più)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p className="text-xs opacity-70 italic mt-2">
+      Nota: Esiste anche il referendum regionale (Art. 123) e quello per la fusione di Regioni/Comuni (Art. 132), ma i due in tabella sono i principali a livello nazionale.
+    </p>
+  </div>
+</TechnicalBlock>
+
+<section className="mt-8 space-y-4">
+  <h2 className="text-xl font-semibold">Esempi Reali: La voce del popolo</h2>
+
+  <ExampleCard type="positive" title="Il Divorzio (1974) e l'Aborto (1981)">
+    <div className="space-y-2">
+      <p><strong>Scenario:</strong> Leggi storiche sui diritti civili vennero contestate da una parte della società che ne chiese l'abrogazione.</p>
+      <p><strong>Analisi:</strong> Si andò al voto (quorum superato abbondantemente) e la maggioranza dei cittadini votò "NO" all'abrogazione.</p>
+      <p><strong>Esito:</strong> Le leggi rimasero in vigore, confermate dalla volontà popolare diretta.</p>
+    </div>
+  </ExampleCard>
+
+  <ExampleCard type="negative" title="Il fallimento del Referendum sulle Trivelle (2016)">
+    <div className="space-y-2">
+      <p><strong>Scenario:</strong> Si chiedeva di abrogare la norma che permetteva le trivellazioni in mare entro le 12 miglia fino a esaurimento giacimento.</p>
+      <p><strong>Analisi:</strong> Vinse nettamente il SÌ (85%), ma andò a votare solo il 31% degli elettori.</p>
+      <p><strong>Esito:</strong> <strong>Referendum nullo</strong> per mancato raggiungimento del quorum. La legge è rimasta identica, come se il voto non ci fosse mai stato.</p>
+    </div>
+  </ExampleCard>
+
+  <ExampleCard type="borderline" title="Inammissibilità: Referendum Legge Fornero">
+    <div className="space-y-2">
+      <p><strong>Scenario:</strong> Alcuni partiti proposero un referendum per abolire la riforma delle pensioni (Legge Fornero).</p>
+      <p><strong>Analisi:</strong> La Corte Costituzionale lo dichiarò inammissibile perché le leggi sulle pensioni sono collegate al <strong>bilancio</strong> dello Stato (materia vietata dall'Art. 75).</p>
+      <p><strong>Esito:</strong> Non si andò nemmeno a votare.</p>
+    </div>
+  </ExampleCard>
+</section>
+
+<ResourceFooter>
+  <div className="space-y-3">
+    <p className="font-semibold">Per approfondire</p>
+    <ul className="list-disc pl-5 space-y-2">
+      <li><a className="underline" href="https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:costituzione#art75">Art. 75 Costituzione (Normattiva)</a></li>
+      <li><a className="underline" href="https://elezioni.interno.gov.it/referendum">Archivio Storico dei Referendum (Ministero Interno)</a></li>
+    </ul>
+    <p className="text-sm opacity-80">Ultima verifica: 13 Febbraio 2026 | Verificatore: Guirimì Team</p>
+  </div>
+</ResourceFooter> 
