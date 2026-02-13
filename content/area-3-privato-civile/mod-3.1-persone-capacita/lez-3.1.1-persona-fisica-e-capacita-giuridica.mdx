@@ -38,200 +38,180 @@ glossary_terms:
   - "soggetto-di-diritto"
 
 quiz:
-  - id: "q1"
-    type: "mcq"
-    question: "Quando una persona acquista la capacità giuridica?"
-    options:
-      - id: "a"
-        text: "Al compimento dei 18 anni"
-        is_correct: false
-        feedback: "No: i 18 anni riguardano la capacità di agire. La capacità giuridica si acquista con la nascita (art. 1 c.c.)."
-      - id: "b"
-        text: "Dal momento della nascita"
-        is_correct: true
-        feedback: "Esatto: la capacità giuridica si acquista dal momento della nascita (art. 1 c.c.)."
-      - id: "c"
-        text: "Quando inizi a lavorare"
-        is_correct: false
-        feedback: "No: lavorare può incidere su specifiche capacità previste da leggi speciali, ma non è il criterio generale della capacità giuridica."
-  - id: "q2"
-    type: "mcq"
-    question: "Che cosa indica, in generale, la capacità di agire?"
-    options:
-      - id: "a"
-        text: "L’essere titolare di diritti e doveri"
-        is_correct: false
-        feedback: "Questa è la capacità giuridica: poter essere titolare di situazioni giuridiche."
-      - id: "b"
-        text: "Il poter compiere validamente atti giuridici per conto proprio"
-        is_correct: true
-        feedback: "Sì: in generale la capacità di agire è il potere di compiere atti con effetti giuridici (art. 2 c.c. come regola generale)."
-      - id: "c"
-        text: "Il diritto di votare"
-        is_correct: false
-        feedback: "No: il voto è un diritto politico; qui parliamo di capacità nel diritto civile."
-  - id: "q3"
-    type: "mcq"
-    question: "I diritti riconosciuti al concepito, secondo l’art. 1 c.c., sono:"
-    options:
-      - id: "a"
-        text: "Sempre pieni ed esercitabili immediatamente"
-        is_correct: false
-        feedback: "No: l’art. 1 c.c. dice che sono subordinati all’evento della nascita."
-      - id: "b"
-        text: "Subordinati all’evento della nascita"
-        is_correct: true
-        feedback: "Esatto: il concepito può essere considerato per alcuni diritti, ma la loro efficacia è subordinata alla nascita (art. 1 c.c.)."
-      - id: "c"
-        text: "Possibili solo se i genitori firmano un contratto"
-        is_correct: false
-        feedback: "No: non dipende da un contratto; dipende dalla regola legale dell’art. 1 c.c."
-  - id: "q4"
-    type: "open"
-    question: "Spiega con un esempio concreto la differenza tra capacità giuridica e capacità di agire."
-    expected_points:
-      - "Definire capacità giuridica come titolarità di diritti/doveri (nascita)."
-      - "Definire capacità di agire come potere di compiere atti validi (regola: 18 anni)."
-      - "Esempio: neonato proprietario (titolarità) ma non può vendere (serve rappresentanza)."
+  questions:
+    - type: "mcq"
+      prompt: "Quando una persona acquista la capacità giuridica?"
+      choices:
+        - "Al compimento dei 18 anni"
+        - "Dal momento della nascita"
+        - "Quando inizi a lavorare"
+      correctIndex: 1
+      feedback:
+        0: "No: i 18 anni riguardano la capacità di agire. La capacità giuridica si acquista con la nascita (art. 1 c.c.)."
+        1: "Esatto: la capacità giuridica si acquista dal momento della nascita (art. 1 c.c.)."
+        2: "No: lavorare può incidere su specifiche capacità previste da leggi speciali, ma non è il criterio generale della capacità giuridica."
+    - type: "mcq"
+      prompt: "Che cosa indica, in generale, la capacità di agire?"
+      choices:
+        - "L’essere titolare di diritti e doveri"
+        - "Il poter compiere validamente atti giuridici per conto proprio"
+        - "Il diritto di votare"
+      correctIndex: 1
+      feedback:
+        0: "Questa è la capacità giuridica: poter essere titolare di situazioni giuridiche."
+        1: "Sì: in generale la capacità di agire è il potere di compiere atti con effetti giuridici (art. 2 c.c. come regola generale)."
+        2: "No: il voto è un diritto politico; qui parliamo di capacità nel diritto civile."
+    - type: "mcq"
+      prompt: "I diritti riconosciuti al concepito, secondo l’art. 1 c.c., sono:"
+      choices:
+        - "Sempre pieni ed esercitabili immediatamente"
+        - "Subordinati all’evento della nascita"
+        - "Possibili solo se i genitori firmano un contratto"
+      correctIndex: 1
+      feedback:
+        0: "No: l’art. 1 c.c. dice che sono subordinati all’evento della nascita."
+        1: "Esatto: il concepito può essere considerato per alcuni diritti, ma la loro efficacia è subordinata alla nascita (art. 1 c.c.)."
+        2: "No: non dipende da un contratto; dipende dalla regola legale dell’art. 1 c.c."
+    - type: "open"
+      prompt: "Spiega con un esempio concreto la differenza tra capacità giuridica e capacità di agire."
+      expected_points:
+        - "Definire capacità giuridica come titolarità di diritti/doveri (nascita)."
+        - "Definire capacità di agire come potere di compiere atti validi (regola: 18 anni)."
+        - "Esempio: neonato proprietario (titolarità) ma non può vendere (serve rappresentanza)."
 ---
 
+
 <HookBlock>
-Immagina che un neonato erediti una casa dal nonno. Sì: può “avere” una casa intestata.  
-Ma può venderla domani mattina? No. E non è un dettaglio: qui c’è una delle distinzioni più importanti del diritto civile.
+  <div className="space-y-3">
+    <p>
+      Immagina che un neonato erediti una casa dal nonno. Sì: può “avere” una casa intestata.
+      Ma può venderla domani mattina? No. E non è un dettaglio: qui c’è una delle distinzioni più importanti del diritto civile.
+    </p>
+  </div>
 </HookBlock>
 
-<PositionMap
-  area="Area 3 — Diritto privato/civile"
-  module="Modulo 3.1 — Persone e capacità"
-  lesson="Lezione 3.1.1 — Persona fisica e capacità giuridica"
-  prevLessonSlug="lez-2.4.3"
-  nextLessonSlug="lez-3.1.2"
-/>
+<section className="mt-6 rounded-2xl border border-white/10 p-5 bg-gradient-to-br from-white/8 via-white/5 to-transparent">
+  <div className="flex flex-wrap items-center gap-2 text-sm">
+    <span className="rounded-full border border-white/10 px-3 py-1 bg-white/5">Area 3 — Privato/Civile</span>
+    <span className="opacity-60">›</span>
+    <span className="rounded-full border border-white/10 px-3 py-1 bg-white/5">Mod 3.1 — Persone e capacità</span>
+    <span className="opacity-60">›</span>
+    <span className="rounded-full border border-white/10 px-3 py-1 bg-white/5">Lez 3.1.1</span>
+  </div>
 
-<SimpleExplanation>
-## Una parola che cambia tutto: “persona” per la legge
+  <p className="mt-3">
+    Nella lezione precedente hai visto come i partiti politici organizzano la democrazia. Ora entriamo nel <strong>Diritto Privato</strong>, il regno dei rapporti tra cittadini, partendo dal protagonista assoluto: la <strong><GlossaryTerm id="persona-fisica">persona fisica</GlossaryTerm></strong>.
+  </p>
+</section>
 
-Nel linguaggio di tutti i giorni “persona” è un essere umano.
+<section className="mt-8 space-y-6">
+  <div className="space-y-2">
+    <h2 className="text-xl font-semibold">1) Una parola che cambia tutto: “persona” per la legge</h2>
+    <p>
+      Nel linguaggio di tutti i giorni “persona” è un essere umano.
+      Nel diritto, “persona” significa una cosa precisa: qualcuno che può stare dentro le regole del gioco.
+      Cioè: qualcuno che può essere titolare di diritti e doveri.
+    </p>
+    <p>
+      Questa è la <strong><GlossaryTerm id="persona-fisica">persona fisica</GlossaryTerm></strong>: l’essere umano considerato come <strong><GlossaryTerm id="soggetto-di-diritto">soggetto di diritto</GlossaryTerm></strong>.
+    </p>
+  </div>
 
-Nel diritto, “persona” significa una cosa precisa: qualcuno che può stare dentro le regole del gioco.  
-Cioè: qualcuno che può essere titolare di diritti e doveri.
+  <div className="space-y-2">
+    <h2 className="text-xl font-semibold">2) Il primo “interruttore” si accende alla nascita</h2>
+    <p>
+      Il diritto civile parte da un’idea semplice: appena nasci, puoi essere titolare di situazioni giuridiche.
+      Questo si chiama <strong><GlossaryTerm id="capacita-giuridica">capacità giuridica</GlossaryTerm></strong> (Art. 1 c.c.).
+    </p>
+    <p>
+      Non riguarda quello che <em>sai fare</em>. Riguarda quello che <em>puoi avere</em> come posizione giuridica.
+      Per capirci: se un neonato riceve un’eredità, può diventare proprietario.
+      Non perché sia “capace” in senso psicologico, ma perché la legge gli riconosce quella titolarità.
+    </p>
+  </div>
 
-Questa è la <GlossaryTerm id="persona-fisica">persona fisica</GlossaryTerm>: l’essere umano considerato come <GlossaryTerm id="soggetto-di-diritto">soggetto di diritto</GlossaryTerm>.
+  <div className="space-y-2">
+    <h2 className="text-xl font-semibold">3) Il secondo “interruttore” arriva dopo: fare atti per conto tuo</h2>
+    <p>
+      Poi c’è l’altra domanda, più pratica: puoi firmare un contratto? Puoi vendere la casa? Puoi accettare un prestito?
+      Qui entra la <strong><GlossaryTerm id="capacita-di-agire">capacità di agire</GlossaryTerm></strong>: il potere di compiere atti che producono effetti giuridici.
+    </p>
+    <p>
+      La regola generale è semplice: con la <strong><GlossaryTerm id="maggiore-eta">maggiore età</GlossaryTerm></strong> (18 anni) la acquisti (Art. 2 c.c.).
+      Quindi può succedere una cosa che, fuori dal diritto, sembra strana:
+      tu puoi “avere” dei diritti (capacità giuridica), ma non puoi ancora “muoverli” da solo (manca la capacità di agire).
+    </p>
+  </div>
 
-## Il primo “interruttore” si accende alla nascita
+  <div className="rounded-2xl border border-white/10 bg-white/5 p-5 space-y-4">
+      <h3 className="text-lg font-semibold">Dove "sei" per il diritto?</h3>
+      <div className="grid md:grid-cols-3 gap-4 text-sm">
+        <div className="p-4 rounded-xl border border-white/10 bg-white/5">
+          <p className="font-bold text-blue-400">Residenza</p>
+          <p>Dove vivi abitualmente (dimora abituale).</p>
+        </div>
+        <div className="p-4 rounded-xl border border-white/10 bg-white/5">
+          <p className="font-bold text-green-400">Domicilio</p>
+          <p>Sede principale dei tuoi affari e interessi (es. ufficio).</p>
+        </div>
+        <div className="p-4 rounded-xl border border-white/10 bg-white/5">
+          <p className="font-bold text-yellow-400">Dimora</p>
+          <p>Dove ti trovi momentaneamente (es. casa vacanze).</p>
+        </div>
+      </div>
+  </div>
+</section>
 
-Il diritto civile parte da un’idea semplice: appena nasci, puoi essere titolare di situazioni giuridiche.
+<TechnicalBlock>
+  <div className="space-y-4">
+    <h3 className="text-lg font-semibold">Focus Tecnico: Codice Civile</h3>
+    <div className="rounded-2xl border border-white/10 p-5 bg-white/5 space-y-2 text-sm">
+      <p className="font-bold">Art. 1 (Capacità giuridica)</p>
+      <p className="italic">"La capacità giuridica si acquista dal momento della nascita. I diritti che la legge riconosce a favore del concepito sono subordinati all’evento della nascita."</p>
+      
+      <p className="font-bold mt-4">Art. 2 (Maggiore età. Capacità di agire)</p>
+      <p className="italic">"La maggiore età è fissata al compimento del diciottesimo anno. Con la maggiore età si acquista la capacità di compiere tutti gli atti per i quali non sia stabilita un’età diversa."</p>
 
-Questo si chiama <GlossaryTerm id="capacita-giuridica">capacità giuridica</GlossaryTerm>.  
-Non riguarda quello che *sai fare*. Riguarda quello che *puoi avere* come posizione giuridica.
-
-Per capirci: se un neonato riceve un’eredità, può diventare proprietario.  
-Non perché sia “capace” in senso psicologico, ma perché la legge gli riconosce quella titolarità.
-
-## Il secondo “interruttore” arriva dopo: fare atti per conto tuo
-
-Poi c’è l’altra domanda, più pratica: puoi firmare un contratto? Puoi vendere la casa? Puoi accettare un prestito?
-
-Qui entra la <GlossaryTerm id="capacita-di-agire">capacità di agire</GlossaryTerm>: il potere di compiere atti che producono effetti giuridici.
-
-La regola generale è semplice: con la <GlossaryTerm id="maggiore-eta">maggiore età</GlossaryTerm> (18 anni) la acquisti.
-
-Quindi può succedere una cosa che, fuori dal diritto, sembra strana:  
-tu puoi “avere” dei diritti (capacità giuridica), ma non puoi ancora “muoverli” da solo (manca la capacità di agire).
-
-## Il caso del concepito: il diritto “prenota”, ma non consegna
-
-A volte la legge tiene conto anche del <GlossaryTerm id="nascituro">nascituro</GlossaryTerm>.
-
-Tradotto: alcuni diritti possono essere previsti *a favore del concepito*, ma funzionano davvero solo se nasce.  
-È come una tutela condizionata: la legge prepara il terreno, ma l’effetto pieno arriva con la nascita.
-
-## Domicilio, residenza, dimora: dove “sei” per il diritto
-
-Infine, c’è un altro pezzo che sembra burocratico ma serve continuamente: i “luoghi” della persona.
-
-La <GlossaryTerm id="residenza">residenza</GlossaryTerm> è dove vivi abitualmente.
-
-La <GlossaryTerm id="dimora">dimora</GlossaryTerm> è dove ti trovi di fatto in un certo momento, anche temporaneamente.
-
-Il <GlossaryTerm id="domicilio">domicilio</GlossaryTerm> è il centro principale dei tuoi affari e interessi: può non coincidere con la residenza.
-
-Questa distinzione torna quando si parla di notifiche, competenze territoriali, pratiche amministrative.  
-E ti accorgerai presto che “dove sei” conta quasi quanto “chi sei”.
-</SimpleExplanation>
-
-<TechnicalBlock title="Versione tecnica (Codice Civile + note giuridiche)">
-**Art. 1 c.c. (Capacità giuridica)**: la capacità giuridica “si acquista dal momento della nascita”; inoltre, “i diritti che la legge riconosce a favore del concepito sono subordinati all’evento della nascita”. (Testo ufficiale)
-
-**Art. 2 c.c. (Maggiore età. Capacità di agire)**: la maggiore età è fissata al compimento del diciottesimo anno; con la maggiore età si acquista la capacità di compiere tutti gli atti per i quali non sia stabilita un’età diversa. (Testo ufficiale)
-
-**Inquadramento**: la distinzione tra capacità giuridica e capacità di agire separa:
-- il piano della **titolarità** di situazioni giuridiche (essere “portatore” di diritti/doveri),
-- dal piano dell’**esercizio** di tali situazioni tramite atti giuridici.
-
-**Nota sul concepito**: la tutela prevista dall’art. 1 c.c. è costruita come effetto “condizionato” alla nascita, per evitare che si consolidino posizioni giuridiche piene in assenza dell’evento che fonda la soggettività piena della persona fisica nel sistema civilistico.
+      <p className="mt-4 text-xs opacity-70">Nota: Il "concepito" (non ancora nato) ha una tutela condizionata: se non nasce vivo, i diritti (es. eredità) non si consolidano mai.</p>
+    </div>
+  </div>
 </TechnicalBlock>
 
 {/* VIDEO: nessun video trovato che rispetti i criteri di qualità. Da cercare manualmente. */}
 
-<ExampleCard type="positive" title="Un neonato che eredita un immobile">
-Il nonno lascia per testamento un appartamento al nipote appena nato.
+<section className="mt-8 space-y-4">
+  <h2 className="text-xl font-semibold">Esempi Pratici</h2>
 
-Quel bambino ha già <GlossaryTerm id="capacita-giuridica">capacità giuridica</GlossaryTerm>, quindi può essere titolare del diritto di proprietà: l’immobile può essere intestato a lui.
+  <ExampleCard type="positive" title="Un neonato che eredita un immobile">
+    <div className="space-y-2">
+      <p><strong>Scenario:</strong> Il nonno lascia per testamento un appartamento al nipote appena nato.</p>
+      <p><strong>Analisi:</strong> Quel bambino ha già <strong><GlossaryTerm id="capacita-giuridica">capacità giuridica</GlossaryTerm></strong>, quindi può essere titolare del diritto di proprietà: l’immobile può essere intestato a lui.</p>
+      <p><strong>Esito:</strong> Ma non ha ancora <strong><GlossaryTerm id="capacita-di-agire">capacità di agire</GlossaryTerm></strong>. Quindi non può vendere, donare o ipotecare quell’appartamento da solo: agiranno i genitori o un tutore.</p>
+    </div>
+  </ExampleCard>
 
-Ma non ha ancora <GlossaryTerm id="capacita-di-agire">capacità di agire</GlossaryTerm>.  
-Quindi non può vendere, donare o ipotecare quell’appartamento da solo: agiranno i genitori o un tutore, secondo le regole che vedrai nella prossima lezione.
-</ExampleCard>
+  <ExampleCard type="negative" title="Il minorenne che firma un contratto">
+    <div className="space-y-2">
+      <p><strong>Scenario:</strong> Un ragazzo di 16 anni firma da solo un contratto per un finanziamento costoso.</p>
+      <p><strong>Analisi:</strong> Qui il punto non è se “capisce” o no. Il punto è giuridico: manca la <strong><GlossaryTerm id="capacita-di-agire">capacità di agire</GlossaryTerm></strong>.</p>
+      <p><strong>Esito:</strong> Il contratto è annullabile. Il sistema tutela il minore impedendogli di assumere obblighi legali validi da solo.</p>
+    </div>
+  </ExampleCard>
 
-<ExampleCard type="negative" title="Il minorenne che firma un contratto “da adulto”">
-Un ragazzo di 16 anni firma da solo un contratto costoso (per esempio un finanziamento) senza coinvolgere i genitori.
+  <ExampleCard type="neutral" title="Residenza e domicilio non coincidono">
+    <div className="space-y-2">
+      <p><strong>Scenario:</strong> Vivi a Milano per l’università, ma la tua famiglia e i tuoi interessi principali restano a Roma.</p>
+      <p><strong>Analisi:</strong> La tua <strong><GlossaryTerm id="residenza">residenza</GlossaryTerm></strong> può essere Milano (dove dimori abitualmente), mentre il <strong><GlossaryTerm id="domicilio">domicilio</GlossaryTerm></strong> può restare Roma (centro degli interessi).</p>
+      <p><strong>Esito:</strong> Questa distinzione è cruciale per le notifiche legali e le tasse.</p>
+    </div>
+  </ExampleCard>
+</section>
 
-Qui il punto non è se “capisce” o no. Il punto è giuridico: manca, in generale, la <GlossaryTerm id="capacita-di-agire">capacità di agire</GlossaryTerm> piena.
-
-Risultato: quell’atto può non produrre gli stessi effetti di un contratto concluso da un maggiorenne, e il sistema prevede strumenti di tutela proprio perché il minore non è considerato pienamente autonomo nel compiere atti giuridici.
-</ExampleCard>
-
-<ExampleCard type="neutral" title="Residenza e domicilio non coincidono">
-Vivi a Milano per l’università, ma la tua famiglia e i tuoi interessi principali restano a Roma.
-
-La tua <GlossaryTerm id="residenza">residenza</GlossaryTerm> può essere Milano (vita abituale), mentre il <GlossaryTerm id="domicilio">domicilio</GlossaryTerm> può restare Roma (centro degli interessi).
-
-Quando parlerai di notifiche e comunicazioni “ufficiali”, questa differenza smette di essere teoria.
-</ExampleCard>
-
-<QuizBlock />
-
-<ResourceFooter
-  disclaimerLevel="standard"
-  primarySources={[
-    {
-      label: "Testo ufficiale — Art. 1 c.c. (Capacità giuridica) — Gazzetta Ufficiale",
-      url: "https://www.gazzettaufficiale.it/atto/serie_generale/caricaArticolo?art.codiceRedazionale=042U0262&art.dataPubblicazioneGazzetta=1942-04-04&art.flagTipoArticolo=2&art.idArticolo=1&art.idGruppo=3&art.idSottoArticolo=1&art.idSottoArticolo1=10&art.progressivo=0&art.versione=4"
-    },
-    {
-      label: "Testo ufficiale — Art. 2 c.c. (Maggiore età e capacità di agire) — Gazzetta Ufficiale",
-      url: "https://www.gazzettaufficiale.it/atto/serie_generale/caricaArticolo?art.codiceRedazionale=042U0262&art.dataPubblicazioneGazzetta=1942-04-04&art.flagTipoArticolo=2&art.idArticolo=2&art.idGruppo=3&art.idSottoArticolo=1&art.idSottoArticolo1=10&art.progressivo=0&art.versione=2"
-    }
-  ]}
-  secondarySources={[
-    {
-      label: "Brocardi — Art. 1 c.c. (commento e ratio)",
-      url: "https://www.brocardi.it/codice-civile/libro-primo/titolo-i/art1.html"
-    },
-    {
-      label: "Brocardi — Art. 2 c.c. (commento e richiami)",
-      url: "https://www.brocardi.it/codice-civile/libro-primo/titolo-i/art2.html"
-    },
-    {
-      label: "Treccani — Capacità giuridica (Enciclopedia Italiana)",
-      url: "https://www.treccani.it/enciclopedia/capacita-giuridica_%28Enciclopedia-Italiana%29/"
-    },
-    {
-      label: "Treccani — Capacità giuridica e capacità di agire (Diritto on-line)",
-      url: "https://www.treccani.it/enciclopedia/capacita-giuridica-e-capacita-di-agire-dir-civ_%28Diritto-on-line%29/"
-    }
-  ]}
->
-Questa lezione ha scopo educativo e introduttivo. Non costituisce consulenza legale.  
-Per decisioni importanti o casi concreti, rivolgiti a un professionista qualificato.
-</ResourceFooter>
+<div className="mt-12 p-6 bg-neutral-100 dark:bg-neutral-900 rounded-lg text-sm text-neutral-600 dark:text-neutral-400">
+  <h4 className="font-bold mb-2 text-neutral-900 dark:text-neutral-200">Fonti e Risorse</h4>
+  <ul className="list-disc pl-5 space-y-2">
+    <li><a className="underline" href="https://www.gazzettaufficiale.it/atto/serie_generale/caricaArticolo?art.codiceRedazionale=042U0262&art.dataPubblicazioneGazzetta=1942-04-04&art.flagTipoArticolo=2&art.idArticolo=1&art.idGruppo=3&art.idSottoArticolo=1&art.idSottoArticolo1=10&art.progressivo=0&art.versione=4">Art. 1 Codice Civile (Gazzetta Ufficiale)</a></li>
+    <li><a className="underline" href="https://www.brocardi.it/codice-civile/libro-primo/titolo-i/art1.html">Spiegazione Art. 1 su Brocardi.it</a></li>
+  </ul>
+  <p className="mt-4 text-xs">Ultima verifica: 13 Febbraio 2026 | Verificatore: Guirimì Team</p>
+</div>
