@@ -4,32 +4,237 @@ title: "Cos'è un contratto e quando è valido"
 area: "area-3-privato-civile"
 module: "mod-3.2-contratto"
 order: 1
-duration_minutes: 12
+duration_minutes: 18
 prerequisites: ["lez-3.1.2"]
 next_lesson: "lez-3.2.2"
-last_verified: "2026-02-07"
-verified_by: "Da verificare"
+prev_lesson: "lez-3.1.2"
+last_verified: "2026-02-13"
+verified_by: "[Nome]"
 disclaimer_level: "standard"
-source_refs: []
-glossary_terms: []
+
+source_refs:
+  - label: "Art. 1321 c.c. — Nozione di contratto (Brocardi)"
+    url: "https://www.brocardi.it/codice-civile/libro-quarto/titolo-ii/art1321.html"
+  - label: "Art. 1325 c.c. — Requisiti del contratto (Brocardi)"
+    url: "https://www.brocardi.it/codice-civile/libro-quarto/titolo-ii/art1325.html"
+  - label: "Art. 1326 c.c. — Conclusione del contratto (Brocardi)"
+    url: "https://www.brocardi.it/codice-civile/libro-quarto/titolo-ii/art1326.html"
+  - label: "Art. 1418 c.c. — Cause di nullità (Brocardi)"
+    url: "https://www.brocardi.it/codice-civile/libro-quarto/titolo-ii/art1418.html"
+  - label: "Treccani — Contratto (Diritto)"
+    url: "https://www.treccani.it/enciclopedia/contratto_(Diritto)/"
+    
+glossary_terms:
+  - "contratto"
+  - "accordo"
+  - "causa"
+  - "oggetto"
+  - "forma"
+  - "proposta"
+  - "accettazione"
+  - "nullita"
+  - "annullabilita"
+  - "autonomia-contrattuale"
+
 quiz:
-  questions: []
+  questions:
+    - type: "mcq"
+      prompt: "Secondo l’art. 1321 c.c., il contratto è:"
+      choices:
+        - "Un atto unilaterale con cui una persona assume un obbligo"
+        - "L’accordo di due o più parti per costituire, regolare o estinguere un rapporto giuridico patrimoniale"
+        - "Qualsiasi promessa fatta a voce"
+      correctIndex: 1
+      feedback:
+        0: "No: il contratto presuppone l’accordo di due o più parti."
+        1: "Esatto: è la definizione normativa dell’art. 1321 c.c."
+        2: "No: non ogni promessa è un contratto giuridicamente rilevante."
+    - type: "mcq"
+      prompt: "Quali sono i requisiti essenziali del contratto ex art. 1325 c.c.?"
+      choices:
+        - "Accordo, causa, oggetto, forma (quando richiesta)"
+        - "Prezzo, firma, testimoni, registrazione"
+        - "Solo l’accordo tra le parti"
+      correctIndex: 0
+      feedback:
+        0: "Corretto: sono gli elementi essenziali indicati dall’art. 1325 c.c."
+        1: "No: possono essere presenti in alcuni contratti, ma non sono requisiti generali."
+        2: "No: l’accordo è necessario ma non sufficiente."
+    - type: "mcq"
+      prompt: "Quando un contratto è nullo?"
+      choices:
+        - "Quando manca uno dei requisiti essenziali o la causa è illecita"
+        - "Quando una parte cambia idea il giorno dopo"
+        - "Sempre quando è concluso oralmente"
+      correctIndex: 0
+      feedback:
+        0: "Sì: l’art. 1418 c.c. disciplina le cause di nullità."
+        1: "No: il ripensamento non è di per sé causa di nullità."
+        2: "No: la forma scritta è richiesta solo nei casi previsti dalla legge."
+    - type: "open"
+      prompt: "Spiega con un esempio concreto cosa significa che la causa è la “funzione economico-sociale” del contratto."
+      expected_points:
+        - "Definire la causa come funzione concreta del contratto."
+        - "Distinguere la causa dal motivo soggettivo."
+        - "Fornire un esempio (es. compravendita: scambio bene-prezzo)."
 ---
 
-<Hook>
-Inserisci qui il gancio iniziale...
-</Hook>
+<HookBlock>
+  <div className="space-y-3">
+    <p>
+      Firmi un contratto quasi ogni giorno: quando compri online, quando affitti una casa, quando accetti un lavoro.
+      Ma cos’è davvero un <GlossaryTerm id="contratto">contratto</GlossaryTerm>?
+      E soprattutto: quando è valido… e quando invece non produce effetti?
+    </p>
+  </div>
+</HookBlock>
 
-<Objective>
-Inserisci qui l'obiettivo della lezione...
-</Objective>
+<section className="mt-6 rounded-2xl border border-white/10 p-5 bg-gradient-to-br from-white/8 via-white/5 to-transparent">
+  <div className="flex flex-wrap items-center gap-2 text-sm">
+    <span className="rounded-full border border-white/10 px-3 py-1 bg-white/5">Area 3 — Privato/Civile</span>
+    <span className="opacity-60">›</span>
+    <span className="rounded-full border border-white/10 px-3 py-1 bg-white/5">Mod 3.2 — Contratto</span>
+    <span className="opacity-60">›</span>
+    <span className="rounded-full border border-white/10 px-3 py-1 bg-white/5">Lez 3.2.1</span>
+  </div>
 
----
+  <p className="mt-3">
+    Nella lezione precedente hai visto incapacità, tutela e curatela. Ora entriamo nel cuore del diritto privato: <strong>il contratto</strong>.
+    Se la capacità di agire ti permette di compiere atti giuridici, il contratto è lo strumento principale con cui le persone regolano i loro rapporti economici.
+  </p>
+</section>
 
-## 1) Titolo sezione
+<section className="mt-8 space-y-6">
+  <div className="space-y-2">
+    <h2 className="text-xl font-semibold">1) Cos’è un contratto?</h2>
+    <p>
+      L’art. 1321 c.c. definisce il <strong><GlossaryTerm id="contratto">contratto</GlossaryTerm></strong> come:
+    </p>
+    <div className="pl-4 border-l-2 border-primary/50 italic text-muted-foreground my-2">
+      l’accordo di due o più parti per costituire, regolare o estinguere un rapporto giuridico patrimoniale.
+    </div>
+    <p>Tre parole chiave:</p>
+    <ul className="list-disc pl-5 space-y-1">
+      <li><strong><GlossaryTerm id="accordo">Accordo</GlossaryTerm></strong></li>
+      <li><strong>Rapporto giuridico</strong></li>
+      <li><strong>Patrimoniale</strong> (cioè con contenuto economico)</li>
+    </ul>
+    <p>Non basta una promessa isolata: serve un incontro di volontà.</p>
+  </div>
 
-Contenuto...
+  <div className="space-y-2">
+    <h2 className="text-xl font-semibold">2) Come nasce un contratto?</h2>
+    <p>Di regola attraverso l'incontro tra <strong><GlossaryTerm id="proposta">proposta</GlossaryTerm></strong> e <strong><GlossaryTerm id="accettazione">accettazione</GlossaryTerm></strong>.</p>
+    <p>Quando l’accettazione arriva al proponente (art. 1326 c.c.), il contratto si considera concluso.</p>
+    <p className="text-sm italic">Esempio: Ordini un prodotto online → il venditore accetta l’ordine → il contratto è concluso.</p>
+  </div>
 
-<Quiz />
+  <div className="space-y-2">
+    <h2 className="text-xl font-semibold">3) I 4 requisiti essenziali (art. 1325 c.c.)</h2>
+    <p>Un contratto è valido se ha:</p>
+    <ol className="list-decimal pl-5 space-y-2">
+      <li><strong>Accordo</strong> — volontà concorde delle parti.</li>
+      <li><strong>Causa</strong> — <strong><GlossaryTerm id="causa">funzione economico-sociale</GlossaryTerm></strong> (es. scambio bene-prezzo). Non è il motivo personale!</li>
+      <li><strong>Oggetto</strong> — ciò su cui cade il contratto. Deve essere <strong><GlossaryTerm id="oggetto">lecito, possibile, determinato o determinabile</GlossaryTerm></strong>.</li>
+      <li><strong>Forma</strong> — <strong><GlossaryTerm id="forma">forma</GlossaryTerm></strong> solo quando la legge la richiede specificamente (es. scritta per immobili).</li>
+    </ol>
+    <p>Se manca uno di questi, il contratto può essere <strong>nullo</strong>.</p>
+  </div>
 
-<Resources />
+  <div className="space-y-2">
+    <h2 className="text-xl font-semibold">4) Autonomia contrattuale</h2>
+    <p>L’art. 1322 c.c. riconosce l’<strong><GlossaryTerm id="autonomia-contrattuale">autonomia contrattuale</GlossaryTerm></strong>:</p>
+    <p>Le parti sono libere di determinare il contenuto del contratto nei limiti imposti dalla legge.</p>
+    <p>Questo significa libertà, ma non anarchia: non puoi stipulare contratti contrari a norme imperative, ordine pubblico o buon costume.</p>
+  </div>
+
+  <div className="grid md:grid-cols-2 gap-4 mt-4">
+    <div className="p-4 rounded-xl border border-red-500/20 bg-red-500/5">
+      <p className="font-bold text-red-500">Nullità (art. 1418 c.c.)</p>
+      <p className="text-sm mt-2">Grave e insanabile.</p>
+      <ul className="list-disc pl-4 text-xs mt-1 space-y-1">
+        <li>Manca requisito essenziale</li>
+        <li>Causa/Oggetto illecito</li>
+        <li>Viola norme imperative</li>
+      </ul>
+      <p className="text-xs mt-2 font-semibold">Il contratto non produce effetti.</p>
+    </div>
+    <div className="p-4 rounded-xl border border-amber-500/20 bg-amber-500/5">
+      <p className="font-bold text-amber-500">Annullabilità</p>
+      <p className="text-sm mt-2">Meno grave, sanabile.</p>
+      <ul className="list-disc pl-4 text-xs mt-1 space-y-1">
+        <li>Incapacità legale/naturale</li>
+        <li>Vizi del consenso (errore, dolo, violenza)</li>
+      </ul>
+      <p className="text-xs mt-2 font-semibold">Produce effetti finché non annullato.</p>
+    </div>
+  </div>
+</section>
+
+<TechnicalBlock title="Versione tecnica (Codice Civile)">
+  <div className="space-y-4 text-sm">
+    <p><strong>Art. 1321 c.c.:</strong> Definizione normativa di contratto.</p>
+    <p><strong>Art. 1325 c.c.:</strong> Requisiti essenziali — accordo, causa, oggetto, forma (quando prescritta).</p>
+    <p><strong>Art. 1326 c.c.:</strong> Conclusione del contratto mediante accettazione conforme alla proposta.</p>
+    <p><strong>Art. 1418 c.c.:</strong> Nullità per mancanza di elementi essenziali o illiceità.</p>
+    
+    <div className="mt-4 pt-4 border-t border-white/10">
+      <p><strong>Distinzione fondamentale:</strong></p>
+      <p>- <strong>Nullità:</strong> insanabile, rilevabile d’ufficio.</p>
+      <p>- <strong>Annullabilità:</strong> azionabile dalla parte legittimata entro termini di legge.</p>
+    </div>
+  </div>
+</TechnicalBlock>
+
+{/* VIDEO PLACEHOLDER: inserire solo se autore con nome e qualifica verificabile, canale universitario o istituzionale, contenuto aggiornato, nessuna promozione. Search query: "contratto diritto privato spiegazione art 1321 1325". */}
+
+<section className="mt-8 space-y-4">
+  <h2 className="text-xl font-semibold">Esempi Pratici</h2>
+
+  <ExampleCard type="positive" title="Compravendita valida">
+    <div className="space-y-2">
+      <p>Mario vende a Luca una bici per 200 euro.</p>
+      <p>C’è <strong>accordo</strong>, <strong>oggetto</strong> lecito (la bici), <strong>causa</strong> (scambio bene-prezzo).</p>
+      <p>Il contratto è <strong>valido</strong>.</p>
+    </div>
+  </ExampleCard>
+
+  <ExampleCard type="negative" title="Contratto con oggetto illecito">
+    <div className="space-y-2">
+      <p>Due parti stipulano un contratto per un’attività vietata dalla legge (es. vendita sostanze illecite).</p>
+      <p>L’<strong>oggetto</strong> è illecito.</p>
+      <p>Il contratto è <strong>nullo</strong> ex art. 1418 c.c.</p>
+    </div>
+  </ExampleCard>
+
+  <ExampleCard type="neutral" title="Contratto orale">
+    <div className="space-y-2">
+      <p>Accordi verbalmente una lezione privata.</p>
+      <p>Il contratto è <strong>valido</strong> anche senza forma scritta, perché la legge non la richiede per questo tipo di accordo.</p>
+    </div>
+  </ExampleCard>
+</section>
+
+<QuizBlock />
+
+<ResourceFooter
+  disclaimerLevel="standard"
+  primarySources={[
+    {
+      label: "Brocardi — Art. 1321 c.c.",
+      url: "https://www.brocardi.it/codice-civile/libro-quarto/titolo-ii/art1321.html"
+    },
+    {
+      label: "Brocardi — Art. 1325 c.c.",
+      url: "https://www.brocardi.it/codice-civile/libro-quarto/titolo-ii/art1325.html"
+    }
+  ]}
+  secondarySources={[
+    {
+      label: "Treccani — Contratto",
+      url: "https://www.treccani.it/enciclopedia/contratto_(Diritto)/"
+    }
+  ]}
+>
+Questa lezione ha finalità didattica e non costituisce consulenza legale.
+</ResourceFooter>

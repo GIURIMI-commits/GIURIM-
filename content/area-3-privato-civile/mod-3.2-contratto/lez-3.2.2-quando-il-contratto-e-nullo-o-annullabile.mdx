@@ -4,32 +4,210 @@ title: "Quando il contratto è nullo o annullabile"
 area: "area-3-privato-civile"
 module: "mod-3.2-contratto"
 order: 2
-duration_minutes: 12
+duration_minutes: 15
 prerequisites: ["lez-3.2.1"]
 next_lesson: "lez-3.2.3"
-last_verified: "2026-02-07"
-verified_by: "Da verificare"
+prev_lesson: "lez-3.2.1"
+last_verified: "2026-02-13"
+verified_by: "Guirimì Team"
 disclaimer_level: "standard"
-source_refs: []
-glossary_terms: []
+
+source_refs:
+  - label: "Artt. 1418-1424 CC — Nullità del contratto"
+    url: "https://www.brocardi.it/codice-civile/libro-quarto/titolo-ii/capo-xi/sezione-i/"
+  - label: "Artt. 1425-1446 CC — Annullabilità del contratto"
+    url: "https://www.brocardi.it/codice-civile/libro-quarto/titolo-ii/capo-xi/sezione-ii/"
+  - label: "Art. 1427 CC — Errore, violenza e dolo"
+    url: "https://www.brocardi.it/codice-civile/libro-quarto/titolo-ii/capo-xii/sezione-i/art1427.html"
+  - label: "Treccani — Nullità (diritto civile)"
+    url: "https://www.treccani.it/enciclopedia/nullita-diritto-civile/"
+
+media:
+  - type: "video"
+    title: "L'invalidità del contratto: nullità e annullabilità"
+    url: "https://www.youtube.com/watch?v=jzn9iyqQZ-s"
+    source: "Edizioni Simone"
+    timestamp: "0:00-05:30"
+    position: "after-spiegazione"
+
+glossary_terms:
+  - "nullita"
+  - "annullabilita"
+  - "invalidita"
+  - "vizi-del-consenso"
+  - "errore"
+  - "violenza"
+  - "dolo"
+  - "norme-imperative"
+
 quiz:
-  questions: []
+  questions:
+    - type: "mcq"
+      prompt: "Qual è la differenza principale tra contratto nullo e annullabile?"
+      choices:
+        - "Nessuna, sono sinonimi."
+        - "Il contratto nullo non produce mai effetti; quello annullabile produce effetti finché un giudice non lo annulla."
+        - "Il contratto annullabile è più grave di quello nullo."
+      correctIndex: 1
+      feedback:
+        0: "Sbagliato. È una distinzione fondamentale del diritto privato."
+        1: "Esatto! La nullità è come se il contratto non fosse mai nato; l'annullabilità è una 'malattia' curabile o mortale (con sentenza)."
+        2: "No, è il contrario. La nullità è la sanzione più grave."
+    - type: "mcq"
+      prompt: "Se firmi un contratto perché l'altra parte ti ha ingannato con raggiri (dolo), il contratto è..."
+      choices:
+        - "Nullo."
+        - "Valido ma irregolare."
+        - "Annullabile."
+      correctIndex: 2
+      feedback:
+        0: "No. Il vizio del consenso porta all'annullabilità, non alla nullità."
+        1: "No, c'è un vizio della volontà che lo rende precario."
+        2: "Corretto. Il dolo (inganno) è una causa tipica di annullabilità (art. 1439 CC)."
+    - type: "mcq"
+      prompt: "Entro quanto tempo si prescrive l'azione di nullità?"
+      choices:
+        - "5 anni."
+        - "Mai (è imprescrittibile)."
+        - "10 anni."
+      correctIndex: 1
+      feedback:
+        0: "Sbagliato. I 5 anni valgono per l'annullamento."
+        1: "Esatto. Poiché tutela interessi generali, la nullità può essere fatta valere sempre (salvo usucapione)."
+        2: "No, questa è la prescrizione ordinaria per i diritti di credito."
+    - type: "open"
+      prompt: "Marco, 17 anni, compra uno scooter firmando un contratto. Il venditore scopre dopo l'età e vuole annullare tutto. Può farlo?"
+      expected_points:
+        - "Il contratto è annullabile per incapacità legale (minore età)."
+        - "L'annullamento può essere chiesto solo dalla parte protetta (Marco o i genitori), non dal venditore."
+        - "È un caso di annullabilità relativa."
 ---
 
-<Hook>
-Inserisci qui il gancio iniziale...
-</Hook>
+<HookBlock>
+  <div className="space-y-3">
+    <p>
+      Immagina di aver comprato un'auto usata e di scoprire dopo una settimana che il contachilometri è stato manomesso per segnarne la metà.
+      Ora immagina di aver firmato un contratto per comprare un rene umano (cosa illegale in Italia).
+    </p>
+    <p>
+      In entrambi i casi c'è qualcosa che non va. Ma per la legge, questi due problemi sono mondi diversi: nel primo caso il contratto è "malato" ma esiste; nel secondo è "morto" fin dall'inizio. Benvenuto nella distinzione tra <strong>nullità</strong> e <strong>annullabilità</strong>.
+    </p>
+  </div>
+</HookBlock>
 
-<Objective>
-Inserisci qui l'obiettivo della lezione...
-</Objective>
+<section className="mt-6 rounded-2xl border border-white/10 p-5 bg-gradient-to-br from-white/8 via-white/5 to-transparent">
+  <div className="flex flex-wrap items-center gap-2 text-sm">
+    <span className="rounded-full border border-white/10 px-3 py-1 bg-white/5">Area 3 — Privato</span>
+    <span className="opacity-60">›</span>
+    <span className="rounded-full border border-white/10 px-3 py-1 bg-white/5">Mod 3.2 — Il Contratto</span>
+    <span className="opacity-60">›</span>
+    <span className="rounded-full border border-white/10 px-3 py-1 bg-white/5">Lez 3.2.2</span>
+  </div>
 
----
+  <p className="mt-3">
+    Nella lezione precedente hai visto cos'è un contratto e i suoi 4 requisiti di validità. Ora vediamo cosa succede quando qualcosa va storto: entriamo nel mondo dell'<strong><GlossaryTerm id="invalidita">invalidità</GlossaryTerm></strong>.
+  </p>
+</section>
 
-## 1) Titolo sezione
+<section className="mt-8 space-y-6">
+  <div className="space-y-2">
+    <h2 className="text-xl font-semibold">1) La Nullità: il contratto "nato morto"</h2>
+    <p>
+      La <strong><GlossaryTerm id="nullita">nullità</GlossaryTerm></strong> è la sanzione più grave. Un contratto nullo è come se non fosse mai esistito per il diritto. Non produce effetti fin dal primo istante.
+    </p>
+    <p>
+      Succede quando il contratto ha un difetto strutturale gravissimo (es. manca la firma scritta per la vendita di una casa) o è contrario a <strong><GlossaryTerm id="norme-imperative">norme imperative</GlossaryTerm></strong> (es. vendita di droga, organi, armi vietate).
+    </p>
+    <div className="rounded-xl bg-red-500/10 border border-red-500/20 p-4 text-sm">
+      <strong>Regola d'oro:</strong> La nullità protegge l'interesse generale. Per questo può essere rilevata da chiunque (anche da un terzo interessato) e persino dal giudice d'ufficio. Inoltre, non scade mai (è imprescrittibile).
+    </div>
+  </div>
 
-Contenuto...
+  <div className="space-y-2">
+    <h2 className="text-xl font-semibold">2) L'Annullabilità: il contratto "malato"</h2>
+    <p>
+      L'<strong><GlossaryTerm id="annullabilita">annullabilità</GlossaryTerm></strong> è diversa. Il contratto nasce, produce effetti (es. la proprietà dell'auto passa), ma ha un vizio che permette a una delle parti di chiedere al giudice di cancellarlo.
+    </p>
+    <p>
+      Finché il giudice non pronuncia la sentenza, il contratto resta valido. Succede principalmente in due casi:
+    </p>
+    <ul className="list-disc pl-5 space-y-2">
+      <li><strong>Incapacità:</strong> Una parte era minorenne o incapace di intendere e di volere.</li>
+      <li><strong><GlossaryTerm id="vizi-del-consenso">Vizi del consenso</GlossaryTerm>:</strong> La volontà c'è, ma si è formata male (errore, violenza o dolo).</li>
+    </ul>
+  </div>
 
-<Quiz />
+  <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+    <h3 className="text-lg font-semibold mb-3">I tre virus della volontà</h3>
+    <div className="grid md:grid-cols-3 gap-4 text-sm">
+      <div className="p-3 rounded-lg border border-white/10 bg-white/5">
+        <strong className="text-blue-300"><GlossaryTerm id="errore">Errore</GlossaryTerm></strong>
+        <br/>Ho sbagliato a capire (es. credevo fosse oro, era ottone). Deve essere essenziale e riconoscibile.
+      </div>
+      <div className="p-3 rounded-lg border border-white/10 bg-white/5">
+        <strong className="text-purple-300"><GlossaryTerm id="violenza">Violenza</GlossaryTerm></strong>
+        <br/>Minaccia psicologica ("firma o ti brucio il negozio"). È la causa più grave di annullamento.
+      </div>
+      <div className="p-3 rounded-lg border border-white/10 bg-white/5">
+        <strong className="text-orange-300"><GlossaryTerm id="dolo">Dolo</GlossaryTerm></strong>
+        <br/>Inganno. L'altra parte mi ha raggirato (es. contachilometri scalato).
+      </div>
+    </div>
+  </div>
+</section>
 
-<Resources />
+<VideoEmbed 
+  url="https://www.youtube.com/watch?v=jzn9iyqQZ-s" 
+  title="L'invalidità del contratto: nullità e annullabilità" 
+  source="Edizioni Simone" 
+  note="Un confronto chiaro e schematico tra i due istituti, ideale per fissare le differenze di disciplina (chi può agire, prescrizione, effetti)." 
+/>
+
+<TechnicalBlock>
+  <div className="space-y-4">
+    <h3 className="text-lg font-semibold">Focus Tecnico: Differenze Operative</h3>
+    
+    <div className="rounded-2xl border border-white/10 p-5 bg-white/5 space-y-2 text-sm">
+      <p className="font-bold">Art. 1418 CC (Cause di nullità)</p>
+      <p>"Il contratto è nullo quando è contrario a norme imperative, salvo che la legge disponga diversamente. Producono nullità del contratto la mancanza di uno dei requisiti indicati dall'art. 1325..."</p>
+      
+      <p className="mt-4 font-bold">Prescrizione (Art. 1422 vs 1442 CC)</p>
+      <ul className="list-disc pl-5">
+        <li><strong>Nullità:</strong> L'azione è <em>imprescrittibile</em> (puoi farla valere anche tra 50 anni, salvi gli effetti dell'usucapione).</li>
+        <li><strong>Annullamento:</strong> L'azione si prescrive in <em>5 anni</em>. Se non agisci entro 5 anni, il contratto si "sanifica" e resta valido per sempre.</li>
+      </ul>
+    </div>
+  </div>
+</TechnicalBlock>
+
+<section className="mt-8 space-y-4">
+  <h2 className="text-xl font-semibold">Esempi Reali</h2>
+
+  <ExampleCard type="positive" title="Nullità: Vendita di immobile abusivo">
+    <p><strong>Scenario:</strong> Compri una casa costruita totalmente senza permessi (abusiva) e non sanabile. L'atto notarile non cita i permessi.</p>
+    <p><strong>Analisi:</strong> Il contratto è <strong>nullo</strong> per violazione di norme imperative urbanistiche e impossibilità dell'oggetto giuridico.</p>
+    <p><strong>Esito:</strong> La proprietà non è mai passata. Hai diritto alla restituzione dei soldi, anche se sono passati anni.</p>
+  </ExampleCard>
+
+  <ExampleCard type="positive" title="Annullabilità: L'anello falso">
+    <p><strong>Scenario:</strong> Compri un anello che il gioielliere ti garantisce essere diamante puro. Scopri che è uno zircone.</p>
+    <p><strong>Analisi:</strong> È un caso di <strong>dolo</strong> (inganno) determinante del consenso.</p>
+    <p><strong>Esito:</strong> Il contratto è valido finché non vai dal giudice. Hai 5 anni dalla scoperta dell'inganno per chiedere l'annullamento e riavere i soldi.</p>
+  </ExampleCard>
+
+  <ExampleCard type="borderline" title="Errore sul prezzo online">
+    <p><strong>Scenario:</strong> Un e-commerce mette in vendita una TV da 1000€ a 10€ per errore di digitazione.</p>
+    <p><strong>Analisi:</strong> È un <strong>errore ostativo</strong>. Se l'errore è <em>riconoscibile</em> (chiunque capirebbe che 10€ è assurdo), il venditore può chiedere l'annullamento.</p>
+    <p><strong>Esito:</strong> Spesso il contratto viene annullato, non basta aver cliccato "compra".</p>
+  </ExampleCard>
+</section>
+
+<ResourceFooter>
+  <div className="space-y-3">
+    <ul className="list-disc pl-5 space-y-2">
+      <li><a className="underline" href="https://www.brocardi.it/codice-civile/libro-quarto/titolo-ii/capo-xi/sezione-i/">Artt. 1418 ss. (Nullità) su Brocardi</a></li>
+      <li><a className="underline" href="https://www.treccani.it/enciclopedia/nullita-diritto-civile/">Treccani — Voce Nullità</a></li>
+    </ul>
+    <p className="text-sm opacity-80">Verificato il: 2026-02-13 | Verificatore: Guirimì Team</p>
+  </div>
+</ResourceFooter>
