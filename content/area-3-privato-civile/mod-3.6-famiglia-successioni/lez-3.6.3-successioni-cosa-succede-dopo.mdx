@@ -1,35 +1,387 @@
 ---
 slug: "lez-3.6.3"
-title: "Successioni: cosa succede dopo"
+title: "Successioni: cosa succede ai beni quando una persona muore"
 area: "area-3-privato-civile"
 module: "mod-3.6-famiglia-successioni"
 order: 3
-duration_minutes: 15
+duration_minutes: 30
 prerequisites: ["lez-3.6.2"]
-next_lesson: "lez-4.1.1"
-last_verified: "2026-02-07"
-verified_by: "Da verificare"
-disclaimer_level: "standard"
-source_refs: []
-glossary_terms: []
+next_lesson: "lez-3.7.1"
+prev_lesson: "lez-3.6.2"
+last_verified: "2026-02-23"
+verified_by: "[Nome]"
+disclaimer_level: "elevated"
+
+source_refs:
+  - label: "Brocardi — Libro II (Delle successioni)"
+    url: "https://www.brocardi.it/codice-civile/libro-secondo/"
+  - label: "Brocardi — Art. 456 c.c. (Apertura della successione)"
+    url: "https://www.brocardi.it/codice-civile/libro-secondo/titolo-i/art456.html"
+  - label: "Brocardi — Art. 457 c.c. (Delazione dell’eredità: legge e testamento)"
+    url: "https://www.brocardi.it/codice-civile/libro-secondo/titolo-i/art457.html"
+  - label: "Brocardi — Art. 459 c.c. (Acquisto dell’eredità)"
+    url: "https://www.brocardi.it/codice-civile/libro-secondo/titolo-i/art459.html"
+  - label: "Brocardi — Art. 536 c.c. (Legittimari: quote di riserva)"
+    url: "https://www.brocardi.it/codice-civile/libro-secondo/titolo-i/capo-x/art536.html"
+  - label: "Treccani — Successione (diritto)"
+    url: "https://www.treccani.it/enciclopedia/successione_(Diritto)/"
+  - label: "Treccani — Eredità"
+    url: "https://www.treccani.it/enciclopedia/eredita/"
+
+glossary_terms:
+  - "successione"
+  - "apertura-successione"
+  - "eredita"
+  - "asse-ereditario"
+  - "delazione"
+  - "chiamato-alleredita"
+  - "erede"
+  - "legato"
+  - "testamento"
+  - "successione-legittima"
+  - "successione-testamentaria"
+  - "legittimari"
+  - "quota-di-riserva"
+  - "accettazione"
+  - "rinuncia"
+
 quiz:
-  questions: []
+  questions:
+    - type: "mcq"
+      prompt: "Quando si apre la successione (art. 456 c.c.)?"
+      choices:
+        - "Quando viene pubblicato il testamento"
+        - "Al momento della morte della persona"
+        - "Quando gli eredi accettano l’eredità"
+      correctIndex: 1
+      feedback:
+        0: "No: la pubblicazione del testamento può avvenire dopo, ma l’apertura è legata alla morte."
+        1: "Corretto: la successione si apre al momento della morte (art. 456 c.c.)."
+        2: "No: l’accettazione riguarda l’acquisto dell’eredità, non l’apertura."
+    - type: "mcq"
+      prompt: "Secondo l’art. 457 c.c., la successione avviene:"
+      choices:
+        - "Solo per testamento"
+        - "Solo per legge"
+        - "Per legge o per testamento"
+      correctIndex: 2
+      feedback:
+        0: "No: esiste anche la successione legittima."
+        1: "No: è possibile anche la successione testamentaria."
+        2: "Corretto: la delazione può derivare dalla legge o dal testamento."
+    - type: "mcq"
+      prompt: "Chi sono i legittimari (art. 536 c.c.)?"
+      choices:
+        - "Tutti i parenti entro il 6° grado"
+        - "I soggetti a cui la legge riserva una quota di eredità anche contro il testamento"
+        - "Solo gli eredi indicati nel testamento"
+      correctIndex: 1
+      feedback:
+        0: "No: non tutti i parenti sono legittimari."
+        1: "Corretto: i legittimari hanno una quota di riserva."
+        2: "No: i legittimari possono valere anche contro disposizioni testamentarie lesive."
+    - type: "open"
+      prompt: "Spiega la differenza tra chiamato all’eredità ed erede, e perché questa distinzione è importante per i debiti."
+      expected_points:
+        - "Chiamato: soggetto a cui è delata l’eredità, ma non ha ancora acquistato."
+        - "Erede: acquista con accettazione (art. 459 c.c.)."
+        - "Importanza: l’acquisto comporta effetti anche sui debiti ereditari."
 ---
 
-<Hook>
-Inserisci qui il gancio iniziale...
-</Hook>
+<HookBlock>
+Una persona muore e lascia: una casa, un conto, magari debiti, e tante relazioni familiari.
+
+La domanda non è “chi prende cosa” in senso emotivo.  
+La domanda giuridica è: **quando nasce l’eredità, chi è chiamato, e quando si diventa eredi davvero**.
+</HookBlock>
 
 <Objective>
-Inserisci qui l'obiettivo della lezione...
+Nella lezione precedente hai visto separazione e divorzio: strumenti che regolano la crisi del rapporto.
+
+Ora entriamo in un altro “momento critico” della vita giuridica: la <GlossaryTerm id="successione">successione</GlossaryTerm>.
+Capirai:
+- quando si apre la successione,
+- come funziona la delazione (legge/testamento),
+- cosa significa accettare o rinunciare,
+- e perché esistono i <GlossaryTerm id="legittimari">legittimari</GlossaryTerm> con una <GlossaryTerm id="quota-di-riserva">quota di riserva</GlossaryTerm>.
 </Objective>
+
+<SectionTitle step={1} title="Che cos’è la successione: non è solo 'passaggio di beni'">
+  È un sistema che trasferisce posizioni giuridiche, non solo oggetti.
+</SectionTitle>
+
+<Concept title="Definizione (in termini pratici)">
+La successione è il meccanismo con cui, alla morte di una persona, alcuni suoi rapporti giuridici patrimoniali
+(passività e attivi) si trasferiscono ad altri soggetti.
+Questo trasferimento avviene secondo regole precise, perché incide su proprietà, debiti e stabilità sociale.
+</Concept>
+
+Quando si parla di successione, devi evitare un errore: pensare che riguardi solo “chi prende la casa”.
+In realtà riguarda l’intero <GlossaryTerm id="asse-ereditario">asse ereditario</GlossaryTerm>:
+
+- beni (immobili, denaro, quote),
+- crediti (somme dovute al defunto),
+- e anche debiti (mutui, prestiti, obbligazioni).
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+  <CardBlock title="📦 Asse ereditario">
+    L’insieme dei rapporti patrimoniali che “restano” dopo la morte.
+    <div className="mt-4"><Highlight color="blue">Non solo attivo: anche passivo</Highlight></div>
+  </CardBlock>
+  <CardBlock title="🧩 Regole di trasferimento">
+    La legge stabilisce chi può subentrare e in quale misura.
+    <div className="mt-4"><Highlight color="blue">Ordine e certezza giuridica</Highlight></div>
+  </CardBlock>
+  <CardBlock title="⚠️ Punto sensibile">
+    Diventare erede può significare anche assumere responsabilità per i debiti.
+    <div className="mt-4"><Highlight color="blue">Eredità ≠ regalo automatico</Highlight></div>
+  </CardBlock>
+</div>
 
 ---
 
-## 1) Titolo sezione
+<SectionTitle step={2} title="Apertura della successione: quando nasce il 'momento ereditario'">
+  Il primo concetto tecnico è temporale: tutto parte dalla morte.
+</SectionTitle>
 
-Contenuto...
+<Concept title="Art. 456 c.c.">
+La <GlossaryTerm id="apertura-successione">successione si apre</GlossaryTerm> al momento della morte della persona,
+nel luogo del suo ultimo domicilio.
+</Concept>
 
-<Quiz />
+<Technical>
+**Art. 456 c.c. — Apertura della successione**  
+La successione si apre al momento della morte, nel luogo dell'ultimo domicilio del defunto.
+</Technical>
 
-<Resources />
+Questa regola non è “formale”: serve a stabilire un punto fisso.
+
+Da quel momento:
+- si identifica l’asse ereditario,
+- si individuano i chiamati,
+- e si attivano le regole di delazione.
+
+---
+
+<SectionTitle step={3} title="Delazione dell’eredità: legge o testamento">
+  Secondo grande concetto: da dove nasce il titolo per succedere.
+</SectionTitle>
+
+<Concept title="Art. 457 c.c. (idea centrale)">
+La delazione è l’attribuzione della vocazione ereditaria: indica “chi è chiamato”.
+Può derivare dalla legge (<GlossaryTerm id="successione-legittima">successione legittima</GlossaryTerm>)
+o da un <GlossaryTerm id="testamento">testamento</GlossaryTerm> (<GlossaryTerm id="successione-testamentaria">successione testamentaria</GlossaryTerm>).
+</Concept>
+
+<Technical>
+**Art. 457 c.c. — Delazione dell’eredità**  
+L’eredità si devolve per legge o per testamento.  
+Non si fa luogo a successione testamentaria se non nei limiti in cui non è esclusa da quella legittima.
+</Technical>
+
+Qui hai una regola di metodo:
+
+- **Se c’è un testamento valido**, si segue (nei limiti consentiti).
+- **Se non c’è testamento**, decide la legge (ordine dei successibili).
+- **Se il testamento dispone oltre i limiti**, interviene la tutela dei legittimari.
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+  <CardBlock title="Successione testamentaria">
+    Il defunto organizza la destinazione dei beni con un atto unilaterale.
+    <div className="mt-4"><Highlight color="blue">Libertà… ma non totale</Highlight></div>
+  </CardBlock>
+  <CardBlock title="Successione legittima">
+    In assenza (o parziale inefficacia) del testamento, la legge stabilisce chi succede e in che quota.
+    <div className="mt-4"><Highlight color="blue">Ordine legale dei successibili</Highlight></div>
+  </CardBlock>
+</div>
+
+---
+
+<SectionTitle step={4} title="Chiamato all’eredità vs erede: la differenza che salva dai debiti">
+  Non si diventa eredi “automaticamente”: serve un passaggio ulteriore.
+</SectionTitle>
+
+<Concept title="Distinzione fondamentale">
+Il <GlossaryTerm id="chiamato-alleredita">chiamato all’eredità</GlossaryTerm> è chi ha titolo a succedere,
+ma non ha ancora acquistato.
+
+L’<GlossaryTerm id="erede">erede</GlossaryTerm> è chi acquista l’eredità (di regola con l’accettazione).
+</Concept>
+
+<Technical>
+**Art. 459 c.c. — Acquisto dell’eredità**  
+L’eredità si acquista con l’accettazione.
+</Technical>
+
+Questa distinzione serve perché l’accettazione è il punto in cui il chiamato decide se “entrare” nell’eredità.
+
+Ed è qui che, nella pratica, si concentra la prudenza:
+se nell’asse ci sono debiti, l’accettazione è una scelta che produce conseguenze patrimoniali.
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+  <CardBlock title="✅ Accettazione">
+    Trasforma il chiamato in erede: subentro nei rapporti patrimoniali.
+    <div className="mt-4"><Highlight color="blue">È il momento dell’acquisto</Highlight></div>
+  </CardBlock>
+  <CardBlock title="❌ Rinuncia">
+    Il chiamato decide di non acquistare l’eredità.
+    <div className="mt-4"><Highlight color="blue">Serve quando l’eredità è “rischiosa”</Highlight></div>
+  </CardBlock>
+  <CardBlock title="⚠️ Regola d’oro">
+    Prima di scegliere, si valuta l’asse: attivo e passivo.
+    <div className="mt-4"><Highlight color="blue">Eredità = saldo complessivo</Highlight></div>
+  </CardBlock>
+</div>
+
+---
+
+<SectionTitle step={5} title="Eredità e legato: due modi diversi di attribuire">
+  Non tutto ciò che ricevi in successione ti rende erede.
+</SectionTitle>
+
+<Concept title="Idea semplice">
+L’<GlossaryTerm id="eredita">eredità</GlossaryTerm> riguarda la posizione complessiva (subentro in un patrimonio).
+Il <GlossaryTerm id="legato">legato</GlossaryTerm> riguarda, in linea generale, un’attribuzione specifica (un bene o un diritto determinato).
+</Concept>
+
+Qui non stiamo facendo tecnicismi avanzati: ti serve capire il “profilo di rischio”.
+
+Chi subentra globalmente può essere esposto anche ai debiti.
+Chi riceve un’attribuzione specifica, in genere, non assume lo stesso tipo di posizione globale.
+
+---
+
+<SectionTitle step={6} title="Legittimari e quota di riserva: la libertà testamentaria ha un limite">
+  È uno dei punti più tipici del diritto italiano delle successioni.
+</SectionTitle>
+
+<Concept title="Art. 536 c.c. (logica)">
+I <GlossaryTerm id="legittimari">legittimari</GlossaryTerm> sono soggetti a cui la legge riserva una parte dell’eredità,
+anche contro un testamento lesivo.  
+Quella parte è la <GlossaryTerm id="quota-di-riserva">quota di riserva</GlossaryTerm>.
+</Concept>
+
+<Technical>
+**Art. 536 c.c. — Legittimari**  
+Le persone a favore delle quali la legge riserva una quota di eredità o altri diritti nella successione sono: il coniuge, i figli e, in mancanza di questi, gli ascendenti.
+</Technical>
+
+L’idea non è “punire” chi fa testamento: è bilanciare due valori:
+
+- autonomia (posso disporre dei miei beni),
+- tutela familiare minima (alcuni soggetti non possono essere esclusi oltre certi limiti).
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+  <CardBlock title="✅ Libertà testamentaria">
+    Posso disporre dei miei beni con il testamento.
+    <div className="mt-4"><Highlight color="blue">Autonomia</Highlight></div>
+  </CardBlock>
+  <CardBlock title="🛡️ Quota di riserva">
+    Una parte è “blindata” a favore di alcuni soggetti.
+    <div className="mt-4"><Highlight color="blue">Tutela minima</Highlight></div>
+  </CardBlock>
+  <CardBlock title="⚖️ Equilibrio">
+    Il sistema costruisce un compromesso tra libertà e famiglia.
+    <div className="mt-4"><Highlight color="blue">Tipico del nostro ordinamento</Highlight></div>
+  </CardBlock>
+</div>
+
+---
+
+<SectionTitle step={7} title="Mini-flusso mentale: come ragionare da studente in un caso di successione">
+  Tre passaggi per non perdersi.
+</SectionTitle>
+
+<Steps>
+  <Step number="1" title="Identifica l’apertura">
+    Quando e dove si apre la successione (art. 456 c.c.).  
+    Questo ti dà il punto di partenza tecnico.
+  </Step>
+  <Step number="2" title="Verifica la delazione">
+    C’è testamento? È valido? Copre tutto?  
+    Se manca o non copre tutto, entra la successione legittima (art. 457 c.c.).
+  </Step>
+  <Step number="3" title="Distingui chiamato/erede e valuta debiti">
+    Chi è chiamato non è ancora erede.  
+    L’acquisto avviene con accettazione (art. 459 c.c.).  
+    Prima: guardare il saldo complessivo dell’asse.
+  </Step>
+</Steps>
+
+---
+
+<SectionTitle step={8} title="Esempi pratici">
+  Qui vedi come i concetti si incastrano.
+</SectionTitle>
+
+<Row className="lg:grid-cols-2">
+  <Col>
+    <Example type="positive" title="Testamento + legittimari: libertà con limiti">
+      Una persona fa testamento e lascia gran parte dei beni a un amico.
+      Tuttavia ha figli.
+
+      Il testamento esprime la volontà, ma deve rispettare la quota di riserva dei legittimari.
+      Se le disposizioni sono lesive, il sistema prevede strumenti di tutela.
+    </Example>
+  </Col>
+
+  <Col>
+    <Example type="negative" title="Errore tipico: accettare senza sapere i debiti">
+      Un chiamato accetta “perché c’è la casa”.
+      Poi scopre che ci sono debiti importanti.
+
+      La distinzione chiamato/erede non è teorica: è il confine tra valutazione e assunzione di responsabilità patrimoniale.
+    </Example>
+  </Col>
+</Row>
+
+<Row className="lg:grid-cols-2">
+  <Col>
+    <Example type="neutral" title="Successione legittima: quando decide la legge">
+      Nessun testamento.  
+      Si applicano le regole di successione legittima: l’ordinamento individua successibili e quote secondo l’ordine previsto.
+      La logica è evitare vuoti di titolarità e garantire continuità patrimoniale.
+    </Example>
+  </Col>
+
+  <Col>
+    <Example type="positive" title="Chiamato che valuta e poi decide">
+      Prima di accettare, il chiamato ricostruisce l’asse: conti, immobili, prestiti, mutui.
+      Solo dopo sceglie se accettare o rinunciare.
+
+      Questo è il comportamento “razionale” che il sistema presuppone e che, in sede d’esame, mostra comprensione vera.
+    </Example>
+  </Col>
+</Row>
+
+<SectionTitle step={9} title="Video suggerito">
+  Inserire solo se autore qualificato e contenuto aggiornato, senza promozione.
+</SectionTitle>
+
+{/* VIDEO PLACEHOLDER:
+  Search query: "successioni diritto civile apertura della successione art 456 delazione 457 legittimari 536 spiegazione università"
+  Criteri: docente universitario/ente istituzionale/ordine professionale; autore identificabile; no promozione; contenuto aggiornato.
+*/}
+
+---
+
+<QuizBlock />
+
+<ResourceFooter
+  disclaimerLevel="elevated"
+  primarySources={[
+    { label: "Brocardi — Libro II (Successioni)", url: "https://www.brocardi.it/codice-civile/libro-secondo/" },
+    { label: "Brocardi — Art. 456 c.c. (Apertura della successione)", url: "https://www.brocardi.it/codice-civile/libro-secondo/titolo-i/art456.html" },
+    { label: "Brocardi — Art. 457 c.c. (Delazione: legge o testamento)", url: "https://www.brocardi.it/codice-civile/libro-secondo/titolo-i/art457.html" },
+    { label: "Brocardi — Art. 459 c.c. (Acquisto dell’eredità)", url: "https://www.brocardi.it/codice-civile/libro-secondo/titolo-i/art459.html" },
+    { label: "Brocardi — Art. 536 c.c. (Legittimari)", url: "https://www.brocardi.it/codice-civile/libro-secondo/titolo-i/capo-x/art536.html" }
+  ]}
+  secondarySources={[
+    { label: "Treccani — Successione (diritto)", url: "https://www.treccani.it/enciclopedia/successione_(Diritto)/" },
+    { label: "Treccani — Eredità", url: "https://www.treccani.it/enciclopedia/eredita/" }
+  ]}
+>
+Questa lezione ha finalità didattica e non costituisce consulenza legale.  
+Tema sensibile: le successioni possono coinvolgere situazioni familiari complesse; i contenuti sono generali e non sostituiscono consulenza professionale.
+</ResourceFooter>
