@@ -19,6 +19,7 @@ L'obiettivo è abbandonare il semplice testo "a cascata" del markdown tradiziona
 - **NO Muri di Testo:** Evita paragrafi più lunghi di 4-5 righe.
 - **NO Titoli Markdown nudi (`##` , `###`)**: Fanno sembrare la piattaforma amatoriale.
 - **NO grassetti casuali:** Usa il grassetto solo per 1 max 2 parole pivotali per frase.
+- **NO `<div className="mt-4">` isolati dentro le Card o nel testo libero:** Causa un *Hydration Error* critico su Next.js (perché MDX lo avvolgerà in un `<p>`). Usa sempre `<span className="block mt-4">` al suo posto.
 
 ---
 
@@ -34,6 +35,14 @@ slug: "lez-X.Y.Z"
 title: "Titolo della lezione"
 area: "area-..."
 module: "mod-..."
+order: 1
+duration_minutes: 15
+prerequisites: ["lez-X.Y.V"]
+next_lesson: "lez-X.Y.K"
+prev_lesson: "lez-X.Y.V"     # [NOVITÀ] Ora tracciamo anche la prev_lesson
+last_verified: "YYYY-MM-DD"
+verified_by: "[Nome]"
+disclaimer_level: "standard" # [NOVITÀ] "standard" oppure "elevated" (per temi penali/finanziari)
 ... (tutti gli altri campi standard)
 ---
 ```
@@ -67,12 +76,12 @@ Il **[Termine]** è un istituto giuridico che...
 ```
 
 ### E) Mappe Concettuali a Griglia (Sostituiscono i Bullet Point testuali)
-Per elenchi di 3+ elementi (es. "le 3 fonti", "i 4 requisiti").
+Per elenchi di 3+ elementi (es. "le 3 fonti", "i 4 requisiti"). Se devi andare a capo e spaziare l'Highlight, ricordati di usare *sempre* lo `<span>` e non il `<div>`.
 ```mdx
 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
   <CardBlock title="1️⃣ Primo Punto">
     Spiegazione breve.
-    <div className="mt-4"><Highlight color="blue">Es. Testo evidenziato</Highlight></div>
+    <span className="block mt-4"><Highlight color="blue">Es. Testo evidenziato</Highlight></span>
   </CardBlock>
   <CardBlock title="2️⃣ Secondo Punto">...</CardBlock>
   <CardBlock title="3️⃣ Terzo Punto">...</CardBlock>
@@ -129,7 +138,20 @@ Se la lezione contiene concetti complessi, inserisci i componenti sviluppati cus
 <AnimatedTimeline />
 ```
 
-### M) Chiusura (Quiz e Fonti)
+### M) Sezione Video (Placeholder)
+Aggiungi un suggerimento in fondo se pensi che al lettore gioverebbe una sintesi video istituzionale o accademica.
+```mdx
+<SectionTitle step={10} title="Video suggerito">
+  Inserire solo se autore qualificato (docente universitario / ente istituzionale / ordine professionale), aggiornato e senza promozione.
+</SectionTitle>
+
+{/* VIDEO PLACEHOLDER:
+  Search query: "[inserire chiavi di ricerca, es: successioni diritto civile apertura successione]"
+  Criteri: docente universitario/ente istituzionale/ordine professionale; autore identificabile; no promozione; ecc.
+*/}
+```
+
+### N) Chiusura (Quiz e Fonti)
 In fondo assoluto al documento. (Il Quiz verrà comunque renderizzato automaticamente anche se omesso, ma è buona norma posizionarlo a mano prima delle fonti).
 ```mdx
 ---
@@ -157,13 +179,13 @@ SEI IL CONTENT CREATOR GIURIDICO DI GIURIMì.
 Devi scrivere una lezione di Diritto Civile/Privato mantenendo altissimo rigore accademico ma con uno stile comunicativo diretto, ingaggiante e "premium" (stile manuali Stripe/Vercel/Fintech).
 
 REGOLE DI FORMATTAZIONE MDX (TASSOVITATIVE):
-1. DEVI usare il frontmatter YAML completo all'inizio.
+1. DEVI usare il frontmatter YAML completo all'inizio (includendo sempre anche `prev_lesson` e `disclaimer_level`).
 2. Inizia SEMPRE con `<HookBlock>Testo ad effetto corto</HookBlock>` seguito da un `<Objective>Cosa impariamo</Objective>`.
 3. NON usare MAI `## Titolo` o `### Sottotitolo`. Usa ESCUSIVAMENTE il componente: `<SectionTitle step={numero} title="Il Tuo Titolo">Sottotitolo opzionale testuale</SectionTitle>`.
 4. Metti la definizione chiave dentro un `<Concept title="Definizione">Testo</Concept>`.
-5. Se devi elencare 2 o 3 categorie o requisiti, NON usare un elenco puntato markdown, usa SEMPRE questo codice JSX per le griglie di card:
+5. Se devi elencare 2 o 3 categorie o requisiti, NON usare un elenco puntato markdown, usa SEMPRE questo codice JSX per le griglie di card. ATTENZIONE: per staccare l'Highlight usa SEMPRE `<span className="block mt-4">` (NIENTE DIV ANNIDATI PER EVITARE HYDRATION ERROR!):
    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-     <CardBlock title="Categoria 1">Descrizione.<br/><div className="mt-4"><Highlight color="blue">Esempio</Highlight></div></CardBlock>
+     <CardBlock title="Categoria 1">Descrizione.<br/><span className="block mt-4"><Highlight color="blue">Esempio</Highlight></span></CardBlock>
    </div>
 6. Cita SEMPRE gli articoli del Codice Civile chiusi dentro il tag espandibile `<Technical> **Art. X.** Testo di legge.</Technical>`.
 7. Fai sempre Esempi finali usando il layout a 2 colonne:
@@ -171,10 +193,11 @@ REGOLE DI FORMATTAZIONE MDX (TASSOVITATIVE):
      <Col><Example type="positive" title="Caso">Testo</Example></Col>
      <Col><Example type="negative" title="Caso">Testo</Example></Col>
    </Row>
-8. Cita nel testo i termini di glossario avvolgendoli in `<GlossaryTerm id="id-del-termine">termine</GlossaryTerm>`.
-9. Inserire sempre un blocco quiz (`<QuizBlock />`) e alla fine il `<ResourceFooter>` con le primarySources.
+8. Prevedi sempre in coda un placeholder commentato in HTML (`{/* VIDEO PLACEHOLDER: ... */}`) in cui indichi la query di ricerca che si adatta meglio alla documentazione e al reperimento di un video di un docente o accademico per completare lo studio.
+9. Cita nel testo i termini di glossario avvolgendoli in `<GlossaryTerm id="id-del-termine">termine</GlossaryTerm>`.
+10. Inserire sempre un blocco quiz (`<QuizBlock />`) e alla fine il `<ResourceFooter>` con le primarySources.
 
-10. Se includi il quiz, l'oggetto YAML *DEVE* avere ESATTAMENTE la struttura definita nell'interfaccia Typescript in questo modo:
+11. Se includi il quiz, l'oggetto YAML *DEVE* avere ESATTAMENTE la struttura definita nell'interfaccia Typescript in questo modo:
     quiz:
       questions:
         - type: "mcq"
