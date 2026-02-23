@@ -4,32 +4,327 @@ title: "Inadempimento e responsabilità del debitore"
 area: "area-3-privato-civile"
 module: "mod-3.3-obbligazioni"
 order: 3
-duration_minutes: 15
+duration_minutes: 26
 prerequisites: ["lez-3.3.2"]
 next_lesson: "lez-3.4.1"
-last_verified: "2026-02-07"
-verified_by: "Da verificare"
+prev_lesson: "lez-3.3.2"
+last_verified: "2026-02-22"
+verified_by: "[Nome]"
 disclaimer_level: "standard"
-source_refs: []
-glossary_terms: []
+
+source_refs:
+  - label: "Art. 1218 c.c. — Responsabilità del debitore"
+    url: "https://www.brocardi.it/codice-civile/libro-quarto/titolo-i/capo-iii/art1218.html"
+  - label: "Art. 1219 c.c. — Costituzione in mora"
+    url: "https://www.brocardi.it/codice-civile/libro-quarto/titolo-i/capo-iii/art1219.html"
+  - label: "Art. 1223 c.c. — Risarcimento del danno"
+    url: "https://www.brocardi.it/codice-civile/libro-quarto/titolo-i/capo-iii/art1223.html"
+  - label: "Art. 1224 c.c. — Danni nelle obbligazioni pecuniarie"
+    url: "https://www.brocardi.it/codice-civile/libro-quarto/titolo-i/capo-iii/art1224.html"
+  - label: "Art. 1225 c.c. — Prevedibilità del danno"
+    url: "https://www.brocardi.it/codice-civile/libro-quarto/titolo-i/capo-iii/art1225.html"
+  - label: "Art. 1227 c.c. — Concorso del fatto colposo del creditore"
+    url: "https://www.brocardi.it/codice-civile/libro-quarto/titolo-i/capo-iii/art1227.html"
+  - label: "Art. 1256 c.c. — Impossibilità sopravvenuta"
+    url: "https://www.brocardi.it/codice-civile/libro-quarto/titolo-i/capo-iv/sezione-v/art1256.html"
+  - label: "Dispensa UniCA — Inadempimento, responsabilità contrattuale e mora del debitore (PDF)"
+    url: "https://web.unica.it/unica/protected/297617/0/def/ref/MAT268588/"
+
+glossary_terms:
+  - "obbligazione"
+  - "adempimento"
+  - "inadempimento"
+  - "ritardo"
+  - "mora"
+  - "responsabilita-contrattuale"
+  - "risarcimento"
+  - "danno-emergente"
+  - "lucro-cessante"
+  - "impossibilita-sopravvenuta"
+  - "causa-non-imputabile"
+  - "prevedibilita-del-danno"
+  - "concorso-colposo-del-creditore"
+
 quiz:
-  questions: []
+  questions:
+    - id: "q1"
+      type: "mcq"
+      question: "Secondo l’art. 1218 c.c., il debitore è tenuto al risarcimento se:"
+      options:
+        - id: "a"
+          text: "Non esegue esattamente la prestazione dovuta e non prova la causa non imputabile"
+          is_correct: true
+          feedback: "Corretto: la responsabilità è presunta, salvo prova di impossibilità non imputabile."
+        - id: "b"
+          text: "Il creditore non invia alcuna diffida"
+          is_correct: false
+          feedback: "La diffida riguarda la mora (art. 1219), non la regola base di responsabilità dell’art. 1218."
+        - id: "c"
+          text: "Il debitore dimostra di averci provato ma non ci è riuscito"
+          is_correct: false
+          feedback: "Non basta ‘averci provato’: serve la prova della causa non imputabile (impossibilità/inesigibilità secondo i casi)."
+    - id: "q2"
+      type: "mcq"
+      question: "La costituzione in mora (art. 1219 c.c.) avviene di regola mediante:"
+      options:
+        - id: "a"
+          text: "Un pagamento parziale"
+          is_correct: false
+          feedback: "No: la mora è un fatto giuridico legato al ritardo, non al pagamento parziale."
+        - id: "b"
+          text: "Intimazione o richiesta fatta per iscritto"
+          is_correct: true
+          feedback: "Esatto: è la regola generale dell’art. 1219."
+        - id: "c"
+          text: "Un messaggio verbale informale"
+          is_correct: false
+          feedback: "La regola richiede forma scritta (salve ipotesi in cui non è necessaria la costituzione in mora)."
+    - id: "q3"
+      type: "mcq"
+      question: "L’art. 1223 c.c. include nel risarcimento:"
+      options:
+        - id: "a"
+          text: "Solo il danno emergente"
+          is_correct: false
+          feedback: "No: include anche il lucro cessante, se conseguenza immediata e diretta."
+        - id: "b"
+          text: "Perdita subita e mancato guadagno, come conseguenza immediata e diretta"
+          is_correct: true
+          feedback: "Corretto: danno emergente + lucro cessante, con filtro del nesso causale."
+        - id: "c"
+          text: "Qualsiasi danno ipotizzabile, anche remoto"
+          is_correct: false
+          feedback: "No: serve che sia conseguenza immediata e diretta."
+    - id: "q4"
+      type: "open"
+      question: "Fai un esempio di ritardo che diventa mora e spiega cosa cambia per debitore e creditore."
+      expected_points:
+        - "Ritardo = mancato rispetto del termine; mora = ritardo qualificato (di regola con richiesta scritta)."
+        - "Effetti pratici: interessi, rischio, risarcibilità del danno da ritardo (a seconda dei casi)."
+        - "Esempio concreto (pagamento, consegna, prestazione di servizi)."
+
 ---
 
-<Hook>
-Inserisci qui il gancio iniziale...
-</Hook>
+<HookBlock>
+Firmare un contratto è facile.  
+Il problema nasce quando qualcuno **non fa ciò che deve**.
+
+Da qui in poi, il diritto civile passa dalla “normalità” al conflitto: inadempimento, mora, responsabilità, risarcimento.
+</HookBlock>
 
 <Objective>
-Inserisci qui l'obiettivo della lezione...
+Capirai quando c’è <GlossaryTerm id="inadempimento">inadempimento</GlossaryTerm>, cosa significa la <GlossaryTerm id="responsabilita-contrattuale">responsabilità del debitore</GlossaryTerm> (art. 1218 c.c.), come funziona la <GlossaryTerm id="mora">mora</GlossaryTerm> (art. 1219 c.c.) e quali sono le regole base del <GlossaryTerm id="risarcimento">risarcimento</GlossaryTerm> (artt. 1223–1227 c.c.).
 </Objective>
+
+<SectionTitle step={1} title="Quando un adempimento “salta”: l’inadempimento">
+Inadempimento non significa solo “non fare”. Può essere anche fare male o fare tardi.
+</SectionTitle>
+
+<Concept title="Inadempimento">
+C’è <GlossaryTerm id="inadempimento">inadempimento</GlossaryTerm> quando il debitore non esegue la prestazione dovuta, oppure la esegue in modo inesatto (per quantità, qualità, modalità, tempo o luogo).
+</Concept>
+
+Un esempio banale: dovevi consegnare un computer “nuovo” e consegni un ricondizionato.  
+Hai consegnato qualcosa, ma **non è la prestazione dovuta**.
+
+Oppure: dovevi pagare il 10 del mese e paghi il 10 del mese successivo.  
+La prestazione è possibile, ma è **in ritardo**.
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+  <CardBlock title="Inadempimento totale">
+    La prestazione non arriva proprio.
+    <span className="block mt-4"><Highlight color="red">Es. non paghi mai</Highlight></span>
+  </CardBlock>
+
+  <CardBlock title="Inadempimento inesatto">
+    Arriva, ma non come promesso.
+    <span className="block mt-4"><Highlight color="blue">Es. consegna difettosa</Highlight></span>
+  </CardBlock>
+
+  <CardBlock title="Ritardo">
+    Arriva, ma troppo tardi.
+    <span className="block mt-4"><Highlight color="yellow">Es. consegna dopo la scadenza</Highlight></span>
+  </CardBlock>
+</div>
+
+<SectionTitle step={2} title="La regola chiave: responsabilità presunta del debitore (art. 1218)">
+Qui c’è il cuore della responsabilità contrattuale: chi non adempie deve risarcire, salvo prova liberatoria.
+</SectionTitle>
+
+<Concept title="Responsabilità del debitore (idea base)">
+Se il debitore non esegue esattamente la prestazione, risponde dei danni.  
+Per liberarsi, deve provare che l’inadempimento (o il ritardo) dipende da una causa a lui non imputabile.
+</Concept>
+
+<Technical>
+**Art. 1218 c.c. — Responsabilità del debitore**  
+«Il debitore che non esegue esattamente la prestazione dovuta è tenuto al risarcimento del danno, se non prova che l'inadempimento o il ritardo è stato determinato da impossibilità della prestazione derivante da causa a lui non imputabile.»
+</Technical>
+
+Questo articolo ti dice una cosa “strategica” sul processo:  
+**chi deve provare cosa.**
+
+<Steps>
+  <Step number="1" title="Cosa prova il creditore">
+    Deve allegare l’inadempimento/ritardo e provare il titolo (da dove nasce l’obbligazione) e il danno.
+  </Step>
+  <Step number="2" title="Cosa prova il debitore">
+    Deve dimostrare che ha adempiuto oppure che l’inadempimento deriva da una causa non imputabile (es. impossibilità sopravvenuta).
+  </Step>
+</Steps>
+
+<SectionTitle step={3} title="Il ritardo diventa “mora”: quando il tempo conta davvero">
+Il ritardo non è sempre uguale. A volte si trasforma in mora: e lì cambiano gli effetti.
+</SectionTitle>
+
+<Concept title="Mora del debitore">
+La <GlossaryTerm id="mora">mora</GlossaryTerm> è il ritardo “qualificato”: il debitore è formalmente messo in condizione di sapere che il creditore pretende l’adempimento.
+</Concept>
+
+Perché serve?  
+Perché il diritto deve distinguere tra:
+- un ritardo fisiologico e risolvibile,
+- e un ritardo che diventa fonte di conseguenze più pesanti.
+
+<Technical>
+**Art. 1219 c.c. — Costituzione in mora**  
+«Il debitore è costituito in mora mediante intimazione o richiesta fatta per iscritto.
+
+Non è necessaria la costituzione in mora:  
+1) quando il debito deriva da fatto illecito;  
+2) quando il debitore ha dichiarato per iscritto di non volere eseguire l’obbligazione;  
+3) quando è scaduto il termine, se la prestazione deve essere eseguita al domicilio del creditore.»
+</Technical>
+
+<AnimatedTimeline />
+
+<SectionTitle step={4} title="La prova liberatoria: quando il debitore può non rispondere">
+Non ogni mancato adempimento porta automaticamente a colpa. Ma la prova è in salita.
+</SectionTitle>
+
+<Compare
+  aTitle="Impossibilità sopravvenuta"
+  aBody="La prestazione diventa oggettivamente impossibile per causa non imputabile al debitore. In questi casi l’obbligazione può estinguersi e il debitore può non rispondere (nei limiti e con le condizioni previste)."
+  bTitle="Semplice difficoltà / scomodità"
+  bBody="La prestazione è più onerosa o complicata, ma resta possibile. Qui, di regola, il debitore non si libera: il rischio organizzativo resta a suo carico."
+/>
+
+<Technical>
+**Art. 1256 c.c. — Impossibilità definitiva e temporanea**  
+«L'obbligazione si estingue quando, per una causa non imputabile al debitore, la prestazione diventa impossibile.
+
+Se l'impossibilità è solo temporanea, il debitore non è responsabile del ritardo nell'adempimento finché essa perdura. Tuttavia, l'obbligazione si estingue se l'impossibilità perdura fino a quando, in relazione al titolo dell'obbligazione o alla natura dell'oggetto, il debitore non può più essere ritenuto obbligato a eseguire la prestazione ovvero il creditore non ha più interesse a conseguirla.»
+</Technical>
+
+<SectionTitle step={5} title="Quanto si risarcisce: le regole base del danno (artt. 1223–1227)">
+Una volta accertata la responsabilità, serve una bussola per misurare il risarcimento.
+</SectionTitle>
+
+<Concept title="Danno risarcibile (art. 1223)">
+Il risarcimento copre la perdita subita e il mancato guadagno, purché siano conseguenza immediata e diretta dell’inadempimento o del ritardo.
+</Concept>
+
+<Technical>
+**Art. 1223 c.c. — Risarcimento del danno**  
+«Il risarcimento del danno per l'inadempimento o per il ritardo deve comprendere così la perdita subita dal creditore come il mancato guadagno, in quanto ne siano conseguenza immediata e diretta.»
+</Technical>
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+  <CardBlock title="Danno emergente">
+    La perdita concreta (spesa, costo, diminuzione patrimoniale).
+    <span className="block mt-4"><Highlight color="blue">Es. paghi un tecnico per rimediare al difetto</Highlight></span>
+  </CardBlock>
+
+  <CardBlock title="Lucro cessante">
+    Il guadagno mancato.
+    <span className="block mt-4"><Highlight color="blue">Es. perdi una commessa perché la consegna non arriva</Highlight></span>
+  </CardBlock>
+</div>
+
+<SectionTitle step={6} title="Tre filtri che riducono (o aumentano) il risarcimento">
+Non sempre “pago tutto”. Il Codice Civile mette dei correttivi.
+</SectionTitle>
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+  <CardBlock title="Prevedibilità (art. 1225)">
+    Se non c’è dolo, risarcisci solo i danni prevedibili quando nasce l’obbligazione.
+    <div className="mt-4"><Highlight color="yellow">Limite quando c’è colpa</Highlight></div>
+  </CardBlock>
+
+  <CardBlock title="Concorso del creditore (art. 1227)">
+    Se il creditore contribuisce colposamente al danno, il risarcimento diminuisce.
+    <div className="mt-4"><Highlight color="yellow">Riduzione proporzionale</Highlight></div>
+  </CardBlock>
+
+  <CardBlock title="Obbligazioni pecuniarie (art. 1224)">
+    Nei debiti di denaro, con la mora scattano interessi legali anche senza prova del danno.
+    <div className="mt-4"><Highlight color="blue">Interessi moratori</Highlight></div>
+  </CardBlock>
+</div>
+
+<Technical>
+**Art. 1225 c.c. — Prevedibilità del danno**  
+«Se l'inadempimento o il ritardo non dipende da dolo del debitore, il risarcimento è limitato al danno che poteva prevedersi nel tempo in cui è sorta l'obbligazione.»
+
+**Art. 1227 c.c. — Concorso del fatto colposo del creditore**  
+«Se il fatto colposo del creditore ha concorso a cagionare il danno, il risarcimento è diminuito secondo la gravità della colpa e l'entità delle conseguenze che ne sono derivate.  
+Il risarcimento non è dovuto per i danni che il creditore avrebbe potuto evitare usando l'ordinaria diligenza.»
+
+**Art. 1224 c.c. — Danni nelle obbligazioni pecuniarie**  
+«Nelle obbligazioni che hanno per oggetto una somma di danaro, sono dovuti dal giorno della mora gli interessi legali, anche se non erano dovuti precedentemente e anche se il creditore non prova di aver sofferto alcun danno.  
+Se prima della mora erano dovuti interessi in misura superiore a quella legale, gli interessi moratori sono dovuti nella stessa misura.»
+</Technical>
+
+<SectionTitle step={7} title="Esempi concreti" />
+
+<Row className="lg:grid-cols-2">
+  <Col>
+    <Example type="positive" title="Ritardo + mora + interessi (debito di denaro)">
+      Un’azienda deve pagare 10.000€ il 1° marzo.  
+      Non paga. Il creditore invia una richiesta scritta il 10 marzo: il debitore è costituito in mora.  
+      Da quel momento, nelle obbligazioni pecuniarie, maturano interessi moratori secondo le regole dell’art. 1224 c.c.
+    </Example>
+  </Col>
+
+  <Col>
+    <Example type="negative" title="Prova liberatoria mancata (art. 1218)">
+      Un fornitore non consegna il materiale promesso e si limita a dire: “c’erano problemi interni”.  
+      Se non prova una causa non imputabile che renda la prestazione impossibile, resta responsabile dell’inadempimento e dei danni conseguenti.
+    </Example>
+  </Col>
+</Row>
+
+<SectionTitle title="Video suggerito" />
+
+{/* 
+VIDEO PLACEHOLDER — regola GUIRIMì:
+Inserire SOLO se l’autore è verificabile (docente universitario / ente istituzionale / canale accademico).
+Query consigliata: "inadempimento obbligazioni art 1218 lezione università".
+
+Candidati trovati (DA VERIFICARE PRIMA DI INSERIRE):
+- https://www.youtube.com/watch?v=sbQbPUduHis  (titolo: "L'inadempimento delle obbligazioni")
+- https://www.youtube.com/watch?v=qa-bhjxF1xE  (titolo: "L'inadempimento delle obbligazioni")
+- https://www.youtube.com/watch?v=URgkiLniStc  (playlist/serie su inadempimento e mora)
+*/}
 
 ---
 
-## 1) Titolo sezione
+<QuizBlock />
 
-Contenuto...
-
-<Quiz />
-
-<Resources />
+<ResourceFooter
+  disclaimerLevel="standard"
+  primarySources={[
+    { label: "Brocardi — Art. 1218 c.c.", url: "https://www.brocardi.it/codice-civile/libro-quarto/titolo-i/capo-iii/art1218.html" },
+    { label: "Brocardi — Art. 1219 c.c.", url: "https://www.brocardi.it/codice-civile/libro-quarto/titolo-i/capo-iii/art1219.html" },
+    { label: "Brocardi — Art. 1223 c.c.", url: "https://www.brocardi.it/codice-civile/libro-quarto/titolo-i/capo-iii/art1223.html" },
+    { label: "Brocardi — Art. 1224 c.c.", url: "https://www.brocardi.it/codice-civile/libro-quarto/titolo-i/capo-iii/art1224.html" },
+    { label: "Brocardi — Art. 1225 c.c.", url: "https://www.brocardi.it/codice-civile/libro-quarto/titolo-i/capo-iii/art1225.html" },
+    { label: "Brocardi — Art. 1227 c.c.", url: "https://www.brocardi.it/codice-civile/libro-quarto/titolo-i/capo-iii/art1227.html" },
+    { label: "Brocardi — Art. 1256 c.c.", url: "https://www.brocardi.it/codice-civile/libro-quarto/titolo-i/capo-iv/sezione-v/art1256.html" }
+  ]}
+  secondarySources={[
+    { label: "UniCA — Dispensa su inadempimento e mora (PDF)", url: "https://web.unica.it/unica/protected/297617/0/def/ref/MAT268588/" }
+  ]}
+>
+Questa lezione ha finalità didattica e non costituisce consulenza legale.
+</ResourceFooter>

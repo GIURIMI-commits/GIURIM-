@@ -1,35 +1,372 @@
 ---
 slug: "lez-3.6.2"
-title: "Separazione e divorzio"
+title: "Separazione e divorzio: cosa cambia e quali effetti produce"
 area: "area-3-privato-civile"
 module: "mod-3.6-famiglia-successioni"
 order: 2
-duration_minutes: 12
+duration_minutes: 28
 prerequisites: ["lez-3.6.1"]
 next_lesson: "lez-3.6.3"
-last_verified: "2026-02-07"
-verified_by: "Da verificare"
-disclaimer_level: "standard"
-source_refs: []
-glossary_terms: []
+prev_lesson: "lez-3.6.1"
+last_verified: "2026-02-23"
+verified_by: "[Nome]"
+disclaimer_level: "elevated"
+
+source_refs:
+  - label: "Costituzione — Art. 29 (famiglia fondata sul matrimonio)"
+    url: "https://www.senato.it/istituzione/la-costituzione/parte-i/titolo-ii/articolo-29"
+  - label: "Brocardi — Art. 143 c.c. (Doveri reciproci dei coniugi)"
+    url: "https://www.brocardi.it/codice-civile/libro-primo/titolo-vi/capo-iv/art143.html"
+  - label: "Brocardi — Art. 151 c.c. (Separazione giudiziale)"
+    url: "https://www.brocardi.it/codice-civile/libro-primo/titolo-vi/capo-vi/art151.html"
+  - label: "Normattiva — Legge 1 dicembre 1970, n. 898 (Divorzio)"
+    url: "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1970-12-01;898"
+  - label: "Normattiva — D.Lgs. 10 ottobre 2022, n. 149 (riforma processo civile / Cartabia)"
+    url: "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2022-10-10;149"
+  - label: "Treccani — Separazione personale"
+    url: "https://www.treccani.it/enciclopedia/separazione-personale_(Diritto)/"
+  - label: "Treccani — Divorzio"
+    url: "https://www.treccani.it/enciclopedia/divorzio/"
+
+glossary_terms:
+  - "separazione"
+  - "divorzio"
+  - "crisi-familiare"
+  - "doveri-coniugali"
+  - "addebito"
+  - "assegno-mantenimento"
+  - "assegno-divorzile"
+  - "affidamento"
+  - "collocamento"
+  - "regime-patrimoniale"
+  - "comunione-legale"
+  - "separazione-beni"
+  - "negoziazione-assistita"
+
 quiz:
-  questions: []
+  questions:
+    - type: "mcq"
+      prompt: "Qual è la differenza più netta tra separazione e divorzio?"
+      choices:
+        - "La separazione scioglie il matrimonio, il divorzio lo sospende"
+        - "La separazione sospende alcuni effetti del matrimonio, il divorzio scioglie o fa cessare gli effetti civili"
+        - "Non c’è alcuna differenza: sono sinonimi"
+      correctIndex: 1
+      feedback:
+        0: "No: è l’opposto. La separazione non scioglie il matrimonio."
+        1: "Corretto: la separazione è una fase di crisi che non scioglie il vincolo; il divorzio chiude il rapporto coniugale sul piano civile."
+        2: "No: sono istituti diversi con effetti diversi."
+    - type: "mcq"
+      prompt: "L’addebito della separazione riguarda principalmente:"
+      choices:
+        - "Una sanzione penale automatica"
+        - "L’attribuzione di responsabilità civile per la crisi, con conseguenze su alcuni diritti economici"
+        - "La nullità del matrimonio"
+      correctIndex: 1
+      feedback:
+        0: "No: l’addebito non è penale."
+        1: "Corretto: è un giudizio di imputabilità della crisi e può incidere su effetti economici (in particolare su alcune pretese)."
+        2: "No: nullità/annullamento sono altra cosa (vizi originari)."
+    - type: "mcq"
+      prompt: "In caso di crisi con figli, l’asse portante del sistema è:"
+      choices:
+        - "Punire il coniuge 'colpevole'"
+        - "Massimizzare l’interesse del minore e organizzare responsabilità e tempi di cura"
+        - "Dare automaticamente il figlio a chi guadagna di più"
+      correctIndex: 1
+      feedback:
+        0: "No: la logica è principalmente protettiva del minore, non punitiva."
+        1: "Corretto: l’impostazione moderna privilegia l’interesse del minore e la responsabilità genitoriale."
+        2: "No: non esiste un automatismo basato sul reddito."
+    - type: "open"
+      prompt: "Spiega, con un esempio concreto, come può cambiare la posizione economica di una persona tra separazione e divorzio (mantenimento vs assegno divorzile)."
+      expected_points:
+        - "Separazione: logica di mantenimento e continuità di alcune tutele coniugali."
+        - "Divorzio: logica diversa (assegno divorzile) e chiusura del rapporto coniugale."
+        - "Esempio: coniuge economicamente più debole, casa, figli, lavoro."
 ---
 
-<Hook>
-Inserisci qui il gancio iniziale...
-</Hook>
+<HookBlock>
+Due persone si sposano e costruiscono una vita insieme.  
+Poi, a un certo punto, la relazione si rompe.
+
+La domanda giuridica non è solo “chi ha torto”: è **che cosa succede al matrimonio** (e a tutto quello che ci gira intorno).
+</HookBlock>
 
 <Objective>
-Inserisci qui l'obiettivo della lezione...
+Nella lezione precedente hai visto le diverse “cornici” della vita di coppia (matrimonio, unione civile, convivenza).
+
+Ora entriamo nel tema più delicato ma anche più concreto: la <GlossaryTerm id="crisi-familiare">crisi familiare</GlossaryTerm>.
+Capirai la differenza tra <GlossaryTerm id="separazione">separazione</GlossaryTerm> e <GlossaryTerm id="divorzio">divorzio</GlossaryTerm>,
+quali effetti producono su doveri, patrimonio e (quando presenti) figli.
 </Objective>
+
+<SectionTitle step={1} title="Prima distinzione: crisi del rapporto vs crisi dell’atto">
+  Non tutte le “rotture” sono uguali nel diritto: a volte si discute l’atto iniziale, a volte il rapporto nel tempo.
+</SectionTitle>
+
+<Concept title="Orientamento rapido">
+Nel linguaggio del diritto:
+- separazione e divorzio riguardano la **crisi del rapporto** (il matrimonio era valido, poi la vita comune non regge più);
+- nullità/annullamento riguardano la **crisi dell’atto** (un vizio originario: problema “alla nascita” del vincolo).
+</Concept>
+
+Questa lezione lavora sul primo scenario: il matrimonio è valido, ma la convivenza si interrompe.
 
 ---
 
-## 1) Titolo sezione
+<SectionTitle step={2} title="Separazione: il vincolo resta, ma cambia la vita giuridica">
+  La separazione è una fase in cui il matrimonio non viene sciolto, ma alcuni effetti vengono sospesi o riorganizzati.
+</SectionTitle>
 
-Contenuto...
+<Concept title="Definizione operativa">
+La separazione è lo strumento con cui l’ordinamento prende atto della crisi coniugale e regola:
+- la cessazione della convivenza,
+- gli assetti personali,
+- gli assetti economici (mantenimento, casa, spese),
+- e, se ci sono figli, l’organizzazione della responsabilità genitoriale.
+</Concept>
 
-<Quiz />
+Per capire la separazione, è utile ricordare che il matrimonio crea doveri reciproci.
 
-<Resources />
+<Technical>
+**Art. 143 c.c. — Doveri reciproci dei coniugi**  
+Dal matrimonio deriva l'obbligo reciproco alla fedeltà, all'assistenza morale e materiale, alla collaborazione nell'interesse della famiglia e alla coabitazione.
+</Technical>
+
+Quando il rapporto entra in crisi, una parte di questi doveri non può più funzionare “come prima”.
+La separazione diventa quindi un modo per sostituire l’“assetto spontaneo” della vita comune con un assetto giuridico ordinato.
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+  <CardBlock title="🏠 Convivenza">
+    La coabitazione viene meno: si legittima la vita separata.
+    <span className="block mt-4"><Highlight color="blue">Non è scioglimento: è riorganizzazione</Highlight></span>
+  </CardBlock>
+  <CardBlock title="💶 Economico">
+    Si regolano spese, eventuale <GlossaryTerm id="assegno-mantenimento">mantenimento</GlossaryTerm>, casa familiare.
+    <span className="block mt-4"><Highlight color="blue">Tema: equilibrio e tutela del più debole</Highlight></span>
+  </CardBlock>
+  <CardBlock title="👨‍👩‍👧 Figli">
+    Se presenti, è il centro del sistema: tempi, cura, decisioni, contributi.
+    <span className="block mt-4"><Highlight color="blue">Interesse del minore come baricentro</Highlight></span>
+  </CardBlock>
+</div>
+
+---
+
+<SectionTitle step={3} title="Separazione consensuale vs giudiziale: cambia il 'come' (non il fatto)">
+  La differenza è procedurale e pratica: o vi accordate, o decide il giudice.
+</SectionTitle>
+
+<Concept title="Idea chiave">
+La separazione può essere:
+- consensuale: accordo tra le parti (più rapido, meno conflittuale);
+- giudiziale: manca l’accordo e serve una decisione.
+</Concept>
+
+<Technical>
+**Art. 151 c.c. — Separazione giudiziale (riferimento)**  
+La separazione può essere chiesta quando si verificano fatti tali da rendere intollerabile la prosecuzione della convivenza o da recare grave pregiudizio all’educazione della prole.
+</Technical>
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+  <CardBlock title="Consensuale">
+    Il focus è costruire un assetto sostenibile: tempi, spese, casa, eventuali figli.
+    <span className="block mt-4"><Highlight color="blue">Più controllo alle parti, meno conflitto</Highlight></span>
+  </CardBlock>
+  <CardBlock title="Giudiziale">
+    Il focus è “risolvere” un conflitto: prove, richieste, valutazioni, decisione.
+    <span className="block mt-4"><Highlight color="blue">Più incertezza, più costo emotivo e processuale</Highlight></span>
+  </CardBlock>
+</div>
+
+---
+
+<SectionTitle step={4} title="Addebito: quando la crisi viene 'attribuita'">
+  Non è una punizione: è un giudizio giuridico sulla causa della crisi e può avere effetti economici.
+</SectionTitle>
+
+<Concept title="Addebito (in logica)">
+L’<GlossaryTerm id="addebito">addebito</GlossaryTerm> interviene quando la rottura è ricondotta alla violazione grave dei doveri coniugali,
+con un nesso causale con la crisi.
+Non è “chi è più antipatico”: è una valutazione giuridica su comportamenti e conseguenze.
+</Concept>
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+  <CardBlock title="📌 Cosa richiede">
+    Condotta grave + collegamento con la crisi.
+    <span className="block mt-4"><Highlight color="blue">Non basta un errore: serve un impatto sulla convivenza</Highlight></span>
+  </CardBlock>
+  <CardBlock title="⚖️ Che cosa produce">
+    Può incidere su alcune conseguenze economiche e sulla posizione del coniuge.
+    <span className="block mt-4"><Highlight color="blue">Effetti indiretti, non penali</Highlight></span>
+  </CardBlock>
+  <CardBlock title="🧠 Errore tipico">
+    Confondere addebito con “colpa morale”.
+    <span className="block mt-4"><Highlight color="blue">Qui conta la prova e la causalità</Highlight></span>
+  </CardBlock>
+</div>
+
+---
+
+<SectionTitle step={5} title="Divorzio: chiusura del rapporto coniugale sul piano civile">
+  Se la separazione è un “assetto di crisi”, il divorzio è l’atto finale che chiude il rapporto.
+</SectionTitle>
+
+<Concept title="Definizione operativa">
+Il <GlossaryTerm id="divorzio">divorzio</GlossaryTerm> è l’istituto che scioglie il matrimonio civile
+(o fa cessare gli effetti civili del matrimonio), determinando la fine del rapporto coniugale.
+Da qui in poi, la logica non è più “gestire una crisi”, ma stabilire gli effetti finali.
+</Concept>
+
+La fonte storica e centrale è la legge sul divorzio.
+
+<Technical>
+**Legge 1 dicembre 1970, n. 898 (Divorzio) — riferimento**  
+La disciplina regola lo scioglimento/cessazione degli effetti civili del matrimonio e gli effetti conseguenti (tra cui profili economici).
+</Technical>
+
+---
+
+<SectionTitle step={6} title="Effetti economici: mantenimento vs assegno divorzile">
+  La differenza non è solo di nome: cambia la logica di sistema.
+</SectionTitle>
+
+<Compare
+  aTitle="Separazione (mantenimento)"
+  aBody="Assetto provvisorio o di crisi: si regola l’equilibrio economico durante la separazione, spesso in chiave di continuità e tutela."
+  bTitle="Divorzio (assegno divorzile)"
+  bBody="Assetto definitivo post-matrimonio: si valuta la posizione economica alla fine del rapporto, con una logica diversa rispetto alla separazione."
+/>
+
+<Concept title="Punto da ricordare">
+Nella pratica, molti errori nascono dal trattare separazione e divorzio come “la stessa cosa in due fasi”.
+In realtà sono istituti distinti: cambiano finalità, criteri e conseguenze.
+</Concept>
+
+---
+
+<SectionTitle step={7} title="Figli: l’asse portante dell’intero sistema">
+  Se ci sono figli, la crisi di coppia diventa anche una riorganizzazione della responsabilità genitoriale.
+</SectionTitle>
+
+<Concept title="Idea chiave (senza tecnicismi inutili)">
+Nelle decisioni che riguardano i figli, la logica ordinante è l’interesse del minore.
+Questo significa: continuità, stabilità, responsabilità condivisa, e un’organizzazione concreta dei tempi e delle spese.
+</Concept>
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+  <CardBlock title="🧭 Decisioni">
+    Scuola, salute, attività: chi decide cosa e con quale coordinamento.
+    <span className="block mt-4"><Highlight color="blue">Responsabilità, non “concorso a premi”</Highlight></span>
+  </CardBlock>
+  <CardBlock title="🕒 Tempi">
+    <GlossaryTerm id="collocamento">Collocamento</GlossaryTerm> e tempi di permanenza: organizzazione realistica della vita quotidiana.
+    <span className="block mt-4"><Highlight color="blue">Calendario concreto, non teoria</Highlight></span>
+  </CardBlock>
+  <CardBlock title="💳 Spese">
+    Contributi e spese straordinarie: definizione e ripartizione.
+    <span className="block mt-4"><Highlight color="blue">Trasparenza = meno conflitto</Highlight></span>
+  </CardBlock>
+</div>
+
+---
+
+<SectionTitle step={8} title="Strumenti moderni e procedura: perché si parla di riforma Cartabia">
+  Il diritto di famiglia è anche processo: tempi e strumenti contano perché incidono sulla vita.
+</SectionTitle>
+
+<Concept title="Perché è rilevante (in ottica studente)">
+Le riforme del processo civile (es. d.lgs. 149/2022) incidono su come vengono gestite le controversie familiari:
+tempi, modelli procedurali, strumenti di gestione del conflitto.
+Non è “solo procedura”: spesso determina quanto rapidamente si ottiene un assetto stabile.
+</Concept>
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+  <CardBlock title="Negoziazione assistita (concetto)">
+    Un canale per provare a costruire un accordo con assistenza legale, riducendo conflitto e tempi.
+    <span className="block mt-4"><Highlight color="blue">Strumento: meno contenzioso</Highlight></span>
+  </CardBlock>
+  <CardBlock title="Giudizio (quando serve)">
+    Quando manca l’accordo o ci sono temi sensibili, decide il giudice con provvedimenti e regole.
+    <span className="block mt-4"><Highlight color="blue">Strumento: decisione autoritativa</Highlight></span>
+  </CardBlock>
+</div>
+
+---
+
+<SectionTitle step={9} title="Esempi pratici: come si 'vede' la differenza nella vita reale">
+  Mini-scenari per trasformare concetti in diagnosi giuridica.
+</SectionTitle>
+
+<Row className="lg:grid-cols-2">
+  <Col>
+    <Example type="positive" title="Separazione come assetto di transizione">
+      Due coniugi interrompono la convivenza ma vogliono ridurre il conflitto.
+      Concordano tempi, spese e gestione della casa familiare.
+
+      La separazione qui funziona come “struttura di contenimento”:
+      rende ordinata una crisi, senza chiudere ancora definitivamente il rapporto sul piano civile.
+    </Example>
+  </Col>
+
+  <Col>
+    <Example type="negative" title="Errore: trattare la separazione come 'divorzio anticipato'">
+      Una parte pensa che, dopo la separazione, il matrimonio sia già finito “in tutto”.
+      Si comporta come se non esistessero più doveri o regole.
+
+      Questo genera conflitto e contenzioso: separazione e divorzio non sono sovrapponibili,
+      e la disciplina cambia in modo significativo tra le due fasi.
+    </Example>
+  </Col>
+</Row>
+
+<Row className="lg:grid-cols-2">
+  <Col>
+    <Example type="neutral" title="Figli: riorganizzare la vita quotidiana">
+      La coppia si separa, ma i figli restano. La questione centrale diventa:
+      come si gestiscono scuola, salute, attività e spese?
+
+      Qui la differenza la fa un assetto chiaro: calendario, comunicazione, ripartizioni.
+      Il diritto serve a rendere stabile ciò che, altrimenti, sarebbe caos.
+    </Example>
+  </Col>
+
+  <Col>
+    <Example type="positive" title="Divorzio come chiusura e stabilizzazione">
+      Dopo un periodo di crisi e una separazione, si arriva al divorzio.
+      La logica diventa definitiva: chiusura del rapporto coniugale e definizione degli effetti finali,
+      inclusi eventuali profili economici e organizzativi.
+    </Example>
+  </Col>
+</Row>
+
+<SectionTitle step={10} title="Video suggerito">
+  Inserire solo se autore qualificato (docente universitario / ente istituzionale / ordine professionale), aggiornato e senza promozione.
+</SectionTitle>
+
+{/* VIDEO PLACEHOLDER:
+  Search query: "separazione divorzio differenze assegno divorzile mantenimento spiegazione università diritto di famiglia"
+  Criteri: autore identificabile con qualifica verificabile; preferenza canali universitari/istituzionali/ordini; no promo; contenuto aggiornato (post-riforma processo civile).
+*/}
+
+---
+
+<QuizBlock />
+
+<ResourceFooter
+  disclaimerLevel="elevated"
+  primarySources={[
+    { label: "Brocardi — Art. 143 c.c. (Doveri dei coniugi)", url: "https://www.brocardi.it/codice-civile/libro-primo/titolo-vi/capo-iv/art143.html" },
+    { label: "Brocardi — Art. 151 c.c. (Separazione giudiziale)", url: "https://www.brocardi.it/codice-civile/libro-primo/titolo-vi/capo-vi/art151.html" },
+    { label: "Normattiva — L. 898/1970 (Divorzio)", url: "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1970-12-01;898" },
+    { label: "Normattiva — D.Lgs. 149/2022 (Cartabia)", url: "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2022-10-10;149" }
+  ]}
+  secondarySources={[
+    { label: "Treccani — Separazione personale", url: "https://www.treccani.it/enciclopedia/separazione-personale_(Diritto)/" },
+    { label: "Treccani — Divorzio", url: "https://www.treccani.it/enciclopedia/divorzio/" }
+  ]}
+>
+Questa lezione ha finalità didattica e non costituisce consulenza legale.  
+Tema sensibile: esempi e spiegazioni sono generali e non sostituiscono il parere di un professionista su casi concreti.
+</ResourceFooter>

@@ -50,3 +50,31 @@ export function Compare({ aTitle, aBody, bTitle, bBody, cTitle, cBody }: Compare
         </div>
     );
 }
+
+interface SectionTitleProps {
+    step?: number | string;
+    title: string;
+    children?: React.ReactNode;
+}
+
+export function SectionTitle({ step, title, children }: SectionTitleProps) {
+    return (
+        <div className="mt-16 mb-8 not-prose">
+            <div className="flex items-center gap-4 mb-4">
+                {step && (
+                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-400 flex items-center justify-center font-bold text-lg font-serif">
+                        {step}
+                    </div>
+                )}
+                <h2 className="text-2xl md:text-3xl font-bold text-neutral-900 dark:text-white font-serif m-0">
+                    {title}
+                </h2>
+            </div>
+            {children && (
+                <div className="text-lg text-neutral-600 dark:text-neutral-400 font-medium md:pl-14">
+                    {children}
+                </div>
+            )}
+        </div>
+    );
+}

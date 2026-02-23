@@ -40,14 +40,11 @@ export async function getThreads(roomSlug?: string): Promise<Thread[]> {
 
     const { data, error } = await query;
     if (error) {
-        console.error("Error fetching threads:", {
-            message: error.message,
-            code: error.code,
-            details: error.details,
-            hint: error.hint,
-        });
+        console.error("Error fetching threads:", error);
         return [];
     }
+
+    if (!data) return [];
 
     // Transform flat view data to nested Thread interface
     const threads: Thread[] = data.map((item: any) => ({

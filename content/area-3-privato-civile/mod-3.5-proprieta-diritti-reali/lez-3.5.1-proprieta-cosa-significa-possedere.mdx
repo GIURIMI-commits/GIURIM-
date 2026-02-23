@@ -1,35 +1,259 @@
 ---
 slug: "lez-3.5.1"
-title: "Proprietà e cosa significa possedere"
+title: "Proprietà: cosa significa possedere (e perché non è la stessa cosa)"
 area: "area-3-privato-civile"
 module: "mod-3.5-proprieta-diritti-reali"
 order: 1
-duration_minutes: 10
+duration_minutes: 28
 prerequisites: ["lez-3.4.3"]
 next_lesson: "lez-3.5.2"
-last_verified: "2026-02-07"
-verified_by: "Da verificare"
+prev_lesson: "lez-3.4.3"
+last_verified: "2026-02-13"
+verified_by: "[Nome]"
 disclaimer_level: "standard"
-source_refs: []
-glossary_terms: []
+
+source_refs:
+  - label: "Art. 832 c.c. — Contenuto del diritto di proprietà"
+    url: "https://www.brocardi.it/codice-civile/libro-terzo/titolo-ii/art832.html"
+  - label: "Art. 1140 c.c. — Possesso"
+    url: "https://www.brocardi.it/codice-civile/libro-terzo/titolo-viii/art1140.html"
+  - label: "Art. 810 c.c. — Nozione di bene"
+    url: "https://www.brocardi.it/codice-civile/libro-terzo/titolo-i/art810.html"
+  - label: "Treccani — Proprietà (Diritto)"
+    url: "https://www.treccani.it/enciclopedia/proprieta_(Diritto)/"
+
+glossary_terms:
+  - "proprieta"
+  - "possesso"
+  - "detenzione"
+  - "diritto-reale"
+  - "bene"
+  - "ius-utendi"
+  - "ius-fruendi"
+  - "ius-abutendi"
+
 quiz:
-  questions: []
+  questions:
+    - type: "mcq"
+      prompt: "Secondo l’art. 832 c.c., il proprietario può:"
+      choices:
+        - "Solo usare il bene"
+        - "Godere e disporre del bene nei limiti e con l’osservanza degli obblighi previsti dall’ordinamento"
+        - "Fare qualsiasi cosa senza limiti"
+      correctIndex: 1
+      feedback:
+        0: "No: la proprietà non si limita all'uso."
+        1: "Corretto: il potere è pieno ma non illimitato."
+        2: "No: esistono limiti pubblicistici e privatistici."
+    - type: "mcq"
+      prompt: "Il possesso è:"
+      choices:
+        - "Un diritto reale"
+        - "Il potere di fatto sulla cosa"
+        - "Sempre coincidente con la proprietà"
+      correctIndex: 1
+      feedback:
+        0: "No: è una situazione di fatto."
+        1: "Esatto: art. 1140 c.c."
+        2: "No: proprietario e possessore possono essere soggetti diversi."
+    - type: "open"
+      prompt: "Spiega con un esempio la differenza tra proprietà, possesso e detenzione."
+      expected_points:
+        - "Definizione tecnica dei tre concetti."
+        - "Esempio concreto coerente."
 ---
 
-<Hook>
-Inserisci qui il gancio iniziale...
-</Hook>
+<HookBlock>
+Hai le chiavi di una casa.  
+La abiti da anni.  
+Ma non è intestata a te.
+
+Sei proprietario? Possessore? O solo detentore?
+</HookBlock>
 
 <Objective>
-Inserisci qui l'obiettivo della lezione...
+In questa lezione analizziamo in modo tecnico e approfondito cosa significa
+<GlossaryTerm id="proprieta">proprietà</GlossaryTerm>,
+cosa significa <GlossaryTerm id="possesso">possesso</GlossaryTerm>,
+e perché la distinzione è essenziale per comprendere l’intero sistema dei diritti reali.
 </Objective>
+
+<SectionTitle step={1} title="La proprietà: il diritto reale pieno">
+  La proprietà è il diritto più ampio che l’ordinamento riconosce su un bene.
+</SectionTitle>
+
+<Concept title="Definizione tecnica (art. 832 c.c.)">
+La proprietà attribuisce al titolare il potere di godere e disporre del bene
+in modo pieno ed esclusivo, entro i limiti previsti dall’ordinamento.
+</Concept>
+
+<Technical>
+**Art. 832 c.c.**  
+Il proprietario ha diritto di godere e disporre delle cose in modo pieno ed esclusivo,
+entro i limiti e con l'osservanza degli obblighi stabiliti dall'ordinamento giuridico.
+</Technical>
+
+La formula “pieno ed esclusivo” è fondamentale:
+
+- **Pieno** → comprende tutte le facoltà possibili sul bene.
+- **Esclusivo** → può escludere chiunque dall’utilizzo.
+
+Ma non è un potere assoluto in senso anarchico.  
+Esistono limiti:
+
+- limiti di legge (urbanistica, ambiente),
+- limiti derivanti da diritti altrui,
+- limiti costituzionali (funzione sociale della proprietà).
+
+<AnimatedProprietaPossesso />
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+  <CardBlock title="Ius utendi">
+    Diritto di usare il bene secondo la sua destinazione economica.
+    <span className="block mt-4"><Highlight color="blue">Es. abitare un immobile</Highlight></span>
+  </CardBlock>
+
+  <CardBlock title="Ius fruendi">
+    Diritto di percepire i frutti naturali o civili.
+    <span className="block mt-4"><Highlight color="blue">Es. affitto, raccolto agricolo</Highlight></span>
+  </CardBlock>
+
+  <CardBlock title="Ius abutendi">
+    Diritto di disporre giuridicamente del bene.
+    <span className="block mt-4"><Highlight color="blue">Es. vendere, donare, distruggere</Highlight></span>
+  </CardBlock>
+</div>
 
 ---
 
-## 1) Titolo sezione
+<SectionTitle step={2} title="Il possesso: una situazione di fatto">
+  Il possesso non è un diritto reale ma una situazione protetta dall’ordinamento.
+</SectionTitle>
 
-Contenuto...
+<Concept title="Art. 1140 c.c.">
+Il possesso è il potere sulla cosa che si manifesta in un’attività corrispondente
+all’esercizio della proprietà o di altro diritto reale.
+</Concept>
 
-<Quiz />
+<Technical>
+**Art. 1140 c.c.**  
+Il possesso è il potere sulla cosa che si manifesta in un’attività corrispondente
+all’esercizio della proprietà o di altro diritto reale.
+</Technical>
 
-<Resources />
+Il possesso ha due elementi:
+
+- **Corpus** → disponibilità materiale del bene.
+- **Animus possidendi** → volontà di comportarsi come titolare.
+
+Ecco perché può esistere:
+
+- possesso senza proprietà,
+- proprietà senza possesso.
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+  <CardBlock title="Proprietario senza possesso">
+    Concedi l’immobile in locazione.
+    Sei titolare del diritto, ma non hai il potere materiale.
+  </CardBlock>
+  <CardBlock title="Possessore senza proprietà">
+    Chi occupa un bene esercita potere di fatto,
+    anche se non è titolare del diritto.
+  </CardBlock>
+</div>
+
+---
+
+<SectionTitle step={3} title="La detenzione: potere senza animus">
+  La detenzione è diversa dal possesso.
+</SectionTitle>
+
+<Concept title="Detenzione qualificata">
+È il potere di fatto esercitato riconoscendo il diritto altrui.
+Manca l’animus di comportarsi da proprietario.
+</Concept>
+
+Qui la differenza è psicologica ma giuridicamente decisiva.
+
+L’inquilino:
+- ha corpus,
+- non ha animus,
+- riconosce il diritto del proprietario.
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+  <CardBlock title="Inquilino">
+    Ha la cosa ma sa che il proprietario è un altro.
+  </CardBlock>
+  <CardBlock title="Comodatario">
+    Usa gratuitamente il bene,
+    ma non pretende di esserne titolare.
+  </CardBlock>
+</div>
+
+---
+
+<SectionTitle step={4} title="Perché la distinzione è centrale nel sistema">
+  Senza questa distinzione non puoi capire:
+</SectionTitle>
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+  <CardBlock title="Usucapione">
+    Il possesso protratto nel tempo può trasformarsi in proprietà.
+  </CardBlock>
+  <CardBlock title="Tutela possessoria">
+    Anche chi non è proprietario può essere protetto.
+  </CardBlock>
+  <CardBlock title="Diritti reali limitati">
+    Usufrutto, servitù, uso: limitano il contenuto della proprietà.
+  </CardBlock>
+</div>
+
+La proprietà è il diritto “madre”.  
+Il possesso è la situazione di fatto che può anticiparlo o prescinderne.
+
+---
+
+<SectionTitle step={5} title="Esempi sistemici">
+  Ora mettiamo insieme i concetti.
+</SectionTitle>
+
+<Row className="lg:grid-cols-2">
+  <Col>
+    <Example type="positive" title="Locazione">
+      Il proprietario conserva il diritto reale.
+      L’inquilino ha detenzione qualificata.
+      Il possesso pieno resta giuridicamente in capo al proprietario.
+    </Example>
+  </Col>
+  <Col>
+    <Example type="negative" title="Occupazione abusiva">
+      L’occupante esercita possesso.
+      Non è proprietario.
+      Può essere tutelato nel possesso ma non nel diritto.
+    </Example>
+  </Col>
+</Row>
+
+---
+
+<SectionTitle step={6} title="Video suggerito">
+  Solo contenuti universitari o istituzionali verificati.
+</SectionTitle>
+
+{/* VIDEO PLACEHOLDER:
+  Search query: "proprietà possesso detenzione diritto civile spiegazione università art 832 art 1140"
+*/}
+
+---
+
+<QuizBlock />
+
+<ResourceFooter
+  disclaimerLevel="standard"
+  primarySources={[
+    { label: "Brocardi — Art. 832 c.c.", url: "https://www.brocardi.it/codice-civile/libro-terzo/titolo-ii/art832.html" },
+    { label: "Brocardi — Art. 1140 c.c.", url: "https://www.brocardi.it/codice-civile/libro-terzo/titolo-viii/art1140.html" }
+  ]}
+>
+Questa lezione ha finalità didattica e non costituisce consulenza legale.
+</ResourceFooter>

@@ -4,32 +4,226 @@ title: "Adempimento e modi di estinzione"
 area: "area-3-privato-civile"
 module: "mod-3.3-obbligazioni"
 order: 2
-duration_minutes: 12
+duration_minutes: 24
 prerequisites: ["lez-3.3.1"]
 next_lesson: "lez-3.3.3"
-last_verified: "2026-02-07"
-verified_by: "Da verificare"
+prev_lesson: "lez-3.3.1"
+last_verified: "2026-02-22"
+verified_by: "[Nome]"
 disclaimer_level: "standard"
-source_refs: []
-glossary_terms: []
+
+source_refs:
+  - label: "Art. 1176 c.c. — Diligenza nell’adempimento"
+    url: "https://www.brocardi.it/codice-civile/libro-quarto/titolo-i/art1176.html"
+  - label: "Art. 1230 c.c. — Novazione"
+    url: "https://www.brocardi.it/codice-civile/libro-quarto/titolo-i/capo-iv/art1230.html"
+  - label: "Art. 1236 c.c. — Remissione del debito"
+    url: "https://www.brocardi.it/codice-civile/libro-quarto/titolo-i/capo-iv/art1236.html"
+  - label: "Art. 1241 c.c. — Compensazione"
+    url: "https://www.brocardi.it/codice-civile/libro-quarto/titolo-i/capo-v/art1241.html"
+  - label: "Art. 1253 c.c. — Confusione"
+    url: "https://www.brocardi.it/codice-civile/libro-quarto/titolo-i/capo-vi/art1253.html"
+  - label: "Art. 2934 c.c. — Prescrizione"
+    url: "https://www.brocardi.it/codice-civile/libro-sesto/titolo-v/art2934.html"
+
+glossary_terms:
+  - "obbligazione"
+  - "adempimento"
+  - "debitore"
+  - "creditore"
+  - "compensazione"
+  - "novazione"
+  - "remissione"
+  - "confusione"
+  - "prescrizione"
+  - "diligenza"
+
 quiz:
-  questions: []
+  questions:
+    - type: "mcq"
+      prompt: "L’adempimento estingue l’obbligazione quando:"
+      choices:
+        - "Il debitore fa qualcosa di simile a quanto promesso"
+        - "La prestazione è eseguita correttamente e secondo diligenza"
+        - "Il creditore rinuncia automaticamente al diritto"
+      correctIndex: 1
+      feedback:
+        0: "No: serve esecuzione esatta della prestazione."
+        1: "Corretto: l’adempimento richiede esattezza e diligenza (art. 1176 c.c.)."
+        2: "Quella sarebbe remissione del debito, non adempimento."
+    - type: "mcq"
+      prompt: "La compensazione si verifica quando:"
+      choices:
+        - "Il creditore perdona il debitore"
+        - "Le parti sostituiscono un’obbligazione con un’altra"
+        - "Due soggetti sono reciprocamente debitori e creditori"
+      correctIndex: 2
+      feedback:
+        0: "Questa è remissione del debito."
+        1: "Questa è novazione."
+        2: "Esatto: i debiti si estinguono per le quantità corrispondenti."
+    - type: "mcq"
+      prompt: "La prescrizione comporta:"
+      choices:
+        - "L’estinzione del diritto per inattività del titolare"
+        - "L’automatica cancellazione del debito"
+        - "La trasformazione del debito in donazione"
+      correctIndex: 0
+      feedback:
+        0: "Corretto: art. 2934 c.c."
+        1: "Il debito storico rimane, ma non è più azionabile."
+        2: "Non esiste questa figura nel sistema."
+    - type: "open"
+      prompt: "Spiega con un esempio pratico la differenza tra novazione e remissione del debito."
+      expected_points:
+        - "La novazione sostituisce un’obbligazione con una nuova."
+        - "La remissione è una rinuncia del creditore."
+        - "Esempio concreto per entrambe."
 ---
 
-<Hook>
-Inserisci qui il gancio iniziale...
-</Hook>
+<HookBlock>
+Un’obbligazione nasce quando qualcuno deve qualcosa a qualcun altro.  
+Ma prima o poi deve finire.
+
+La domanda è: **come si chiude davvero un rapporto obbligatorio?**
+</HookBlock>
 
 <Objective>
-Inserisci qui l'obiettivo della lezione...
+Hai visto cos’è un’<GlossaryTerm id="obbligazione">obbligazione</GlossaryTerm> e come nasce.  
+Ora capiamo come si estingue: prima con l’<GlossaryTerm id="adempimento">adempimento</GlossaryTerm>, poi con gli altri meccanismi previsti dal Codice Civile.
 </Objective>
+
+<SectionTitle step={1} title="La chiusura naturale: l’adempimento">
+Quando il debitore fa esattamente ciò che deve, l’obbligazione si estingue.
+</SectionTitle>
+
+<Concept title="Adempimento">
+L’<GlossaryTerm id="adempimento">adempimento</GlossaryTerm> è l’esecuzione esatta della prestazione dovuta da parte del <GlossaryTerm id="debitore">debitore</GlossaryTerm> nei confronti del <GlossaryTerm id="creditore">creditore</GlossaryTerm>.
+</Concept>
+
+Pagare quanto pattuito.  
+Consegnare il bene promesso.  
+Eseguire la prestazione concordata.
+
+Ma non basta “fare qualcosa”: serve la corretta <GlossaryTerm id="diligenza">diligenza</GlossaryTerm>.
+
+<Technical>
+**Art. 1176 c.c. — Diligenza nell’adempimento**  
+«Nell’adempiere l’obbligazione il debitore deve usare la diligenza del buon padre di famiglia.»
+
+Per le obbligazioni professionali, la diligenza è valutata con riguardo alla natura dell’attività esercitata.
+</Technical>
 
 ---
 
-## 1) Titolo sezione
+<SectionTitle step={2} title="Quando l’obbligazione si estingue senza pagamento">
+Non sempre si chiude pagando.
+</SectionTitle>
 
-Contenuto...
+<AnimatedModiEstinzione />
 
-<Quiz />
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+  <CardBlock title="Compensazione">
+    Se due soggetti sono reciprocamente debitori e creditori,
+    i debiti si estinguono per le quantità corrispondenti.
+    <div className="mt-4">
+      <Highlight color="blue">Debiti che si neutralizzano</Highlight>
+    </div>
+  </CardBlock>
+  <CardBlock title="Novazione">
+    Le parti sostituiscono l’obbligazione originaria con una nuova,
+    diversa per oggetto o titolo.
+    <div className="mt-4">
+      <Highlight color="blue">Nuovo debito al posto del vecchio</Highlight>
+    </div>
+  </CardBlock>
+  <CardBlock title="Remissione">
+    Il creditore rinuncia volontariamente al proprio diritto.
+    <div className="mt-4">
+      <Highlight color="blue">Perdono del debito</Highlight>
+    </div>
+  </CardBlock>
+  <CardBlock title="Confusione">
+    Le qualità di creditore e debitore si riuniscono nella stessa persona.
+    <div className="mt-4">
+      <Highlight color="blue">Non puoi essere debitore di te stesso</Highlight>
+    </div>
+  </CardBlock>
+</div>
 
-<Resources />
+<Technical>
+**Art. 1230 c.c. — Novazione**  
+«L’obbligazione si estingue quando le parti sostituiscono all’obbligazione originaria una nuova obbligazione con oggetto o titolo diverso.»
+
+**Art. 1236 c.c. — Remissione del debito**  
+«La dichiarazione del creditore di rimettere il debito estingue l’obbligazione.»
+
+**Art. 1241 c.c. — Compensazione**  
+«Quando due persone sono obbligate l’una verso l’altra, i due debiti si estinguono per le quantità corrispondenti.»
+
+**Art. 1253 c.c. — Confusione**  
+«Quando le qualità di creditore e debitore si riuniscono nella stessa persona, l’obbligazione si estingue.»
+</Technical>
+
+---
+
+<SectionTitle step={3} title="Quando è il tempo a spegnere il diritto">
+A volte non serve un’azione.  
+Basta aspettare troppo.
+</SectionTitle>
+
+<Concept title="Prescrizione">
+La <GlossaryTerm id="prescrizione">prescrizione</GlossaryTerm> è l’estinzione del diritto per mancato esercizio nel tempo stabilito dalla legge.
+</Concept>
+
+<Technical>
+**Art. 2934 c.c. — Estinzione dei diritti**  
+«Ogni diritto si estingue per prescrizione, quando il titolare non lo esercita per il tempo determinato dalla legge.»
+</Technical>
+
+La prescrizione tutela la certezza dei rapporti giuridici.  
+Non cancella il fatto storico, ma impedisce di far valere il diritto in giudizio.
+
+---
+
+<SectionTitle step={4} title="Esempi concreti" />
+
+<Row className="lg:grid-cols-2">
+    <Col>
+        <Example type="positive" title="Adempimento corretto">
+            Marco deve 3.000 euro a Luca.  
+            Paga l’intera somma entro il termine concordato.  
+            L’obbligazione si estingue per adempimento.
+        </Example>
+    </Col>
+    <Col>
+        <Example type="negative" title="Credito prescritto">
+            Anna presta 5.000 euro ma non agisce per oltre dieci anni.  
+            Se il termine è decorso, il diritto non è più azionabile.
+        </Example>
+    </Col>
+</Row>
+
+<SectionTitle title="Video suggerito" />
+
+{/* VIDEO PLACEHOLDER: Inserire solo se il contenuto proviene da docente universitario o ente accademico verificabile. Query consigliata: "adempimento obbligazioni diritto civile spiegazione università art 1176". */}
+
+---
+
+<QuizBlock />
+
+<ResourceFooter
+  disclaimerLevel="standard"
+  primarySources={[
+    {
+      label: "Brocardi — Art. 1176 c.c.",
+      url: "https://www.brocardi.it/codice-civile/libro-quarto/titolo-i/art1176.html"
+    },
+    {
+      label: "Brocardi — Art. 1230 c.c.",
+      url: "https://www.brocardi.it/codice-civile/libro-quarto/titolo-i/capo-iv/art1230.html"
+    }
+  ]}
+>
+Questa lezione ha finalità didattica e non costituisce consulenza legale.
+</ResourceFooter> 

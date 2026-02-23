@@ -4,32 +4,176 @@ title: "Responsabilità oggettiva e per fatto altrui"
 area: "area-3-privato-civile"
 module: "mod-3.4-responsabilita-civile"
 order: 2
-duration_minutes: 10
+duration_minutes: 15
 prerequisites: ["lez-3.4.1"]
 next_lesson: "lez-3.4.3"
-last_verified: "2026-02-07"
-verified_by: "Da verificare"
+prev_lesson: "lez-3.4.1"
+last_verified: "2026-02-22"
+verified_by: "Guirimì Team"
 disclaimer_level: "standard"
-source_refs: []
-glossary_terms: []
+
+source_refs:
+  - label: "Art. 2047 CC — Danno cagionato dall'incapace"
+    url: "https://www.brocardi.it/codice-civile/libro-quarto/titolo-ix/capo-i/art2047.html"
+  - label: "Art. 2048 CC — Responsabilità dei genitori e insegnanti"
+    url: "https://www.brocardi.it/codice-civile/libro-quarto/titolo-ix/capo-i/art2048.html"
+  - label: "Art. 2049 CC — Responsabilità dei padroni e committenti"
+    url: "https://www.brocardi.it/codice-civile/libro-quarto/titolo-ix/capo-i/art2049.html"
+  - label: "Art. 2050 CC — Responsabilità per attività pericolose"
+    url: "https://www.brocardi.it/codice-civile/libro-quarto/titolo-ix/capo-i/art2050.html"
+  - label: "Art. 2051 CC — Danno cagionato da cosa in custodia"
+    url: "https://www.brocardi.it/codice-civile/libro-quarto/titolo-ix/capo-i/art2051.html"
+  - label: "Art. 2052 CC — Danno cagionato da animali"
+    url: "https://www.brocardi.it/codice-civile/libro-quarto/titolo-ix/capo-i/art2052.html"
+  - label: "Art. 2054 CC — Circolazione dei veicoli"
+    url: "https://www.brocardi.it/codice-civile/libro-quarto/titolo-ix/capo-i/art2054.html"
+
+glossary_terms:
+  - "responsabilita-oggettiva"
+  - "responsabilita-per-fatto-altrui"
+  - "inversione-onere-prova"
+  - "custodia"
+  - "attivita-pericolosa"
+  - "culpa-in-vigilando"
+  - "culpa-in-eligendo"
+
 quiz:
-  questions: []
+  questions:
+    - type: "mcq"
+      prompt: "Il cane del tuo vicino scappa e ti morde. Il vicino sostiene che non è colpa sua perché il recinto era chiuso bene. Deve pagarti i danni?"
+      choices:
+        - "No, se dimostra di non avere colpa non deve pagare."
+        - "Sì, il proprietario di un animale risponde oggettivamente, salvo che provi il caso fortuito."
+        - "No, risponde l'allevatore del cane."
+      correctIndex: 1
+      feedback:
+        0: "Sbagliato. L'art. 2052 prevede una responsabilità presunta/oggettiva molto rigorosa."
+        1: "Esatto! Non basta dire 'sono stato attento', bisogna provare un evento eccezionale (es. un fulmine ha distrutto il recinto)."
+        2: "No, la responsabilità ricade su chi ha la proprietà o l'uso dell'animale in quel momento."
+    - type: "mcq"
+      prompt: "Un dipendente di un'impresa di pulizie fa cadere accidentalmente un secchio di vernice sull'auto di un passante. Chi paga?"
+      choices:
+        - "Solo il dipendente."
+        - "Solo l'impresa di pulizie."
+        - "L'impresa di pulizie (Art. 2049) che risponde per il fatto del proprio dipendente."
+      correctIndex: 2
+      feedback:
+        0: "Sbagliato. L'impresa risponde sempre per i danni creati dai propri dipendenti."
+        1: "Parzialmente inesatto, il dipendente potrebbe risponderne in solido, ma la legge chiama in causa il datore di lavoro a garanzia del danneggiato."
+        2: "Corretto! È il classico caso di 'responsabilità dei padroni e committenti'. Il datore paga perché ha scelto lui il lavoratore (culpa in eligendo) e se ne assume i rischi d'impresa."
+    - type: "open"
+      prompt: "Cosa si intende per 'Inversione dell'onere della prova' in questi casi specifici rispetto alla regola generale dell'Art. 2043?"
+      expected_points:
+        - "Nella regola generale (2043), la vittima deve dimostrare la colpa di chi ha fatto il danno."
+        - "Nei casi speciali (es. animali, cose in custodia, attività pericolose), la legge PRESUME la colpa del responsabile."
+        - "È il presunto colpevole a doversi discolpare (provando il caso fortuito o di aver fatto di tutto per evitare il danno)."
 ---
 
-<Hook>
-Inserisci qui il gancio iniziale...
-</Hook>
+<HookBlock>
+Il cane del tuo vicino morde un passante. Il vicino si difende dicendo: "Non è colpa mia, il cane non aveva mai morso nessuno prima di oggi!". Ha ragione? Assolutamente no. In Italia, il proprietario di un animale paga i danni anche se non ha materialmente fatto nulla di male. E questo principio si applica a molte più situazioni di quanto pensi.
+</HookBlock>
 
 <Objective>
-Inserisci qui l'obiettivo della lezione...
+Nella lezione precedente hai visto la regola aurea: per pagare un danno devi avere **colpa o dolo**. Ora vediamo le *eccezioni*: i casi in cui la legge ti fa pagare i danni creati da un'altra persona (<GlossaryTerm id="responsabilita-per-fatto-altrui">Responsabilità per fatto altrui</GlossaryTerm>) o dalle cose e animali che possiedi (<GlossaryTerm id="responsabilita-oggettiva">Responsabilità oggettiva / aggravata</GlossaryTerm>).
 </Objective>
+
+<SectionTitle step={1} title="Pagare per gli altri (Fatto Altrui)">
+Quando la colpa di uno ricade sul portafoglio di un altro
+</SectionTitle>
+
+La legge individua soggetti che hanno un obbligo di sorveglianza o direzione su altre persone. Se queste persone fanno un danno, paga il "supervisore". 
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+  <CardBlock title="👨‍👩‍👧 Genitori e Insegnanti (Art. 2048)">
+    Rispondono dei danni causati dai figli minori o dagli allievi sotto la loro vigilanza. Si parla di <strong><GlossaryTerm id="culpa-in-vigilando">culpa in vigilando</GlossaryTerm></strong> (colpa nel non aver sorvegliato) e di mancata educazione.
+    <span className="block mt-4"><Highlight color="blue">Es: Un bambino rompe la vetrina del vicino con un sasso. Pagano i genitori.</Highlight></span>
+  </CardBlock>
+
+  <CardBlock title="👔 Datori di Lavoro (Art. 2049)">
+    Il datore ("padrone o committente") risponde SEMPRE per i danni causati dal dipendente durante il lavoro. È una garanzia assoluta per la vittima: il datore si prende i profitti dell'impresa, quindi si assume anche i rischi dei danni creati dai lavoratori (<strong><GlossaryTerm id="culpa-in-eligendo">culpa in eligendo</GlossaryTerm></strong>).
+  </CardBlock>
+</div>
+
+<SectionTitle step={2} title="Pagare senza colpa (Responsabilità Oggettiva)">
+Cose, Animali e Automobili
+</SectionTitle>
+
+In alcuni settori della vita quotidiana e lavorativa, i rischi sono talmente alti che la legge ha deciso di tagliare corto: se hai la proprietà o il controllo di qualcosa e quel qualcosa fa danno, paghi tu. Non importa quanto tu sia stato prudente. 
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+  <CardBlock title="🏢 Cose in Custodia (Art. 2051)">
+    Chi ha in <GlossaryTerm id="custodia">custodia</GlossaryTerm> una cosa è responsabile dei danni che essa provoca. 
+    <span className="block mt-4"><Highlight color="yellow">Es: Il marciapiede del Comune con una buca nascosta, o la tegola che cade dal tuo tetto.</Highlight></span>
+  </CardBlock>
+
+  <CardBlock title="🐕 Danni da Animali (Art. 2052)">
+    Il proprietario dell'animale, o chi se ne serve in quel momento, è sempre responsabile, sia che l'animale fosse smarrito sia che fosse sotto controllo.
+  </CardBlock>
+
+  <CardBlock title="⚠️ Attività Pericolose (Art. 2050)">
+    Chi esercita <GlossaryTerm id="attivita-pericolosa">attività pericolose</GlossaryTerm> (es. produzione fuochi d'artificio, stoccaggio gas) è tenuto al risarcimento se causa danni, per la natura stessa del suo lavoro.
+  </CardBlock>
+</div>
+
+<SectionTitle step={3} title="Il ribaltamento delle regole">
+L'Inversione dell'Onere della Prova
+</SectionTitle>
+
+<Concept title="Cosa significa inversione dell'onere?">
+Nella responsabilità normale (art. 2043), chi subisce il danno deve sbattere la testa in tribunale per dimostrare che tu sei colpevole. **Qui avviene il contrario** (<GlossaryTerm id="inversione-onere-prova">inversione dell'onere della prova</GlossaryTerm>). La legge presume già che tu sia colpevole. 
+</Concept>
+
+Sei **tu (il responsabile)** che per salvarti devi provare in giudizio il *caso fortuito*. Il **caso fortuito** è un evento imprevedibile ed eccezionale, del tutto estraneo alla tua sfera di controllo (ad esempio, un terremoto rarissimo, o un passante che si butta spontaneamente sotto la tua auto a fari spenti).
+
+<Technical>
+**Art. 2052 c.c. — Danno cagionato da animali**
+Il proprietario di un animale o chi se ne serve per il tempo in cui lo ha in uso, è responsabile dei danni cagionati dall'animale, sia che fosse sotto la sua custodia, sia che fosse smarrito o fuggito, salvo che provi il caso fortuito.
+</Technical>
+
+<VideoEmbed 
+  url="https://www.youtube.com/watch?v=Cxzp0SFLw-s" 
+  title="La responsabilità extracontrattuale: Art. 2050 e 2051" 
+  source="Keyeditore Tv" 
+  note="Approfondimento didattico molto utile sulle presunzioni di colpa e sulla responsabilità oggettiva del custode e nell'esercizio di attività pericolose." 
+/>
+
+<SectionTitle step={4} title="Casi Pratici">
+Il Giudice in azione
+</SectionTitle>
+
+<Row className="lg:grid-cols-2">
+    <Col>
+        <Example type="positive" title="La buca stradale insidiosa">
+            **Scenario:** Cadi in una grossa buca sul marciapiede, invisibile e non segnalata, rompendoti la caviglia.
+            **Analisi:** Il Comune ha in custodia la strada (Art. 2051). La colpa del Comune si presume automaticamente. 
+            **Esito:** Il Comune è tenuto a pagarti il risarcimento per danno biologico e patrimoniale, a meno che non provi il "caso fortuito" (es. la buca si è aperta 3 secondi prima del tuo passaggio per una scossa di assestamento).
+        </Example>
+    </Col>
+    <Col>
+        <Example type="negative" title="Il ladro morso dal cane">
+            **Scenario:** Un ladro scavalca il muro di recinzione della tua villa in piena notte per rubare. Il tuo cane da guardia lo morde gravemente. Il ladro ti fa causa.
+            **Analisi:** Sebbene il proprietario sia oggettivamente responsabile per il cane (Art. 2052), la condotta dolosa e illegale della vittima (entrare di nascosto) rappresenta un evento eccezionale che spezza il collegamento.
+            **Esito:** Il giudice riconoscerà il **caso fortuito** (l'azione colpevole del danneggiato), assolvendo il proprietario del cane dal risarcimento.
+        </Example>
+    </Col>
+</Row>
 
 ---
 
-## 1) Titolo sezione
+<QuizBlock />
 
-Contenuto...
+<ResourceFooter
+  disclaimerLevel="standard"
+  primarySources={[
+    { label: "Brocardi — Art. 2049 CC", url: "https://www.brocardi.it/codice-civile/libro-quarto/titolo-ix/capo-i/art2049.html" },
+    { label: "Brocardi — Art. 2052 CC", url: "https://www.brocardi.it/codice-civile/libro-quarto/titolo-ix/capo-i/art2052.html" }
+  ]}
+>
+Questa lezione ha finalità didattica e non costituisce consulenza legale. Ricorda che la valutazione del "caso fortuito" dipende spesso dalla discrezionalità e dall'interpretazione dei giudici. Per questioni di risarcimento, rivolgersi a un professionista qualificato.
+</ResourceFooter>
 
-<Quiz />
+[Diritto civile - Lezione 51 - La responsabilità extracontrattuale: Art. 2050, 2051](https://www.youtube.com/watch?v=Cxzp0SFLw-s)
+Questo video è rilevante perché offre una spiegazione chiara e specifica sulle eccezioni alla responsabilità civile per colpa, concentrandosi proprio sulla custodia e sulle attività pericolose affrontate in questa lezione.
 
-<Resources />
+
+http://googleusercontent.com/youtube_content/8

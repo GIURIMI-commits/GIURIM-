@@ -43,7 +43,7 @@ export default function Home() {
               {/* Left */}
               <div className="space-y-8 animate-in fade-in slide-in-from-bottom-6 duration-700">
                 <div className="flex flex-col gap-3">
-                  <Badge className="bg-card border border-border text-muted-foreground">
+                  <Badge className="bg-card border border-border text-muted-foreground w-fit">
                     <span className="font-semibold text-foreground">GIURIMì</span>
                     <span className="opacity-70">— educazione legale semplice</span>
                   </Badge>
@@ -98,6 +98,24 @@ export default function Home() {
                     <BadgeCheck className="h-4 w-4" />
                     Approccio educativo (no consulenza mascherata)
                   </span>
+                </div>
+
+                {/* CTA Collaborazione (Avvocati / Studenti) */}
+                <div className="pt-2 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200">
+                  <Card className="p-5 border-indigo-200 dark:border-indigo-900/50 bg-indigo-50/50 dark:bg-indigo-950/20 shadow-sm flex items-start gap-4 rounded-2xl group hover:shadow-md transition-all">
+                    <div className="bg-indigo-100 dark:bg-indigo-900/50 p-2.5 rounded-xl flex-shrink-0">
+                      <Scale className="h-5 w-5 text-indigo-600 dark:text-indigo-400" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-foreground text-sm">Sei un avvocato o un giurista d'eccellenza?</h4>
+                      <p className="text-sm text-muted-foreground mt-1 leading-relaxed pr-2">
+                        Aiutaci a migliorare l'educazione legale in Italia unendoti a noi. Questo progetto è collaborativo e ha bisogno del tuo occhio critico.
+                      </p>
+                      <Link href="/chi-siamo#collabora" className="inline-flex items-center gap-1 text-sm font-medium text-indigo-600 dark:text-indigo-400 mt-3 group-hover:underline">
+                        Unisciti al progetto <ArrowRight className="h-3 w-3" />
+                      </Link>
+                    </div>
+                  </Card>
                 </div>
               </div>
 

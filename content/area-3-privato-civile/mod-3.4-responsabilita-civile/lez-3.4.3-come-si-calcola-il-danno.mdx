@@ -4,32 +4,330 @@ title: "Come si calcola il danno"
 area: "area-3-privato-civile"
 module: "mod-3.4-responsabilita-civile"
 order: 3
-duration_minutes: 12
+duration_minutes: 20
 prerequisites: ["lez-3.4.2"]
 next_lesson: "lez-3.5.1"
-last_verified: "2026-02-07"
-verified_by: "Da verificare"
+prev_lesson: "lez-3.4.2"
+last_verified: "2026-02-13"
+verified_by: "[Nome]"
 disclaimer_level: "standard"
-source_refs: []
-glossary_terms: []
+
+source_refs:
+  - label: "Art. 1223 c.c. — Risarcimento del danno"
+    url: "https://www.brocardi.it/codice-civile/libro-quarto/titolo-i/art1223.html"
+  - label: "Art. 1226 c.c. — Valutazione equitativa del danno"
+    url: "https://www.brocardi.it/codice-civile/libro-quarto/titolo-i/art1226.html"
+  - label: "Art. 2056 c.c. — Valutazione dei danni"
+    url: "https://www.brocardi.it/codice-civile/libro-quarto/titolo-ix/art2056.html"
+  - label: "Art. 2059 c.c. — Danni non patrimoniali"
+    url: "https://www.brocardi.it/codice-civile/libro-quarto/titolo-ix/art2059.html"
+  - label: "Normattiva — Codice Civile (ricerca articoli 1223, 1226, 2056, 2059)"
+    url: "https://www.normattiva.it/"
+
+glossary_terms:
+  - "danno-patrimoniale"
+  - "danno-non-patrimoniale"
+  - "danno-emergente"
+  - "lucro-cessante"
+  - "valutazione-equitativa"
+  - "risarcimento"
+  - "nesso-causale"
+
 quiz:
-  questions: []
+  questions:
+    - type: "mcq"
+      prompt: "Secondo l’art. 1223 c.c., il risarcimento comprende:"
+      choices:
+        - "Solo il danno morale"
+        - "Danno emergente e lucro cessante, in quanto conseguenza immediata e diretta"
+        - "Qualsiasi conseguenza possibile, anche lontana nel tempo"
+      correctIndex: 1
+      feedback:
+        0: "No: quello riguarda il danno non patrimoniale e non è la regola generale dell’art. 1223."
+        1: "Corretto: art. 1223 = danno emergente + lucro cessante, ma solo se conseguenza immediata e diretta."
+        2: "No: l’art. 1223 richiede il legame di conseguenza immediata e diretta."
+    - type: "mcq"
+      prompt: "Che cosa descrive meglio il 'danno emergente'?"
+      choices:
+        - "La perdita di guadagno futuro"
+        - "La perdita subita nel patrimonio (spese, riparazioni, danno al bene)"
+        - "Un fastidio o dispiacere non quantificabile"
+      correctIndex: 1
+      feedback:
+        0: "Quello è tipicamente il lucro cessante."
+        1: "Esatto: è la perdita patrimoniale concreta (ciò che 'esce' dal patrimonio)."
+        2: "Quello rientra (se risarcibile) nel danno non patrimoniale."
+    - type: "mcq"
+      prompt: "Quando entra in gioco la valutazione equitativa ex art. 1226 c.c.?"
+      choices:
+        - "Quando il danno è provato e quantificabile con precisione matematica"
+        - "Quando il danno esiste, ma è difficile o impossibile provarne l’ammontare preciso"
+        - "Quando si vuole evitare di risarcire"
+      correctIndex: 1
+      feedback:
+        0: "Se è quantificabile con precisione, il giudice non ha bisogno dell’equità."
+        1: "Corretto: l’equità serve quando il danno è certo ma la quantificazione esatta è ardua."
+        2: "No: l’equità è un criterio di quantificazione, non un modo per negare il risarcimento."
+    - type: "open"
+      prompt: "Fai un esempio concreto di danno emergente e uno di lucro cessante nello stesso caso."
+      expected_points:
+        - "Danno emergente: spese di riparazione, spese mediche, sostituzione bene."
+        - "Lucro cessante: mancati guadagni (es. giorni di lavoro persi, mancato incasso)."
+        - "Collegare entrambi alla stessa vicenda (es. incidente/illecito)."
 ---
 
-<Hook>
-Inserisci qui il gancio iniziale...
-</Hook>
+<HookBlock>
+Hai subito un danno e “ti devono risarcire”. Ok.  
+Ma **quanto**? E soprattutto: si risarcisce tutto, o solo alcune conseguenze?
+
+In questa lezione vediamo la logica con cui il diritto civile “traduce” un danno in numeri.
+</HookBlock>
 
 <Objective>
-Inserisci qui l'obiettivo della lezione...
+Capiremo come si calcola il <GlossaryTerm id="risarcimento">risarcimento</GlossaryTerm> distinguendo
+tra <GlossaryTerm id="danno-patrimoniale">danno patrimoniale</GlossaryTerm> e
+<GlossaryTerm id="danno-non-patrimoniale">danno non patrimoniale</GlossaryTerm>,
+e applicando i criteri degli artt. 1223, 1226, 2056 e 2059 c.c.
 </Objective>
+
+<SectionTitle step={0} title="Mappa posizione (Area 3)">
+  Stai entrando nella chiusura del Modulo 3.4 — Responsabilità civile: dopo aver visto chi risponde e in quali casi, ora quantifichiamo il danno.
+</SectionTitle>
 
 ---
 
-## 1) Titolo sezione
+<SectionTitle step={1} title="La regola-base: cosa comprende il risarcimento">
+  Il punto di partenza è semplice: non basta dire “c’è un danno”, bisogna capire *quale* danno la legge considera risarcibile.
+</SectionTitle>
 
-Contenuto...
+<Concept title="Definizione operativa (da ricordare)">
+Il risarcimento mira a “ricostruire” la situazione del danneggiato come se l’illecito non fosse accaduto, **ma** solo per le conseguenze
+che hanno un legame sufficientemente stretto con l’evento (criterio della conseguenza immediata e diretta).
+</Concept>
 
-<Quiz />
+<Technical>
+**Art. 1223 c.c. — Risarcimento del danno**  
+Il risarcimento del danno per l'inadempimento o per il ritardo deve comprendere così la perdita subita dal creditore come il mancato guadagno, in quanto ne siano conseguenza immediata e diretta.
+</Technical>
 
-<Resources />
+<AnimatedCalcoloDanno />
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+  <CardBlock title="🔻 Perdita subita">
+    È il <GlossaryTerm id="danno-emergente">danno emergente</GlossaryTerm>: ciò che “esce” dal patrimonio.
+    <div className="mt-4">
+      <Highlight color="blue">Esempio: costi di riparazione, spese mediche, sostituzione di un bene</Highlight>
+    </div>
+  </CardBlock>
+
+  <CardBlock title="📉 Mancato guadagno">
+    È il <GlossaryTerm id="lucro-cessante">lucro cessante</GlossaryTerm>: ciò che *non entra* nel patrimonio.
+    <div className="mt-4">
+      <Highlight color="blue">Esempio: mancato incasso, giorni di lavoro persi, attività ferma</Highlight>
+    </div>
+  </CardBlock>
+
+  <CardBlock title="🔗 Legame con l’evento">
+    Non basta che “succeda dopo”: deve essere conseguenza sufficientemente collegata.
+    <div className="mt-4">
+      <Highlight color="blue">Chiave: conseguenza immediata e diretta (art. 1223)</Highlight>
+    </div>
+  </CardBlock>
+</div>
+
+---
+
+<SectionTitle step={2} title="Danno patrimoniale vs danno non patrimoniale">
+  Prima di calcolare, devi classificare: “che tipo di danno è?” Cambia il modo in cui lo descrivi e lo provi.
+</SectionTitle>
+
+<Compare
+  aTitle="Danno patrimoniale"
+  aBody="Incide sul patrimonio: spese, perdita di valore, mancati guadagni. Si scompone spesso in danno emergente + lucro cessante."
+  bTitle="Danno non patrimoniale"
+  bBody="Non è (direttamente) economico: riguarda la sfera personale. È risarcibile nei casi previsti dalla legge (art. 2059 c.c.)."
+/>
+
+<Technical>
+**Art. 2059 c.c. — Danni non patrimoniali**  
+Il danno non patrimoniale deve essere risarcito solo nei casi determinati dalla legge.
+</Technical>
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+  <CardBlock title="💼 Patrimoniale (più 'contabile')">
+    Di solito si calcola tramite:
+    <div className="mt-4">
+      <Highlight color="blue">fatture, ricevute, preventivi, documenti di reddito</Highlight>
+    </div>
+  </CardBlock>
+
+  <CardBlock title="🧍 Non patrimoniale (più 'valutativo')">
+    Spesso si quantifica con criteri orientativi e valutazioni giudiziali, perché non è un “conto da pagare”.
+    <div className="mt-4">
+      <Highlight color="blue">qui contano gravità, durata, incidenza sulla vita</Highlight>
+    </div>
+  </CardBlock>
+</div>
+
+---
+
+<SectionTitle step={3} title="Il 'ponte' dell’art. 2056: come si applicano le regole">
+  Quando siamo nella responsabilità extracontrattuale (fatto illecito), il codice fa un rinvio alle regole generali del risarcimento.
+</SectionTitle>
+
+<Concept title="Perché l’art. 2056 è importante">
+Ti dice che, per calcolare il risarcimento da fatto illecito, si usano i criteri del risarcimento “generale” (come l’art. 1223).
+È come se dicesse: “stessa logica, diverso contesto”.
+</Concept>
+
+<Technical>
+**Art. 2056 c.c. — Valutazione dei danni**  
+Il risarcimento dovuto al danneggiato si deve determinare secondo le disposizioni degli artt. 1223, 1226 e 1227.
+</Technical>
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+  <CardBlock title="1️⃣ Individua le voci di danno">
+    Prima “lista” mentalmente cosa è successo: spese? fermo attività? perdita di valore?
+    <span className="block mt-4"><Highlight color="blue">Classifica: emergente / cessante / non patrimoniale</Highlight></span>
+  </CardBlock>
+
+  <CardBlock title="2️⃣ Collega causa-effetto">
+    Ogni voce deve avere un legame con l’evento (<GlossaryTerm id="nesso-causale">nesso causale</GlossaryTerm> + criterio art. 1223).
+    <span className="block mt-4"><Highlight color="blue">Domanda: “Sarebbe successo lo stesso senza l’evento?”</Highlight></span>
+  </CardBlock>
+
+  <CardBlock title="3️⃣ Quantifica (prove o equità)">
+    Se puoi provare in modo preciso, usi i documenti. Se no, entra l’art. 1226.
+    <span className="block mt-4"><Highlight color="blue">Danno certo ma importo incerto → equità</Highlight></span>
+  </CardBlock>
+</div>
+
+---
+
+<SectionTitle step={4} title="Quando non puoi fare i conti: valutazione equitativa (art. 1226)">
+  Alcuni danni esistono davvero, ma non sono misurabili al centesimo. Il diritto lo sa e ti dà un criterio.
+</SectionTitle>
+
+<Technical>
+**Art. 1226 c.c. — Valutazione equitativa del danno**  
+Se il danno non può essere provato nel suo preciso ammontare, è liquidato dal giudice con valutazione equitativa.
+</Technical>
+
+<Concept title="Traduzione pratica dell’art. 1226">
+Equità non significa “a sentimento”.  
+Significa: **il danno è certo**, ma l’importo preciso è difficile da dimostrare, quindi il giudice lo stima con criteri ragionevoli.
+</Concept>
+
+<Steps>
+  <Step number="1" title="Dimostra che il danno esiste">
+    Prima cosa: il danno deve essere reale e collegato all’evento. Non basta “mi sembra”.
+  </Step>
+  <Step number="2" title="Spiega perché non puoi quantificarlo al centesimo">
+    Devi motivare l’impossibilità o la particolare difficoltà di una prova precisa.
+  </Step>
+  <Step number="3" title="Offri criteri concreti per stimare">
+    Parametri, confronti, durata, entità dell’incidenza: più dai “materiale”, più la stima è solida.
+  </Step>
+</Steps>
+
+---
+
+<SectionTitle step={5} title="Mini-casi: come ragiona un calcolo del danno">
+  Ora mettiamo insieme i pezzi in esempi che sembrano veri.
+</SectionTitle>
+
+<Row className="lg:grid-cols-2">
+  <Col>
+    <Example type="positive" title="Incidente: danno emergente + lucro cessante">
+      Un rider viene tamponato (colpa altrui).  
+      <br/><br/>
+      <Highlight color="blue">Danno emergente</Highlight>: riparazione scooter + spese mediche documentate.  
+      <Highlight color="blue">Lucro cessante</Highlight>: mancati guadagni dei giorni di stop (documentati con storico incassi).  
+      <br/><br/>
+      Tutte le voci devono essere collegate all’evento e “prossime” (art. 1223).
+    </Example>
+  </Col>
+
+  <Col>
+    <Example type="negative" title="Richiesta troppo ampia: conseguenze lontane e non dimostrate">
+      Dopo un piccolo sinistro, il danneggiato chiede anche “anni di mancata carriera” senza elementi concreti,
+      o collega eventi successivi troppo distanti.  
+      <br/><br/>
+      Se manca il legame stretto e la prova minima, quella voce rischia di non rientrare nel perimetro dell’art. 1223.
+    </Example>
+  </Col>
+</Row>
+
+<Row className="lg:grid-cols-2">
+  <Col>
+    <Example type="neutral" title="Danno non patrimoniale (art. 2059): quantificazione non 'a fatture'">
+      Una lesione personale incide sulla vita quotidiana (dolore, limitazioni, durata della convalescenza).  
+      <br/><br/>
+      Qui la quantificazione non è un semplice totale di ricevute: spesso servono criteri valutativi e motivazione.
+      L’art. 2059 delimita la risarcibilità ai casi previsti dalla legge.
+    </Example>
+  </Col>
+
+  <Col>
+    <Example type="positive" title="Valutazione equitativa (art. 1226): danno certo, importo incerto">
+      Un’attività subisce un disservizio che riduce gli incassi per un periodo, ma i dati sono incompleti.  
+      <br/><br/>
+      Se il calo è plausibile e collegato, ma la misura precisa è difficile, il giudice può stimare equitativamente,
+      usando elementi disponibili come durata, media storica, impatto.
+    </Example>
+  </Col>
+</Row>
+
+---
+
+<SectionTitle step={6} title="Checklist mentale: come impostare un calcolo in 30 secondi">
+  Se ti perdi, torna a questa sequenza: è la “mappa” del calcolo.
+</SectionTitle>
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+  <CardBlock title="✅ 1) Che tipo di danno è?">
+    <GlossaryTerm id="danno-patrimoniale">Patrimoniale</GlossaryTerm> o <GlossaryTerm id="danno-non-patrimoniale">non patrimoniale</GlossaryTerm>.
+    <span className="block mt-4"><Highlight color="blue">Se patrimoniale: emergente/cessante</Highlight></span>
+  </CardBlock>
+
+  <CardBlock title="✅ 2) È conseguenza collegata?">
+    Applica il criterio dell’art. 1223: legame stretto con l’evento.
+    <span className="block mt-4"><Highlight color="blue">No legame = niente voce di danno</Highlight></span>
+  </CardBlock>
+
+  <CardBlock title="✅ 3) Come quantifico?">
+    Documenti se possibile, altrimenti art. 1226 (equità) con criteri.
+    <span className="block mt-4"><Highlight color="blue">Danno certo + importo incerto → equità</Highlight></span>
+  </CardBlock>
+</div>
+
+---
+
+<SectionTitle step={7} title="Video suggerito">
+  Da inserire solo se rispetta i criteri: autore identificabile e qualificato, canale universitario/istituzionale, contenuto aggiornato, nessuna promozione.
+</SectionTitle>
+
+{/* VIDEO PLACEHOLDER:
+  Search query: "risarcimento del danno art 1223 1226 2056 2059 spiegazione università"
+  Preferenza canali: università (lezioni di diritto civile), ordini professionali, scuole forensi riconoscibili.
+  Nota: deve distinguere danno emergente vs lucro cessante e spiegare l'equità ex 1226.
+*/}
+
+---
+
+<QuizBlock />
+
+<ResourceFooter
+  disclaimerLevel="standard"
+  primarySources={[
+    { label: "Brocardi — Art. 1223 c.c.", url: "https://www.brocardi.it/codice-civile/libro-quarto/titolo-i/art1223.html" },
+    { label: "Brocardi — Art. 1226 c.c.", url: "https://www.brocardi.it/codice-civile/libro-quarto/titolo-i/art1226.html" },
+    { label: "Brocardi — Art. 2056 c.c.", url: "https://www.brocardi.it/codice-civile/libro-quarto/titolo-ix/art2056.html" },
+    { label: "Brocardi — Art. 2059 c.c.", url: "https://www.brocardi.it/codice-civile/libro-quarto/titolo-ix/art2059.html" }
+  ]}
+  secondarySources={[
+    { label: "Normattiva — Codice Civile (verifica articoli)", url: "https://www.normattiva.it/" }
+  ]}
+>
+Questa lezione ha finalità didattica e non costituisce consulenza legale.
+</ResourceFooter>

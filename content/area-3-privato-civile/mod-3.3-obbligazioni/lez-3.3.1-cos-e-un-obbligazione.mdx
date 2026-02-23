@@ -4,32 +4,214 @@ title: "Cos'è un'obbligazione"
 area: "area-3-privato-civile"
 module: "mod-3.3-obbligazioni"
 order: 1
-duration_minutes: 10
+duration_minutes: 22
 prerequisites: ["lez-3.2.3"]
 next_lesson: "lez-3.3.2"
-last_verified: "2026-02-07"
-verified_by: "Da verificare"
+prev_lesson: "lez-3.2.3"
+last_verified: "2026-02-13"
+verified_by: "[Nome]"
 disclaimer_level: "standard"
-source_refs: []
-glossary_terms: []
+
+source_refs:
+  - label: "Art. 1173 c.c. — Fonti delle obbligazioni"
+    url: "https://www.brocardi.it/codice-civile/libro-quarto/titolo-i/art1173.html"
+  - label: "Art. 1174 c.c. — Carattere patrimoniale della prestazione"
+    url: "https://www.brocardi.it/codice-civile/libro-quarto/titolo-i/art1174.html"
+  - label: "Art. 1175 c.c. — Correttezza"
+    url: "https://www.brocardi.it/codice-civile/libro-quarto/titolo-i/art1175.html"
+  - label: "Art. 1176 c.c. — Diligenza nell’adempimento"
+    url: "https://www.brocardi.it/codice-civile/libro-quarto/titolo-i/art1176.html"
+  - label: "Treccani — Obbligazione (Diritto)"
+    url: "https://www.treccani.it/enciclopedia/obbligazione_(Diritto)/"
+
+glossary_terms:
+  - "obbligazione"
+  - "creditore"
+  - "debitore"
+  - "prestazione"
+  - "fonti-delle-obbligazioni"
+  - "buona-fede"
+  - "correttezza"
+  - "diligenza"
+  - "vincolo-giuridico"
+
 quiz:
-  questions: []
+  questions:
+    - id: "q1"
+      type: "mcq"
+      question: "Nel diritto civile, un’obbligazione è:"
+      options:
+        - id: "a"
+          text: "Un titolo finanziario emesso dallo Stato"
+          is_correct: false
+          feedback: "No: quello è un bond finanziario."
+        - id: "b"
+          text: "Un vincolo giuridico tra debitore e creditore avente ad oggetto una prestazione patrimoniale"
+          is_correct: true
+          feedback: "Esatto: questa è la struttura del rapporto obbligatorio."
+        - id: "c"
+          text: "Un dovere morale senza conseguenze giuridiche"
+          is_correct: false
+          feedback: "No: l’obbligazione è giuridicamente vincolante."
+    - id: "q2"
+      type: "mcq"
+      question: "Le obbligazioni possono nascere:"
+      options:
+        - id: "a"
+          text: "Solo dal contratto"
+          is_correct: false
+          feedback: "Il contratto è una fonte, ma non l’unica."
+        - id: "b"
+          text: "Da contratto, fatto illecito e altri atti o fatti idonei a produrle"
+          is_correct: true
+          feedback: "Corretto: art. 1173 c.c."
+        - id: "c"
+          text: "Solo da promesse verbali"
+          is_correct: false
+          feedback: "Serve una fonte giuridica riconosciuta."
+    - id: "q3"
+      type: "open"
+      question: "Spiega la differenza tra obbligazione di dare, fare e non fare con un esempio."
+      expected_points:
+        - "Definizione delle tre tipologie."
+        - "Esempi concreti."
 ---
 
-<Hook>
-Inserisci qui il gancio iniziale...
-</Hook>
+<HookBlock>
+Quando senti la parola “obbligazione” potresti pensare a un titolo finanziario, a un investimento.  
+Qui no.  
+
+Nel diritto civile, l’obbligazione è il rapporto fondamentale che regge quasi tutti i rapporti economici tra persone.
+</HookBlock>
 
 <Objective>
-Inserisci qui l'obiettivo della lezione...
+Nella lezione precedente hai visto gli effetti del contratto e l'inadempimento. Ora facciamo un passo indietro per capire il concetto che sta dietro a tutto: l'obbligazione.
+
+Il contratto produce obbligazioni. L’inadempimento è la violazione di un’obbligazione. Ma cos’è, in senso tecnico, un’obbligazione?
 </Objective>
+
+<SectionTitle step={1} title="La struttura del rapporto obbligatorio">
+Il contratto produce obbligazioni. Ma cos’è, in senso tecnico, un’obbligazione?
+</SectionTitle>
+
+<Concept title="Definizione di Obbligazione">
+Un’<GlossaryTerm id="obbligazione">obbligazione</GlossaryTerm> è un <GlossaryTerm id="vincolo-giuridico">vincolo giuridico</GlossaryTerm> in forza del quale un <GlossaryTerm id="debitore">debitore</GlossaryTerm> è tenuto a una <GlossaryTerm id="prestazione">prestazione</GlossaryTerm> nei confronti di un <GlossaryTerm id="creditore">creditore</GlossaryTerm>.
+
+Questo è il cuore del rapporto obbligatorio: **una relazione giuridicamente tutelata tra due soggetti.** Clicca sul bottone qui sotto per vedere come matura il rapporto.
+</Concept>
+
+<AnimatedObbligazione />
+
+<SectionTitle step={2} title="Attenzione ai falsi amici" />
+
+<Compare 
+    aTitle="💵 Linguaggio Finanziario" 
+    aBody="Un'“obbligazione” (bond) è un titolo di debito. Esempio: Comprare un BTP per ricevere una cedola. In questo caso, sei un investitore."
+    bTitle="⚖️ Diritto Civile"
+    bBody="Un'obbligazione è un rapporto giuridico tra soggetti. Esempio: Firmare un contratto di affitto. In questo caso, entri in un rapporto obbligatorio."
+/>
+
+<SectionTitle step={3} title="Le fonti delle obbligazioni (art. 1173 c.c.)">
+Le <GlossaryTerm id="fonti-delle-obbligazioni">fonti delle obbligazioni</GlossaryTerm> indicano da dove nasce questo vincolo giuridico. L'ordinamento prevede tre categorie principali. Scorri per visualizzare le fonti:
+</SectionTitle>
+
+<AnimatedTimeline />
+
+<Technical>
+**Art. 1173. Fonti delle obbligazioni.**
+Le obbligazioni derivano da contratto, da fatto illecito, o da ogni altro atto o fatto idoneo a produrle in conformità dell'ordinamento giuridico.
+
+Questo articolo stabilisce il principio di atipicità delle fonti: il legislatore non fa un elenco chiuso (come invece avviene per i diritti reali), permettendo all'ordinamento di adattarsi a nuove figure giuridiche (es. contatto sociale qualificato).
+</Technical>
+
+<SectionTitle step={4} title="La prestazione: contenuto dell’obbligazione">
+L’art. 1174 c.c. stabilisce che la prestazione deve avere **carattere patrimoniale** (deve essere traducibile in valore economico).
+</SectionTitle>
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+  <CardBlock title="Obbligazione di DARE">
+      Trasferire un diritto, un bene o pagare una somma di denaro.
+      
+      <span className="block mt-4"><Highlight color="green">Es. Pagare 1.000 euro</Highlight></span>
+  </CardBlock>
+  <CardBlock title="Obbligazione di FARE">
+      Compiere un’attività specifica, che può essere materiale o giuridica.
+      
+      <span className="block mt-4"><Highlight color="blue">Es. Progettare un edificio</Highlight></span>
+  </CardBlock>
+  <CardBlock title="Obbligazione di NON FARE">
+      Astenersi da un determinato comportamento altrimenti lecito.
+      
+      <span className="block mt-4"><Highlight color="red">Es. Non fare concorrenza</Highlight></span>
+  </CardBlock>
+</div>
+
+Questa distinzione è fondamentale perché incide radicalmente sui rimedi applicabili in caso di inadempimento (es. risarcimento in forma specifica).
+
+<SectionTitle step={5} title="I principi che regolano l’obbligazione">
+Un rapporto obbligatorio non è solo uno scambio meccanico. È regolato da principi generali che le parti non possono eludere:
+</SectionTitle>
+
+<Steps>
+  <Step number="1" title="Correttezza (art. 1175 c.c.)">
+    Le parti devono comportarsi secondo <GlossaryTerm id="correttezza">correttezza</GlossaryTerm>. Entrambi (sia debitore che creditore) devono cooperare lealmente e non ostacolarsi a vicenda.
+  </Step>
+  <Step number="2" title="Diligenza (art. 1176 c.c.)">
+    Il debitore deve adempiere con <GlossaryTerm id="diligenza">diligenza</GlossaryTerm> (storicamente chiamata "del buon padre di famiglia"). Per i professionisti, la diligenza richiesta è tecnicamente più elevata (diligenza professionale).
+  </Step>
+  <Step number="3" title="Buona fede oggettiva">
+    La <GlossaryTerm id="buona-fede">buona fede</GlossaryTerm> permea l’intero rapporto obbligatorio. Non è solo un atteggiamento psicologico (buona fede soggettiva), ma un vero e proprio **paradigma giuridico comportamentale**.
+  </Step>
+</Steps>
+
+<SectionTitle step={6} title="Perché l’obbligazione è centrale nel diritto privato?" />
+
+<CardBlock>
+Tutto ruota attorno a lei. L’obbligazione è la **struttura portante** del diritto civile e dei rapporti economici:
+- Il contratto serve a far nascere, modificare o estinguere obbligazioni.
+- Il danno extracontrattuale genera l'obbligazione di risarcimento.
+- L’inadempimento è la violazione di un’obbligazione e comporta responsabilita patrimoniale.
+</CardBlock>
+
+<SectionTitle step={7} title="Esempi concreti" />
+
+<Row className="lg:grid-cols-2">
+    <Col>
+        <Example type="positive" title="Contratti Tipici">
+            **Vendita:** Il venditore deve consegnare la merce, il compratore deve pagarne il prezzo.
+            
+            **Contratto di lavoro:** Il lavoratore deve effettuare la propria mansione, il datore di lavoro deve retribuirlo periodicamente.
+        </Example>
+    </Col>
+    <Col>
+        <Example type="negative" title="Fatto Illecito">
+            **L'incidente stradale:** Chi passa col semaforo rosso e provoca un incidente stradale commette un "fatto illecito". Anche senza alcun contratto pregresso, genera immediatamente un'obbligazione al risarcimento del danno (Responsabilità Civile Auto).
+        </Example>
+    </Col>
+</Row>
+
+<SectionTitle title="Video suggerito" />
+
+{/* VIDEO PLACEHOLDER: Inserire solo se autore con qualifica verificabile (docente universitario o ente istituzionale), contenuto aggiornato, nessuna promozione. Search query: "obbligazione diritto civile spiegazione università art 1173". */}
 
 ---
 
-## 1) Titolo sezione
+<QuizBlock />
 
-Contenuto...
-
-<Quiz />
-
-<Resources />
+<ResourceFooter
+  disclaimerLevel="standard"
+  primarySources={[
+    {
+      label: "Brocardi — Art. 1173 c.c.",
+      url: "https://www.brocardi.it/codice-civile/libro-quarto/titolo-i/art1173.html"
+    }
+  ]}
+  secondarySources={[
+    {
+      label: "Treccani — Obbligazione",
+      url: "https://www.treccani.it/enciclopedia/obbligazione_(Diritto)/"
+    }
+  ]}
+>
+Questa lezione ha finalità didattica e non costituisce consulenza legale.
+</ResourceFooter>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { AlertTriangle } from "lucide-react";
 
 const footerLinks = {
     esplora: [
@@ -43,12 +44,19 @@ export function Footer() {
                             </div>
                         </div>
 
-                        <div className="mt-6 rounded-2xl border border-border bg-muted/20 p-5 max-w-md">
-                            <p className="text-sm text-muted-foreground leading-relaxed">
-                                GIURIMì è un progetto <strong className="text-foreground">educativo</strong> e{" "}
-                                <strong className="text-foreground">open source</strong>. Non fornisce consulenza
-                                legale e non sostituisce professionisti.
-                            </p>
+                        <div className="mt-6 flex flex-col gap-3">
+                            <div className="inline-flex items-center gap-2 rounded-full border border-amber-200/50 dark:border-amber-900/50 bg-amber-50/50 dark:bg-amber-950/30 px-3 py-1.5 text-xs text-amber-800 dark:text-amber-500 w-fit">
+                                <AlertTriangle className="h-3.5 w-3.5 flex-shrink-0" />
+                                <span><strong className="font-semibold">Open Source (Beta)</strong>: i contenuti potrebbero contenere imprecisioni.</span>
+                            </div>
+
+                            <div className="rounded-2xl border border-border bg-muted/20 p-5 max-w-md">
+                                <p className="text-sm text-muted-foreground leading-relaxed">
+                                    GIURIMì è un progetto <strong className="text-foreground">educativo</strong> e{" "}
+                                    <strong className="text-foreground">open source</strong>. Non fornisce consulenza
+                                    legale e non sostituisce professionisti.
+                                </p>
+                            </div>
                         </div>
                     </div>
 

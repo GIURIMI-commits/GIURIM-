@@ -4,32 +4,172 @@ title: "Fatto illecito e obbligo di risarcimento"
 area: "area-3-privato-civile"
 module: "mod-3.4-responsabilita-civile"
 order: 1
-duration_minutes: 12
+duration_minutes: 15
 prerequisites: ["lez-3.3.3"]
 next_lesson: "lez-3.4.2"
-last_verified: "2026-02-07"
-verified_by: "Da verificare"
+prev_lesson: "lez-3.3.3"
+last_verified: "2026-02-22"
+verified_by: "Guirimì Team"
 disclaimer_level: "standard"
-source_refs: []
-glossary_terms: []
+
+source_refs:
+  - label: "Art. 2043 CC — Risarcimento per fatto illecito"
+    url: "https://www.brocardi.it/codice-civile/libro-quarto/titolo-ix/capo-i/art2043.html"
+  - label: "Art. 2056 CC — Valutazione dei danni"
+    url: "https://www.brocardi.it/codice-civile/libro-quarto/titolo-ix/capo-i/art2056.html"
+  - label: "Art. 2059 CC — Danni non patrimoniali"
+    url: "https://www.brocardi.it/codice-civile/libro-quarto/titolo-ix/capo-i/art2059.html"
+
+media:
+  - type: "video"
+    title: "La Responsabilità Extracontrattuale (Art. 2043 c.c.)"
+    url: "https://www.youtube.com/watch?v=F0S_v7nAnx0"
+    source: "Edizioni Simone — Diritto Privato"
+    timestamp: "0:00-08:15"
+    position: "after-spiegazione"
+
+glossary_terms:
+  - "fatto-illecito"
+  - "dolo"
+  - "colpa"
+  - "danno-ingiusto"
+  - "nesso-causale"
+  - "responsabilita-extracontrattuale"
+  - "danno-patrimoniale"
+  - "danno-non-patrimoniale"
+
 quiz:
-  questions: []
+  questions:
+    - type: "mcq"
+      prompt: "Quale dei seguenti elementi NON è essenziale per far scattare la responsabilità ex Art. 2043 CC?"
+      choices:
+        - "Il dolo o la colpa."
+        - "L'esistenza di un contratto precedente tra le parti."
+        - "Un danno considerato 'ingiusto' dalla legge."
+        - "Il nesso causale tra comportamento e danno."
+      correctIndex: 1
+      feedback:
+        0: "Sbagliato. La colpevolezza (dolo o colpa) è un pilastro dell'illecito aquiliano."
+        1: "Esatto! La responsabilità extracontrattuale nasce proprio tra soggetti che NON hanno un legame contrattuale precedente."
+        2: "Sbagliato. Se il danno non è 'ingiusto' (es. concorrenza leale), non c'è risarcimento."
+        3: "Sbagliato. Senza nesso di causalità non si può imputare l'evento all'autore."
+    - type: "mcq"
+      prompt: "Nella responsabilità extracontrattuale, su chi ricade l'onere della prova?"
+      choices:
+        - "Sul danneggiato, che deve dimostrare tutti gli elementi dell'illecito."
+        - "Sul danneggiante, che deve dimostrare la sua innocenza."
+        - "Sullo Stato."
+      correctIndex: 0
+      feedback:
+        0: "Corretto. È la grande differenza con la responsabilità contrattuale: qui chi chiede i soldi deve provare colpa, danno e nesso causale."
+        1: "No, questo accade nella responsabilità contrattuale (inversione dell'onere)."
+        2: "Sbagliato. Il diritto civile regola i rapporti tra privati."
+    - type: "open"
+      prompt: "Tizio apre una pizzeria accanto a quella di Caio, facendogli perdere il 50% dei clienti. Caio subisce un danno economico evidente. Può chiedere il risarcimento ex Art. 2043 CC?"
+      expected_points:
+        - "Il danno economico esiste (perdita di clientela)."
+        - "Tuttavia manca il requisito dell'antigiuridicità (il danno non è 'ingiusto')."
+        - "La libera concorrenza è un diritto, quindi il comportamento di Tizio è lecito e non sorge alcun obbligo di risarcimento."
 ---
 
-<Hook>
-Inserisci qui il gancio iniziale...
-</Hook>
+<HookBlock>
+Stai camminando per strada. Dal terzo piano di un palazzo cade un vaso di fiori che si schianta esattamente sulla tua bicicletta nuova, distruggendola. Tu e il proprietario del vaso non vi siete mai visti prima, non avete firmato nulla. Eppure, da quel preciso istante, lui ha un debito nei tuoi confronti.
+</HookBlock>
 
 <Objective>
-Inserisci qui l'obiettivo della lezione...
+In questa lezione abbandoniamo il mondo dei contratti e scopriamo cosa succede quando persone estranee si "scontrano". Capirai l'anatomia dell'Articolo 2043, il pilastro che decide chi paga quando si verifica un danno.
 </Objective>
+
+<AnimatedFattoIllecito />
+
+<SectionTitle step={1} title="La Responsabilità Extracontrattuale">
+Dal contratto al "fatto illecito"
+</SectionTitle>
+
+Nelle lezioni precedenti abbiamo visto che un'obbligazione nasce quasi sempre da un accordo voluto (il contratto). Ma la società è piena di incidenti, distrazioni e azioni dolose tra sconosciuti. 
+
+Il diritto privato definisce questa situazione come **<GlossaryTerm id="responsabilita-extracontrattuale">Responsabilità Extracontrattuale</GlossaryTerm>** (o "aquiliana"). La regola di base è una delle più famose di tutto il Codice Civile: **chi rompe, paga**. 
+
+<Technical>
+**Art. 2043 c.c. — Risarcimento per fatto illecito**
+Qualunque fatto doloso o colposo, che cagiona ad altri un danno ingiusto, obbliga colui che ha commesso il fatto a risarcire il danno.
+</Technical>
+
+<SectionTitle step={2} title="I 5 Elementi del Danno">
+L'anatomia dell'illecito civile
+</SectionTitle>
+
+Perché un giudice ordini a qualcuno di staccare un assegno a tuo favore, non basta che tu abbia subito una perdita. Devono incastrarsi perfettamente **5 elementi**. Se ne manca anche solo uno, l'azione risarcitoria crolla.
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+  <CardBlock title="1️⃣ Il Fatto (Condotta)">
+    Deve esserci un'azione umana attiva (tirare un pugno, guidare oltre il limite) o un'omissione (non riparare un cornicione pericolante quando si ha l'obbligo di farlo).
+  </CardBlock>
+  
+  <CardBlock title="2️⃣ Il Danno Ingiusto">
+    Non ogni danno va risarcito. Il danno deve essere <GlossaryTerm id="danno-ingiusto">ingiusto</GlossaryTerm>, cioè deve ledere un diritto protetto dalla legge (la salute, la proprietà, l'onore).
+    <span className="block mt-4"><Highlight color="red">Es. Se apro un bar e ti rubo clienti lavorando meglio, ti danneggio ma non è "ingiusto".</Highlight></span>
+  </CardBlock>
+
+  <CardBlock title="3️⃣ Dolo o Colpa">
+    Il soggetto deve essere colpevole. <GlossaryTerm id="dolo">Dolo</GlossaryTerm> significa farlo apposta (rigo la tua auto). <GlossaryTerm id="colpa">Colpa</GlossaryTerm> significa farlo per negligenza, imprudenza o imperizia (guardo il cellulare e ti tampono).
+  </CardBlock>
+
+  <CardBlock title="4️⃣ Nesso Causale">
+    Deve esserci un collegamento diretto tra la condotta e l'evento. Il danno deve essere la conseguenza logica e prevedibile di quell'azione specifica (<GlossaryTerm id="nesso-causale">nesso eziologico</GlossaryTerm>).
+  </CardBlock>
+</div>
+
+<SectionTitle step={3} title="Il problema più grande: Provare tutto">
+L'Onere della Prova
+</SectionTitle>
+
+<Concept title="L'Onere della Prova a carico del danneggiato">
+Nel diritto extracontrattuale, la legge non presume che l'altro sia colpevole. Sei **tu (il danneggiato)** a dover portare le prove davanti al giudice. Devi dimostrare il fatto, la colpa del responsabile, l'entità del tuo danno e il nesso causale.
+</Concept>
+
+Questo è il motivo per cui le cause civili per incidenti stradali o malasanità sono spesso lunghe e complesse: raccogliere perizie, testimonianze e filmati è a totale carico di chi ha subito il danno.
+
+<VideoEmbed 
+  url="https://www.youtube.com/watch?v=F0S_v7nAnx0" 
+  title="La Responsabilità Extracontrattuale (Art. 2043 c.c.)" 
+  source="Edizioni Simone" 
+  note="Un'eccellente scomposizione dell'Articolo 2043, utile per memorizzare la differenza tra Danno Patrimoniale e Non Patrimoniale." 
+/>
+
+<SectionTitle step={4} title="Casi Pratici">
+Come ragiona il Giudice
+</SectionTitle>
+
+Vediamo come i 5 elementi si applicano (o falliscono) nella giurisprudenza reale.
+
+<Row className="lg:grid-cols-2">
+    <Col>
+        <Example type="positive" title="L'incidente in monopattino">
+            **Scenario:** Tizio sfreccia in monopattino sul marciapiede (vietato), guarda lo smartphone (colpa) e travolge Caio, rompendogli un braccio (danno biologico).
+            **Analisi:** Ci sono tutti gli elementi. Condotta illecita, colpa per negligenza, lesione di un diritto assoluto (salute) e nesso causale diretto.
+            **Esito:** Tizio deve risarcire integralmente i danni medici e morali a Caio.
+        </Example>
+    </Col>
+    <Col>
+        <Example type="negative" title="La coincidenza medica">
+            **Scenario:** Sempronio viene tamponato lievemente, va in ospedale per un controllo e, mentre è nella sala d'attesa, il tetto crolla ferendolo gravemente.
+            **Analisi:** Sempronio fa causa a chi lo ha tamponato dicendo "Se non mi avessi tamponato non sarei stato in ospedale".
+            **Esito:** La richiesta viene respinta. Si spezza il **nesso causale**: il crollo del tetto è un evento eccezionale e autonomo, non una conseguenza prevedibile del tamponamento.
+        </Example>
+    </Col>
+</Row>
 
 ---
 
-## 1) Titolo sezione
+<QuizBlock />
 
-Contenuto...
-
-<Quiz />
-
-<Resources />
+<ResourceFooter
+  disclaimerLevel="standard"
+  primarySources={[
+    { label: "Brocardi — Art. 2043 CC", url: "https://www.brocardi.it/codice-civile/libro-quarto/titolo-ix/capo-i/art2043.html" },
+    { label: "Treccani — Fatto Illecito", url: "https://www.treccani.it/enciclopedia/fatto-illecito/" }
+  ]}
+>
+Questa lezione ha scopo esclusivamente educativo e mira a spiegare i fondamenti del diritto civile. In caso di sinistro o contenzioso per risarcimento danni, consulta sempre un avvocato civilista.
+</ResourceFooter>
