@@ -1,35 +1,267 @@
 ---
 slug: "lez-4.1.1"
-title: "Cos'è un reato"
+title: "Cos'è un reato (delitti vs contravvenzioni)"
 area: "area-4-penale"
 module: "mod-4.1-reato-struttura"
 order: 1
-duration_minutes: 10
-prerequisites: ["lez-3.6.3"]
+duration_minutes: 15
+prerequisites: ["lez-1.1.3"]
 next_lesson: "lez-4.1.2"
-last_verified: "2026-02-07"
-verified_by: "Da verificare"
-disclaimer_level: "standard"
-source_refs: []
-glossary_terms: []
+prev_lesson: "lez-3.6.3"
+last_verified: "2026-02-23"
+verified_by: "[Nome penalista]"
+disclaimer_level: "high"
+
+source_refs:
+  - label: "Art. 1 CP — Reati e pene: disposizione espressa di legge"
+    url: "https://www.brocardi.it/codice-penale/libro-primo/titolo-i/art1.html"
+  - label: "Art. 17 CP — Pene principali (distinzione delitti/contravvenzioni)"
+    url: "https://www.brocardi.it/codice-penale/libro-primo/titolo-ii/capo-i/art17.html"
+  - label: "Art. 39 CP — Reato: distinzione fra delitti e contravvenzioni"
+    url: "https://www.brocardi.it/codice-penale/libro-primo/titolo-iii/capo-i/art39.html"
+  - label: "Art. 25 comma 2 Costituzione — Principio di legalità penale"
+    url: "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:costituzione:1947-12-27~art25="
+  - label: "Art. 27 Costituzione — Responsabilità penale personale"
+    url: "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:costituzione:1947-12-27~art27-com3="
+  - label: "Treccani — Reato"
+    url: "https://www.treccani.it/enciclopedia/reato/"
+
+
+
+glossary_terms:
+  - "reato"
+  - "delitto"
+  - "contravvenzione"
+  - "principio-di-legalita"
+  - "riserva-di-legge"
+  - "tassativita"
+  - "irretroattivita"
+  - "responsabilita-penale"
+  - "reclusione"
+  - "multa"
+  - "arresto"
+  - "ammenda"
+
 quiz:
-  questions: []
+  questions:
+    - type: "mcq"
+      prompt: "Qual è l'idea base del principio di legalità in materia penale?"
+      choices:
+        - "Si può punire qualunque comportamento ritenuto ingiusto dal giudice."
+        - "Si può punire solo ciò che una legge prevede come reato e con le pene stabilite dalla legge."
+        - "Si punisce solo se c'è un danno economico."
+      correctIndex: 1
+      feedback:
+        0: "No: nel penale non vale 'secondo me è ingiusto'. Serve una legge che tipizzi il reato e la pena."
+        1: "Corretto: è il cuore di legalità (art. 1 CP; art. 25 co. 2 Cost.)."
+        2: "No: esistono reati senza danno economico (es. molti reati contro la persona o l'ordine pubblico)."
+    - type: "mcq"
+      prompt: "Secondo il Codice penale, come si distinguono delitti e contravvenzioni?"
+      choices:
+        - "In base al fatto che siano commessi di notte o di giorno."
+        - "In base alla specie delle pene previste per quel reato."
+        - "In base al numero di testimoni."
+      correctIndex: 1
+      feedback:
+        0: "No: l'orario non c'entra con la classificazione giuridica."
+        1: "Corretto: art. 39 CP, la distinzione è legata alla diversa specie di pena."
+        2: "No: i testimoni incidono sulla prova, non sulla qualificazione del reato."
+    - type: "open"
+      prompt: "Spiega con parole tue perché nel diritto penale si dice che è 'extrema ratio' e fai un esempio semplice."
+      expected_points:
+        - "Il penale interviene come 'ultima scelta' perché usa la sanzione più afflittiva (pena) e tocca la libertà personale."
+        - "Differenza rispetto a civile/amministrativo: nel penale c'è reato e pena."
+        - "Esempio concreto: una lite tra privati può restare civile; diventa penale solo se la legge prevede un reato (es. minaccia/lesioni)."
 ---
 
-<Hook>
-Inserisci qui il gancio iniziale...
-</Hook>
+<HookBlock>
+Attraversi col rosso alle 3 di notte, strada deserta: “non ho fatto male a nessuno”… ma è <GlossaryTerm id="reato">reato</GlossaryTerm>?
+</HookBlock>
 
 <Objective>
-Inserisci qui l'obiettivo della lezione...
+In questa lezione capisci **che cosa rende un fatto “penale”**: il <GlossaryTerm id="principio-di-legalita">principio di legalità</GlossaryTerm> e la distinzione tra <GlossaryTerm id="delitto">delitti</GlossaryTerm> e <GlossaryTerm id="contravvenzione">contravvenzioni</GlossaryTerm>. È la base per la prossima lezione, dove “smontiamo” il reato per vedere da quali pezzi è fatto (dolo/colpa, condotta, evento…).
 </Objective>
+
+<SectionTitle step={1} title="Il punto di partenza: senza legge non esiste reato">
+Nel penale non basta che un comportamento “sembri sbagliato”: deve essere **previsto dalla legge** come reato, e la legge deve indicare anche **quale pena** si applica.
+</SectionTitle>
+
+<Concept title="Definizione (da ricordare davvero)">
+Un <GlossaryTerm id="reato">reato</GlossaryTerm> è un fatto che la legge prevede come tale e a cui collega una pena.  
+Se manca la legge (o la legge non è chiara), **non si può punire**.
+</Concept>
+
+<Technical>
+**Art. 1 CP (estratto).**  
+Nessuno può essere punito per un fatto che non sia espressamente preveduto come reato dalla legge, né con pene che non siano da essa stabilite.
+</Technical>
+
+<Technical>
+**Art. 25, co. 2 Cost. (estratto).**  
+Nessuno può essere punito se non in forza di una legge che sia entrata in vigore prima del fatto commesso.
+</Technical>
+
+<SectionTitle step={2} title="I quattro “blocchi” della legalità penale">
+Se ti perdi, torna qui: sono i paletti che rendono il penale “garantito”.
+</SectionTitle>
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+  <CardBlock title="🏛️ Riserva di legge">
+    Solo una <Highlight color="blue">legge</Highlight> può creare reati e pene (non “un’idea”, non “un regolamento”).
+    <span className="block mt-4">
+      <Highlight color="blue"><GlossaryTerm id="riserva-di-legge">Riserva di legge</GlossaryTerm></Highlight>
+    </span>
+  </CardBlock>
+
+  <CardBlock title="📌 Tassatività">
+    La norma deve essere <Highlight color="blue">chiara e determinata</Highlight>: devi poter capire prima cosa è vietato.
+    <span className="block mt-4">
+      <Highlight color="blue"><GlossaryTerm id="tassativita">Tassatività</GlossaryTerm></Highlight>
+    </span>
+  </CardBlock>
+
+  <CardBlock title="⏳ Irretroattività">
+    Non ti si può punire con una legge nata <Highlight color="blue">dopo</Highlight> il fatto.
+    <span className="block mt-4">
+      <Highlight color="blue"><GlossaryTerm id="irretroattivita">Irretroattività</GlossaryTerm></Highlight>
+    </span>
+  </CardBlock>
+
+  <CardBlock title="🚫 Niente analogia sfavorevole">
+    Se un caso non rientra davvero nella norma, non puoi “allargarla” contro l’imputato.
+    <span className="block mt-4">
+      <Highlight color="blue">Garanzia contro interpretazioni “creative”</Highlight>
+    </span>
+  </CardBlock>
+</div>
+
+<SectionTitle step={3} title="Delitti e contravvenzioni: non è “una sensazione”, è la pena">
+Sembra un dettaglio tecnico, ma in realtà è una bussola: ti dice *che tipo di reato* hai davanti.
+</SectionTitle>
+
+<Technical>
+**Art. 39 CP (testo).**  
+I reati si distinguono in delitti e contravvenzioni, secondo la diversa specie delle pene per essi rispettivamente stabilite da questo codice.
+</Technical>
+
+<Compare
+  aTitle="Delitto"
+  aBody={<>È punito con <GlossaryTerm id='reclusione'>reclusione</GlossaryTerm> e/o <GlossaryTerm id='multa'>multa</GlossaryTerm> (e nei casi più gravi può esserci l’ergastolo). In genere: fatti più gravi.</>}
+  bTitle="Contravvenzione"
+  bBody={<>È punita con <GlossaryTerm id='arresto'>arresto</GlossaryTerm> e/o <GlossaryTerm id='ammenda'>ammenda</GlossaryTerm>. In genere: fatti meno gravi, spesso legati a regole di sicurezza/ordine.</>}
+/>
+
+<Technical>
+**Art. 17 CP (estratto utile).**  
+Delitti: ergastolo, reclusione, multa.  
+Contravvenzioni: arresto, ammenda.
+</Technical>
+
+<SectionTitle step={4} title="Penale vs civile vs amministrativo: perché il penale è 'extrema ratio'">
+Il penale è l’intervento più “pesante” dello Stato: può limitare la libertà personale. Per questo entra in gioco solo quando la legge lo ritiene necessario.
+</SectionTitle>
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+  <CardBlock title="⚖️ Illecito civile">
+    Regola tipica: <Highlight color="blue">risarcimento</Highlight> o ripristino (es. danno, inadempimento).
+    <span className="block mt-4">
+      <Highlight color="blue">Non c’è “pena”</Highlight>
+    </span>
+  </CardBlock>
+
+  <CardBlock title="🧾 Illecito amministrativo">
+    Regola tipica: <Highlight color="blue">sanzione pecuniaria</Highlight> (multa amministrativa), sospensioni, punti patente…
+    <span className="block mt-4">
+      <Highlight color="blue">È “punitivo”, ma non è penale</Highlight>
+    </span>
+  </CardBlock>
+
+  <CardBlock title="🚓 Reato (penale)">
+    C’è una <Highlight color="blue">pena</Highlight> prevista dalla legge e si attiva il processo penale.
+    <span className="block mt-4">
+      <Highlight color="blue">Garanzie + regole più rigorose</Highlight>
+    </span>
+  </CardBlock>
+</div>
+
+<SectionTitle step={5} title="Due garanzie da tenere sempre accese (art. 27 Cost.)">
+Queste frasi sono il “DNA” del penale moderno: ti aiutano a leggere qualsiasi reato senza perderti.
+</SectionTitle>
+
+<Steps>
+  <Step number="1" title="Responsabilità personale">
+    La <GlossaryTerm id="responsabilita-penale">responsabilità penale</GlossaryTerm> è personale: non paghi per il fatto di un altro.
+  </Step>
+  <Step number="2" title="Presunzione di innocenza">
+    L’imputato non è considerato colpevole sino alla condanna definitiva: il processo serve proprio ad accertare i fatti.
+  </Step>
+</Steps>
+
+<Technical>
+**Art. 27 Cost. (estratti).**  
+La responsabilità penale è personale.  
+L'imputato non è considerato colpevole sino alla condanna definitiva.
+</Technical>
+
+<SectionTitle step={6} title="Esempi pratici: riconoscere “che cosa” hai davanti">
+Qui non ti serve sapere tutto il diritto penale: ti serve imparare a fare la prima distinzione.
+</SectionTitle>
+
+<Row className="lg:grid-cols-2">
+  <Col>
+    <Example type="positive" title="Caso (contravvenzione: regola + sanzione penale)">
+      Un comportamento viola una regola di ordine/sicurezza e la legge lo punisce con <GlossaryTerm id="arresto">arresto</GlossaryTerm> o <GlossaryTerm id="ammenda">ammenda</GlossaryTerm>.  
+      La cosa importante è: non è “grave per opinione”, è penale perché la legge lo qualifica e prevede quella specie di pena.
+    </Example>
+  </Col>
+
+  <Col>
+    <Example type="negative" title="Caso (non è penale: manca la tipizzazione)">
+      Un comportamento è scorretto o immorale, ma <Highlight color="blue">non è previsto</Highlight> da una norma penale come reato.  
+      Qui possono scattare conseguenze civili o amministrative, ma non “pena” penale.
+    </Example>
+  </Col>
+</Row>
+
+<SectionTitle step={7} title="Mini-check: come ragionare in 15 secondi davanti a un caso">
+È un metodo semplice per non confondere “ingiusto” con “penale”.
+</SectionTitle>
+
+<Steps>
+  <Step number="1" title="C'è una norma penale?">
+    Se non trovi una legge che tipizza quel fatto, non è <GlossaryTerm id="reato">reato</GlossaryTerm>.
+  </Step>
+  <Step number="2" title="Che pena prevede?">
+    Specie della pena → ti orienta su <GlossaryTerm id="delitto">delitto</GlossaryTerm> o <GlossaryTerm id="contravvenzione">contravvenzione</GlossaryTerm>.
+  </Step>
+  <Step number="3" title="Ricorda le garanzie">
+    Legalità (art. 25 Cost.) + responsabilità personale (art. 27 Cost.) come “filtro” costante.
+  </Step>
+</Steps>
+
+<SectionTitle step={10} title="Video suggerito">
+Solo se trovi un video introduttivo universitario/istituzionale (autore identificabile, no promozione, no cronaca).
+</SectionTitle>
+
+{/* VIDEO PLACEHOLDER:
+  Search query: "cos'è un reato diritto penale lezione universitaria delitti contravvenzioni principio di legalità"
+  Criteri: docente universitario / ente istituzionale; autore identificabile; niente promozione; niente cronaca nera.
+*/}
 
 ---
 
-## 1) Titolo sezione
+<QuizBlock />
 
-Contenuto...
-
-<Quiz />
-
-<Resources />
+<ResourceFooter
+  disclaimerLevel="elevated"
+  primarySources={[
+    { label: "Brocardi — Art. 1 c.p.", url: "https://www.brocardi.it/codice-penale/libro-primo/titolo-i/art1.html" },
+    { label: "Brocardi — Art. 17 c.p.", url: "https://www.brocardi.it/codice-penale/libro-primo/titolo-ii/capo-i/art17.html" },
+    { label: "Brocardi — Art. 39 c.p.", url: "https://www.brocardi.it/codice-penale/libro-primo/titolo-iii/capo-i/art39.html" },
+    { label: "Normattiva — Costituzione, art. 25", url: "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:costituzione:1947-12-27~art25=" },
+    { label: "Normattiva — Costituzione, art. 27", url: "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:costituzione:1947-12-27~art27-com3=" },
+    { label: "Treccani — 'Reato'", url: "https://www.treccani.it/enciclopedia/reato/" }
+  ]}
+>
+Questa lezione ha finalità esclusivamente didattiche. Nel diritto penale i casi concreti dipendono dai fatti e dalle norme applicabili: questo contenuto non è consulenza legale e non sostituisce un professionista.
+</ResourceFooter>
