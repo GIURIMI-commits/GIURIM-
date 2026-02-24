@@ -12,10 +12,24 @@ import {
     Lock,
     FileText,
     BadgeCheck,
-    Info,
     LogOut,
+    Mail,
+    ChevronRight,
 } from "lucide-react";
 import { motion } from "framer-motion";
+
+const containerVariants = {
+    hidden: { opacity: 0 },
+    show: {
+        opacity: 1,
+        transition: { staggerChildren: 0.1 },
+    },
+};
+
+const itemVariants = {
+    hidden: { opacity: 0, y: 15 },
+    show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 300, damping: 24 } },
+};
 
 export default function ProfilePage() {
     const { profile, loading } = useProfile();
@@ -30,77 +44,79 @@ export default function ProfilePage() {
 
     if (loading) {
         return (
-            <div className="max-w-4xl mx-auto px-4 md:px-8 py-14">
-                <Card className="rounded-2xl">
-                    <CardContent className="py-10 text-sm text-muted-foreground">
-                        Caricamento profilo…
-                    </CardContent>
-                </Card>
+            <div className="max-w-6xl mx-auto px-4 md:px-8 py-14 flex items-center justify-center min-h-[60vh]">
+                <motion.div
+                    animate={{ opacity: [0.5, 1, 0.5] }}
+                    transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+                    className="text-sm text-primary font-medium tracking-widest uppercase"
+                >
+                    Sincronizzazione Profilo...
+                </motion.div>
             </div>
         );
     }
 
     const displayName = profile?.display_name || "Utente";
-    const roleLabel = profile?.role ? profile.role.replace("_", " ") : "ruolo non definito";
+    const roleLabel = profile?.role ? profile.role.replace("_", " ") : "Ospite";
     const memberSince = profile?.created_at
-        ? new Date(profile.created_at).toLocaleDateString()
+        ? new Date(profile.created_at).toLocaleDateString('it-IT', { year: 'numeric', month: 'long', day: 'numeric' })
         : "-";
+    const email = profile?.email || "Email non disponibile";
 
-    // "Verifica studente" (solo UI): se hai un campo reale tipo profile.is_student_verified
-    // sostituisci la condizione qui sotto. Per ora: consideriamo "studente" come badge soft.
-    const isStudent = profile?.role === "student";
+    // Manteniamo la logica dello Studente Verificato
     const isVerifiedStudent = profile?.student_status === "verified";
 
-    const handleExportData = () => {
-        window.location.href = '/api/user/export';
-    };
-
-    const handleDeleteAccount = async () => {
-        if (!confirm("Sei sicuro di voler eliminare il tuo account? Questa azione è irreversibile.")) return;
-
-        try {
-            const res = await fetch('/api/user/delete', { method: 'DELETE' });
-            if (res.ok) {
-                await supabase.auth.signOut();
-                router.push("/");
-            } else {
-                alert("Errore durante l'eliminazione dell'account.");
-            }
-        } catch (e) {
-            console.error(e);
-            alert("Si è verificato un errore.");
-        }
-    };
-
     return (
-        <div className="max-w-4xl mx-auto px-4 md:px-8 py-12 space-y-10">
-            {/* Page header */}
-            <div className="space-y-2">
-                <h1 className="text-3xl md:text-4xl font-serif font-bold text-foreground tracking-tight">
-                    Profilo
-                </h1>
-                <p className="text-muted-foreground max-w-2xl">
-                    Una fotografia chiara del tuo account. GIURIMì minimizza i dati: solo ciò che serve per
-                    offrirti un percorso educativo ordinato e verificabile.
-                </p>
+        <div className="max-w-6xl mx-auto px-4 md:px-8 py-10 lg:py-16">
+            <div className="mb-10 lg:mb-14">
+                <motion.h1
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5, type: 'spring' }}
+                    className="text-3xl md:text-5xl font-serif font-bold text-foreground tracking-tight"
+                >
+                    Dashboard Personale
+                </motion.h1>
+                <motion.p
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.2, duration: 0.5 }}
+                    className="mt-3 text-muted-foreground max-w-2xl text-lg"
+                >
+                    Il tuo centro di controllo GIURIMÌ. Dati al sicuro, essenziali e sotto il tuo dominio.
+                </motion.p>
             </div>
 
-            {/* Identity / Hero card */}
-            <Card className="rounded-2xl">
-                <CardContent className="p-6 md:p-8">
-                    <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-                        <div className="flex items-start gap-4">
-                            <div className="h-12 w-12 rounded-2xl bg-neutral-900 text-white flex items-center justify-center">
-                                <User className="h-6 w-6" />
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 items-start">
+
+                {/* --- LEFT COLUMN: Sticky Digital ID Card --- */}
+                <div className="md:col-span-4 lg:col-span-3 md:sticky md:top-24 space-y-6">
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.5 }}
+                    >
+                        <Card className="rounded-3xl border-border/50 bg-card/60 backdrop-blur-2xl shadow-xl shadow-black/5 overflow-hidden">
+                            {/* Decorative Top Banner */}
+                            <div className="h-24 w-full bg-gradient-to-br from-neutral-800 to-neutral-900 dark:from-neutral-900 dark:to-neutral-950 relative overflow-hidden">
+                                {isVerifiedStudent && (
+                                    <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-20 mix-blend-overlay"></div>
+                                )}
                             </div>
 
-                            <div className="space-y-2">
-                                <div className="flex flex-wrap items-center gap-2">
-                                    <h2 className="text-xl md:text-2xl font-serif font-bold text-foreground">
-                                        {displayName}
-                                    </h2>
+                            <CardContent className="px-6 pb-8 pt-0 flex flex-col items-center text-center relative">
+                                {/* Giant Avatar */}
+                                <div className="h-24 w-24 rounded-full bg-background border-4 border-card/60 shadow-lg flex items-center justify-center -mt-12 mb-4 relative z-10 overflow-hidden">
+                                    <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 to-transparent"></div>
+                                    <User className="h-10 w-10 text-foreground/80" strokeWidth={1.5} />
+                                </div>
 
-                                    <span className="inline-flex items-center rounded-full border border-border bg-card px-2.5 py-1 text-xs text-muted-foreground capitalize">
+                                <h2 className="text-2xl font-serif font-bold text-foreground mb-1">
+                                    {displayName}
+                                </h2>
+
+                                <div className="flex flex-col items-center gap-2 mt-2">
+                                    <span className="inline-flex items-center rounded-full border border-border/50 bg-muted/50 px-3 py-1 text-xs text-muted-foreground uppercase tracking-widest font-semibold">
                                         {roleLabel}
                                     </span>
 
@@ -108,219 +124,201 @@ export default function ProfilePage() {
                                         <motion.span
                                             initial={{ opacity: 0, scale: 0.8 }}
                                             animate={{ opacity: 1, scale: 1 }}
-                                            transition={{ duration: 0.5, type: 'spring' }}
-                                            className="relative inline-flex items-center gap-1 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-500 dark:text-emerald-400 px-3 py-1 text-xs font-medium overflow-hidden"
+                                            transition={{ delay: 0.3, duration: 0.5, type: 'spring' }}
+                                            className="relative inline-flex items-center gap-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 px-3.5 py-1.5 text-xs font-bold overflow-hidden mt-1 shadow-sm shadow-emerald-500/10"
                                         >
                                             <motion.div
                                                 animate={{
-                                                    boxShadow: ["0px 0px 0px 0px rgba(16, 185, 129, 0)", "0px 0px 8px 2px rgba(16, 185, 129, 0.4)", "0px 0px 0px 0px rgba(16, 185, 129, 0)"]
+                                                    boxShadow: ["0px 0px 0px 0px rgba(16, 185, 129, 0)", "0px 0px 8px 2px rgba(16, 185, 129, 0.3)", "0px 0px 0px 0px rgba(16, 185, 129, 0)"]
                                                 }}
-                                                transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+                                                transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut' }}
                                                 className="absolute inset-0 rounded-full"
                                             />
-                                            {/* Shimmer effect */}
-                                            <motion.div
-                                                animate={{ x: ["-100%", "200%"] }}
-                                                transition={{ duration: 3, repeat: Infinity, ease: "linear", repeatDelay: 1 }}
-                                                className="absolute inset-0 bg-gradient-to-r from-transparent via-emerald-400/20 to-transparent skew-x-12"
-                                            />
                                             <BadgeCheck className="h-4 w-4 relative z-10" />
-                                            <span className="relative z-10">Studente verificato</span>
+                                            <span className="relative z-10">Verificato</span>
                                         </motion.span>
                                     )}
                                 </div>
+                            </CardContent>
+                        </Card>
+                    </motion.div>
 
-                                <div className="mt-2 text-xs text-muted-foreground/80 flex items-start gap-2 max-w-2xl">
-                                    <Info className="h-4 w-4 mt-0.5" />
-                                    <p>
-                                        Il badge “Studente verificato” indica che l’accesso completo è stato sbloccato
-                                        tramite verifica dell’account studente (es. email istituzionale e verifica).
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="flex md:flex-col gap-3 md:items-end">
-                            <Button variant="outline" onClick={() => router.push("/privacy")} className="gap-2">
-                                <FileText className="h-4 w-4" />
-                                Privacy
-                            </Button>
-                            <Button variant="destructive" onClick={handleLogout} className="gap-2">
-                                <LogOut className="h-4 w-4" />
-                                Disconnetti
-                            </Button>
-                        </div>
-                    </div>
-                </CardContent>
-            </Card>
-
-            {/* Read-only profile details */}
-            <Card className="rounded-2xl">
-                <CardHeader>
-                    <CardTitle>Informazioni account</CardTitle>
-                </CardHeader>
-                <CardContent className="grid gap-6 md:grid-cols-2">
-                    <InfoTile
-                        icon={User}
-                        label="Nome visualizzato"
-                        value={profile?.display_name || "-"}
-                        hint="Usato per mostrarti in dashboard e nella community (se attiva)."
-                    />
-                    <InfoTile
-                        icon={ShieldCheck}
-                        label="Ruolo"
-                        value={roleLabel}
-                        capitalize
-                        hint="Serve a personalizzare i percorsi e l’accesso ai contenuti."
-                    />
-                    <InfoTile
-                        icon={Calendar}
-                        label="Membro dal"
-                        value={memberSince}
-                        hint="Data di creazione del profilo GIURIMì."
-                    />
-                    {isVerifiedStudent ? (
-                        <motion.div
-                            whileHover={{ scale: 1.02 }}
-                            className="relative rounded-2xl p-[1.5px] overflow-hidden group"
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 0.4 }}
+                        className="px-2"
+                    >
+                        <Button
+                            variant="ghost"
+                            className="w-full justify-start text-muted-foreground hover:text-destructive hover:bg-destructive/10 rounded-xl transition-all"
+                            onClick={handleLogout}
                         >
-                            {/* Animated gradient border */}
+                            <LogOut className="h-4 w-4 mr-3" />
+                            Disconnetti in modo sicuro
+                        </Button>
+                    </motion.div>
+                </div>
+
+                {/* --- RIGHT COLUMN: Content Dashboard --- */}
+                <motion.div
+                    variants={containerVariants}
+                    initial="hidden"
+                    animate="show"
+                    className="md:col-span-8 lg:col-span-9 space-y-8"
+                >
+
+                    {/* VIP Status Banner (Se verificato) */}
+                    {isVerifiedStudent ? (
+                        <motion.div variants={itemVariants} className="relative rounded-3xl p-[1px] overflow-hidden group shadow-lg shadow-emerald-900/5">
                             <motion.div
-                                className="absolute inset-[-50%] bg-[conic-gradient(from_0deg_at_50%_50%,transparent_0%,#10b981_50%,transparent_100%)] opacity-50"
+                                className="absolute inset-[-100%] bg-[conic-gradient(from_0deg_at_50%_50%,transparent_0%,#10b981_30%,transparent_60%)] opacity-30"
                                 animate={{ rotate: 360 }}
-                                transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
+                                transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
                             />
-                            <div className="relative h-full rounded-2xl bg-card/90 backdrop-blur-xl p-5 z-10">
-                                <div className="flex items-start gap-3">
-                                    <div className="mt-0.5 text-emerald-500">
-                                        <BadgeCheck className="h-5 w-5" />
+                            <div className="relative h-full rounded-3xl bg-card/95 backdrop-blur-xl p-6 md:p-8 z-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
+                                <div className="flex items-start gap-4">
+                                    <div className="h-12 w-12 rounded-2xl bg-emerald-500/10 text-emerald-500 flex items-center justify-center shrink-0 border border-emerald-500/20">
+                                        <ShieldCheck className="h-6 w-6" />
                                     </div>
-                                    <div className="min-w-0">
-                                        <p className="text-xs uppercase tracking-wide text-emerald-600 dark:text-emerald-500 font-bold mb-1">Status Esclusivo</p>
-                                        <p className="text-lg font-bold text-foreground">
-                                            Studente Verificato
+                                    <div>
+                                        <p className="text-xs uppercase tracking-widest text-emerald-600 dark:text-emerald-500 font-bold mb-1.5">Privilegi Sbloccati</p>
+                                        <h3 className="text-xl md:text-2xl font-serif font-bold text-foreground">Status Accademico Attivo</h3>
+                                        <p className="mt-2 text-sm text-muted-foreground leading-relaxed max-w-lg">
+                                            Hai l'accesso completo garantito all'intero ecosistema GIURIMÌ, inclusi moduli avanzati e funzioni di simulazione specifiche per studenti.
                                         </p>
-                                        <p className="mt-2 text-xs text-muted-foreground leading-relaxed">
-                                            Accesso completo sbloccato. Hai tutti i privilegi riservati alla community accademica.
-                                        </p>
+                                    </div>
+                                </div>
+                                <div className="hidden md:block">
+                                    <div className="h-16 w-16 opacity-10 text-emerald-500">
+                                        <BadgeCheck className="h-full w-full" strokeWidth={1} />
                                     </div>
                                 </div>
                             </div>
                         </motion.div>
                     ) : (
-                        <InfoTile
-                            icon={BadgeCheck}
-                            label="Stato studente"
-                            value="Non verificato"
-                            hint="Verifica account per sbloccare l’accesso studenti (se idoneo)."
-                        />
+                        <motion.div variants={itemVariants}>
+                            <Card className="rounded-3xl border-border/60 bg-gradient-to-br from-card to-muted/20 border-dashed">
+                                <CardContent className="p-6 md:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+                                    <div className="space-y-2">
+                                        <h3 className="text-lg font-serif font-bold text-foreground">Sei uno studente universitario?</h3>
+                                        <p className="text-sm text-muted-foreground">Verifica il tuo account con l'email di ateneo per sbloccare l'accesso dedicato.</p>
+                                    </div>
+                                    <Button variant="default" className="rounded-full shadow-sm whitespace-nowrap">
+                                        Ottieni lo status VIP
+                                        <ChevronRight className="ml-2 h-4 w-4" />
+                                    </Button>
+                                </CardContent>
+                            </Card>
+                        </motion.div>
                     )}
-                </CardContent>
-            </Card>
 
-            {/* Privacy & Security */}
-            <Card className="rounded-2xl">
-                <CardHeader>
-                    <CardTitle>Privacy & Sicurezza</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-6">
-                    <div className="grid gap-4 md:grid-cols-3">
-                        <Pillar
-                            icon={ShieldCheck}
-                            title="Minimizzazione"
-                            desc="Raccogliamo solo ciò che serve per login, progressi e qualità del percorso."
-                        />
-                        <Pillar
-                            icon={Lock}
-                            title="Accessi protetti"
-                            desc="I contenuti personali sono accessibili solo al proprietario dell’account (RLS)."
-                        />
-                        <Pillar
-                            icon={FileText}
-                            title="Trasparenza"
-                            desc="Policy chiare, fonti esplicite e preferenze gestibili senza dark patterns."
-                        />
-                    </div>
-
-                    <div className="rounded-2xl border border-border bg-muted/20 p-5">
-                        <h4 className="text-sm font-semibold text-foreground mb-2">Controllo dei tuoi dati</h4>
-                        <p className="text-sm text-muted-foreground leading-relaxed">
-                            Qui potrai trovare (in arrivo) le azioni per scaricare i tuoi dati e richiedere la
-                            cancellazione dell’account. GIURIMì è un progetto educativo: la priorità è essere chiari,
-                            coerenti e rispettosi della tua privacy.
-                        </p>
-
-                        <div className="mt-4 flex flex-col sm:flex-row gap-3">
-                            <Button variant="outline" disabled className="justify-start">
-                                Scarica i tuoi dati (in arrivo)
-                            </Button>
-                            <Button variant="outline" disabled className="justify-start">
-                                Elimina account (in arrivo)
-                            </Button>
-                            <Button
-                                variant="outline"
-                                onClick={() => router.push("/privacy/cookie-preferences")}
-                                className="justify-start"
-                            >
-                                Preferenze cookie
-                            </Button>
+                    {/* Account Overview Grid */}
+                    <motion.div variants={itemVariants}>
+                        <h3 className="text-lg font-bold text-foreground mb-4 px-2">Panoramica Account</h3>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <InfoTile
+                                icon={Mail}
+                                label="Indirizzo Email"
+                                value={email}
+                            />
+                            <InfoTile
+                                icon={Calendar}
+                                label="Membro Dal"
+                                value={memberSince}
+                                capitalize
+                            />
                         </div>
+                    </motion.div>
 
-                        <p className="mt-3 text-xs text-muted-foreground/80">
-                            Nota: le azioni “in arrivo” sono placeholder UI. Non cambia la logica, ma prepara la
-                            struttura per quando implementerai export/cancellazione.
-                        </p>
-                    </div>
-                </CardContent>
-            </Card>
+                    {/* Privacy & Security Section */}
+                    <motion.div variants={itemVariants}>
+                        <Card className="rounded-3xl border-border bg-card shadow-sm overflow-hidden">
+                            <CardHeader className="bg-muted/30 border-b border-border/50 pb-6">
+                                <CardTitle className="text-lg">Privacy & Gestione Dati</CardTitle>
+                            </CardHeader>
+                            <CardContent className="p-6 md:p-8 space-y-8">
+                                {/* Pillars */}
+                                <div className="grid gap-6 md:grid-cols-3">
+                                    <Pillar
+                                        icon={ShieldCheck}
+                                        title="Minimizzazione"
+                                        desc="Raccogliamo solo i dati essenziali necessari al tuo percorso."
+                                        colorClass="text-blue-500 bg-blue-500/10 border-blue-500/20"
+                                    />
+                                    <Pillar
+                                        icon={Lock}
+                                        title="Zero Trust"
+                                        desc="Infrastruttura database isolata. Nessuno può leggere i tuoi asset."
+                                        colorClass="text-emerald-500 bg-emerald-500/10 border-emerald-500/20"
+                                    />
+                                    <Pillar
+                                        icon={FileText}
+                                        title="Trasparenza"
+                                        desc="Controllo totale sulle policy senza alcun dark pattern."
+                                        colorClass="text-purple-500 bg-purple-500/10 border-purple-500/20"
+                                    />
+                                </div>
 
-            {/* Closing note in manifesto tone */}
-            <Card className="rounded-2xl border border-border bg-neutral-900 text-white">
-                <CardContent className="p-6 md:p-8">
-                    <p className="text-sm md:text-base text-neutral-200 leading-relaxed">
-                        GIURIMì nasce per rendere il diritto comprensibile senza semplificazioni fuorvianti.
-                        Qui non “spieghiamo per vincere”: spieghiamo per dare strumenti reali.
-                    </p>
-                    <p className="mt-3 text-xs text-neutral-400">
-                        Progetto educativo. Non è consulenza legale.
-                    </p>
-                </CardContent>
-            </Card>
+                                {/* Danger Zone / Actions */}
+                                <div className="rounded-2xl border border-destructive/20 bg-destructive/5 p-6 space-y-4">
+                                    <div>
+                                        <h4 className="text-sm font-bold text-destructive mb-1">Zona di Controllo</h3>
+                                        <p className="text-sm text-muted-foreground leading-relaxed">
+                                            Gestisci l'esportazione dei tuoi progressi o richiedi l'estinzione definitiva dell'account dai nostri server in ottemperanza al GDPR.
+                                        </p>
+                                    </div>
+
+                                    <div className="flex flex-col sm:flex-row gap-3 pt-2">
+                                        <Button
+                                            variant="outline"
+                                            className="rounded-xl border-border hover:bg-muted"
+                                            onClick={() => router.push("/privacy/cookie-preferences")}
+                                        >
+                                            Preferenze Cookie
+                                        </Button>
+                                        <Button variant="outline" disabled className="rounded-xl border-border opacity-50 cursor-not-allowed">
+                                            Esporta Dati
+                                        </Button>
+                                        <Button variant="destructive" disabled className="rounded-xl opacity-50 cursor-not-allowed sm:ml-auto">
+                                            Elimina Profilo
+                                        </Button>
+                                    </div>
+                                </div>
+                            </CardContent>
+                        </Card>
+                    </motion.div>
+
+                </motion.div>
+            </div>
         </div>
     );
 }
 
-/* ---------- UI helpers (presentational only) ---------- */
+/* ---------- UI helpers ---------- */
 
 function InfoTile({
     icon: Icon,
     label,
     value,
-    hint,
     capitalize,
 }: {
     icon: any;
     label: string;
     value: string;
-    hint?: string;
     capitalize?: boolean;
 }) {
     return (
-        <div className="rounded-2xl border border-border bg-card p-5">
-            <div className="flex items-start gap-3">
-                <div className="mt-0.5 text-muted-foreground">
-                    <Icon className="h-4 w-4" />
+        <div className="rounded-2xl border border-border/60 bg-card p-5 hover:bg-muted/20 transition-colors">
+            <div className="flex items-center gap-4">
+                <div className="h-10 w-10 rounded-full bg-muted flex items-center justify-center shrink-0">
+                    <Icon className="h-4 w-4 text-muted-foreground" />
                 </div>
-                <div className="min-w-0">
-                    <p className="text-xs uppercase tracking-wide text-muted-foreground">{label}</p>
-                    <p className={`mt-1 text-base text-foreground ${capitalize ? "capitalize" : ""}`}>
+                <div className="min-w-0 overflow-hidden">
+                    <p className="text-xs uppercase tracking-wider text-muted-foreground font-medium truncate">{label}</p>
+                    <p className={`mt-0.5 text-base font-semibold text-foreground truncate ${capitalize ? "capitalize" : ""}`}>
                         {value}
                     </p>
-                    {hint && (
-                        <p className="mt-2 text-xs text-muted-foreground leading-relaxed">
-                            {hint}
-                        </p>
-                    )}
                 </div>
             </div>
         </div>
@@ -331,20 +329,22 @@ function Pillar({
     icon: Icon,
     title,
     desc,
+    colorClass
 }: {
     icon: any;
     title: string;
     desc: string;
+    colorClass: string;
 }) {
     return (
-        <div className="rounded-2xl border border-border bg-card p-5">
-            <div className="flex items-center gap-3 mb-2">
-                <div className="h-9 w-9 rounded-xl border border-border bg-muted/20 flex items-center justify-center">
-                    <Icon className="h-4 w-4 text-foreground" />
-                </div>
-                <h5 className="text-sm font-semibold text-foreground">{title}</h5>
+        <div className="space-y-3">
+            <div className={`h-10 w-10 rounded-xl flex items-center justify-center border ${colorClass}`}>
+                <Icon className="h-5 w-5" />
             </div>
-            <p className="text-sm text-muted-foreground leading-relaxed">{desc}</p>
+            <div>
+                <h5 className="text-sm font-bold text-foreground mb-1">{title}</h5>
+                <p className="text-sm text-muted-foreground leading-relaxed">{desc}</p>
+            </div>
         </div>
     );
 }
