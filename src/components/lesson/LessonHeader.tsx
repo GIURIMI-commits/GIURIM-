@@ -5,14 +5,14 @@ import { LessonMeta } from '@/types/content';
 
 export function LessonHeader({ lesson }: { lesson: LessonMeta }) {
     return (
-        <div className="mb-8 border-b pb-8">
-            <div className="flex items-center gap-2 text-sm text-neutral-500 mb-4">
+        <div className="mb-8 border-b pb-8 animate-in fade-in duration-700 slide-in-from-bottom-2">
+            <div className="flex items-center gap-2 text-sm text-neutral-500 mb-4 opacity-0 animate-[fadeIn_0.5s_ease-out_0.2s_forwards]">
                 <span className="uppercase tracking-wider font-semibold">{lesson.area.replace('area-', '').split('-')[1]}</span>
                 <span>/</span>
                 <span>{lesson.module}</span>
             </div>
 
-            <h1 className="text-4xl font-serif font-bold mb-4 text-neutral-900 dark:text-neutral-50">
+            <h1 className="text-4xl font-serif font-bold mb-4 text-neutral-900 dark:text-neutral-50 opacity-0 animate-[fadeIn_0.5s_ease-out_0.3s_forwards]">
                 {lesson.title}
             </h1>
 
