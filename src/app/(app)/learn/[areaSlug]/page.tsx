@@ -1,12 +1,35 @@
 import { redirect } from 'next/navigation';
 import Link from 'next/link';
-import { getModules, getLessons } from '@/lib/content/loader';
+import { getModules, getLessons, getCurriculum } from '@/lib/content/loader';
 import { AreaProgress, ModuleProgress } from '@/components/layout/AreaProgress';
+import { Metadata } from 'next';
 
 interface PageProps {
     params: {
         areaSlug: string;
     };
+}
+
+export async function generateStaticParams() {
+    const curriculum = await getCurriculum();
+    return curriculum.map((area) => ({
+        areaSlug: area.slug,
+    }));
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+    const { areaSlug } = await params;
+
+    // Capitalize and format the slug for the title
+    const formattedTitle = areaSlug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+
+    return {
+        title: `Corso: ${formattedTitle} | GIURIMÌ`,
+        description: `Esplora il corso completo di ${formattedTitle} su GIURIMÌ. Moduli interattivi, lezioni chiare e quiz per la tua preparazione giuridica.`,
+        alternates: {
+            canonical: `${process.env.NEXT_PUBLIC_APP_URL || 'https://giurimi.it'}/learn/${areaSlug}`
+        }
+    }
 }
 
 export default async function AreaPage({ params }: PageProps) {
@@ -21,8 +44,31 @@ export default async function AreaPage({ params }: PageProps) {
             firstLessonSlug: lessons.length > 0 ? lessons[0].slug : null
         };
     }));
+
+    const formattedTitle = areaSlug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+
+    const jsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'Course',
+        name: `Corso: ${formattedTitle}`,
+        description: `Esplora il corso completo di ${formattedTitle} su GIURIMÌ. Moduli interattivi, lezioni chiare e quiz per la tua preparazione giuridica.`,
+        provider: {
+            '@type': 'Organization',
+            name: 'GIURIMÌ',
+            url: process.env.NEXT_PUBLIC_APP_URL || 'https://giurimi.it'
+        },
+        hasCourseInstance: {
+            '@type': 'CourseInstance',
+            courseMode: 'online',
+        }
+    };
+
     return (
         <div className="space-y-6 sm:space-y-8 px-2 sm:px-0">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
             <h1 className="text-2xl sm:text-3xl font-serif font-bold capitalize">{areaSlug.replace(/-/g, ' ')}</h1>
 
             <AreaProgress areaSlug={areaSlug} modulesWithLessons={modulesWithLessons} />

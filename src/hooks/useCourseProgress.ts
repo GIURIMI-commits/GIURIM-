@@ -92,6 +92,21 @@ export function useCourseProgress(curriculum: AreaMeta[]) {
         return { total, completed, percentage: total === 0 ? 0 : Math.round((completed / total) * 100) };
     }, [curriculum, getAreaStats]);
 
+    const getNextLesson = useCallback(() => {
+        for (const area of curriculum) {
+            if (!area.modules) continue;
+            for (const mod of area.modules) {
+                if (!mod.lessons) continue;
+                for (const lesson of mod.lessons) {
+                    if (!isCompleted(lesson.slug)) {
+                        return { area, module: mod, lesson };
+                    }
+                }
+            }
+        }
+        return null; // All done!
+    }, [curriculum, isCompleted]);
+
     return {
         progressMap,
         loading,
@@ -99,6 +114,7 @@ export function useCourseProgress(curriculum: AreaMeta[]) {
         getModuleStats,
         getAreaStats,
         getGlobalStats,
+        getNextLesson,
         refresh: fetchAllProgress
     };
 }

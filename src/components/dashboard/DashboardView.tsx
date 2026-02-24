@@ -16,8 +16,9 @@ interface DashboardViewProps {
 
 export function DashboardView({ curriculum }: DashboardViewProps) {
     const { profile, loading } = useProfile();
-    const { getGlobalStats } = useCourseProgress(curriculum);
+    const { getGlobalStats, getNextLesson } = useCourseProgress(curriculum);
     const { percentage, completed, total } = getGlobalStats();
+    const nextLessonData = getNextLesson();
 
     if (loading) return <div>Caricamento...</div>;
 
@@ -56,19 +57,33 @@ export function DashboardView({ curriculum }: DashboardViewProps) {
             {/* CONTINUE LEARNING */}
             <section>
                 <h2 className="text-xl font-bold mb-4">Continua a studiare</h2>
-                {/* Placeholder for "Next Lesson" logic */}
-                <Card className="border-l-4 border-l-primary">
-                    <CardHeader>
-                        <div className="text-sm font-bold text-primary uppercase tracking-wider mb-1">PROSSIMA LEZIONE CONSIGLIATA</div>
-                        <CardTitle>Perché esistono le regole?</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                        <p className="text-neutral-500 mb-4">Fondamenta del Diritto • Modulo 1.1</p>
-                        <Link href="/learn/area-1-fondamenta/mod-1.1-cose-il-diritto/lez-1.1.1">
-                            <Button>Riprendi Lezione</Button>
-                        </Link>
-                    </CardContent>
-                </Card>
+                {nextLessonData ? (
+                    <Card className="border-l-4 border-l-primary">
+                        <CardHeader>
+                            <div className="text-sm font-bold text-primary uppercase tracking-wider mb-1">PROSSIMA LEZIONE CONSIGLIATA</div>
+                            <CardTitle>{nextLessonData.lesson.title}</CardTitle>
+                        </CardHeader>
+                        <CardContent>
+                            <p className="text-neutral-500 mb-4">{nextLessonData.area.title} • {nextLessonData.module.title}</p>
+                            <Link href={`/learn/${nextLessonData.area.slug}/${nextLessonData.module.slug}/${nextLessonData.lesson.slug}`}>
+                                <Button>Vai alla Lezione</Button>
+                            </Link>
+                        </CardContent>
+                    </Card>
+                ) : (
+                    <Card className="border-l-4 border-l-emerald-500">
+                        <CardHeader>
+                            <div className="text-sm font-bold text-emerald-600 uppercase tracking-wider mb-1">COMPLETATO</div>
+                            <CardTitle>Sei un maestro del Diritto! 🎓</CardTitle>
+                        </CardHeader>
+                        <CardContent>
+                            <p className="text-neutral-500 mb-4">Hai completato l'intero percorso formativo di GIURIMÌ.</p>
+                            <Link href="/mappa">
+                                <Button variant="outline">Esplora la Mappa</Button>
+                            </Link>
+                        </CardContent>
+                    </Card>
+                )}
             </section>
 
             {/* OVERALL PROGRESS */}

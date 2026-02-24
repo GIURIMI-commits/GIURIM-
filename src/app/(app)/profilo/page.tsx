@@ -15,6 +15,7 @@ import {
     Info,
     LogOut,
 } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function ProfilePage() {
     const { profile, loading } = useProfile();
@@ -104,10 +105,28 @@ export default function ProfilePage() {
                                     </span>
 
                                     {isVerifiedStudent && (
-                                        <span className="inline-flex items-center gap-1 rounded-full border border-border bg-neutral-900 text-white px-2.5 py-1 text-xs">
-                                            <BadgeCheck className="h-3.5 w-3.5" />
-                                            Studente verificato
-                                        </span>
+                                        <motion.span
+                                            initial={{ opacity: 0, scale: 0.8 }}
+                                            animate={{ opacity: 1, scale: 1 }}
+                                            transition={{ duration: 0.5, type: 'spring' }}
+                                            className="relative inline-flex items-center gap-1 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-500 dark:text-emerald-400 px-3 py-1 text-xs font-medium overflow-hidden"
+                                        >
+                                            <motion.div
+                                                animate={{
+                                                    boxShadow: ["0px 0px 0px 0px rgba(16, 185, 129, 0)", "0px 0px 8px 2px rgba(16, 185, 129, 0.4)", "0px 0px 0px 0px rgba(16, 185, 129, 0)"]
+                                                }}
+                                                transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+                                                className="absolute inset-0 rounded-full"
+                                            />
+                                            {/* Shimmer effect */}
+                                            <motion.div
+                                                animate={{ x: ["-100%", "200%"] }}
+                                                transition={{ duration: 3, repeat: Infinity, ease: "linear", repeatDelay: 1 }}
+                                                className="absolute inset-0 bg-gradient-to-r from-transparent via-emerald-400/20 to-transparent skew-x-12"
+                                            />
+                                            <BadgeCheck className="h-4 w-4 relative z-10" />
+                                            <span className="relative z-10">Studente verificato</span>
+                                        </motion.span>
                                     )}
                                 </div>
 
@@ -160,16 +179,42 @@ export default function ProfilePage() {
                         value={memberSince}
                         hint="Data di creazione del profilo GIURIMì."
                     />
-                    <InfoTile
-                        icon={BadgeCheck}
-                        label="Stato studente"
-                        value={isVerifiedStudent ? "Verificato" : "Non verificato"}
-                        hint={
-                            isVerifiedStudent
-                                ? "Accesso completo ai corsi studenti."
-                                : "Verifica account per sbloccare l’accesso studenti (se idoneo)."
-                        }
-                    />
+                    {isVerifiedStudent ? (
+                        <motion.div
+                            whileHover={{ scale: 1.02 }}
+                            className="relative rounded-2xl p-[1.5px] overflow-hidden group"
+                        >
+                            {/* Animated gradient border */}
+                            <motion.div
+                                className="absolute inset-[-50%] bg-[conic-gradient(from_0deg_at_50%_50%,transparent_0%,#10b981_50%,transparent_100%)] opacity-50"
+                                animate={{ rotate: 360 }}
+                                transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
+                            />
+                            <div className="relative h-full rounded-2xl bg-card/90 backdrop-blur-xl p-5 z-10">
+                                <div className="flex items-start gap-3">
+                                    <div className="mt-0.5 text-emerald-500">
+                                        <BadgeCheck className="h-5 w-5" />
+                                    </div>
+                                    <div className="min-w-0">
+                                        <p className="text-xs uppercase tracking-wide text-emerald-600 dark:text-emerald-500 font-bold mb-1">Status Esclusivo</p>
+                                        <p className="text-lg font-bold text-foreground">
+                                            Studente Verificato
+                                        </p>
+                                        <p className="mt-2 text-xs text-muted-foreground leading-relaxed">
+                                            Accesso completo sbloccato. Hai tutti i privilegi riservati alla community accademica.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </motion.div>
+                    ) : (
+                        <InfoTile
+                            icon={BadgeCheck}
+                            label="Stato studente"
+                            value="Non verificato"
+                            hint="Verifica account per sbloccare l’accesso studenti (se idoneo)."
+                        />
+                    )}
                 </CardContent>
             </Card>
 
