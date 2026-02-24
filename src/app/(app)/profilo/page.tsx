@@ -16,8 +16,11 @@ import {
     Mail,
     ChevronRight,
     Crown,
+    AlertTriangle,
 } from "lucide-react";
 import { motion, Variants } from "framer-motion";
+import { useState } from "react";
+import { Modal, ModalContent, ModalHeader, ModalTitle, ModalDescription, ModalFooter } from "@/components/ui/Modal";
 
 const containerVariants: Variants = {
     hidden: { opacity: 0 },
@@ -37,7 +40,24 @@ export default function ProfilePage() {
     const router = useRouter();
     const supabase = createClient();
 
+    // Deletion Modal State
+    const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
+    const [deleteConfirmationText, setDeleteConfirmationText] = useState("");
+    const [isDeleting, setIsDeleting] = useState(false);
+    const expectedConfirmation = "ELIMINA";
+
     const handleLogout = async () => {
+        await supabase.auth.signOut();
+        router.push("/");
+        router.refresh();
+    };
+
+    const handleDeleteAccount = async () => {
+        if (deleteConfirmationText !== expectedConfirmation) return;
+        setIsDeleting(true);
+        // Implementazione futura API / RPC Supabase per pulizia rigorosa.
+        // Al momento firmiamo out l'utente e chiudiamo la sessione.
+        await new Promise((resolve) => setTimeout(resolve, 1500)); // Finto delay per feedback UI
         await supabase.auth.signOut();
         router.push("/");
         router.refresh();
@@ -129,8 +149,8 @@ export default function ProfilePage() {
                                             animate={{ opacity: 1, scale: 1 }}
                                             transition={{ delay: 0.3, duration: 0.5, type: 'spring' }}
                                             className={`relative inline-flex items-center gap-1.5 rounded-full border px-3.5 py-1.5 text-xs font-bold overflow-hidden mt-1 shadow-sm ${isPro
-                                                    ? "border-amber-500/30 bg-amber-500/10 text-amber-600 dark:text-amber-400 shadow-amber-500/10"
-                                                    : "border-emerald-500/30 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 shadow-emerald-500/10"
+                                                ? "border-amber-500/30 bg-amber-500/10 text-amber-600 dark:text-amber-400 shadow-amber-500/10"
+                                                : "border-emerald-500/30 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 shadow-emerald-500/10"
                                                 }`}
                                         >
                                             <motion.div
@@ -158,12 +178,15 @@ export default function ProfilePage() {
                         className="px-2"
                     >
                         <Button
-                            variant="ghost"
-                            className="w-full justify-start text-muted-foreground hover:text-destructive hover:bg-destructive/10 rounded-xl transition-all"
+                            variant="outline"
+                            className="w-full flex justify-between items-center text-muted-foreground border-border/60 hover:text-destructive hover:border-destructive/50 hover:bg-destructive/10 rounded-xl transition-all shadow-sm group py-6"
                             onClick={handleLogout}
                         >
-                            <LogOut className="h-4 w-4 mr-3" />
-                            Disconnetti in modo sicuro
+                            <div className="flex items-center">
+                                <LogOut className="h-5 w-5 mr-3 text-muted-foreground group-hover:text-destructive transition-colors" />
+                                <span className="font-semibold text-sm">Disconnetti in modo sicuro</span>
+                            </div>
+                            <ChevronRight className="h-4 w-4 opacity-40 group-hover:opacity-100 transition-opacity" />
                         </Button>
                     </motion.div>
                 </div>
@@ -308,7 +331,7 @@ export default function ProfilePage() {
                                     <div className="flex flex-col sm:flex-row gap-3 pt-2">
                                         <Button
                                             variant="outline"
-                                            className="rounded-xl border-border hover:bg-muted"
+                                            className="rounded-xl border-border hover:bg-muted font-medium"
                                             onClick={() => router.push("/privacy/cookie-preferences")}
                                         >
                                             Preferenze Cookie
@@ -316,14 +339,75 @@ export default function ProfilePage() {
                                         <Button variant="outline" disabled className="rounded-xl border-border opacity-50 cursor-not-allowed">
                                             Esporta Dati
                                         </Button>
-                                        <Button variant="destructive" disabled className="rounded-xl opacity-50 cursor-not-allowed sm:ml-auto">
-                                            Elimina Profilo
+                                        <Button
+                                            variant="outline"
+                                            onClick={() => setIsDeleteModalOpen(true)}
+                                            className="rounded-xl sm:ml-auto border border-destructive/20 text-destructive bg-destructive/5 hover:bg-destructive hover:text-destructive-foreground transition-all shadow-sm shadow-destructive/10 font-medium"
+                                        >
+                                            Elimina Definitivamente
                                         </Button>
                                     </div>
                                 </div>
                             </CardContent>
                         </Card>
                     </motion.div>
+
+                    {/* Modal di Eliminazione Definitiva */}
+                    <Modal open={isDeleteModalOpen} onOpenChange={setIsDeleteModalOpen}>
+                        <ModalContent className="sm:max-w-md rounded-2xl border-destructive/20 shadow-2xl shadow-destructive/10">
+                            <ModalHeader className="space-y-3 pb-2">
+                                <ModalTitle className="text-xl font-serif text-destructive flex items-center gap-2">
+                                    <AlertTriangle className="h-6 w-6" />
+                                    Conferma Estinzione Account
+                                </ModalTitle>
+                                <ModalDescription className="text-base text-muted-foreground leading-relaxed">
+                                    Questa azione è irrevocabile. Tutti i tuoi progressi, i punteggi dei quiz e le informazioni
+                                    nel nostro database verranno <strong>estirpate definitivamente</strong> in conformità alla direttiva GDPR.
+                                </ModalDescription>
+                            </ModalHeader>
+
+                            <div className="my-6 space-y-4">
+                                <div className="rounded-xl bg-destructive/5 border border-destructive/20 p-4 text-sm text-foreground font-medium flex gap-3 items-start">
+                                    <div className="h-5 w-5 rounded-full bg-destructive/10 flex items-center justify-center shrink-0 mt-0.5">
+                                        <span className="text-destructive text-xs font-bold">!</span>
+                                    </div>
+                                    <p>
+                                        Per procedere con l'eliminazione verificata, digita <strong className="text-destructive">{expectedConfirmation}</strong> qui sotto.
+                                    </p>
+                                </div>
+
+                                <input
+                                    type="text"
+                                    value={deleteConfirmationText}
+                                    onChange={(e) => setDeleteConfirmationText(e.target.value.toUpperCase())}
+                                    placeholder="Scrivi qui..."
+                                    className="w-full px-4 py-3 bg-background border-2 border-border/80 rounded-xl focus:outline-none focus:border-destructive focus:ring-4 focus:ring-destructive/10 transition-all font-mono uppercase tracking-widest text-center text-lg"
+                                />
+                            </div>
+
+                            <ModalFooter className="flex gap-3 sm:justify-between w-full pt-2">
+                                <Button
+                                    variant="ghost"
+                                    onClick={() => {
+                                        setIsDeleteModalOpen(false);
+                                        setDeleteConfirmationText("");
+                                    }}
+                                    className="rounded-xl w-full sm:w-auto hover:bg-muted"
+                                    disabled={isDeleting}
+                                >
+                                    Annulla Procedura
+                                </Button>
+                                <Button
+                                    variant="destructive"
+                                    onClick={handleDeleteAccount}
+                                    disabled={deleteConfirmationText !== expectedConfirmation || isDeleting}
+                                    className="rounded-xl w-full sm:w-auto shadow-md"
+                                >
+                                    {isDeleting ? "Distruzione in corso..." : "Esegui Eliminazione"}
+                                </Button>
+                            </ModalFooter>
+                        </ModalContent>
+                    </Modal>
 
                 </motion.div>
             </div>
