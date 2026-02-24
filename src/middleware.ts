@@ -41,23 +41,57 @@ export async function middleware(request: NextRequest) {
         data: { user },
     } = await supabase.auth.getUser();
 
-    // Protected routes pattern
-    const isProtectedRoute = request.nextUrl.pathname.startsWith('/dashboard') ||
-        request.nextUrl.pathname.startsWith('/learn') ||
-        request.nextUrl.pathname.startsWith('/profilo') ||
-        request.nextUrl.pathname.startsWith('/admin') ||
-        request.nextUrl.pathname.startsWith('/corte/nuovo');
+    const path = request.nextUrl.pathname;
 
-    // Auth routes (redirect if already logged in)
-    const isAuthRoute = request.nextUrl.pathname.startsWith('/login') ||
-        request.nextUrl.pathname.startsWith('/registrazione');
+    // 1. Definiamo in modo esplicito le route pubbliche e di auth
+    const isAuthRoute = path.startsWith('/login') || path.startsWith('/registrazione');
 
-    if (isProtectedRoute && !user) {
-        return NextResponse.redirect(new URL('/login', request.url));
-    }
+    // Le API pubbliche (es: auth callback, webhooks) o statiche
+    const isPublicApiRoute = path.startsWith('/api/auth');
 
+    // Le pagine pubbliche vere e proprie
+    const isPublicPageRoute =
+        path === '/' ||
+        path === '/chi-siamo' ||
+        path === '/privacy' ||
+        path === '/privacy/cookie-preferences' ||
+        path === '/terms' ||
+        path === '/status' ||
+        path === '/studenti' ||
+        path === '/fonti' ||
+        path.startsWith('/mappa') ||
+        path.startsWith('/glossario') ||
+        path.startsWith('/corte') && !path.startsWith('/corte/nuovo');
+
+    // 2. Auth Routes redirect logic
     if (isAuthRoute && user) {
         return NextResponse.redirect(new URL('/dashboard', request.url));
+    }
+
+    // 3. API Protection: Qualsiasi API non esplicitamente pubblica richiede autenticazione
+    if (path.startsWith('/api/') && !isPublicApiRoute && !user) {
+        return NextResponse.json(
+            { error: 'Unauthorized. Please provide a valid session.' },
+            { status: 401 }
+        );
+    }
+
+    // 4. Page Protection: Se la pagina NON è pubblica e l'utente NON è loggato -> login
+    // Permettiamo temporaneamente i percorsi dinamici di /learn come semi-pubblici (freemium)?
+    // Nella tua app /learn è protetto (tranne mappa). Se /learn/[area] è pubblico rimuovilo dalle protette.
+    // Presumiamo che /learn sia protetto dalle lezioni a pagamento come in piattaforma standard:
+    const isProtectedRoute =
+        path.startsWith('/dashboard') ||
+        path.startsWith('/profilo') ||
+        path.startsWith('/admin') ||
+        path.startsWith('/learn') || // Metti in commento se /learn è 100% gratuito per i non-loggati
+        path.startsWith('/corte/nuovo');
+
+    if (isProtectedRoute && !user) {
+        // Puoi aggiungere un redirect parameter per riportarlo alla pagina giusta dopo il login
+        const redirectUrl = new URL('/login', request.url);
+        redirectUrl.searchParams.set('next', path);
+        return NextResponse.redirect(redirectUrl);
     }
 
     return response;
