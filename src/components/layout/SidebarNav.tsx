@@ -66,6 +66,23 @@ export function SidebarNav({ curriculum }: SidebarNavProps) {
         }
     }, [pathname, curriculum]); // Run on mount and path change
 
+    // Auto-collapse on tablet screens (768px - 1024px)
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth >= 768 && window.innerWidth < 1024) {
+                setIsCollapsed(true);
+            } else if (window.innerWidth >= 1024) {
+                setIsCollapsed(false);
+            }
+        };
+
+        // Run once on mount
+        handleResize();
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
     const toggleArea = (slug: string) => {
         const next = new Set(expandedAreas);
         if (next.has(slug)) next.delete(slug);
