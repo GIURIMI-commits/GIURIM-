@@ -263,7 +263,7 @@ export default function ProfilePage() {
                                 {/* Danger Zone / Actions */}
                                 <div className="rounded-2xl border border-destructive/20 bg-destructive/5 p-6 space-y-4">
                                     <div>
-                                        <h4 className="text-sm font-bold text-destructive mb-1">Zona di Controllo</h3>
+                                        <h4 className="text-sm font-bold text-destructive mb-1">Zona di Controllo</h4>
                                         <p className="text-sm text-muted-foreground leading-relaxed">
                                             Gestisci l'esportazione dei tuoi progressi o richiedi l'estinzione definitiva dell'account dai nostri server in ottemperanza al GDPR.
                                         </p>
