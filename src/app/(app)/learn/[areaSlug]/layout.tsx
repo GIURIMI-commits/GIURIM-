@@ -8,7 +8,7 @@ export default async function AreaAccessLayout({
     params,
 }: {
     children: React.ReactNode;
-    params: { areaSlug: string };
+    params: Promise<{ areaSlug: string }>;
 }) {
     const { areaSlug } = await params;
 
