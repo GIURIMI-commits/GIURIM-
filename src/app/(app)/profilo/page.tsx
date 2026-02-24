@@ -309,14 +309,14 @@ function InfoTile({
     capitalize?: boolean;
 }) {
     return (
-        <div className="rounded-2xl border border-border/60 bg-card p-5 hover:bg-muted/20 transition-colors">
-            <div className="flex items-start sm:items-center gap-4">
+        <div className="rounded-2xl border border-border/60 bg-card p-5 hover:bg-muted/20 transition-colors w-full overflow-hidden">
+            <div className="flex items-start sm:items-center gap-4 w-full">
                 <div className="h-10 w-10 mt-1 sm:mt-0 rounded-full bg-muted flex items-center justify-center shrink-0">
                     <Icon className="h-4 w-4 text-muted-foreground" />
                 </div>
-                <div className="min-w-0 flex-1">
+                <div className="min-w-0 flex-1 w-full relative">
                     <p className="text-xs uppercase tracking-wider text-muted-foreground font-medium truncate">{label}</p>
-                    <p className={`mt-0.5 text-base sm:text-lg font-semibold text-foreground break-all sm:break-normal ${capitalize ? "capitalize" : ""}`}>
+                    <p className={`mt-0.5 text-base sm:text-lg font-semibold text-foreground break-words sm:break-all ${capitalize ? "capitalize" : ""}`}>
                         {value}
                     </p>
                 </div>
