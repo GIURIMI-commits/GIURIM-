@@ -16,7 +16,7 @@ export function VideoEmbed({ url, title, source, note }: VideoEmbedProps) {
     };
 
     const videoId = getYoutubeId(url);
-    const embedUrl = videoId ? `https://www.youtube.com/embed/${videoId}` : null;
+    const embedUrl = videoId ? `https://www.youtube-nocookie.com/embed/${videoId}?rel=0` : null;
 
     if (!embedUrl) {
         return (
