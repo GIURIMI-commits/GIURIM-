@@ -16,9 +16,9 @@ import {
     Mail,
     ChevronRight,
 } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
-const containerVariants = {
+const containerVariants: Variants = {
     hidden: { opacity: 0 },
     show: {
         opacity: 1,
@@ -26,7 +26,7 @@ const containerVariants = {
     },
 };
 
-const itemVariants = {
+const itemVariants: Variants = {
     hidden: { opacity: 0, y: 15 },
     show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 300, damping: 24 } },
 };
@@ -67,13 +67,13 @@ export default function ProfilePage() {
     const isVerifiedStudent = profile?.student_status === "verified";
 
     return (
-        <div className="max-w-6xl mx-auto px-4 md:px-8 py-10 lg:py-16">
-            <div className="mb-10 lg:mb-14">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-8 md:py-10 lg:py-16">
+            <div className="mb-8 md:mb-10 lg:mb-14 text-center md:text-left">
                 <motion.h1
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.5, type: 'spring' }}
-                    className="text-3xl md:text-5xl font-serif font-bold text-foreground tracking-tight"
+                    className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-foreground tracking-tight"
                 >
                     Dashboard Personale
                 </motion.h1>
@@ -81,7 +81,7 @@ export default function ProfilePage() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.2, duration: 0.5 }}
-                    className="mt-3 text-muted-foreground max-w-2xl text-lg"
+                    className="mt-3 text-muted-foreground max-w-2xl text-base md:text-lg mx-auto md:mx-0"
                 >
                     Il tuo centro di controllo GIURIMÌ. Dati al sicuro, essenziali e sotto il tuo dominio.
                 </motion.p>
@@ -90,7 +90,7 @@ export default function ProfilePage() {
             <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 items-start">
 
                 {/* --- LEFT COLUMN: Sticky Digital ID Card --- */}
-                <div className="md:col-span-4 lg:col-span-3 md:sticky md:top-24 space-y-6">
+                <div className="md:col-span-4 lg:col-span-3 md:sticky md:top-24 space-y-4 md:space-y-6">
                     <motion.div
                         initial={{ opacity: 0, scale: 0.95 }}
                         animate={{ opacity: 1, scale: 1 }}
@@ -310,13 +310,13 @@ function InfoTile({
 }) {
     return (
         <div className="rounded-2xl border border-border/60 bg-card p-5 hover:bg-muted/20 transition-colors">
-            <div className="flex items-center gap-4">
-                <div className="h-10 w-10 rounded-full bg-muted flex items-center justify-center shrink-0">
+            <div className="flex items-start sm:items-center gap-4">
+                <div className="h-10 w-10 mt-1 sm:mt-0 rounded-full bg-muted flex items-center justify-center shrink-0">
                     <Icon className="h-4 w-4 text-muted-foreground" />
                 </div>
-                <div className="min-w-0 overflow-hidden">
+                <div className="min-w-0 flex-1">
                     <p className="text-xs uppercase tracking-wider text-muted-foreground font-medium truncate">{label}</p>
-                    <p className={`mt-0.5 text-base font-semibold text-foreground truncate ${capitalize ? "capitalize" : ""}`}>
+                    <p className={`mt-0.5 text-base sm:text-lg font-semibold text-foreground break-all sm:break-normal ${capitalize ? "capitalize" : ""}`}>
                         {value}
                     </p>
                 </div>
