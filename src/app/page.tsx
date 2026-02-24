@@ -280,6 +280,32 @@ export default function Home() {
               </Card>
             </div>
 
+            {/* Risorse Banner */}
+            <div className="mt-8 animate-in fade-in slide-in-from-bottom-6 duration-700">
+              <Card className="rounded-2xl border border-indigo-200 dark:border-indigo-900/50 bg-indigo-50/40 dark:bg-indigo-900/10 shadow-sm p-8 flex flex-col md:flex-row items-center gap-8 justify-between group hover:shadow-md transition-all">
+                <div>
+                  <div className="flex items-center gap-2 mb-2">
+                    <BookOpen className="h-5 w-5 text-indigo-600 dark:text-indigo-400" />
+                    <p className="text-xs uppercase tracking-widest text-indigo-600 dark:text-indigo-400 font-bold">
+                      Nuova Libreria
+                    </p>
+                  </div>
+                  <h3 className="text-2xl font-serif font-bold text-foreground">
+                    Risorse e Letture Consigliate
+                  </h3>
+                  <p className="mt-3 text-muted-foreground leading-relaxed max-w-2xl">
+                    Hai bisogno di un manuale per l'università o un compendio per preparare un concorso? Abbiamo raccolto i migliori volumi di Diritto diviso per Area e Livello (Principiante, Intermedio, Avanzato). Trova subito il testo giusto per te.
+                  </p>
+                </div>
+                <Link href="/risorse" className="shrink-0 w-full md:w-auto">
+                  <Button className="rounded-full w-full md:w-auto bg-indigo-600 hover:bg-indigo-700 text-white shadow-sm hover:shadow-md transition-all border-0">
+                    Sfoglia la Libreria
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
+              </Card>
+            </div>
+
             <p className="mt-10 text-center text-xs text-muted-foreground">
               Nota: l’accesso gratuito per studenti è riservato a chi registra un’email istituzionale
               e conferma l’indirizzo. I dettagli su gestione e protezione dati sono pubblicati nella privacy policy.

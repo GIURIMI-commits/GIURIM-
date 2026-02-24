@@ -20,6 +20,7 @@ L'obiettivo è abbandonare il semplice testo "a cascata" del markdown tradiziona
 - **NO Titoli Markdown nudi (`##` , `###`)**: Fanno sembrare la piattaforma amatoriale.
 - **NO grassetti casuali:** Usa il grassetto solo per 1 max 2 parole pivotali per frase.
 - **NO `<div className="mt-4">` isolati dentro le Card o nel testo libero:** Causa un *Hydration Error* critico su Next.js (perché MDX lo avvolgerà in un `<p>`). Usa sempre `<span className="block mt-4">` al suo posto.
+- **NO "Muri di testo" o paragrafi nudi per spiegare processi/metafore:** Non scrivere mai sequenze di paragrafi nudi testuali per spiegare una logica a stadi. Usa SEMPRE i componenti visivi (`<Concept>` se è una metafora/definizione coi bullet point con emoji, `<CardBlock>`, `<Steps>`) per incapsulare e formattare in modo "Premium" le spiegazioni lunghe o sequenziali.
 
 ---
 
@@ -132,10 +133,9 @@ Metti sempre esempi Pratici a fine argomento.
 ```
 
 ### L) Interactive / 3D Graphics
-Se la lezione contiene concetti complessi, inserisci i componenti sviluppati custom in React/FramerMotion all'inizio o al centro.
+Se la lezione contiene concetti complessi, inserisci i componenti sviluppati custom in React/FramerMotion all'inizio o al centro. (Devono essere componenti coerenti con l'argomento).
 ```mdx
 <AnimatedObbligazione />
-<AnimatedTimeline />
 ```
 
 ### M) Sezione Video (Placeholder)
@@ -187,15 +187,16 @@ REGOLE DI FORMATTAZIONE MDX (TASSOVITATIVE):
    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
      <CardBlock title="Categoria 1">Descrizione.<br/><span className="block mt-4"><Highlight color="blue">Esempio</Highlight></span></CardBlock>
    </div>
-6. Cita SEMPRE gli articoli del Codice Civile chiusi dentro il tag espandibile `<Technical> **Art. X.** Testo di legge.</Technical>`.
-7. Fai sempre Esempi finali usando il layout a 2 colonne:
+6. DIVIETO DI "MURI DI TESTO" E RIPETIZIONI TESTUALI: Quando spieghi un processo a fasi, una metafora o un elenco logico, NON scrivere MAI paragrafi di testo nudo o finti elenchi testuali uno sotto l'altro. Devi SEMPRE strutturarli usando i blocchi visivi eleganti: usa `<Concept>` (per metafore, inserendo le frasi in span separati con emoji), `<Steps>` (per processi sequenziali) o `<CardBlock>`. Inoltre, se prevedi un elemento animato/interattivo per spiegare un concetto, non spoilerare o ripetere a testo nudo noioso l'intero contenuto subito prima di esso.
+7. Cita SEMPRE gli articoli del Codice Civile chiusi dentro il tag espandibile `<Technical> **Art. X.** Testo di legge.</Technical>`.
+8. Fai sempre Esempi finali usando il layout a 2 colonne:
    <Row className="lg:grid-cols-2">
      <Col><Example type="positive" title="Caso">Testo</Example></Col>
      <Col><Example type="negative" title="Caso">Testo</Example></Col>
    </Row>
-8. Prevedi sempre in coda un placeholder commentato in HTML (`{/* VIDEO PLACEHOLDER: ... */}`) in cui indichi la query di ricerca che si adatta meglio alla documentazione e al reperimento di un video di un docente o accademico per completare lo studio.
-9. Cita nel testo i termini di glossario avvolgendoli in `<GlossaryTerm id="id-del-termine">termine</GlossaryTerm>`.
-10. Inserire sempre un blocco quiz (`<QuizBlock />`) e alla fine il `<ResourceFooter>` con le primarySources.
+9. Prevedi sempre in coda un placeholder commentato in HTML (`{/* VIDEO PLACEHOLDER: ... */}`) in cui indichi la query di ricerca che si adatta meglio alla documentazione e al reperimento di un video di un docente o accademico per completare lo studio.
+10. Cita nel testo i termini di glossario avvolgendoli in `<GlossaryTerm id="id-del-termine">termine</GlossaryTerm>`.
+11. Inserire sempre un blocco quiz (`<QuizBlock />`) e alla fine il `<ResourceFooter>` con le primarySources.
 
 11. Se includi il quiz, l'oggetto YAML *DEVE* avere ESATTAMENTE la struttura definita nell'interfaccia Typescript in questo modo:
     quiz:
@@ -217,8 +218,10 @@ REGOLE DI FORMATTAZIONE MDX (TASSOVITATIVE):
             - "Punto chiave 1 che deve trattare"
             - "Punto chiave 2 che deve trattare"
 
-12. COMPONENTI DINAMICI E ANIMATI: Devi SEMPRE ideare un componente interattivo custom (es. `<AnimatedSchema... />`) per spiegare visivamente il concetto più complesso o tecnico della lezione (es. una timeline, un imbuto a filtri, una comparazione di card animata). Inseriscilo nel testo MDX. Poi, scrivi *in fondo al documento* (fuori dal MDX renderizzato, dentro un blocco ```tsx commentato) una bozza di codice React + Framer Motion per quel componente. 
-13. PREVENZIONE ERRORI (ZERO HYDRATION ERRORS): Nel codice dei componenti dinamici e nel testo MDX, presta la massima attenzione a non violare le regole HTML di base (es. NON annidare mai `<div ...>` o `<button>` all'interno di `<p>`). Usa sempre `<span className="block">` se ti serve un blocco spaziatore testuale all'interno di card o paragrafi.
+12. COMPONENTI DINAMICI E ANIMATI (ATTENZIONE CRITICA):
+    **NON INVENTARE MAI TAG REACT INESISTENTI NEL TESTO MDX (es. NON inserire `<AnimatedMioComponente />` nel mdx).** 
+    Se l'argomento è complesso, immagina pure un componente custom (es. una timeline o un imbuto animato). Ma **NON** inserire il relativo tag all'interno del codice MDX principale, altrimenti l'applicazione andrà in CRASH (Runtime Error / Component not defined). 
+    Invece, scrivi semplicemente *in fondo al documento* (fuori dal MDX renderizzato, dentro un blocco ```tsx commentato) una bozza di codice React + Framer Motion per un componente che riterresti utile. Sarà poi uno sviluppatore a crearlo e importarlo correttamente, e solo DOPO potremo inserirlo nel MDX.
 
 L'ARGOMENTO DELLA LEZIONE È: [INSERISCI QUI IL TITOLO/ARGOMENTO]
 Genera l'intero codice MDX.

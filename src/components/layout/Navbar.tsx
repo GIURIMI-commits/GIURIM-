@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Scale, Menu, X } from 'lucide-react';
+import { Scale, Menu, X, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import { useProfile } from '@/hooks/useProfile';
 
@@ -34,12 +34,27 @@ export function Navbar() {
                         <Link href="/chi-siamo" className="hover:text-foreground transition-colors">
                             Chi siamo
                         </Link>
-                        <Link href="/glossario" className="hover:text-foreground transition-colors">
-                            Glossario
-                        </Link>
-                        <Link href="/studenti" className="hover:text-foreground transition-colors text-indigo-600 font-semibold dark:text-indigo-400">
-                            Studenti
-                        </Link>
+
+                        {/* Esplora Dropdown */}
+                        <div className="relative group">
+                            <button className="flex items-center gap-1 hover:text-foreground transition-colors font-medium">
+                                Esplora <ChevronDown className="h-4 w-4 opacity-70" />
+                            </button>
+                            <div className="absolute top-full left-0 mt-2 w-48 rounded-xl border border-border bg-popover p-2 text-popover-foreground shadow-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all origin-top-left z-50">
+                                <Link href="/learn" className="block px-3 py-2 text-sm hover:bg-muted rounded-md transition-colors">
+                                    Lezioni
+                                </Link>
+                                <Link href="/glossario" className="block px-3 py-2 text-sm hover:bg-muted rounded-md transition-colors">
+                                    Glossario
+                                </Link>
+                                <Link href="/studenti" className="block px-3 py-2 text-sm hover:bg-muted rounded-md transition-colors text-indigo-600 dark:text-indigo-400 font-medium">
+                                    Studenti
+                                </Link>
+                                <Link href="/risorse" className="block px-3 py-2 text-sm hover:bg-muted rounded-md transition-colors">
+                                    Letture e Risorse
+                                </Link>
+                            </div>
+                        </div>
 
                         {/* Community Divider */}
                         <div className="h-4 w-px bg-border/60 mx-1" />
@@ -64,9 +79,6 @@ export function Navbar() {
                         <>
                             {profile ? (
                                 <div className="flex items-center gap-4">
-                                    <Link href="/learn" className="hidden md:block">
-                                        <Button variant="ghost" className="font-medium">Lezioni</Button>
-                                    </Link>
                                     <Link href="/dashboard" className="hidden md:block">
                                         <Button variant="ghost" className="font-medium text-muted-foreground">Dashboard</Button>
                                     </Link>
@@ -101,20 +113,39 @@ export function Navbar() {
                     >
                         Chi siamo
                     </Link>
+                    <div className="px-2 py-1 text-xs font-semibold text-muted-foreground uppercase tracking-wider mt-2">
+                        Esplora
+                    </div>
+                    <Link
+                        href="/learn"
+                        className="p-2 ml-2 hover:bg-muted rounded-md transition-colors font-medium text-sm"
+                        onClick={() => setIsOpen(false)}
+                    >
+                        Lezioni
+                    </Link>
                     <Link
                         href="/glossario"
-                        className="p-2 hover:bg-muted rounded-md transition-colors font-medium"
+                        className="p-2 ml-2 hover:bg-muted rounded-md transition-colors font-medium text-sm"
                         onClick={() => setIsOpen(false)}
                     >
                         Glossario
                     </Link>
                     <Link
                         href="/studenti"
-                        className="p-2 hover:bg-muted rounded-md transition-colors font-medium text-indigo-600"
+                        className="p-2 ml-2 hover:bg-muted rounded-md transition-colors font-medium text-sm text-indigo-600 dark:text-indigo-400"
                         onClick={() => setIsOpen(false)}
                     >
                         Studenti
                     </Link>
+                    <Link
+                        href="/risorse"
+                        className="p-2 ml-2 hover:bg-muted rounded-md transition-colors font-medium text-sm"
+                        onClick={() => setIsOpen(false)}
+                    >
+                        Letture e Risorse
+                    </Link>
+
+                    <div className="h-px bg-border my-1" />
                     <Link
                         href="/corte"
                         className="p-2 hover:bg-muted rounded-md transition-colors font-medium text-[#C4A052]"
@@ -137,13 +168,6 @@ export function Navbar() {
 
                     {profile && (
                         <>
-                            <Link
-                                href="/learn"
-                                className="p-2 hover:bg-muted rounded-md transition-colors font-medium"
-                                onClick={() => setIsOpen(false)}
-                            >
-                                Lezioni
-                            </Link>
                             <Link
                                 href="/dashboard"
                                 className="p-2 hover:bg-muted rounded-md transition-colors font-medium"

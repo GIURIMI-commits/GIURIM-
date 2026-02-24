@@ -24,6 +24,13 @@ import { AnimatedFormeFamiliari } from './interactive/AnimatedFormeFamiliari';
 import { AnimatedElementiReato } from './interactive/AnimatedElementiReato';
 import { AnimatedScriminanti } from './interactive/AnimatedScriminanti';
 import { AnimatedPresunzioneSchema } from './interactive/AnimatedPresunzioneSchema';
+import { AnimatedStalkingSchema } from './interactive/AnimatedStalkingSchema';
+import { AnimatedPatrimonioSchema } from './interactive/AnimatedPatrimonioSchema';
+import { AnimatedStateFunctions } from './interactive/AnimatedStateFunctions';
+import { AnimatedPAEcosystem } from './interactive/AnimatedPAEcosystem';
+import { AnimatedProcedimentoJourney } from './interactive/AnimatedProcedimentoJourney';
+import { AnimatedViziAtto } from './interactive/AnimatedViziAtto';
+import { AnimatedSubordinatoVsAutonomo } from './interactive/AnimatedSubordinatoVsAutonomo';
 
 interface LessonPlayerProps {
     lesson: Lesson;
@@ -31,6 +38,10 @@ interface LessonPlayerProps {
 
 export function LessonPlayer({ lesson }: LessonPlayerProps) {
     const components = {
+        // Hydration Bug Fix: MDX wraps raw text in <p>, causing <p> in <p> DOM nesting errors.
+        // Rendering them as <div> entirely bypasses this React strict mode crash.
+        p: (props: any) => <div className="mb-4" {...props} />,
+
         // Standard Components
         HookBlock,
         TechnicalBlock,
@@ -56,6 +67,13 @@ export function LessonPlayer({ lesson }: LessonPlayerProps) {
         AnimatedElementiReato,
         AnimatedScriminanti,
         AnimatedPresunzioneSchema,
+        AnimatedStalkingSchema,
+        AnimatedPatrimonioSchema,
+        AnimatedStateFunctions,
+        AnimatedPAEcosystem,
+        AnimatedProcedimentoJourney,
+        AnimatedViziAtto,
+        AnimatedSubordinatoVsAutonomo,
 
         // Aliases & New Shorthands (User Code Support)
         Hook: HookBlock,
