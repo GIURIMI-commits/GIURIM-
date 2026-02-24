@@ -60,6 +60,8 @@
 
   --card: #ffffff;
   --card-foreground: #0f172a;
+  
+  --minimap-mask: rgba(0, 0, 0, 0.05);
 }
 
 .mask-fade {
@@ -80,6 +82,8 @@
     --secondary-foreground: #f8fafc;
     --card: #0f172a;
     --card-foreground: #f8fafc;
+
+    --minimap-mask: rgba(0, 0, 0, 0.4);
   }
 }
 

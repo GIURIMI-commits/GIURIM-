@@ -1,12 +1,15 @@
 import { Metadata } from 'next';
 import { LegalMap } from '@/components/map/LegalMap';
+import { getCurriculum } from '@/lib/content/loader';
 
 export const metadata: Metadata = {
     title: 'Mappa Interattiva dell\'Ordinamento | GIURIMÌ',
     description: 'Esplora la gerarchia delle fonti e la struttura dell\'ordinamento giuridico italiano in modo interattivo.',
 };
 
-export default function InteractiveMapPage() {
+export default async function InteractiveMapPage() {
+    const curriculum = await getCurriculum();
+
     return (
         <div className="flex flex-col h-[calc(100vh-8rem)] w-full max-w-7xl mx-auto space-y-4">
             <div>
@@ -19,7 +22,7 @@ export default function InteractiveMapPage() {
             </div>
 
             <div className="flex-1 min-h-[500px] w-full relative">
-                <LegalMap />
+                <LegalMap curriculum={curriculum} />
             </div>
         </div>
     );

@@ -6,6 +6,7 @@ export type CustomNodeData = {
     icon?: string;
     link?: string;
     color?: 'primary' | 'secondary' | 'accent' | 'neutral';
+    completed?: boolean;
 };
 
 export const initialNodes: Node<CustomNodeData>[] = [

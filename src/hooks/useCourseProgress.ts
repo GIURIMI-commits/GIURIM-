@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { createClient } from '@/lib/supabase/client';
 import { AreaMeta, ModuleMeta } from '@/types/content';
 import { LessonProgress } from '@/types/user';
@@ -57,18 +57,18 @@ export function useCourseProgress(curriculum: AreaMeta[]) {
     }, []);
 
     // Helpers to calc stats
-    const isCompleted = (lessonSlug: string) => {
+    const isCompleted = useCallback((lessonSlug: string) => {
         return progressMap[lessonSlug]?.status === 'completed';
-    };
+    }, [progressMap]);
 
-    const getModuleStats = (mod: ModuleMeta) => {
+    const getModuleStats = useCallback((mod: ModuleMeta) => {
         if (!mod.lessons || mod.lessons.length === 0) return { total: 0, completed: 0, percentage: 0 };
         const total = mod.lessons.length;
         const completed = mod.lessons.filter(l => isCompleted(l.slug)).length;
         return { total, completed, percentage: Math.round((completed / total) * 100) };
-    };
+    }, [isCompleted]);
 
-    const getAreaStats = (area: AreaMeta) => {
+    const getAreaStats = useCallback((area: AreaMeta) => {
         if (!area.modules) return { total: 0, completed: 0, percentage: 0 };
         let total = 0;
         let completed = 0;
@@ -79,9 +79,9 @@ export function useCourseProgress(curriculum: AreaMeta[]) {
             }
         });
         return { total, completed, percentage: total === 0 ? 0 : Math.round((completed / total) * 100) };
-    };
+    }, [isCompleted]);
 
-    const getGlobalStats = () => {
+    const getGlobalStats = useCallback(() => {
         let total = 0;
         let completed = 0;
         curriculum.forEach(area => {
@@ -90,7 +90,7 @@ export function useCourseProgress(curriculum: AreaMeta[]) {
             completed += stats.completed;
         });
         return { total, completed, percentage: total === 0 ? 0 : Math.round((completed / total) * 100) };
-    };
+    }, [curriculum, getAreaStats]);
 
     return {
         progressMap,
