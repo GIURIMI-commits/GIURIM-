@@ -175,19 +175,21 @@ export default function ProfilePage() {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.4 }}
-                        className="px-2"
                     >
-                        <Button
-                            variant="outline"
-                            className="w-full flex justify-between items-center text-muted-foreground border-border/60 hover:text-destructive hover:border-destructive/50 hover:bg-destructive/10 rounded-xl transition-all shadow-sm group py-6"
+                        <button
                             onClick={handleLogout}
+                            className="w-full flex items-center justify-between text-muted-foreground border border-border/50 hover:text-destructive hover:border-destructive/40 hover:bg-destructive/5 rounded-2xl transition-all shadow-sm group p-4 bg-card/30 backdrop-blur-md overflow-hidden"
                         >
-                            <div className="flex items-center">
-                                <LogOut className="h-5 w-5 mr-3 text-muted-foreground group-hover:text-destructive transition-colors" />
-                                <span className="font-semibold text-sm">Disconnetti in modo sicuro</span>
+                            <div className="flex items-center gap-3 min-w-0">
+                                <div className="h-10 w-10 rounded-xl bg-muted/50 group-hover:bg-destructive/10 text-muted-foreground group-hover:text-destructive flex items-center justify-center shrink-0 transition-colors">
+                                    <LogOut className="h-5 w-5" />
+                                </div>
+                                <span className="font-bold border-l border-border/50 pl-3 text-sm truncate group-hover:text-destructive transition-colors">
+                                    Esci dall'Account
+                                </span>
                             </div>
-                            <ChevronRight className="h-4 w-4 opacity-40 group-hover:opacity-100 transition-opacity" />
-                        </Button>
+                            <ChevronRight className="h-5 w-5 opacity-30 group-hover:opacity-100 group-hover:text-destructive transition-all shrink-0 ml-2 group-hover:translate-x-1" />
+                        </button>
                     </motion.div>
                 </div>
 
@@ -328,23 +330,27 @@ export default function ProfilePage() {
                                         </p>
                                     </div>
 
-                                    <div className="flex flex-col sm:flex-row gap-3 pt-2">
+                                    <div className="flex flex-col sm:flex-row flex-wrap sm:flex-nowrap gap-3 pt-2">
                                         <Button
                                             variant="outline"
-                                            className="rounded-xl border-border hover:bg-muted font-medium"
+                                            className="rounded-xl border-border hover:bg-muted font-medium w-full sm:w-auto h-auto py-2.5 flex-1 whitespace-normal text-wrap"
                                             onClick={() => router.push("/privacy/cookie-preferences")}
                                         >
                                             Preferenze Cookie
                                         </Button>
-                                        <Button variant="outline" disabled className="rounded-xl border-border opacity-50 cursor-not-allowed">
+                                        <Button
+                                            variant="outline"
+                                            disabled
+                                            className="rounded-xl border-border opacity-50 cursor-not-allowed w-full sm:w-auto h-auto py-2.5 flex-1 whitespace-normal text-wrap text-sm"
+                                        >
                                             Esporta Dati
                                         </Button>
                                         <Button
                                             variant="outline"
                                             onClick={() => setIsDeleteModalOpen(true)}
-                                            className="rounded-xl sm:ml-auto border border-destructive/20 text-destructive bg-destructive/5 hover:bg-destructive hover:text-destructive-foreground transition-all shadow-sm shadow-destructive/10 font-medium"
+                                            className="rounded-xl border border-destructive/20 text-destructive bg-destructive/5 hover:bg-destructive hover:text-destructive-foreground transition-all shadow-sm shadow-destructive/10 font-medium w-full sm:w-auto h-auto py-2.5 flex-1 whitespace-normal text-wrap"
                                         >
-                                            Elimina Definitivamente
+                                            Elimina Account
                                         </Button>
                                     </div>
                                 </div>
