@@ -1,35 +1,258 @@
 ---
 slug: "lez-4.3.1"
-title: "Presunzione di innocenza"
+title: "La presunzione di innocenza"
 area: "area-4-penale"
 module: "mod-4.3-diritti-imputato"
 order: 1
-duration_minutes: 8
-prerequisites: ["lez-4.2.2"]
+duration_minutes: 12
+prerequisites: ["lez-4.2.2", "lez-4.1.1"]
 next_lesson: "lez-4.3.2"
-last_verified: "2026-02-07"
-verified_by: "Da verificare"
-disclaimer_level: "standard"
-source_refs: []
-glossary_terms: []
+prev_lesson: "lez-4.2.2"
+last_verified: "2026-02-23"
+verified_by: "[Nome penalista]"
+disclaimer_level: "penale"
+
+source_refs:
+  - label: "Art. 27 comma 2 Costituzione — Presunzione di innocenza"
+    url: "https://www.brocardi.it/costituzione-italiana/parte-i/titolo-i/art27.html"
+  - label: "Art. 6 comma 2 CEDU — Presunzione di innocenza"
+    url: "https://www.echr.coe.int/documents/convention_ita.pdf"
+  - label: "D.Lgs. 188/2021 — Attuazione direttiva UE sulla presunzione di innocenza"
+    url: "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2021-11-08;188"
+  - label: "Art. 533 c.p.p. — Condanna: oltre ogni ragionevole dubbio"
+    url: "https://www.brocardi.it/codice-di-procedura-penale/libro-settimo/titolo-i/capo-ii/art533.html"
+  - label: "Treccani — Presunzione di innocenza"
+    url: "https://www.treccani.it/enciclopedia/presunzione-di-innocenza/"
+
+media:
+  - type: "video"
+    search_query: "presunzione di innocenza art 27 costituzione oltre ogni ragionevole dubbio art 533 cpp lezione universitaria"
+    canali_preferiti: ["università", "Unione Camere Penali"]
+    position: "after-spiegazione"
+    nota: "Cercare video che spieghi cosa significa davvero 'innocente fino a prova contraria' e il criterio dell'oltre ogni ragionevole dubbio. Evitare video polemici sulla giustizia italiana."
+
+glossary_terms:
+  - "presunzione-di-innocenza"
+  - "indagato"
+  - "imputato"
+  - "pubblico-ministero"
+  - "onere-della-prova"
+  - "oltre-ragionevole-dubbio"
+  - "condanna-definitiva"
+  - "tre-gradi-di-giudizio"
+
 quiz:
-  questions: []
+  questions:
+    - type: "mcq"
+      prompt: "Secondo l’art. 27, comma 2 Cost., quando una persona non è più 'considerata non colpevole'?"
+      choices:
+        - "Quando viene arrestata o indagata."
+        - "Quando viene condannata in primo grado."
+        - "Quando c’è una condanna definitiva."
+      correctIndex: 2
+      feedback:
+        0: "No: arresto o indagine non equivalgono a colpevolezza."
+        1: "No: la Costituzione parla di condanna definitiva."
+        2: "Corretto: la regola costituzionale collega il superamento della presunzione alla condanna definitiva."
+    - type: "mcq"
+      prompt: "Che cosa significa, in termini pratici, 'oltre ogni ragionevole dubbio' (art. 533 c.p.p.)?"
+      choices:
+        - "Se c’è un dubbio serio e ragionevole, si deve condannare per prudenza."
+        - "Se resta un dubbio ragionevole, il dubbio pesa a favore dell’imputato."
+        - "La condanna può basarsi su una probabilità più alta del 50%."
+      correctIndex: 1
+      feedback:
+        0: "No: la regola va nella direzione opposta."
+        1: "Corretto: il dubbio ragionevole è incompatibile con la condanna."
+        2: "No: lo standard è più elevato di una semplice probabilità."
+    - type: "open"
+      prompt: "Spiega perché la presunzione di innocenza tutela tutti e collega la risposta a: (1) onere della prova, (2) oltre ogni ragionevole dubbio, (3) media/opinione pubblica."
+      expected_points:
+        - "Onere della prova: l’accusa deve dimostrare la colpevolezza, non l’imputato la propria innocenza."
+        - "Oltre ogni ragionevole dubbio: lo standard di condanna è altissimo."
+        - "Media: il racconto pubblico non può sostituire il processo e non deve trasformare una persona in colpevole prima del tempo."
 ---
 
-<Hook>
-Inserisci qui il gancio iniziale...
-</Hook>
+<HookBlock>
+Apri un giornale e leggi: “Arrestato il ladro del secolo”. Arrestato, non condannato.  
+Per la legge, quella persona è innocente — esattamente come te adesso.
+</HookBlock>
 
 <Objective>
-Inserisci qui l'obiettivo della lezione...
+Finora hai visto reati e pene dal lato dello Stato. Ora cambiamo prospettiva: **i diritti di chi è accusato**.  
+Capirai cos’è la <GlossaryTerm id="presunzione-di-innocenza">presunzione di innocenza</GlossaryTerm>, cosa vuol dire “<GlossaryTerm id="condanna-definitiva">condanna definitiva</GlossaryTerm>”, perché l’<GlossaryTerm id="onere-della-prova">onere della prova</GlossaryTerm> sta sull’accusa e che cosa significa “<GlossaryTerm id="oltre-ragionevole-dubbio">oltre ogni ragionevole dubbio</GlossaryTerm>”.
 </Objective>
+
+<SectionTitle step={1} title="La regola: lo Stato non può trattarti da colpevole prima del tempo">
+La presunzione di innocenza non è un cavillo.  
+È un limite al potere: finché la colpevolezza non è dimostrata come prevede la legge, lo Stato non può “saltare” alla conclusione.
+</SectionTitle>
+
+<Technical>
+**Art. 27, comma 2, Cost.**  
+L’imputato non è considerato colpevole sino alla condanna definitiva.
+</Technical>
+
+<Concept title="Definizione (semplice e corretta)">
+La <GlossaryTerm id="presunzione-di-innocenza">presunzione di innocenza</GlossaryTerm> significa che una persona accusata **non è colpevole per il diritto** finché non esiste una condanna definitiva.  
+Questo protegge tutti: oggi l’<GlossaryTerm id="imputato">imputato</GlossaryTerm> è un altro, domani potresti essere tu.
+</Concept>
+
+<SectionTitle step={2} title="Indagato e imputato: due parole, due fasi">
+Nel linguaggio comune si fa confusione. Nel diritto, le parole servono a evitare errori.
+</SectionTitle>
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+  <CardBlock title="🔎 Indagato">
+    La persona a cui vengono attribuiti fatti in una fase di indagine.  
+    Non è una “condanna”: è una posizione nel procedimento.
+    <span className="block mt-4"><Highlight color="blue"><GlossaryTerm id="indagato">Indagato</GlossaryTerm> ≠ colpevole</Highlight></span>
+  </CardBlock>
+
+  <CardBlock title="⚖️ Imputato">
+    La persona formalmente chiamata a rispondere davanti al giudice in un processo.  
+    Anche qui: non è una “etichetta di colpa”.
+    <span className="block mt-4"><Highlight color="blue"><GlossaryTerm id="imputato">Imputato</GlossaryTerm> ≠ colpevole</Highlight></span>
+  </CardBlock>
+</div>
+
+<AnimatedPresunzioneSchema />
+
+<SectionTitle step={3} title="Che cosa significa 'condanna definitiva'">
+La Costituzione usa una parola precisa: **definitiva**.  
+In pratica, si collega ai <GlossaryTerm id="tre-gradi-di-giudizio">tre gradi di giudizio</GlossaryTerm> e alla stabilità della decisione.
+</SectionTitle>
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+  <CardBlock title="1️⃣ Primo grado">
+    Il giudice decide per la prima volta.  
+    La decisione può essere impugnata.
+    <span className="block mt-4"><Highlight color="blue">Non è “fine della storia”</Highlight></span>
+  </CardBlock>
+
+  <CardBlock title="2️⃣ Appello">
+    Si rivede la decisione secondo regole precise.  
+    Anche qui non si “spegne” la presunzione.
+    <span className="block mt-4"><Highlight color="blue">Si controlla la decisione</Highlight></span>
+  </CardBlock>
+
+  <CardBlock title="3️⃣ Cassazione">
+    Non è un “terzo processo uguale”: controlla soprattutto la corretta applicazione del diritto.  
+    Dopo, la condanna può diventare definitiva.
+    <span className="block mt-4"><Highlight color="blue"><GlossaryTerm id="condanna-definitiva">Definitiva</GlossaryTerm> = stabilizzata</Highlight></span>
+  </CardBlock>
+</div>
+
+<SectionTitle step={4} title="La prova: non devi dimostrare di essere innocente">
+Qui c’è una svolta mentale: il sistema non è “tu dimostra che non l’hai fatto”.  
+Il compito di dimostrare la colpevolezza è dell’accusa, cioè del <GlossaryTerm id="pubblico-ministero">Pubblico Ministero</GlossaryTerm>.
+</SectionTitle>
+
+<Concept title="Regola d’oro (da ricordare sempre)">
+L’<GlossaryTerm id="onere-della-prova">onere della prova</GlossaryTerm> sta sull’accusa.  
+Se la prova non regge, la colpa non è “probabile”: **non è provata**.
+</Concept>
+
+<SectionTitle step={5} title="Oltre ogni ragionevole dubbio: lo standard più alto per condannare">
+“Innocente fino a prova contraria” è una frase famosa, ma rischia di essere vaga.  
+Nel processo penale italiano esiste una regola concreta: la condanna richiede uno standard probatorio altissimo.
+</SectionTitle>
+
+<Technical>
+**Art. 533 c.p.p. (condanna).**  
+Il giudice pronuncia sentenza di condanna se l’imputato risulta colpevole del reato contestatogli **oltre ogni ragionevole dubbio**.
+</Technical>
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+  <CardBlock title="✅ Cosa NON basta">
+    “È molto probabile” non è sufficiente.  
+    Il penale non funziona con percentuali intuitive.
+    <span className="block mt-4"><Highlight color="blue">Probabile ≠ provato</Highlight></span>
+  </CardBlock>
+
+  <CardBlock title="🧠 Cosa significa 'ragionevole'">
+    Non ogni dubbio “fantasioso”, ma un dubbio serio, concreto, legato a elementi del caso.  
+    Se resta, la condanna non regge.
+    <span className="block mt-4"><Highlight color="blue"><GlossaryTerm id="oltre-ragionevole-dubbio">Dubbio ragionevole</GlossaryTerm> = limite alla condanna</Highlight></span>
+  </CardBlock>
+</div>
+
+<SectionTitle step={6} title="Presunzione e comunicazione pubblica: perché esiste il D.Lgs. 188/2021">
+Qui entra un punto moderno: la presunzione non vive solo in aula.  
+Vive anche nel modo in cui autorità e comunicazione pubblica raccontano un’indagine.
+</SectionTitle>
+
+<Technical>
+**D.Lgs. 188/2021** (attuazione direttiva UE).  
+Interviene anche sul modo in cui le autorità pubbliche possono comunicare, per evitare che una persona sia presentata come colpevole prima di una decisione definitiva.
+</Technical>
+
+<Compare
+  aTitle="Processo"
+  aBody="Accusa e difesa si confrontano davanti a un giudice, con regole di prova e standard 'oltre ogni ragionevole dubbio'."
+  bTitle="Opinione pubblica"
+  bBody="È veloce, emotiva, spesso incompleta. Non può sostituire il processo e non può 'condannare' in anticipo."
+/>
+
+<SectionTitle step={7} title="Esempi pratici: riconoscere la presunzione nella vita reale">
+Niente cronaca, niente casi riconoscibili. Solo scenari realistici per capire il principio.
+</SectionTitle>
+
+<Row className="lg:grid-cols-2">
+  <Col>
+    <Example type="positive" title="Caso (linguaggio corretto)">
+      Un comunicato usa formule neutrali: “persona <GlossaryTerm id="indagato">indagata</GlossaryTerm>”, “ipotesi accusatoria”, “accertamenti in corso”.  
+      È coerente con la <GlossaryTerm id="presunzione-di-innocenza">presunzione di innocenza</GlossaryTerm>: si descrive un procedimento, non una colpa.
+    </Example>
+  </Col>
+
+  <Col>
+    <Example type="negative" title="Caso (mito da smontare: 'se sei indagato sei colpevole')">
+      Un gruppo social scrive: “Se ti indagano è perché hanno già le prove”.  
+      In realtà l’<GlossaryTerm id="onere-della-prova">onere della prova</GlossaryTerm> va costruito e verificato, e la condanna richiede lo standard dell’<GlossaryTerm id="oltre-ragionevole-dubbio">oltre ogni ragionevole dubbio</GlossaryTerm> (art. 533 c.p.p.).
+    </Example>
+  </Col>
+</Row>
+
+<SectionTitle step={8} title="Mini-check: 5 frasi da usare (e 5 da evitare) quando studi o spieghi il penale">
+È un esercizio di precisione: le parole giuste proteggono i concetti giusti.
+</SectionTitle>
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+  <CardBlock title="✅ Da usare">
+    “È <GlossaryTerm id='indagato'>indagato</GlossaryTerm> / <GlossaryTerm id='imputato'>imputato</GlossaryTerm>”, “si procede per…”, “ipotesi accusatoria”, “accertamenti”, “si attende la decisione”.
+    <span className="block mt-4"><Highlight color="blue">Descrivi fatti procedurali</Highlight></span>
+  </CardBlock>
+
+  <CardBlock title="❌ Da evitare">
+    “È colpevole”, “è sicuramente lui”, “è già condannato”, “se lo arrestano è fatta”, “tanto la giustizia…”.  
+    Non è analisi: è anticipazione.
+    <span className="block mt-4"><Highlight color="blue">Non sostituire il processo</Highlight></span>
+  </CardBlock>
+</div>
+
+<SectionTitle step={10} title="Video suggerito">
+Solo se trovi una lezione universitaria o un intervento tecnico (es. Unione Camere Penali) su art. 27 Cost. e “oltre ogni ragionevole dubbio”, senza taglio polemico o sensazionalistico.
+</SectionTitle>
+
+{/* VIDEO PLACEHOLDER:
+  Search query: "presunzione di innocenza art 27 costituzione oltre ogni ragionevole dubbio art 533 cpp lezione universitaria"
+  Criteri: docente universitario / ente istituzionale / UCPI; autore identificabile; no promozione; no polemica; no cronaca.
+*/}
 
 ---
 
-## 1) Titolo sezione
+<QuizBlock />
 
-Contenuto...
-
-<Quiz />
-
-<Resources />
+<ResourceFooter
+  disclaimerLevel="elevated"
+  primarySources={[
+    { label: "Brocardi — Art. 27 Cost.", url: "https://www.brocardi.it/costituzione-italiana/parte-i/titolo-i/art27.html" },
+    { label: "CEDU — Art. 6(2) (PDF ufficiale)", url: "https://www.echr.coe.int/documents/convention_ita.pdf" },
+    { label: "Normattiva — D.Lgs. 188/2021", url: "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2021-11-08;188" },
+    { label: "Brocardi — Art. 533 c.p.p.", url: "https://www.brocardi.it/codice-di-procedura-penale/libro-settimo/titolo-i/capo-ii/art533.html" },
+    { label: "Treccani — Presunzione di innocenza", url: "https://www.treccani.it/enciclopedia/presunzione-di-innocenza/" }
+  ]}
+>
+Questa lezione ha finalità esclusivamente didattiche. Nel diritto penale ogni caso dipende da fatti, prove e regole processuali: questo contenuto non è consulenza legale e non sostituisce un avvocato penalista.
+</ResourceFooter>

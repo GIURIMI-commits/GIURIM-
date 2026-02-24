@@ -16,7 +16,7 @@ L'obiettivo è abbandonare il semplice testo "a cascata" del markdown tradiziona
 - **Cita i termini tecnici** usando il `<GlossaryTerm id="...">` per il tooltip.
 
 ### ❌ Da Evitare
-- **NO Muri di Testo:** Evita paragrafi più lunghi di 4-5 righe.
+
 - **NO Titoli Markdown nudi (`##` , `###`)**: Fanno sembrare la piattaforma amatoriale.
 - **NO grassetti casuali:** Usa il grassetto solo per 1 max 2 parole pivotali per frase.
 - **NO `<div className="mt-4">` isolati dentro le Card o nel testo libero:** Causa un *Hydration Error* critico su Next.js (perché MDX lo avvolgerà in un `<p>`). Usa sempre `<span className="block mt-4">` al suo posto.
@@ -216,6 +216,9 @@ REGOLE DI FORMATTAZIONE MDX (TASSOVITATIVE):
           expected_points:
             - "Punto chiave 1 che deve trattare"
             - "Punto chiave 2 che deve trattare"
+
+12. COMPONENTI DINAMICI E ANIMATI: Devi SEMPRE ideare un componente interattivo custom (es. `<AnimatedSchema... />`) per spiegare visivamente il concetto più complesso o tecnico della lezione (es. una timeline, un imbuto a filtri, una comparazione di card animata). Inseriscilo nel testo MDX. Poi, scrivi *in fondo al documento* (fuori dal MDX renderizzato, dentro un blocco ```tsx commentato) una bozza di codice React + Framer Motion per quel componente. 
+13. PREVENZIONE ERRORI (ZERO HYDRATION ERRORS): Nel codice dei componenti dinamici e nel testo MDX, presta la massima attenzione a non violare le regole HTML di base (es. NON annidare mai `<div ...>` o `<button>` all'interno di `<p>`). Usa sempre `<span className="block">` se ti serve un blocco spaziatore testuale all'interno di card o paragrafi.
 
 L'ARGOMENTO DELLA LEZIONE È: [INSERISCI QUI IL TITOLO/ARGOMENTO]
 Genera l'intero codice MDX.

@@ -23,6 +23,7 @@ import { AnimatedProprietaPossesso } from './interactive/AnimatedProprietaPosses
 import { AnimatedFormeFamiliari } from './interactive/AnimatedFormeFamiliari';
 import { AnimatedElementiReato } from './interactive/AnimatedElementiReato';
 import { AnimatedScriminanti } from './interactive/AnimatedScriminanti';
+import { AnimatedPresunzioneSchema } from './interactive/AnimatedPresunzioneSchema';
 
 interface LessonPlayerProps {
     lesson: Lesson;
@@ -54,6 +55,7 @@ export function LessonPlayer({ lesson }: LessonPlayerProps) {
         AnimatedFormeFamiliari,
         AnimatedElementiReato,
         AnimatedScriminanti,
+        AnimatedPresunzioneSchema,
 
         // Aliases & New Shorthands (User Code Support)
         Hook: HookBlock,
