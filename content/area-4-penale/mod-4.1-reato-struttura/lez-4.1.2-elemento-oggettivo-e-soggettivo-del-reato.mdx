@@ -1,35 +1,301 @@
 ---
 slug: "lez-4.1.2"
-title: "Elemento oggettivo e soggettivo del reato"
+title: "Gli elementi del reato (fatto tipico, antigiuridicità, colpevolezza)"
 area: "area-4-penale"
 module: "mod-4.1-reato-struttura"
 order: 2
-duration_minutes: 15
+duration_minutes: 18
 prerequisites: ["lez-4.1.1"]
 next_lesson: "lez-4.1.3"
-last_verified: "2026-02-07"
-verified_by: "Da verificare"
-disclaimer_level: "standard"
-source_refs: []
-glossary_terms: []
+prev_lesson: "lez-4.1.1"
+last_verified: "2026-02-23"
+verified_by: "[Nome penalista]"
+disclaimer_level: "high"
+
+source_refs:
+  - label: "Art. 1 CP — Principio di legalità"
+    url: "https://www.brocardi.it/codice-penale/libro-primo/titolo-i/art1.html"
+  - label: "Art. 25 co. 2 Cost. — Legalità"
+    url: "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:costituzione:1947-12-27~art25="
+  - label: "Art. 27 Cost. — Responsabilità penale personale"
+    url: "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:costituzione:1947-12-27~art27-com3="
+  - label: "Art. 40 CP — Rapporto di causalità (comma 1 e 2)"
+    url: "https://www.brocardi.it/codice-penale/libro-primo/titolo-iii/capo-i/art40.html"
+  - label: "Art. 42 CP — Elemento psicologico (dolo/colpa e responsabilità)"
+    url: "https://www.brocardi.it/codice-penale/libro-primo/titolo-iv/art42.html"
+  - label: "Art. 43 CP — Dolo, colpa e preterintenzione"
+    url: "https://www.brocardi.it/codice-penale/libro-primo/titolo-iv/art43.html"
+  - label: "Brocardi — Titolo IV (Della imputabilità) e norme collegate (per quadro generale)"
+    url: "https://www.brocardi.it/codice-penale/libro-primo/titolo-iv/"
+
+
+
+glossary_terms:
+  - "fatto-tipico"
+  - "tipicita"
+  - "antigiuridicita"
+  - "colpevolezza"
+  - "condotta"
+  - "evento"
+  - "nesso-causale"
+  - "reato-omissivo"
+  - "posizione-di-garanzia"
+  - "dolo"
+  - "colpa"
+  - "preterintenzione"
+  - "scriminanti"
+
 quiz:
-  questions: []
+  questions:
+    - type: "mcq"
+      prompt: "Qual è l'ordine logico più usato per 'scomporre' un reato nell'analisi di base?"
+      choices:
+        - "Colpevolezza → fatto tipico → antigiuridicità"
+        - "Fatto tipico → antigiuridicità → colpevolezza"
+        - "Antigiuridicità → colpevolezza → fatto tipico"
+      correctIndex: 1
+      feedback:
+        0: "No: partire dalla colpevolezza 'salta' il primo filtro (tipicità) e il secondo (antigiuridicità)."
+        1: "Corretto: prima verifichi che il fatto rientri nella norma (tipicità), poi se è giustificato (antigiuridicità), infine l'elemento soggettivo (colpevolezza)."
+        2: "No: l'antigiuridicità si valuta dopo aver individuato un fatto tipico."
+    - type: "mcq"
+      prompt: "Se manca il dolo ma la legge punisce anche a titolo di colpa, cosa diventa decisivo?"
+      choices:
+        - "Che il fatto sia 'immorale'."
+        - "Che ci sia una violazione di regole di diligenza/prudenza e che l'evento sia prevedibile/evitabile."
+        - "Che l'autore non abbia chiesto scusa."
+      correctIndex: 1
+      feedback:
+        0: "No: l'immoralità non basta, serve tipicità e responsabilità secondo la legge."
+        1: "Corretto: è la logica della colpa (art. 43 c.p.), legata a regole cautelari e prevedibilità/evitabilità."
+        2: "No: le scuse non sostituiscono i requisiti del reato."
+    - type: "open"
+      prompt: "Analizza questo caso: 'Tizio dimentica una candela accesa in casa, esce, e scoppia un incendio che danneggia l'appartamento vicino'. Indica (1) fatto tipico, (2) nesso causale, (3) dolo o colpa e perché."
+      expected_points:
+        - "Fatto tipico: condotta omissiva/imprudente + evento dannoso (in astratto, se una norma lo tipizza)."
+        - "Nesso causale: collegamento tra omissione/imprudenza e incendio/danno (art. 40 c.p.)."
+        - "Elemento soggettivo: assenza di volontà dell'evento → possibile colpa (art. 43 c.p.) se prevedibile ed evitabile con diligenza."
 ---
 
-<Hook>
-Inserisci qui il gancio iniziale...
-</Hook>
+<HookBlock>
+“Non volevo che succedesse.” È la frase più comune dopo un fatto grave — ma nel penale non basta: bisogna capire *come* quel fatto entra (o non entra) dentro la struttura del <GlossaryTerm id="fatto-tipico">reato</GlossaryTerm>.
+</HookBlock>
 
 <Objective>
-Inserisci qui l'obiettivo della lezione...
+In questa lezione impari la “radiografia” base del reato: <GlossaryTerm id="fatto-tipico">fatto tipico</GlossaryTerm>, <GlossaryTerm id="antigiuridicita">antigiuridicità</GlossaryTerm>, <GlossaryTerm id="colpevolezza">colpevolezza</GlossaryTerm>.  
+È il metodo che useremo sempre: nella prossima lezione applichiamo questo schema alle <GlossaryTerm id="scriminanti">cause di giustificazione</GlossaryTerm> (es. legittima difesa), cioè ai casi in cui un fatto tipico può non essere punibile.
 </Objective>
+
+<SectionTitle step={1} title="Prima regola: il penale è 'a filtri'">
+Se anche *solo uno* dei filtri non passa, il reato (o la punibilità) cade. È un modo “garantista” di ragionare: evita punizioni basate su impressioni.
+</SectionTitle>
+
+<Concept title="La struttura minima del reato (schema operativo)">
+Per un’analisi introduttiva, un reato si studia così:  
+1) <GlossaryTerm id="fatto-tipico">Fatto tipico</GlossaryTerm> (rientra nella norma?)  
+2) <GlossaryTerm id="antigiuridicita">Antigiuridicità</GlossaryTerm> (è giustificato?)  
+3) <GlossaryTerm id="colpevolezza">Colpevolezza</GlossaryTerm> (dolo/colpa + rimproverabilità personale)
+</Concept>
+
+<AnimatedElementiReato />
+
+<Technical>
+**Art. 1 c.p. (estratto).**  
+Nessuno può essere punito per un fatto che non sia espressamente preveduto come reato dalla legge…
+</Technical>
+
+<Technical>
+**Art. 25, co. 2 Cost. (estratto).**  
+Nessuno può essere punito se non in forza di una legge che sia entrata in vigore prima del fatto commesso.
+</Technical>
+
+<SectionTitle step={2} title="Filtro 1 — Il fatto tipico: condotta, evento, nesso causale">
+Il <GlossaryTerm id="fatto-tipico">fatto tipico</GlossaryTerm> è il “pezzo di realtà” descritto dalla norma: quello che *deve* accadere perché la legge dica “questo è reato”.
+</SectionTitle>
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+  <CardBlock title="🧩 Condotta">
+    È ciò che una persona fa (azione) o non fa (omissione).
+    <span className="block mt-4">
+      <Highlight color="blue"><GlossaryTerm id="condotta">Condotta</GlossaryTerm></Highlight>
+    </span>
+  </CardBlock>
+
+  <CardBlock title="💥 Evento">
+    È il risultato esterno quando la norma lo richiede (es. danno, lesione, morte).
+    <span className="block mt-4">
+      <Highlight color="blue"><GlossaryTerm id="evento">Evento</GlossaryTerm></Highlight>
+    </span>
+  </CardBlock>
+
+  <CardBlock title="🔗 Nesso causale">
+    È il collegamento tra condotta ed evento: senza quel collegamento, non si “attribuisce” l’evento.
+    <span className="block mt-4">
+      <Highlight color="blue"><GlossaryTerm id="nesso-causale">Nesso causale</GlossaryTerm></Highlight>
+    </span>
+  </CardBlock>
+</div>
+
+<Technical>
+**Art. 40 c.p. (estratti).**  
+Nessuno può essere punito per un fatto preveduto dalla legge come reato, se l'evento dannoso o pericoloso… non è conseguenza della sua azione od omissione.  
+Non impedire un evento che si ha l'obbligo giuridico di impedire, equivale a cagionarlo.
+</Technical>
+
+<SectionTitle step={3} title="Un passaggio chiave: quando l'omissione 'vale' come causa">
+Nel penale, non sempre “non fare” è rilevante. Diventa decisivo quando esiste un obbligo giuridico di intervenire.
+</SectionTitle>
+
+<Compare
+  aTitle="Omissione 'qualunque' (di regola irrilevante)"
+  aBody="Non intervenire può essere moralmente discutibile, ma non diventa automaticamente reato: serve una norma che ti imponga un dovere specifico."
+  bTitle="Omissione 'con obbligo' (art. 40 co. 2 c.p.)"
+  bBody="Se hai una posizione di dovere (es. controllo, protezione, custodia), non impedire l'evento può equivalere a cagionarlo."
+/>
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+  <CardBlock title="🛡️ Obbligo giuridico">
+    Non è un “dovere morale”: è un dovere che deriva da legge, contratto, incarico o da una situazione giuridica riconosciuta.
+    <span className="block mt-4">
+      <Highlight color="blue"><GlossaryTerm id="posizione-di-garanzia">Posizione di garanzia</GlossaryTerm></Highlight>
+    </span>
+  </CardBlock>
+
+  <CardBlock title="🧠 Perché conta">
+    Perché stabilisce *se* puoi essere chiamato a rispondere di un evento anche senza aver agito materialmente.
+    <span className="block mt-4">
+      <Highlight color="blue"><GlossaryTerm id="reato-omissivo">Reato omissivo</GlossaryTerm></Highlight>
+    </span>
+  </CardBlock>
+</div>
+
+<SectionTitle step={4} title="Filtro 2 — Antigiuridicità: il fatto può essere 'tipico' ma non illecito">
+Qui succede la cosa più controintuitiva: un fatto può rientrare nella descrizione del reato, ma essere comunque lecito perché c’è una causa di giustificazione.
+</SectionTitle>
+
+<Concept title="Antigiuridicità (idea semplice)">
+Un fatto è <GlossaryTerm id="antigiuridicita">antigiuridico</GlossaryTerm> quando è *contra ius*, cioè vietato dall’ordinamento.  
+Se però esiste una causa che lo giustifica (le <GlossaryTerm id="scriminanti">scriminanti</GlossaryTerm>), il divieto “si spegne”.
+</Concept>
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+  <CardBlock title="🧯 Perché serve un filtro">
+    Evita di punire comportamenti che l’ordinamento considera leciti in certe condizioni.
+    <span className="block mt-4">
+      <Highlight color="blue">Non tutto ciò che “sembra reato” è punibile</Highlight>
+    </span>
+  </CardBlock>
+
+  <CardBlock title="⚠️ Esempi (solo come idea)">
+    Legittima difesa, stato di necessità, consenso dell’avente diritto… (li studiamo nella prossima lezione).
+    <span className="block mt-4">
+      <Highlight color="blue">Qui ti serve la logica, non i dettagli</Highlight>
+    </span>
+  </CardBlock>
+
+  <CardBlock title="🔍 Cosa controlli davvero">
+    Se c’è una norma/istituto che giustifica la condotta, l’antigiuridicità manca.
+    <span className="block mt-4">
+      <Highlight color="blue">Filtro “di liceità”</Highlight>
+    </span>
+  </CardBlock>
+</div>
+
+<SectionTitle step={5} title="Filtro 3 — Colpevolezza: dolo, colpa e responsabilità personale">
+Ultimo filtro: anche se il fatto è tipico e antigiuridico, non basta. Serve un collegamento soggettivo (dolo/colpa) e la responsabilità deve restare personale.
+</SectionTitle>
+
+<Technical>
+**Art. 27 Cost. (estratto).**  
+La responsabilità penale è personale.
+</Technical>
+
+<Technical>
+**Art. 42 c.p. (estratti).**  
+Nessuno può essere punito per un'azione od omissione preveduta dalla legge come reato, se non l'ha commessa con coscienza e volontà.  
+Nessuno può essere punito per un fatto preveduto dalla legge come delitto, se non l'ha commesso con dolo… salvo i casi di delitto preterintenzionale o colposo espressamente preveduti dalla legge.
+</Technical>
+
+<Technical>
+**Art. 43 c.p. (estratto).**  
+Il delitto è doloso… quando l'evento… è dall'agente preveduto e voluto…; è colposo… quando l'evento… non è voluto e si verifica a causa di negligenza o imprudenza o imperizia…
+</Technical>
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+  <CardBlock title="🎯 Dolo">
+    L’evento (o il fatto tipico) è <Highlight color="blue">previsto e voluto</Highlight>.
+    <span className="block mt-4">
+      <Highlight color="blue"><GlossaryTerm id="dolo">Dolo</GlossaryTerm></Highlight>
+    </span>
+  </CardBlock>
+
+  <CardBlock title="🧩 Colpa">
+    L’evento <Highlight color="blue">non è voluto</Highlight>, ma accade perché si violano regole di cautela (negligenza, imprudenza, imperizia).
+    <span className="block mt-4">
+      <Highlight color="blue"><GlossaryTerm id="colpa">Colpa</GlossaryTerm></Highlight>
+    </span>
+  </CardBlock>
+</div>
+
+<SectionTitle step={6} title="Esempi guidati: stesso evento, esiti diversi">
+L’obiettivo non è “indovinare il reato”: è capire *quale filtro si blocca*.
+</SectionTitle>
+
+<Row className="lg:grid-cols-2">
+  <Col>
+    <Example type="positive" title="Caso (colpa: 'non volevo', ma potevo evitare)">
+      Un soggetto viola una regola di prudenza evidente; si verifica un evento dannoso prevedibile ed evitabile con la normale diligenza.  
+      Qui il tema diventa la <GlossaryTerm id="colpa">colpa</GlossaryTerm> (art. 43 c.p.) e il <GlossaryTerm id="nesso-causale">nesso causale</GlossaryTerm> (art. 40 c.p.).
+    </Example>
+  </Col>
+
+  <Col>
+    <Example type="negative" title="Caso (manca l'antigiuridicità: fatto giustificato)">
+      Un fatto rientra nella descrizione tipica, ma avviene in presenza di una causa di giustificazione.  
+      In questo caso non si arriva alla punibilità: si ferma al filtro dell’<GlossaryTerm id="antigiuridicita">antigiuridicità</GlossaryTerm>.
+    </Example>
+  </Col>
+</Row>
+
+<SectionTitle step={7} title="Metodo lampo: come scrivere l'analisi in tre righe">
+Questo ti salva negli esercizi e anche quando studi velocemente.
+</SectionTitle>
+
+<Steps>
+  <Step number="1" title="Tipicità">
+    Qual è la norma (in astratto) e quali sono <GlossaryTerm id="condotta">condotta</GlossaryTerm>, <GlossaryTerm id="evento">evento</GlossaryTerm>, <GlossaryTerm id="nesso-causale">nesso causale</GlossaryTerm>?
+  </Step>
+  <Step number="2" title="Antigiuridicità">
+    C’è una possibile <GlossaryTerm id="scriminanti">scriminante</GlossaryTerm> che giustifica il fatto?
+  </Step>
+  <Step number="3" title="Colpevolezza">
+    È <GlossaryTerm id="dolo">dolo</GlossaryTerm> o <GlossaryTerm id="colpa">colpa</GlossaryTerm> (artt. 42–43 c.p.)? La responsabilità resta personale (art. 27 Cost.)?
+  </Step>
+</Steps>
+
+<SectionTitle step={10} title="Video suggerito">
+Solo se trovi una lezione universitaria/istituzionale chiara sugli “elementi del reato” (autore identificabile, no promozione, no cronaca).
+</SectionTitle>
+
+{/* VIDEO PLACEHOLDER:
+  Search query: "elementi del reato fatto tipico antigiuridicità colpevolezza lezione diritto penale università"
+  Criteri: docente universitario / ente istituzionale; autore identificabile; niente promozione; niente cronaca nera.
+*/}
 
 ---
 
-## 1) Titolo sezione
+<QuizBlock />
 
-Contenuto...
-
-<Quiz />
-
-<Resources />
+<ResourceFooter
+  disclaimerLevel="elevated"
+  primarySources={[
+    { label: "Brocardi — Art. 1 c.p.", url: "https://www.brocardi.it/codice-penale/libro-primo/titolo-i/art1.html" },
+    { label: "Normattiva — Costituzione, art. 25", url: "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:costituzione:1947-12-27~art25=" },
+    { label: "Normattiva — Costituzione, art. 27", url: "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:costituzione:1947-12-27~art27-com3=" },
+    { label: "Brocardi — Art. 40 c.p.", url: "https://www.brocardi.it/codice-penale/libro-primo/titolo-iii/capo-i/art40.html" },
+    { label: "Brocardi — Art. 42 c.p.", url: "https://www.brocardi.it/codice-penale/libro-primo/titolo-iv/art42.html" },
+    { label: "Brocardi — Art. 43 c.p.", url: "https://www.brocardi.it/codice-penale/libro-primo/titolo-iv/art43.html" }
+  ]}
+>
+Questa lezione ha finalità esclusivamente didattiche. In diritto penale l’analisi dipende dai fatti e dalle norme applicabili: questo contenuto non è consulenza legale e non sostituisce un professionista.
+</ResourceFooter>

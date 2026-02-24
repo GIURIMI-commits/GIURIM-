@@ -21,6 +21,8 @@ import { AnimatedModiEstinzione } from './interactive/AnimatedModiEstinzione';
 import { AnimatedCalcoloDanno } from './interactive/AnimatedCalcoloDanno';
 import { AnimatedProprietaPossesso } from './interactive/AnimatedProprietaPossesso';
 import { AnimatedFormeFamiliari } from './interactive/AnimatedFormeFamiliari';
+import { AnimatedElementiReato } from './interactive/AnimatedElementiReato';
+import { AnimatedScriminanti } from './interactive/AnimatedScriminanti';
 
 interface LessonPlayerProps {
     lesson: Lesson;
@@ -50,6 +52,8 @@ export function LessonPlayer({ lesson }: LessonPlayerProps) {
         AnimatedCalcoloDanno,
         AnimatedProprietaPossesso,
         AnimatedFormeFamiliari,
+        AnimatedElementiReato,
+        AnimatedScriminanti,
 
         // Aliases & New Shorthands (User Code Support)
         Hook: HookBlock,
