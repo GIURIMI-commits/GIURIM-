@@ -15,6 +15,7 @@ import {
     LogOut,
     Mail,
     ChevronRight,
+    Crown,
 } from "lucide-react";
 import { motion, Variants } from "framer-motion";
 
@@ -63,8 +64,10 @@ export default function ProfilePage() {
         : "-";
     const email = profile?.email || "Email non disponibile";
 
-    // Manteniamo la logica dello Studente Verificato
+    // Manteniamo la logica dello Studente Verificato e aggiungiamo il piano PRO
     const isVerifiedStudent = profile?.student_status === "verified";
+    const isPro = profile?.subscription_tier === "pro";
+    const hasFullAccess = isVerifiedStudent || isPro;
 
     return (
         <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-8 md:py-10 lg:py-16">
@@ -99,7 +102,7 @@ export default function ProfilePage() {
                         <Card className="rounded-3xl border-border/50 bg-card/60 backdrop-blur-2xl shadow-xl shadow-black/5 overflow-hidden">
                             {/* Decorative Top Banner */}
                             <div className="h-24 w-full bg-gradient-to-br from-neutral-800 to-neutral-900 dark:from-neutral-900 dark:to-neutral-950 relative overflow-hidden">
-                                {isVerifiedStudent && (
+                                {hasFullAccess && (
                                     <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-20 mix-blend-overlay"></div>
                                 )}
                             </div>
@@ -120,22 +123,27 @@ export default function ProfilePage() {
                                         {roleLabel}
                                     </span>
 
-                                    {isVerifiedStudent && (
+                                    {hasFullAccess && (
                                         <motion.span
                                             initial={{ opacity: 0, scale: 0.8 }}
                                             animate={{ opacity: 1, scale: 1 }}
                                             transition={{ delay: 0.3, duration: 0.5, type: 'spring' }}
-                                            className="relative inline-flex items-center gap-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 px-3.5 py-1.5 text-xs font-bold overflow-hidden mt-1 shadow-sm shadow-emerald-500/10"
+                                            className={`relative inline-flex items-center gap-1.5 rounded-full border px-3.5 py-1.5 text-xs font-bold overflow-hidden mt-1 shadow-sm ${isPro
+                                                    ? "border-amber-500/30 bg-amber-500/10 text-amber-600 dark:text-amber-400 shadow-amber-500/10"
+                                                    : "border-emerald-500/30 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 shadow-emerald-500/10"
+                                                }`}
                                         >
                                             <motion.div
                                                 animate={{
-                                                    boxShadow: ["0px 0px 0px 0px rgba(16, 185, 129, 0)", "0px 0px 8px 2px rgba(16, 185, 129, 0.3)", "0px 0px 0px 0px rgba(16, 185, 129, 0)"]
+                                                    boxShadow: isPro
+                                                        ? ["0px 0px 0px 0px rgba(245, 158, 11, 0)", "0px 0px 8px 2px rgba(245, 158, 11, 0.3)", "0px 0px 0px 0px rgba(245, 158, 11, 0)"]
+                                                        : ["0px 0px 0px 0px rgba(16, 185, 129, 0)", "0px 0px 8px 2px rgba(16, 185, 129, 0.3)", "0px 0px 0px 0px rgba(16, 185, 129, 0)"]
                                                 }}
                                                 transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut' }}
                                                 className="absolute inset-0 rounded-full"
                                             />
-                                            <BadgeCheck className="h-4 w-4 relative z-10" />
-                                            <span className="relative z-10">Verificato</span>
+                                            {isPro ? <Crown className="h-4 w-4 relative z-10" /> : <BadgeCheck className="h-4 w-4 relative z-10" />}
+                                            <span className="relative z-10">{isPro ? "PRO" : "Verificato"}</span>
                                         </motion.span>
                                     )}
                                 </div>
@@ -168,44 +176,72 @@ export default function ProfilePage() {
                     className="md:col-span-8 lg:col-span-9 space-y-8"
                 >
 
-                    {/* VIP Status Banner (Se verificato) */}
-                    {isVerifiedStudent ? (
-                        <motion.div variants={itemVariants} className="relative rounded-3xl p-[1px] overflow-hidden group shadow-lg shadow-emerald-900/5">
+                    {/* VIP Status Banner / Upgrade Options */}
+                    {hasFullAccess ? (
+                        <motion.div variants={itemVariants} className={`relative rounded-3xl p-[1px] overflow-hidden group shadow-lg ${isPro ? 'shadow-amber-900/5' : 'shadow-emerald-900/5'}`}>
                             <motion.div
-                                className="absolute inset-[-100%] bg-[conic-gradient(from_0deg_at_50%_50%,transparent_0%,#10b981_30%,transparent_60%)] opacity-30"
+                                className={`absolute inset-[-100%] opacity-30 ${isPro ? 'bg-[conic-gradient(from_0deg_at_50%_50%,transparent_0%,#f59e0b_30%,transparent_60%)]' : 'bg-[conic-gradient(from_0deg_at_50%_50%,transparent_0%,#10b981_30%,transparent_60%)]'}`}
                                 animate={{ rotate: 360 }}
                                 transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
                             />
                             <div className="relative h-full rounded-3xl bg-card/95 backdrop-blur-xl p-6 md:p-8 z-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
                                 <div className="flex items-start gap-4">
-                                    <div className="h-12 w-12 rounded-2xl bg-emerald-500/10 text-emerald-500 flex items-center justify-center shrink-0 border border-emerald-500/20">
-                                        <ShieldCheck className="h-6 w-6" />
+                                    <div className={`h-12 w-12 rounded-2xl flex items-center justify-center shrink-0 border ${isPro ? 'bg-amber-500/10 text-amber-500 border-amber-500/20' : 'bg-emerald-500/10 text-emerald-500 border-emerald-500/20'}`}>
+                                        {isPro ? <Crown className="h-6 w-6" /> : <ShieldCheck className="h-6 w-6" />}
                                     </div>
                                     <div>
-                                        <p className="text-xs uppercase tracking-widest text-emerald-600 dark:text-emerald-500 font-bold mb-1.5">Privilegi Sbloccati</p>
-                                        <h3 className="text-xl md:text-2xl font-serif font-bold text-foreground">Status Accademico Attivo</h3>
+                                        <p className={`text-xs uppercase tracking-widest font-bold mb-1.5 ${isPro ? 'text-amber-600 dark:text-amber-500' : 'text-emerald-600 dark:text-emerald-500'}`}>
+                                            Privilegi Sbloccati
+                                        </p>
+                                        <h3 className="text-xl md:text-2xl font-serif font-bold text-foreground">
+                                            {isPro ? "GIURIMÌ PRO Attivo" : "Status Accademico Attivo"}
+                                        </h3>
                                         <p className="mt-2 text-sm text-muted-foreground leading-relaxed max-w-lg">
-                                            Hai l'accesso completo garantito all'intero ecosistema GIURIMÌ, inclusi moduli avanzati e funzioni di simulazione specifiche per studenti.
+                                            Hai l'accesso completo garantito all'intero ecosistema GIURIMÌ, inclusi moduli avanzati, sentenze commentate e funzioni simulazione esame.
                                         </p>
                                     </div>
                                 </div>
                                 <div className="hidden md:block">
-                                    <div className="h-16 w-16 opacity-10 text-emerald-500">
-                                        <BadgeCheck className="h-full w-full" strokeWidth={1} />
+                                    <div className={`h-16 w-16 opacity-10 ${isPro ? 'text-amber-500' : 'text-emerald-500'}`}>
+                                        {isPro ? <Crown className="h-full w-full" strokeWidth={1} /> : <BadgeCheck className="h-full w-full" strokeWidth={1} />}
                                     </div>
                                 </div>
                             </div>
                         </motion.div>
                     ) : (
-                        <motion.div variants={itemVariants}>
-                            <Card className="rounded-3xl border-border/60 bg-gradient-to-br from-card to-muted/20 border-dashed">
-                                <CardContent className="p-6 md:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
-                                    <div className="space-y-2">
-                                        <h3 className="text-lg font-serif font-bold text-foreground">Sei uno studente universitario?</h3>
-                                        <p className="text-sm text-muted-foreground">Verifica il tuo account con l'email di ateneo per sbloccare l'accesso dedicato.</p>
+                        <motion.div variants={itemVariants} className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            {/* Option 1: Studenti */}
+                            <Card className="rounded-3xl border-border/60 bg-gradient-to-br from-card to-muted/20 hover:border-emerald-500/30 transition-colors group cursor-pointer">
+                                <CardContent className="p-6 md:p-8 flex flex-col h-full justify-between gap-6">
+                                    <div className="space-y-3">
+                                        <div className="h-10 w-10 rounded-xl bg-emerald-500/10 text-emerald-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                                            <BadgeCheck className="h-5 w-5" />
+                                        </div>
+                                        <h3 className="text-xl font-serif font-bold text-foreground">Sei uno Studente?</h3>
+                                        <p className="text-sm text-muted-foreground leading-relaxed">Verifica il tuo account con la mail del tuo ateneo per sbloccare GRATIS l'accesso ai simulatori d'esame e ai quiz.</p>
                                     </div>
-                                    <Button variant="default" className="rounded-full shadow-sm whitespace-nowrap">
-                                        Ottieni lo status VIP
+                                    <Button variant="default" className="w-full rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white shadow-sm mt-4">
+                                        Verifica la Mail
+                                        <ChevronRight className="ml-2 h-4 w-4" />
+                                    </Button>
+                                </CardContent>
+                            </Card>
+
+                            {/* Option 2: Professionisti */}
+                            <Card className="rounded-3xl border-border/60 bg-gradient-to-br from-card to-muted/20 hover:border-amber-500/30 transition-colors group cursor-pointer relative overflow-hidden">
+                                <div className="absolute top-0 right-0 p-4 opacity-5 pointer-events-none group-hover:opacity-10 transition-opacity">
+                                    <Crown className="h-24 w-24" />
+                                </div>
+                                <CardContent className="p-6 md:p-8 flex flex-col h-full justify-between gap-6 relative z-10">
+                                    <div className="space-y-3">
+                                        <div className="h-10 w-10 rounded-xl bg-amber-500/10 text-amber-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                                            <Crown className="h-5 w-5" />
+                                        </div>
+                                        <h3 className="text-xl font-serif font-bold text-foreground">Concorsi o Lavoro?</h3>
+                                        <p className="text-sm text-muted-foreground leading-relaxed">Diventa un utente <strong className="text-amber-500">GIURIMÌ PRO</strong> per avere accesso alle sezioni estese, casi giuridici pratici e sentenze.</p>
+                                    </div>
+                                    <Button variant="default" className="w-full rounded-2xl bg-amber-500 hover:bg-amber-600 text-amber-950 font-semibold shadow-sm mt-4">
+                                        Scopri i Piani PRO
                                         <ChevronRight className="ml-2 h-4 w-4" />
                                     </Button>
                                 </CardContent>

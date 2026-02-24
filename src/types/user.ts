@@ -13,6 +13,8 @@ export interface UserProfile {
     email?: string;
     email_domain?: string;
     student_status?: 'none' | 'pending' | 'verified' | 'rejected';
+    subscription_tier?: 'free' | 'pro' | string;
+    subscription_status?: 'active' | 'canceled' | 'past_due' | string;
     cookie_preferences?: CookiePreferences;
     role: UserRole | null;
     onboarding_completed: boolean;
