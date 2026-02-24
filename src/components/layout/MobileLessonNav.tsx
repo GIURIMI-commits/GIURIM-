@@ -9,6 +9,7 @@ import {
     Scale, Landmark, Users, Gavel, Building, Scale as Balance,
     ChevronRight, ChevronDown, CheckCircle2, Circle, BookOpen, FileText, PlayCircle, Menu, X, GripHorizontal
 } from "lucide-react";
+import { useCourseProgress } from "@/hooks/useCourseProgress";
 
 const iconMap: { [key: string]: any } = {
     scale: Scale,
@@ -28,6 +29,9 @@ export function MobileLessonNav({ curriculum }: MobileLessonNavProps) {
     const [isOpen, setIsOpen] = useState(false);
     const [expandedAreas, setExpandedAreas] = useState<Set<string>>(new Set());
     const [expandedModules, setExpandedModules] = useState<Set<string>>(new Set());
+
+    const { isCompleted, getGlobalStats } = useCourseProgress(curriculum);
+    const { percentage } = getGlobalStats();
 
     // Touch Handling State
     const [isDragging, setIsDragging] = useState(false);
@@ -129,13 +133,12 @@ export function MobileLessonNav({ curriculum }: MobileLessonNavProps) {
         <div className="md:hidden">
             {/* Sticky Floating Button */}
             {!isOpen && (
-                <div className="fixed bottom-6 left-1/2 -translate-x-1/2 w-max z-[100]">
+                <div className="fixed bottom-8 left-1/2 -translate-x-1/2 w-max z-[100] pb-safe">
                     <button
                         onClick={() => setIsOpen(true)}
-                        className="flex items-center gap-2 px-5 py-3 bg-primary text-primary-foreground dark:bg-white dark:text-neutral-900 rounded-full shadow-[0_8px_30px_rgb(0,0,0,0.12)] font-semibold text-sm active:scale-95 transition-transform"
+                        className="flex items-center gap-2 px-6 py-3.5 bg-primary text-primary-foreground dark:bg-white dark:text-neutral-900 rounded-full shadow-[0_8px_30px_rgb(0,0,0,0.18)] font-semibold text-[15px] active:scale-95 transition-transform"
                     >
-                        <Menu className="w-4 h-4" />
-                        <span>Indice Lezioni</span>
+                        <span>📑 Indice</span>
                     </button>
                 </div>
             )}
@@ -171,9 +174,13 @@ export function MobileLessonNav({ curriculum }: MobileLessonNavProps) {
                     <div className="w-12 h-1.5 bg-neutral-200 dark:bg-neutral-800 rounded-full mb-4" />
 
                     <div className="w-full px-6 flex items-center justify-between">
-                        <div className="font-serif font-bold text-lg text-neutral-900 dark:text-white flex items-center gap-2">
-                            <BookOpen className="w-5 h-5 text-primary" />
-                            Curriculum
+                        <div className="flex flex-col">
+                            <div className="font-serif font-bold text-xl text-neutral-900 dark:text-white flex items-center gap-2">
+                                📑 Indice
+                            </div>
+                            <div className="text-xs font-semibold text-neutral-500 mt-0.5">
+                                Progresso: <span className="text-primary">{percentage}%</span>
+                            </div>
                         </div>
                         <button
                             onClick={() => setIsOpen(false)}
@@ -284,12 +291,16 @@ export function MobileLessonNav({ curriculum }: MobileLessonNavProps) {
                                                                             {isLessonActive && (
                                                                                 <span className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-2/3 bg-indigo-600 dark:bg-indigo-400 rounded-r-md -ml-4" />
                                                                             )}
-                                                                            {isLessonActive ? (
-                                                                                <PlayCircle className="h-4 w-4 mt-0.5 flex-shrink-0" />
+                                                                            {isCompleted(lesson.slug) ? (
+                                                                                <CheckCircle2 className="h-4 w-4 mt-0.5 flex-shrink-0 text-green-500 dark:text-green-400" />
+                                                                            ) : isLessonActive ? (
+                                                                                <PlayCircle className="h-4 w-4 mt-0.5 flex-shrink-0 text-indigo-600 dark:text-indigo-400" />
                                                                             ) : (
-                                                                                <FileText className="h-4 w-4 mt-0.5 flex-shrink-0 opacity-50" />
+                                                                                <Circle className="h-4 w-4 mt-0.5 flex-shrink-0 opacity-40 dark:opacity-50" />
                                                                             )}
-                                                                            <span className="leading-tight">{lesson.title}</span>
+                                                                            <span className={cn("leading-tight", isCompleted(lesson.slug) && !isLessonActive ? "opacity-70" : "")}>
+                                                                                {lesson.title}
+                                                                            </span>
                                                                         </Link>
                                                                     );
                                                                 })}

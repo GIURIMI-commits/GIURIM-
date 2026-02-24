@@ -1,35 +1,361 @@
 ---
 slug: "lez-5.3.1"
 title: "Il contratto di lavoro: diritti e doveri"
-area: "area-5-amministrativo"
-module: "mod-5.3-diritto-lavoro"
+area: "area-5-diritto-amministrativo"
+module: "mod-5.3-lavoro-e-tutele"
 order: 1
-duration_minutes: 12
+duration_minutes: 28
 prerequisites: ["lez-5.2.3"]
 next_lesson: "lez-5.3.2"
-last_verified: "2026-02-07"
+prev_lesson: "lez-5.2.3"
+last_verified: "2026-02-24"
 verified_by: "Da verificare"
-disclaimer_level: "standard"
-source_refs: []
-glossary_terms: []
+disclaimer_level: "elevated"
+glossary_terms:
+  - "contratto-di-lavoro"
+  - "lavoro-subordinato"
+  - "lavoro-autonomo"
+  - "collaborazione"
+  - "finta-partita-iva"
+  - "busta-paga"
+  - "retribuzione"
+  - "contributi"
+  - "tfr"
+  - "licenziamento"
+  - "dimissioni"
+  - "giusta-causa"
+  - "preavviso"
+  - "inps"
+  - "ispettorato-nazionale-del-lavoro"
+  - "patronato"
+  - "sindacato"
 quiz:
-  questions: []
+  questions:
+    - type: "mcq"
+      prompt: "Qual è l’elemento che più distingue il lavoro subordinato da quello autonomo?"
+      choices:
+        - "Il fatto di ricevere un compenso"
+        - "La presenza di eterodirezione (ordini, orari, controllo) da parte del datore"
+        - "L’avere una Partita IVA"
+      correctIndex: 1
+      feedback:
+        0: "No. Anche l’autonomo riceve un compenso."
+        1: "Corretto. Nel subordinato conta la direzione/organizzazione del datore (eterodirezione)."
+        2: "No. La Partita IVA non decide da sola la natura del rapporto."
+    - type: "mcq"
+      prompt: "In busta paga, i contributi previdenziali servono principalmente a:"
+      choices:
+        - "Pagare l’IVA"
+        - "Finanziare tutele e prestazioni previdenziali (es. pensione)"
+        - "Sostituire lo stipendio netto"
+      correctIndex: 1
+      feedback:
+        0: "No. L’IVA è un’altra imposta."
+        1: "Corretto. I contributi finanziano prestazioni previdenziali (es. pensione) e tutele collegate."
+        2: "No. Il netto è ciò che ricevi dopo trattenute."
+    - type: "mcq"
+      prompt: "Se ti chiedono di aprire Partita IVA ma lavori come un dipendente (orari fissi, ordini, un solo committente), il rischio principale è:"
+      choices:
+        - "Che sia una “finta P.IVA” con minori tutele"
+        - "Che diventi automaticamente dirigente"
+        - "Che lo stipendio diventi esentasse"
+      correctIndex: 0
+      feedback:
+        0: "Corretto. Il problema è l’asimmetria di tutele: subordinazione mascherata."
+        1: "No. Non c’è automatismo del genere."
+        2: "No. Le imposte e i contributi restano, cambia solo il regime."
+    - type: "open"
+      prompt: "Scrivi una mini-checklist per capire se sei subordinato, autonomo o in una situazione “borderline”."
+      expected_points:
+        - "Orari/turni imposti vs libertà organizzativa"
+        - "Ordini e controllo del datore/committente"
+        - "Inserimento nell’organizzazione (team, strumenti, procedure)"
+        - "Numero di clienti/committenti e rischio d’impresa"
 ---
 
-<Hook>
-Inserisci qui il gancio iniziale...
-</Hook>
+<HookBlock>
+“Mi hanno assunto, ma non capisco cosa ho firmato.”  
+Se ti è capitato (o ti sta per capitare), questa lezione ti dà una bussola: quali diritti hai, quali doveri hai, e dove andare quando qualcosa non torna.
+</HookBlock>
 
 <Objective>
-Inserisci qui l'obiettivo della lezione...
+Finora hai visto il rapporto con lo Stato e come ottenere/contestare decisioni della PA. Ora entriamo nel rapporto più concreto della vita adulta: il <GlossaryTerm id="contratto-di-lavoro">contratto di lavoro</GlossaryTerm>. Capirai la differenza tra <GlossaryTerm id="lavoro-subordinato">subordinato</GlossaryTerm> e <GlossaryTerm id="lavoro-autonomo">autonomo</GlossaryTerm>, come leggere la <GlossaryTerm id="busta-paga">busta paga</GlossaryTerm>, e quali canali istituzionali usare (INPS, Ispettorato, patronati, sindacati).
 </Objective>
+
+<SectionTitle step={1} title="Prima domanda: che tipo di rapporto è?">
+  Subordinato vs autonomo (e perché cambia tutto)
+</SectionTitle>
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+  <CardBlock title="Subordinato">
+    Lavori dentro l’organizzazione del datore: orari, direttive, controllo.
+    <span className="block mt-4"><Highlight color="blue">Più tutele</Highlight></span>
+  </CardBlock>
+  <CardBlock title="Autonomo">
+    Organizzi tu lavoro e tempi, con rischio d’impresa e più autonomia.
+    <span className="block mt-4"><Highlight color="blue">Più responsabilità</Highlight></span>
+  </CardBlock>
+</div>
+
+<Technical>
+**Art. 2094 c.c. — Prestatore di lavoro subordinato.**  
+È prestatore di lavoro subordinato chi si obbliga, mediante retribuzione, a collaborare nell’impresa prestando il proprio lavoro intellettuale o manuale alle dipendenze e sotto la direzione dell’imprenditore.
+</Technical>
+
+<Technical>
+**Art. 2222 c.c. — Contratto d’opera.**  
+Quando una persona si obbliga a compiere verso un corrispettivo un’opera o un servizio, con lavoro prevalentemente proprio e senza vincolo di subordinazione, si applica il contratto d’opera.
+</Technical>
+
+<SectionTitle step={2} title="La trappola più comune: la “finta Partita IVA”">
+  Quando sembra autonomia, ma funziona da dipendenza
+</SectionTitle>
+
+<Concept title="Segnali tipici di una possibile “finta P.IVA”">
+<span className="block">• Hai <Highlight color="blue">orari fissi</Highlight> e turni imposti.</span>
+<span className="block mt-2">• Ricevi <Highlight color="blue">ordini</Highlight> e sei controllato come un dipendente.</span>
+<span className="block mt-2">• Lavori quasi solo per <Highlight color="blue">un committente</Highlight>.</span>
+<span className="block mt-2">• Usi strumenti, procedure e canali interni come se fossi “in organico”.</span>
+</Concept>
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+  <CardBlock title="Perché è un problema">
+    Rischi meno tutele su ferie, malattia, maternità, licenziamento e contributi.
+    <span className="block mt-4"><Highlight color="blue">Asimmetria di potere</Highlight></span>
+  </CardBlock>
+  <CardBlock title="Cosa fai concretamente">
+    Prima raccogli elementi (turni, chat, email, procedure), poi chiedi supporto a patronato/sindacato o Ispettorato.
+    <span className="block mt-4"><Highlight color="blue">Canali ufficiali</Highlight></span>
+  </CardBlock>
+</div>
+
+<SectionTitle step={3} title="Diritti fondamentali: cosa ti spetta (base)">
+  Il minimo che devi sapere senza essere esperto
+</SectionTitle>
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+  <CardBlock title="Retribuzione">
+    Deve essere proporzionata e sufficiente.
+    <span className="block mt-4"><Highlight color="blue">Dignità</Highlight></span>
+  </CardBlock>
+  <CardBlock title="Sicurezza">
+    Il lavoro non deve mettere a rischio salute e integrità.
+    <span className="block mt-4"><Highlight color="blue">Tutela della persona</Highlight></span>
+  </CardBlock>
+  <CardBlock title="Previdenza">
+    Contributi per tutele e prestazioni (es. pensione).
+    <span className="block mt-4"><Highlight color="blue">INPS</Highlight></span>
+  </CardBlock>
+</div>
+
+<Technical>
+**Art. 36 Cost. — Retribuzione.**  
+Il lavoratore ha diritto a una retribuzione proporzionata alla quantità e qualità del suo lavoro e in ogni caso sufficiente ad assicurare a sé e alla famiglia un’esistenza libera e dignitosa.
+</Technical>
+
+<Technical>
+**Art. 2087 c.c. — Tutela delle condizioni di lavoro.**  
+L’imprenditore è tenuto ad adottare nell’esercizio dell’impresa le misure che, secondo la particolarità del lavoro, l’esperienza e la tecnica, sono necessarie a tutelare l’integrità fisica e la personalità morale dei prestatori di lavoro.
+</Technical>
+
+<Technical>
+**Art. 38 Cost. — Previdenza e assistenza.**  
+Sono previsti mezzi adeguati alle esigenze di vita in caso di infortunio, malattia, invalidità, vecchiaia, disoccupazione involontaria, secondo quanto stabilito.
+</Technical>
+
+<SectionTitle step={4} title="Doveri: cosa può pretendere (legittimamente) il datore">
+  Diligenza, obbedienza, fedeltà
+</SectionTitle>
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+  <CardBlock title="Diligenza">
+    Lavorare con cura secondo mansione e istruzioni ragionevoli.
+    <span className="block mt-4"><Highlight color="blue">Serietà</Highlight></span>
+  </CardBlock>
+  <CardBlock title="Obbedienza">
+    Seguire direttive lecite e coerenti con il contratto.
+    <span className="block mt-4"><Highlight color="blue">Ordini leciti</Highlight></span>
+  </CardBlock>
+  <CardBlock title="Fedeltà">
+    Non fare concorrenza sleale e proteggere informazioni aziendali.
+    <span className="block mt-4"><Highlight color="blue">Lealtà</Highlight></span>
+  </CardBlock>
+</div>
+
+<Technical>
+**Art. 2104 c.c. — Diligenza del prestatore di lavoro.**  
+Il prestatore deve usare la diligenza richiesta dalla natura della prestazione dovuta, dall’interesse dell’impresa e da quello superiore della produzione nazionale.
+</Technical>
+
+<Technical>
+**Art. 2105 c.c. — Obbligo di fedeltà.**  
+Il prestatore non deve trattare affari per conto proprio o di terzi in concorrenza con l’imprenditore, né divulgare notizie attinenti all’organizzazione e ai metodi di produzione dell’impresa, o farne uso in modo da poter recare ad essa pregiudizio.
+</Technical>
+
+<Technical>
+**Art. 2106 c.c. — Sanzioni disciplinari.**  
+L’inosservanza degli obblighi può dare luogo all’applicazione di sanzioni disciplinari, secondo la gravità dell’infrazione.
+</Technical>
+
+<SectionTitle step={5} title="Busta paga: come leggerla senza panico">
+  Lordo, netto, contributi, TFR
+</SectionTitle>
+
+<Concept title="Regola base: non guardare solo il netto">
+Il <GlossaryTerm id="retribuzione">lordo</GlossaryTerm> è la base. Il <GlossaryTerm id="contributi">netto</GlossaryTerm> è ciò che ricevi dopo trattenute (contributi e imposte). Se capisci queste tre righe, sei già avanti.
+</Concept>
+
+<div className="grid grid-cols-1 md:grid-cols-4 gap-6 my-8">
+  <CardBlock title="Retribuzione lorda">
+    Quanto “vale” il mese prima delle trattenute.
+    <span className="block mt-4"><Highlight color="blue">Base di calcolo</Highlight></span>
+  </CardBlock>
+  <CardBlock title="Trattenute">
+    Contributi + imposte (a seconda del caso).
+    <span className="block mt-4"><Highlight color="blue">Non è un furto</Highlight></span>
+  </CardBlock>
+  <CardBlock title="Netto">
+    Quanto ti arriva davvero.
+    <span className="block mt-4"><Highlight color="blue">Bonifico</Highlight></span>
+  </CardBlock>
+  <CardBlock title="TFR">
+    Quota accantonata mese per mese.
+    <span className="block mt-4"><Highlight color="blue">“Salvadanaio”</Highlight></span>
+  </CardBlock>
+</div>
+
+<Technical>
+**Art. 2120 c.c. — Trattamento di fine rapporto (TFR).**  
+Disciplina il TFR come quota accantonata nel tempo e liquidata alla cessazione del rapporto, secondo regole previste.
+</Technical>
+
+<SectionTitle step={6} title="Fine rapporto: dimissioni e licenziamento (base)">
+  Due parole che cambiano tutele e tempi
+</SectionTitle>
+
+<Compare
+  aTitle="Dimissioni"
+  aBody="Se decidi tu di chiudere. Spesso conta il preavviso e la procedura prevista (anche telematica in molti casi)."
+  bTitle="Licenziamento"
+  bBody="Se decide il datore. Devono esserci presupposti e regole; se no si apre la tutela del lavoratore."
+/>
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+  <CardBlock title="Preavviso">
+    Serve tempo per chiudere correttamente (salvo casi particolari).
+    <span className="block mt-4"><Highlight color="blue">Organizzazione</Highlight></span>
+  </CardBlock>
+  <CardBlock title="Giusta causa">
+    Situazione grave che può far cessare subito il rapporto.
+    <span className="block mt-4"><Highlight color="blue">Eccezione</Highlight></span>
+  </CardBlock>
+</div>
+
+<Technical>
+**Art. 2118 c.c. — Recesso dal contratto a tempo indeterminato.**  
+Ciascuna delle parti può recedere dando preavviso nel termine e nei modi stabiliti (salvo eccezioni).
+</Technical>
+
+<Technical>
+**Art. 2119 c.c. — Recesso per giusta causa.**  
+Ciascuna delle parti può recedere senza preavviso se si verifica una causa che non consenta la prosecuzione, anche provvisoria, del rapporto.
+</Technical>
+
+<SectionTitle step={7} title="Dove vai quando hai un problema reale">
+  Canali istituzionali e supporto (senza restare solo)
+</SectionTitle>
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+  <CardBlock title="INPS (prestazioni e posizione contributiva)">
+    Per contributi, estratto conto, prestazioni e domande online.
+    <span className="block mt-4"><Highlight color="blue">Accesso con SPID</Highlight></span>
+  </CardBlock>
+  <CardBlock title="Ispettorato Nazionale del Lavoro">
+    Per segnalazioni e verifiche su irregolarità del rapporto e tutela del lavoratore.
+    <span className="block mt-4"><Highlight color="blue">Canale pubblico</Highlight></span>
+  </CardBlock>
+  <CardBlock title="Patronati">
+    Aiuto pratico su pratiche INPS e assistenza amministrativa.
+    <span className="block mt-4"><Highlight color="blue">Supporto operativo</Highlight></span>
+  </CardBlock>
+  <CardBlock title="Sindacati">
+    Supporto contrattuale e orientamento, soprattutto nei conflitti e nella lettura del contratto/CCNL.
+    <span className="block mt-4"><Highlight color="blue">Mediazione e tutela</Highlight></span>
+  </CardBlock>
+</div>
+
+<Steps>
+  <Step number="1" title="Metti ordine ai documenti">
+    Contratto, buste paga, comunicazioni (mail/chat), turni. Se manca qualcosa, segna cosa non ti è stato consegnato.
+  </Step>
+  <Step number="2" title="Fai una verifica “neutra”">
+    Patronato o sindacato possono aiutarti a capire se tutto torna (tutele, contributi, inquadramento).
+  </Step>
+  <Step number="3" title="Se c’è irregolarità, usa il canale giusto">
+    Per contributi/prestazioni → INPS. Per controlli sul rapporto → Ispettorato. Per contenzioso → serve valutazione professionale.
+  </Step>
+</Steps>
+
+<SectionTitle step={8} title="Esempi (tono reale, senza giudizio)">
+  Situazioni comuni e cosa osservare
+</SectionTitle>
+
+<Row className="lg:grid-cols-2">
+  <Col>
+    <Example type="positive" title="Subordinato chiaro: tutele e busta paga leggibile">
+      Marco ha orari, turno, responsabile e mansione definita.  
+      Riceve busta paga ogni mese e vede contributi e TFR.
+
+      Qui il rapporto è coerente: la cosa intelligente è imparare a leggere le voci base e controllare la regolarità nel tempo.
+    </Example>
+  </Col>
+  <Col>
+    <Example type="negative" title="Finta autonomia: Partita IVA “di facciata”">
+      Sara apre P.IVA ma lavora come se fosse in ufficio: orari fissi, ordini, un solo committente, controllo costante.
+
+      Qui l’attenzione è sulle tutele mancanti: prima raccogli elementi, poi chiedi supporto (patronato/sindacato) e valuti canali pubblici.
+    </Example>
+  </Col>
+</Row>
+
+<Row className="lg:grid-cols-2">
+  <Col>
+    <Example type="positive" title="Dimissioni gestite bene">
+      Luca vuole cambiare lavoro. Verifica preavviso, consegna comunicazioni chiare, conserva tutto.
+
+      Anche quando sei tu a scegliere, il modo “pulito” ti evita problemi e contestazioni.
+    </Example>
+  </Col>
+  <Col>
+    <Example type="negative" title="Busta paga assente o irregolare">
+      Ti pagano “a voce” o con bonifici senza busta paga regolare.
+
+      Non è solo un dettaglio: senza documentazione aumentano rischi su contributi e tutele. Metti in ordine e chiedi aiuto a un patronato/sindacato.
+    </Example>
+  </Col>
+</Row>
+
+<SectionTitle step={9} title="Video suggerito">
+  Subordinato vs autonomo + lettura busta paga
+</SectionTitle>
+
+{/* VIDEO PLACEHOLDER:
+  Search query: "contratto di lavoro subordinato autonomo differenze busta paga spiegazione universitaria"
+  Criteri: docente universitario / ente istituzionale / ordine professionale; autore identificabile; no promozione; esempi pratici; aggiornato.
+*/}
 
 ---
 
-## 1) Titolo sezione
+<QuizBlock />
 
-Contenuto...
-
-<Quiz />
-
-<Resources />
+<ResourceFooter
+  disclaimerLevel="elevated"
+  primarySources={[
+    { label: "Normattiva — Codice civile (artt. 2087, 2094, 2104, 2105, 2106, 2118, 2119, 2120)", url: "https://www.normattiva.it/" },
+    { label: "Normattiva — Costituzione (artt. 36, 38)", url: "https://www.normattiva.it/" },
+    { label: "INPS — sito istituzionale", url: "https://www.inps.it/" },
+    { label: "Ispettorato Nazionale del Lavoro — sito istituzionale", url: "https://www.ispettorato.gov.it/" }
+  ]}
+>
+Questa lezione ha finalità didattica e non costituisce consulenza legale. Se vivi una situazione lavorativa complessa o urgente, usa i canali istituzionali (INPS, Ispettorato) e supporto qualificato (patronati, sindacati) e valuta assistenza professionale per il tuo caso concreto.
+</ResourceFooter>

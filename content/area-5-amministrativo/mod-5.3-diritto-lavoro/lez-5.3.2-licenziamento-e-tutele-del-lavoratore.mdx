@@ -1,35 +1,312 @@
 ---
 slug: "lez-5.3.2"
 title: "Licenziamento e tutele del lavoratore"
-area: "area-5-amministrativo"
-module: "mod-5.3-diritto-lavoro"
+area: "area-5-diritto-amministrativo"
+module: "mod-5.3-lavoro-e-tutele"
 order: 2
-duration_minutes: 12
+duration_minutes: 30
 prerequisites: ["lez-5.3.1"]
 next_lesson: "lez-6.1.1"
-last_verified: "2026-02-07"
+prev_lesson: "lez-5.3.1"
+last_verified: "2026-02-24"
 verified_by: "Da verificare"
-disclaimer_level: "standard"
-source_refs: []
-glossary_terms: []
+disclaimer_level: "elevated"
+glossary_terms:
+  - "licenziamento"
+  - "recesso"
+  - "impugnazione"
+  - "termine-decadenziale"
+  - "giusta-causa"
+  - "giustificato-motivo"
+  - "contestazione-disciplinare"
+  - "lettera-di-licenziamento"
+  - "naspI"
+  - "inps"
+  - "ispettorato-nazionale-del-lavoro"
+  - "sindacato"
+  - "patronato"
+  - "dimissioni-telematiche"
 quiz:
-  questions: []
+  questions:
+    - type: "mcq"
+      prompt: "Dopo un licenziamento, il primo numero da ricordare per non perdere diritti (in generale) è:"
+      choices:
+        - "7 giorni"
+        - "60 giorni"
+        - "365 giorni"
+      correctIndex: 1
+      feedback:
+        0: "No. 7 giorni non è il termine generale di impugnazione del licenziamento."
+        1: "Corretto. In linea generale l’impugnazione va fatta entro 60 giorni (termine decadenziale)."
+        2: "No. 365 giorni non è il termine generale per impugnare."
+    - type: "mcq"
+      prompt: "Se ti dimetti oggi in modo “informale” (mail/WhatsApp) senza usare la procedura prevista, il rischio principale è:"
+      choices:
+        - "Nessuno: basta comunicarlo"
+        - "Che le dimissioni non siano valide secondo la procedura e si creino problemi/contestazioni"
+        - "Che diventi automaticamente licenziamento"
+      correctIndex: 1
+      feedback:
+        0: "No. In molti casi è richiesta una procedura telematica."
+        1: "Corretto. La procedura telematica è centrale: farlo “a parole” può creare problemi."
+        2: "No. Non c’è automatismo, ma può generare conflitti e incertezze."
+    - type: "mcq"
+      prompt: "La NASpI è, in sintesi:"
+      choices:
+        - "Un bonus una tantum per chi si dimette"
+        - "Una misura di sostegno al reddito in caso di disoccupazione involontaria (con requisiti)"
+        - "Un rimborso spese per l’avvocato"
+      correctIndex: 1
+      feedback:
+        0: "No. La NASpI non è un bonus una tantum e non è collegata automaticamente alle dimissioni."
+        1: "Corretto. È un sostegno legato alla disoccupazione involontaria, con condizioni."
+        2: "No. Non è un rimborso legale."
+    - type: "open"
+      prompt: "Scrivi una mini-procedura (5 righe) su cosa faresti nelle prime 48 ore dopo un licenziamento."
+      expected_points:
+        - "Conservare lettera e comunicazioni; non firmare “alla cieca”"
+        - "Verificare data e motivazione; capire tipo (disciplinare/economico)"
+        - "Contattare sindacato/patronato/avvocato giuslavorista"
+        - "Preparare impugnazione entro 60 giorni"
+        - "Valutare domanda NASpI e canali INPS"
 ---
 
-<Hook>
-Inserisci qui il gancio iniziale...
-</Hook>
+<HookBlock>
+Ti chiamano in ufficio, ti consegnano una lettera, e in 2 minuti cambia tutto.  
+In quel momento non serve sapere “tutto il diritto del lavoro”: serve sapere **cosa fare subito** per non perdere tutele.
+</HookBlock>
 
 <Objective>
-Inserisci qui l'obiettivo della lezione...
+Nella lezione precedente hai visto il contratto di lavoro e le differenze tra subordinato e autonomo. Ora affrontiamo il punto più temuto: il <GlossaryTerm id="licenziamento">licenziamento</GlossaryTerm>. Ti porti via tre cose operative: (1) il termine dei <Highlight color="blue">60 giorni</Highlight> per l’<GlossaryTerm id="impugnazione">impugnazione</GlossaryTerm>, (2) uno schema “cosa fare se ti licenziano” passo-passo, (3) la rete di sicurezza: <GlossaryTerm id="naspI">NASpI</GlossaryTerm> e canali istituzionali.
 </Objective>
+
+<SectionTitle step={1} title="Prima distinzione: che tipo di fine rapporto è?">
+  Licenziamento vs dimissioni (e perché cambia la tutela)
+</SectionTitle>
+
+<Compare
+  aTitle="Licenziamento"
+  aBody="Decide il datore. Serve una base (motivo) e un percorso corretto. Se manca qualcosa, puoi contestare."
+  bTitle="Dimissioni"
+  bBody="Decidi tu. In molti casi devi usare la procedura telematica: farlo “a parole” può creare problemi."
+/>
+
+<Technical>
+**Art. 2118 c.c. — Recesso con preavviso.**  
+Ciascuna delle parti può recedere dal contratto a tempo indeterminato dando preavviso nel termine e nei modi stabiliti.
+</Technical>
+
+<Technical>
+**Art. 2119 c.c. — Recesso per giusta causa.**  
+Ciascuna delle parti può recedere senza preavviso se si verifica una causa che non consenta la prosecuzione, anche provvisoria, del rapporto.
+</Technical>
+
+<SectionTitle step={2} title="Il numero che ti salva: 60 giorni (tassativi)">
+  Se lo perdi, perdi la partita
+</SectionTitle>
+
+<Concept title="Termine decadenziale: cosa significa davvero">
+Il termine dei <Highlight color="blue">60 giorni</Highlight> per impugnare è un <GlossaryTerm id="termine-decadenziale">termine decadenziale</GlossaryTerm>: se scade, **di regola** non puoi più far valere quella tutela con la stessa forza.
+</Concept>
+
+<Technical>
+**L. 604/1966, art. 6 — Impugnazione del licenziamento.**  
+Prevede (in linea generale) che il licenziamento debba essere impugnato entro 60 giorni dalla comunicazione, secondo le modalità previste.
+</Technical>
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+  <CardBlock title="Cosa conti (pratico)">
+    La data della comunicazione/lettera e quando la ricevi.
+    <span className="block mt-4"><Highlight color="blue">Segna tutto</Highlight></span>
+  </CardBlock>
+  <CardBlock title="Cosa NON fare">
+    Aspettare “di vedere come va” senza attivarti.
+    <span className="block mt-4"><Highlight color="blue">Tempo = diritti</Highlight></span>
+  </CardBlock>
+</div>
+
+<SectionTitle step={3} title="Motivi: quando il datore può licenziare (macro)">
+  Giusta causa, giustificato motivo, disciplinare
+</SectionTitle>
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+  <CardBlock title="Giusta causa">
+    Fatti gravi che non consentono la prosecuzione del rapporto.
+    <span className="block mt-4"><Highlight color="blue">Senza preavviso</Highlight></span>
+  </CardBlock>
+  <CardBlock title="Giustificato motivo">
+    Ragioni che rendono legittimo il recesso secondo le regole applicabili.
+    <span className="block mt-4"><Highlight color="blue">Con preavviso</Highlight></span>
+  </CardBlock>
+  <CardBlock title="Disciplinare">
+    Collegato a condotte contestate e procedure corrette.
+    <span className="block mt-4"><Highlight color="blue">Procedura conta</Highlight></span>
+  </CardBlock>
+</div>
+
+<Technical>
+**L. 300/1970 (Statuto dei Lavoratori), art. 7 — Sanzioni disciplinari e garanzie.**  
+Rileva per le garanzie procedurali in materia disciplinare (contestazione, difesa, proporzionalità), secondo le regole applicabili.
+</Technical>
+
+<SectionTitle step={4} title="Schema operativo: cosa fare se ti licenziano">
+  Le prime 48 ore contano più di mille idee
+</SectionTitle>
+
+<Steps>
+  <Step number="1" title="Metti in sicurezza i documenti">
+    Conserva <GlossaryTerm id="lettera-di-licenziamento">lettera di licenziamento</GlossaryTerm>, buste paga, contratto, comunicazioni (mail/chat), eventuali contestazioni e risposte.
+  </Step>
+  <Step number="2" title="Non firmare “alla cieca”">
+    Se ti propongono verbali o accordi immediati, leggili con calma. Se non puoi, chiedi di portarli via o di riceverli via mail.
+  </Step>
+  <Step number="3" title="Segna le date">
+    Data consegna/ricezione lettera, data ultimo giorno, eventuale preavviso. Ti serve per calcolare i termini.
+  </Step>
+  <Step number="4" title="Attiva la rete">
+    Contatta <GlossaryTerm id="sindacato">sindacato</GlossaryTerm> o <GlossaryTerm id="patronato">patronato</GlossaryTerm>. Se la situazione è complessa, valuta un avvocato giuslavorista.
+  </Step>
+  <Step number="5" title="Impugnazione entro 60 giorni">
+    Anche se poi tratti o fai conciliazione, la priorità è non far scadere il termine.
+  </Step>
+</Steps>
+
+<SectionTitle step={5} title="NASpI: la rete di sicurezza (quando ne hai diritto)">
+  Sostegno al reddito, con requisiti
+</SectionTitle>
+
+<Concept title="Cosa ti serve capire subito">
+La <GlossaryTerm id="naspI">NASpI</GlossaryTerm> è un sostegno legato alla disoccupazione involontaria. Non è “automatica” per qualunque uscita: dipende dal caso e dai requisiti.
+</Concept>
+
+<Technical>
+**D.Lgs. 22/2015 — NASpI.**  
+Disciplina la Nuova Assicurazione Sociale per l’Impiego e le condizioni di accesso, durata e modalità.
+</Technical>
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+  <CardBlock title="Canale principale">
+    Domanda e gestione tramite <GlossaryTerm id="inps">INPS</GlossaryTerm> (spesso con SPID).
+    <span className="block mt-4"><Highlight color="blue">Portale INPS</Highlight></span>
+  </CardBlock>
+  <CardBlock title="Aiuto operativo">
+    Se non vuoi sbagliare pratica o documenti, un patronato ti aiuta in modo concreto.
+    <span className="block mt-4"><Highlight color="blue">Patronato</Highlight></span>
+  </CardBlock>
+</div>
+
+<SectionTitle step={6} title="Dimissioni: “solo online” come regola di prudenza">
+  Evita l’errore più costoso: dimettersi male
+</SectionTitle>
+
+<Concept title="Regola pratica">
+Se devi dimetterti, considera come regola di prudenza la procedura <GlossaryTerm id="dimissioni-telematiche">telematica</GlossaryTerm>: farlo via messaggio o voce può creare contestazioni e caos.
+</Concept>
+
+<Technical>
+**D.Lgs. 151/2015, art. 26 — Dimissioni e risoluzione consensuale.**  
+Prevede la procedura telematica per dimissioni/risoluzione consensuale nei casi e modi stabiliti.
+</Technical>
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+  <CardBlock title="Quando è cruciale">
+    Quando il datore ti “spinge” a dimetterti o ti propone scorciatoie.
+    <span className="block mt-4"><Highlight color="blue">Proteggi la tua posizione</Highlight></span>
+  </CardBlock>
+  <CardBlock title="Cosa fare">
+    Prima chiarisci cosa stai firmando, poi usa canali ufficiali o supporto (patronato/sindacato).
+    <span className="block mt-4"><Highlight color="blue">Non improvvisare</Highlight></span>
+  </CardBlock>
+</div>
+
+<SectionTitle step={7} title="Esempi: due storie, due mosse diverse">
+  Senza giudizio, solo strategia
+</SectionTitle>
+
+<Row className="lg:grid-cols-2">
+  <Col>
+    <Example type="positive" title="Licenziamento: agisci subito e metti in sicurezza i termini">
+      Anna riceve una lettera.  
+      In giornata salva tutto (contratto, buste paga, mail), segna la data, e contatta un sindacato/patronato.
+
+      Risultato: può valutare tutele e, soprattutto, non perde l’impugnazione entro 60 giorni.
+    </Example>
+  </Col>
+  <Col>
+    <Example type="negative" title="Errore tipico: “aspetto, poi vedo”">
+      Marco è confuso e non fa nulla per settimane.  
+      Quando decide di muoversi, il termine è quasi scaduto o scaduto.
+
+      Risultato: anche se aveva argomenti, ora la strada si complica.
+    </Example>
+  </Col>
+</Row>
+
+<Row className="lg:grid-cols-2">
+  <Col>
+    <Example type="positive" title="Dimissioni: procedura corretta e comunicazione pulita">
+      Luca vuole cambiare.  
+      Chiede supporto, verifica preavviso e usa la procedura telematica.
+
+      Risultato: chiusura ordinata, meno conflitti e documenti puliti.
+    </Example>
+  </Col>
+  <Col>
+    <Example type="negative" title="Dimissioni “a voce” sotto pressione">
+      Ti dicono: “Se non ti dimetti oggi, domani…”.  
+      Tu mandi un WhatsApp e basta.
+
+      Risultato: rischi incertezze sulla validità, contestazioni e perdita di tutele collegate.
+    </Example>
+  </Col>
+</Row>
+
+<SectionTitle step={8} title="Riepilogo Area 5 + ponte alla prossima area">
+  Dal rapporto con lo Stato al tuo sistema di tutele
+</SectionTitle>
+
+<Concept title="Cosa hai costruito in Area 5">
+<span className="block">• Come funziona la PA e come si forma un atto.</span>
+<span className="block mt-2">• Come ottenere informazioni (accesso agli atti) e come contestare un diniego.</span>
+<span className="block mt-2">• Come ottenere permessi e avviare attività (SCIA/SUAP/silenzio-assenso).</span>
+<span className="block mt-2">• Come leggere e proteggere un rapporto di lavoro: contratto, busta paga, fine rapporto.</span>
+</Concept>
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+  <CardBlock title="Il filo logico">
+    In ogni rapporto con un’istituzione (PA o datore) contano: documenti, termini e canali ufficiali.
+    <span className="block mt-4"><Highlight color="blue">Metodo</Highlight></span>
+  </CardBlock>
+  <CardBlock title="Verso Area 6">
+    Ora che hai strumenti pratici, il passo successivo è capire come si tutelano i diritti con le regole e gli strumenti dell’area successiva.
+    <span className="block mt-4"><Highlight color="blue">Ponte</Highlight></span>
+  </CardBlock>
+</div>
+
+<SectionTitle step={9} title="Video suggerito">
+  Impugnazione licenziamento, NASpI, dimissioni telematiche
+</SectionTitle>
+
+{/* VIDEO PLACEHOLDER:
+  Search query: "impugnazione licenziamento 60 giorni art 6 legge 604 1966 NASpI dimissioni telematiche lezione universitaria"
+  Criteri: docente universitario / ente istituzionale / ordine professionale; autore identificabile; no promozione; casi pratici; aggiornato.
+*/}
 
 ---
 
-## 1) Titolo sezione
+<QuizBlock />
 
-Contenuto...
-
-<Quiz />
-
-<Resources />
+<ResourceFooter
+  disclaimerLevel="elevated"
+  primarySources={[
+    { label: "Normattiva — L. 604/1966 (art. 6: impugnazione)", url: "https://www.normattiva.it/" },
+    { label: "Normattiva — L. 300/1970 (Statuto dei Lavoratori, art. 7)", url: "https://www.normattiva.it/" },
+    { label: "Normattiva — Codice civile (artt. 2118–2119; 2120)", url: "https://www.normattiva.it/" },
+    { label: "Normattiva — D.Lgs. 22/2015 (NASpI)", url: "https://www.normattiva.it/" },
+    { label: "Normattiva — D.Lgs. 151/2015 (art. 26: dimissioni telematiche)", url: "https://www.normattiva.it/" },
+    { label: "INPS — sito istituzionale", url: "https://www.inps.it/" },
+    { label: "Ispettorato Nazionale del Lavoro — sito istituzionale", url: "https://www.ispettorato.gov.it/" }
+  ]}
+>
+Questa lezione ha finalità didattica e non costituisce consulenza legale. Se sei in una situazione urgente (licenziamento, dimissioni forzate, mancati pagamenti), non restare solo: contatta sindacato o patronato e valuta un avvocato giuslavorista. I termini (es. 60 giorni per impugnare) possono essere decisivi: conserva documenti e prova delle date.
+</ResourceFooter>

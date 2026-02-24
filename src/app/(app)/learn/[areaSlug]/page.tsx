@@ -1,6 +1,7 @@
 import { redirect } from 'next/navigation';
 import Link from 'next/link';
 import { getModules, getLessons } from '@/lib/content/loader';
+import { AreaProgress, ModuleProgress } from '@/components/layout/AreaProgress';
 
 interface PageProps {
     params: {
@@ -23,6 +24,9 @@ export default async function AreaPage({ params }: PageProps) {
     return (
         <div className="space-y-6 sm:space-y-8 px-2 sm:px-0">
             <h1 className="text-2xl sm:text-3xl font-serif font-bold capitalize">{areaSlug.replace(/-/g, ' ')}</h1>
+
+            <AreaProgress areaSlug={areaSlug} modulesWithLessons={modulesWithLessons} />
+
             <div className="grid gap-3 sm:gap-4">
                 {modulesWithLessons.map(mod => {
                     return (
@@ -36,6 +40,11 @@ export default async function AreaPage({ params }: PageProps) {
                             <span className="text-sm text-primary font-medium">
                                 {mod.firstLessonSlug ? "Apri Modulo →" : "Prossimamente"}
                             </span>
+
+                            <ModuleProgress
+                                moduleData={mod}
+                                curriculum={[{ slug: areaSlug, title: "", modules: modulesWithLessons }]}
+                            />
                         </Link>
                     )
                 })}

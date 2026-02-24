@@ -141,6 +141,7 @@ export function LessonPlayer({ lesson }: LessonPlayerProps) {
                         nextSlug={lesson.next_lesson}
                         areaSlug={lesson.area}
                         moduleSlug={lesson.module}
+                        currentSlug={lesson.slug}
                     />
                 </div>
             </article>

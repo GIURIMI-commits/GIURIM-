@@ -9,6 +9,7 @@ import {
     ChevronRight, ChevronLeft, ChevronDown, CheckCircle2, Circle, BookOpen, FileText, PlayCircle
 } from "lucide-react";
 import { useState, useEffect } from "react";
+import { useCourseProgress } from "@/hooks/useCourseProgress";
 
 const iconMap: { [key: string]: any } = {
     scale: Scale,
@@ -28,6 +29,9 @@ export function SidebarNav({ curriculum }: SidebarNavProps) {
     const [expandedModules, setExpandedModules] = useState<Set<string>>(new Set());
     const [expandedAreas, setExpandedAreas] = useState<Set<string>>(new Set());
     const [isCollapsed, setIsCollapsed] = useState(false);
+
+    const { isCompleted, getAreaStats, getGlobalStats } = useCourseProgress(curriculum);
+    const globalStats = getGlobalStats();
 
     // Auto-expand based on current path
     useEffect(() => {
@@ -115,9 +119,31 @@ export function SidebarNav({ curriculum }: SidebarNavProps) {
                 "h-full overflow-y-auto scrollbar-thin scrollbar-thumb-neutral-200 dark:scrollbar-thumb-neutral-800 w-full",
                 isCollapsed ? "hidden" : "p-4"
             )}>
-                <div className="font-semibold text-xs text-neutral-500 dark:text-neutral-400 uppercase tracking-widest mb-4">
-                    Indice Contenuti
+                <div className="flex items-center justify-between mb-4">
+                    <div className="font-semibold text-xs text-neutral-500 dark:text-neutral-400 uppercase tracking-widest">
+                        Indice Contenuti
+                    </div>
                 </div>
+
+                <Link href="/mappa" className="flex items-center gap-2 mb-4 px-2 py-1.5 rounded-md text-sm font-medium text-indigo-600 dark:text-indigo-400 hover:bg-indigo-50 dark:hover:bg-indigo-900/40 transition-colors">
+                    <span className="text-base">🗺️</span> Mappa Ordinamento
+                </Link>
+
+                {/* Global Progress */}
+                {globalStats.total > 0 && (
+                    <div className="mb-6 px-1">
+                        <div className="flex justify-between text-xs text-muted-foreground mb-1.5">
+                            <span>Progresso Globale</span>
+                            <span className="font-medium">{globalStats.percentage}%</span>
+                        </div>
+                        <div className="h-1.5 w-full bg-muted rounded-full overflow-hidden">
+                            <div
+                                className="h-full bg-primary transition-all duration-500 ease-out"
+                                style={{ width: `${globalStats.percentage}%` }}
+                            />
+                        </div>
+                    </div>
+                )}
 
                 <div className="space-y-6 pb-10">
                     {curriculum.map((area) => {
@@ -197,12 +223,16 @@ export function SidebarNav({ curriculum }: SidebarNavProps) {
                                                                                 : "text-neutral-500 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800/60 dark:hover:text-neutral-200"
                                                                         )}
                                                                     >
-                                                                        {isLessonActive ? (
-                                                                            <PlayCircle className="h-3 w-3 mt-0.5 flex-shrink-0" />
+                                                                        {isCompleted(lesson.slug) ? (
+                                                                            <CheckCircle2 className="h-3.5 w-3.5 mt-0.5 flex-shrink-0 text-green-500 dark:text-green-400" />
+                                                                        ) : isLessonActive ? (
+                                                                            <PlayCircle className="h-3.5 w-3.5 mt-0.5 flex-shrink-0 text-indigo-600 dark:text-indigo-400" />
                                                                         ) : (
-                                                                            <FileText className="h-3 w-3 mt-0.5 flex-shrink-0 opacity-50 dark:opacity-70 group-hover/lesson:dark:opacity-100" />
+                                                                            <Circle className="h-3 w-3 mt-0.5 ml-0.5 flex-shrink-0 opacity-40 dark:opacity-50 group-hover/lesson:dark:opacity-80" />
                                                                         )}
-                                                                        <span className="leading-tight">{lesson.title}</span>
+                                                                        <span className={cn("leading-tight", isCompleted(lesson.slug) && !isLessonActive ? "opacity-70" : "")}>
+                                                                            {lesson.title}
+                                                                        </span>
                                                                     </Link>
                                                                 );
                                                             })}

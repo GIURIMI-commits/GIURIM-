@@ -1,16 +1,29 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Scale, Menu, X, ChevronDown } from 'lucide-react';
+import { Scale, Menu, X, ChevronDown, Search } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import { useProfile } from '@/hooks/useProfile';
+import { GlobalSearch } from '@/components/ui/search/GlobalSearch';
 
 export function Navbar() {
     const { profile, loading } = useProfile();
     const pathname = usePathname();
     const [isOpen, setIsOpen] = useState(false);
+    const [searchOpen, setSearchOpen] = useState(false);
+
+    useEffect(() => {
+        const down = (e: KeyboardEvent) => {
+            if (e.key === 'k' && (e.metaKey || e.ctrlKey)) {
+                e.preventDefault();
+                setSearchOpen((open) => !open);
+            }
+        };
+        document.addEventListener('keydown', down);
+        return () => document.removeEventListener('keydown', down);
+    }, []);
 
     return (
         <nav className="border-b bg-background/80 backdrop-blur-md sticky top-0 z-40">
@@ -47,6 +60,9 @@ export function Navbar() {
                                 <Link href="/glossario" className="block px-3 py-2 text-sm hover:bg-muted rounded-md transition-colors">
                                     Glossario
                                 </Link>
+                                <Link href="/mappa" className="block px-3 py-2 text-sm hover:bg-muted rounded-md transition-colors">
+                                    Mappa Ordinamento
+                                </Link>
                                 <Link href="/studenti" className="block px-3 py-2 text-sm hover:bg-muted rounded-md transition-colors text-indigo-600 dark:text-indigo-400 font-medium">
                                     Studenti
                                 </Link>
@@ -75,31 +91,49 @@ export function Navbar() {
                 </div>
 
                 <div className="flex items-center gap-4">
-                    {!loading && (
-                        <>
-                            {profile ? (
-                                <div className="flex items-center gap-4">
-                                    <Link href="/dashboard" className="hidden md:block">
-                                        <Button variant="ghost" className="font-medium text-muted-foreground">Dashboard</Button>
-                                    </Link>
-                                    <Link href="/profilo">
-                                        <div className="h-8 w-8 rounded-full bg-neutral-100 border border-neutral-200 flex items-center justify-center text-xs font-bold text-neutral-700">
-                                            {profile.display_name ? profile.display_name[0].toUpperCase() : 'U'}
-                                        </div>
-                                    </Link>
-                                </div>
-                            ) : (
-                                <div className="flex items-center gap-2">
-                                    <Link href="/login" className="hidden md:block">
-                                        <Button variant="ghost" className="text-muted-foreground hover:text-foreground">Accedi</Button>
-                                    </Link>
-                                    <Link href="/registrazione">
-                                        <Button className="rounded-full px-4 md:px-6 text-sm">Inizia</Button>
-                                    </Link>
-                                </div>
-                            )}
-                        </>
-                    )}
+                    {/* Search Trigger */}
+                    <button
+                        onClick={() => setSearchOpen(true)}
+                        className="hidden md:flex items-center gap-2 px-3 py-1.5 text-sm text-muted-foreground bg-muted/50 hover:bg-muted border border-border/50 rounded-full transition-colors"
+                    >
+                        <Search className="h-4 w-4" />
+                        <span>Cerca...</span>
+                        <kbd className="hidden lg:inline-flex h-5 items-center gap-1 rounded border bg-background px-1.5 font-mono text-[10px] font-medium text-muted-foreground opacity-100">
+                            <span className="text-xs">⌘</span>K
+                        </kbd>
+                    </button>
+                    {/* Mobile Search Icon */}
+                    <button
+                        onClick={() => setSearchOpen(true)}
+                        className="md:hidden p-2 text-muted-foreground hover:text-foreground"
+                    >
+                        <Search className="h-5 w-5" />
+                    </button>
+
+                    <div className="flex items-center gap-4">
+                        {!loading && (
+                            <>
+                                {profile ? (
+                                    <div className="flex items-center gap-4">
+                                        <Link href="/dashboard" className="hidden md:block">
+                                            <Button variant="ghost" className="font-medium text-muted-foreground">Dashboard</Button>
+                                        </Link>
+                                        <Link href="/profilo">
+                                            <div className="h-8 w-8 rounded-full bg-neutral-100 border border-neutral-200 flex items-center justify-center text-xs font-bold text-neutral-700">
+                                                {profile.display_name ? profile.display_name[0].toUpperCase() : 'U'}
+                                            </div>
+                                        </Link>
+                                    </div>
+                                ) : (
+                                    <div className="flex items-center gap-2">
+                                        <Link href="/login" className="hidden md:block">
+                                            <Button variant="ghost" className="text-muted-foreground hover:text-foreground">Accedi</Button>
+                                        </Link>
+                                    </div>
+                                )}
+                            </>
+                        )}
+                    </div>
                 </div>
             </div>
 
@@ -129,6 +163,13 @@ export function Navbar() {
                         onClick={() => setIsOpen(false)}
                     >
                         Glossario
+                    </Link>
+                    <Link
+                        href="/mappa"
+                        className="p-2 ml-2 hover:bg-muted rounded-md transition-colors font-medium text-sm"
+                        onClick={() => setIsOpen(false)}
+                    >
+                        Mappa Ordinamento
                     </Link>
                     <Link
                         href="/studenti"
@@ -179,6 +220,8 @@ export function Navbar() {
                     )}
                 </div>
             )}
+
+            <GlobalSearch open={searchOpen} onOpenChange={setSearchOpen} />
         </nav>
     );
 }
