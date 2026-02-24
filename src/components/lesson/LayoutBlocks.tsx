@@ -5,7 +5,7 @@ import React from "react";
 
 export function Row({ children, className }: { children: React.ReactNode; className?: string }) {
     return (
-        <div className={cn("grid grid-cols-1 md:grid-cols-2 gap-6 my-8", className)}>
+        <div className={cn("grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 my-8", className)}>
             {children}
         </div>
     );
@@ -13,7 +13,7 @@ export function Row({ children, className }: { children: React.ReactNode; classN
 
 export function Col({ children, className }: { children: React.ReactNode; className?: string }) {
     return (
-        <div className={cn("flex flex-col gap-4", className)}>
+        <div className={cn("flex flex-col gap-3 sm:gap-4", className)}>
             {children}
         </div>
     );
@@ -39,8 +39,8 @@ export function Highlight({ children, color = "yellow" }: { children: React.Reac
 
 export function CardBlock({ children, title, className }: { children: React.ReactNode; title?: string; className?: string }) {
     return (
-        <div className={cn("p-6 rounded-xl border bg-card text-card-foreground shadow-sm", className)}>
-            {title && <h4 className="font-semibold text-lg mb-3">{title}</h4>}
+        <div className={cn("p-4 sm:p-5 rounded-xl border bg-card text-card-foreground shadow-sm", className)}>
+            {title && <h4 className="font-semibold text-lg mb-2 sm:mb-3">{title}</h4>}
             <div className="text-sm leading-relaxed text-muted-foreground">
                 {children}
             </div>

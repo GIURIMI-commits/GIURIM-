@@ -75,7 +75,7 @@ export function AnimatedElementiReato() {
             </div>
 
             {/* Visual Funnel Graphic */}
-            <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-2 mb-10 w-full relative z-10">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-3 sm:gap-4 md:gap-2 mb-10 w-full relative z-10">
                 {filters.map((filter, index) => {
                     const isActive = activeFilter === index;
                     const Icon = filter.icon;
@@ -130,12 +130,12 @@ export function AnimatedElementiReato() {
                     className="w-full relative z-10"
                 >
                     <div className={cn(
-                        "rounded-2xl p-6 border",
+                        "rounded-2xl p-4 sm:p-6 border",
                         filters[activeFilter].bg,
                         filters[activeFilter].border
                     )}>
-                        <h4 className="font-bold text-lg mb-4 text-neutral-900 dark:text-white">Cosa si valuta qui?</h4>
-                        <div className="grid md:grid-cols-2 gap-6">
+                        <h4 className="font-bold text-lg mb-3 sm:mb-4 text-neutral-900 dark:text-white">Cosa si valuta qui?</h4>
+                        <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
                             <ul className="space-y-3">
                                 {filters[activeFilter].details.map((detail, idx) => (
                                     <motion.li

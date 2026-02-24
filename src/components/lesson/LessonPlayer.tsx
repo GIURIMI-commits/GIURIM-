@@ -100,22 +100,22 @@ export function LessonPlayer({ lesson }: LessonPlayerProps) {
     const hasQuizInMDX = lesson.content.includes('<Quiz') || lesson.content.includes('<QuizBlock');
 
     return (
-        <div className="max-w-4xl mx-auto px-4 py-8 md:py-12">
-            <article className="bg-white dark:bg-neutral-950 rounded-2xl shadow-sm border border-neutral-200 dark:border-neutral-800 p-6 md:p-12">
+        <div className="max-w-4xl mx-auto px-3 sm:px-4 py-8 md:py-12">
+            <article className="bg-white dark:bg-neutral-950 rounded-2xl shadow-sm border border-neutral-200 dark:border-neutral-800 px-4 py-6 sm:p-6 md:p-10 lg:p-12">
                 <LessonHeader lesson={lesson} />
 
-                <div className="mt-8 prose prose-neutral dark:prose-invert max-w-none prose-headings:font-serif prose-headings:font-bold prose-p:text-lg prose-p:leading-relaxed prose-li:text-lg">
+                <div className="mt-8 sm:mt-12 prose prose-sm sm:prose-base md:prose-lg prose-neutral dark:prose-invert max-w-none prose-headings:font-serif prose-headings:font-bold prose-p:leading-relaxed">
                     <MDXRemote source={lesson.content} components={components} />
                 </div>
 
                 {/* Auto-append quiz if they didn't manually use the <QuizBlock /> tag */}
                 {lesson.quiz && !hasQuizInMDX && (
-                    <div className="mt-12 pt-8 border-t border-neutral-100 dark:border-neutral-800">
+                    <div className="mt-8 sm:mt-12 pt-8 border-t border-neutral-100 dark:border-neutral-800">
                         <QuizBlockComponent quiz={lesson.quiz} lessonSlug={lesson.slug} />
                     </div>
                 )}
 
-                <div className="mt-12 pt-8 border-t border-neutral-100 dark:border-neutral-800">
+                <div className="mt-8 sm:mt-12 pt-8 border-t border-neutral-100 dark:border-neutral-800">
                     <LessonNav
                         prevSlug={lesson.prev_lesson}
                         nextSlug={lesson.next_lesson}
@@ -126,18 +126,18 @@ export function LessonPlayer({ lesson }: LessonPlayerProps) {
             </article>
 
             {/* Global Open Source Disclaimer (Beta) & CTA Collaborazione */}
-            <div className="mt-8 p-5 bg-amber-50 dark:bg-amber-950/30 rounded-2xl border border-amber-200 dark:border-amber-900/50 flex flex-col sm:flex-row items-start gap-4 shadow-sm group hover:shadow-md transition-shadow">
+            <div className="mt-8 p-4 sm:p-5 bg-amber-50 dark:bg-amber-950/30 rounded-2xl border border-amber-200 dark:border-amber-900/50 flex flex-col sm:flex-row items-start gap-4 shadow-sm group hover:shadow-md transition-shadow">
                 <div className="bg-amber-100 dark:bg-amber-900/50 p-2.5 rounded-xl flex-shrink-0">
                     <AlertTriangle className="h-5 w-5 text-amber-600 dark:text-amber-500" />
                 </div>
-                <div className="flex-1">
-                    <h4 className="font-semibold text-amber-900 dark:text-amber-400 text-sm">
+                <div className="flex-1 text-xs sm:text-sm">
+                    <h4 className="font-semibold text-amber-900 dark:text-amber-400">
                         Progetto Educativo Open Source (Beta)
                     </h4>
-                    <p className="text-sm text-amber-800/80 dark:text-amber-500/80 mt-1 leading-relaxed">
+                    <p className="text-amber-800/80 dark:text-amber-500/80 mt-1 leading-relaxed">
                         Giurimì è un ecosistema collaborativo in costante aggiornamento. I contenuti, seppur verificati, potrebbero contenere imprecisioni o semplificazioni e non costituiscono in alcun modo parere o consulenza legale istituzionale.
                     </p>
-                    <Link href="/chi-siamo#collabora" className="inline-flex items-center gap-1 text-sm font-medium text-amber-700 dark:text-amber-500 mt-3 group-hover:underline">
+                    <Link href="/chi-siamo#collabora" className="inline-flex items-center gap-1 font-medium text-amber-700 dark:text-amber-500 mt-3 group-hover:underline">
                         Sei uno studente o un professionista? Aiutaci a migliorare la piattaforma <ArrowRight className="h-3 w-3" />
                     </Link>
                 </div>

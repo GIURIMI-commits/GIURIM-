@@ -7,15 +7,15 @@ export default async function LearnIndexPage() {
     const areas = await getAreas();
 
     return (
-        <div className="space-y-8">
+        <div className="space-y-6 sm:space-y-8 px-2 sm:px-0">
             <div className="max-w-2xl">
-                <h1 className="text-3xl font-serif font-bold mb-4">Il Curriculum di GIURIMÌ</h1>
-                <p className="text-neutral-500 text-lg">
+                <h1 className="text-2xl sm:text-3xl font-serif font-bold mb-3 sm:mb-4">Il Curriculum di GIURIMÌ</h1>
+                <p className="text-neutral-500 text-base sm:text-lg">
                     Un percorso strutturato per capire il diritto italiano, dalle basi alla pratica.
                 </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
                 {areas.map((area) => (
                     <Link key={area.slug} href={`/learn/${area.slug}`} className="block h-full group">
                         <Card className="h-full hover:shadow-md transition-shadow cursor-pointer border-neutral-200 dark:border-neutral-800">

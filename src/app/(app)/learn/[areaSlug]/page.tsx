@@ -21,17 +21,17 @@ export default async function AreaPage({ params }: PageProps) {
         };
     }));
     return (
-        <div className="space-y-8">
-            <h1 className="text-3xl font-serif font-bold capitalize">{areaSlug.replace(/-/g, ' ')}</h1>
-            <div className="grid gap-4">
+        <div className="space-y-6 sm:space-y-8 px-2 sm:px-0">
+            <h1 className="text-2xl sm:text-3xl font-serif font-bold capitalize">{areaSlug.replace(/-/g, ' ')}</h1>
+            <div className="grid gap-3 sm:gap-4">
                 {modulesWithLessons.map(mod => {
                     return (
                         <Link
                             key={mod.slug}
                             href={mod.firstLessonSlug ? `/learn/${areaSlug}/${mod.slug}/${mod.firstLessonSlug}` : "#"}
-                            className="block p-6 border rounded-lg hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors"
+                            className="block p-4 sm:p-5 md:p-6 border rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors"
                         >
-                            <h2 className="text-xl font-bold mb-2">{mod.title}</h2>
+                            <h2 className="text-lg sm:text-xl font-bold mb-2">{mod.title}</h2>
                             <p className="text-neutral-500 mb-4">{mod.description}</p>
                             <span className="text-sm text-primary font-medium">
                                 {mod.firstLessonSlug ? "Apri Modulo →" : "Prossimamente"}

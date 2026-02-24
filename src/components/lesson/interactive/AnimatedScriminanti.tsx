@@ -82,14 +82,14 @@ export function AnimatedScriminanti() {
                 </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
                 {scriminanti.map((item) => (
                     <motion.div
                         key={item.id}
                         layoutId={`card-${item.id}`}
                         onClick={() => setSelectedId(item.id)}
                         className={cn(
-                            "cursor-pointer rounded-2xl p-5 border transition-all duration-300 hover:scale-105",
+                            "cursor-pointer rounded-2xl p-4 sm:p-5 border transition-all duration-300 hover:scale-105",
                             item.bg,
                             item.border
                         )}
