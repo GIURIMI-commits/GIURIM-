@@ -1,35 +1,272 @@
 ---
 slug: "lez-4.2.1"
-title: "Le pene nel diritto italiano"
+title: "Le pene nel diritto italiano (funzioni e tipologie)"
 area: "area-4-penale"
-module: "mod-4.2-pena-misure"
+module: "mod-4.2-pene-e-misure"
 order: 1
-duration_minutes: 10
+duration_minutes: 18
 prerequisites: ["lez-4.1.3"]
 next_lesson: "lez-4.2.2"
-last_verified: "2026-02-07"
-verified_by: "Da verificare"
-disclaimer_level: "standard"
-source_refs: []
-glossary_terms: []
+prev_lesson: "lez-4.1.3"
+last_verified: "2026-02-23"
+verified_by: "[Nome penalista]"
+disclaimer_level: "penale"
+
+source_refs:
+  - label: "Normattiva — Costituzione, art. 27 (comma 3: funzione rieducativa)"
+    url: "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:costituzione:1947-12-27~art27="
+  - label: "Brocardi — Art. 17 c.p. (pene principali: delitti/contravvenzioni)"
+    url: "https://www.brocardi.it/codice-penale/libro-primo/titolo-ii/capo-i/art17.html"
+  - label: "Brocardi — Art. 22 c.p. (ergastolo)"
+    url: "https://www.brocardi.it/codice-penale/libro-primo/titolo-ii/capo-i/art22.html"
+  - label: "Brocardi — Art. 23 c.p. (reclusione)"
+    url: "https://www.brocardi.it/codice-penale/libro-primo/titolo-ii/capo-i/art23.html"
+  - label: "Brocardi — Art. 24 c.p. (multa)"
+    url: "https://www.brocardi.it/codice-penale/libro-primo/titolo-ii/capo-i/art24.html"
+  - label: "Brocardi — Art. 25 c.p. (arresto)"
+    url: "https://www.brocardi.it/codice-penale/libro-primo/titolo-ii/capo-i/art25.html"
+  - label: "Brocardi — Art. 26 c.p. (ammenda)"
+    url: "https://www.brocardi.it/codice-penale/libro-primo/titolo-ii/capo-i/art26.html"
+  - label: "Brocardi — Artt. 19 ss. c.p. (pene accessorie: quadro generale)"
+    url: "https://www.brocardi.it/codice-penale/libro-primo/titolo-ii/capo-ii/"
+
+media:
+  - type: "video"
+    search_query: "funzione della pena art 27 comma 3 Costituzione pene principali accessorie diritto penale lezione universitaria"
+    canali_preferiti: ["università diritto penale", "enti istituzionali", "docente universitario"]
+    position: "after-funzioni"
+    nota: "Preferire lezione accademica neutrale su art. 27 e classificazione pene. No promozione, no cronaca."
+
+glossary_terms:
+  - "pena"
+  - "funzione-rieducativa"
+  - "pena-detentiva"
+  - "pena-pecuniaria"
+  - "ergastolo"
+  - "reclusione"
+  - "arresto"
+  - "multa"
+  - "ammenda"
+  - "pene-principali"
+  - "pene-accessorie"
+  - "delitto"
+  - "contravvenzione"
+  - "misure-di-sicurezza"
+
 quiz:
-  questions: []
+  questions:
+    - type: "mcq"
+      prompt: "Qual è il principio costituzionale che guida la funzione moderna della pena in Italia?"
+      choices:
+        - "La pena serve principalmente a vendicare la vittima."
+        - "La pena deve tendere alla rieducazione del condannato."
+        - "La pena è sempre uguale per tutti i reati."
+      correctIndex: 1
+      feedback:
+        0: "No: la logica costituzionale non è la vendetta, ma un sistema di pena con garanzie e finalità precise."
+        1: "Corretto: art. 27, comma 3 Cost. parla della funzione rieducativa."
+        2: "No: la pena varia per gravità e fattispecie; il sistema è graduato."
+    - type: "mcq"
+      prompt: "Quale coppia di pene principali è tipica delle contravvenzioni (art. 17 c.p.)?"
+      choices:
+        - "Reclusione e multa"
+        - "Arresto e ammenda"
+        - "Ergastolo e multa"
+      correctIndex: 1
+      feedback:
+        0: "No: reclusione e multa sono tipiche dei delitti."
+        1: "Corretto: contravvenzioni → arresto e ammenda (art. 17 c.p.)."
+        2: "No: l'ergastolo è pena dei delitti, non delle contravvenzioni."
+    - type: "open"
+      prompt: "Spiega la differenza tra pene principali e pene accessorie e fai un esempio di 'effetto accessorio' nella vita reale."
+      expected_points:
+        - "Pene principali: sono quelle previste come risposta base al reato (detentive/pecuniarie)."
+        - "Pene accessorie: conseguenze ulteriori che si aggiungono alla principale (interdizioni, incapacità, ecc.)."
+        - "Esempio pratico: perdita/sospensione di un diritto o limitazione a svolgere certe attività, oltre alla pena principale."
 ---
 
-<Hook>
-Inserisci qui il gancio iniziale...
-</Hook>
+<HookBlock>
+Nelle lezioni precedenti hai visto cos’è un reato e quando non lo è. Ora arriva la domanda inevitabile: **cosa succede a chi viene condannato**?
+</HookBlock>
 
 <Objective>
-Inserisci qui l'obiettivo della lezione...
+In questa lezione capisci cos’è una <GlossaryTerm id="pena">pena</GlossaryTerm> nel sistema italiano, quali funzioni ha (con focus sull’art. 27, comma 3 Cost.) e come si classificano le pene: <GlossaryTerm id="pene-principali">principali</GlossaryTerm>, <GlossaryTerm id="pene-accessorie">accessorie</GlossaryTerm> e il concetto (da non confondere) di <GlossaryTerm id="misure-di-sicurezza">misure di sicurezza</GlossaryTerm>.
 </Objective>
+
+<SectionTitle step={1} title="La bussola costituzionale: la pena non è 'vendetta'">
+Nel diritto penale moderno, la pena è una risposta dello Stato regolata da garanzie. La Costituzione ti dà la direzione: il carcere e il sistema sanzionatorio non possono essere disumani e devono guardare al “dopo”.
+</SectionTitle>
+
+<Technical>
+**Art. 27 Cost. (estratto rilevante).**  
+Le pene non possono consistere in trattamenti contrari al senso di umanità e devono tendere alla rieducazione del condannato.
+</Technical>
+
+<Concept title="Definizione (chiara e utile)">
+La <GlossaryTerm id="pena">pena</GlossaryTerm> è la conseguenza prevista dalla legge a seguito di una condanna, applicata con regole rigorose.  
+Nel modello costituzionale, la pena non è un “sfogo”: deve essere legittima, proporzionata e orientata anche alla <GlossaryTerm id="funzione-rieducativa">rieducazione</GlossaryTerm>.
+</Concept>
+
+<SectionTitle step={2} title="A cosa serve la pena: tre funzioni da tenere insieme">
+Non serve imparare slogan. Serve capire che il sistema tiene insieme più obiettivi, e la Costituzione impone limiti e direzione.
+</SectionTitle>
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+  <CardBlock title="🧭 Rieducativa (art. 27 co. 3)">
+    La pena deve tendere al reinserimento: non è solo “punire”, ma trasformare il comportamento futuro.
+    <span className="block mt-4"><Highlight color="blue"><GlossaryTerm id="funzione-rieducativa">Funzione rieducativa</GlossaryTerm></Highlight></span>
+  </CardBlock>
+
+  <CardBlock title="🛑 Preventiva">
+    Serve anche a ridurre i reati: dissuade e tutela la collettività (ma sempre dentro i limiti di legge).
+    <span className="block mt-4"><Highlight color="blue">Prevenzione generale e speciale</Highlight></span>
+  </CardBlock>
+
+  <CardBlock title="⚖️ Retributiva (in senso tecnico)">
+    È la risposta proporzionata a un fatto illecito: “dare conseguenza” al reato, non “vendicarsi”.
+    <span className="block mt-4"><Highlight color="blue">Proporzione e legalità</Highlight></span>
+  </CardBlock>
+</div>
+
+<SectionTitle step={3} title="Prima distinzione che ti salva: pene principali vs accessorie">
+Quando leggi una norma penale o un caso, chiediti subito: qual è la pena “base” e quali sono gli effetti aggiuntivi?
+</SectionTitle>
+
+<Compare
+  aTitle="Pene principali"
+  aBody="Sono le sanzioni centrali previste per il reato (detentive o pecuniarie). Per capirle, guarda l’art. 17 c.p."
+  bTitle="Pene accessorie"
+  bBody="Sono conseguenze ulteriori che si aggiungono alla principale (es. interdizioni). Non sostituiscono la principale: la 'seguono'."
+/>
+
+<Technical>
+**Art. 17 c.p. (estratto).**  
+Delitti: ergastolo, reclusione, multa.  
+Contravvenzioni: arresto, ammenda.
+</Technical>
+
+<SectionTitle step={4} title="Pene principali: detentive e pecuniarie (con il lessico giusto)">
+Qui devi usare le parole corrette: <GlossaryTerm id="reclusione">reclusione</GlossaryTerm> non è <GlossaryTerm id="arresto">arresto</GlossaryTerm>, e <GlossaryTerm id="multa">multa</GlossaryTerm> non è <GlossaryTerm id="ammenda">ammenda</GlossaryTerm>. Sono “etichette” giuridiche con effetti diversi.
+</SectionTitle>
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+  <CardBlock title="🏛️ Delitti">
+    Pene principali: <GlossaryTerm id="ergastolo">ergastolo</GlossaryTerm>, <GlossaryTerm id="reclusione">reclusione</GlossaryTerm>, <GlossaryTerm id="multa">multa</GlossaryTerm>.
+    <span className="block mt-4"><Highlight color="blue"><GlossaryTerm id="delitto">Delitto</GlossaryTerm> → art. 17 c.p.</Highlight></span>
+  </CardBlock>
+
+  <CardBlock title="🧾 Contravvenzioni">
+    Pene principali: <GlossaryTerm id="arresto">arresto</GlossaryTerm>, <GlossaryTerm id="ammenda">ammenda</GlossaryTerm>.
+    <span className="block mt-4"><Highlight color="blue"><GlossaryTerm id="contravvenzione">Contravvenzione</GlossaryTerm> → art. 17 c.p.</Highlight></span>
+  </CardBlock>
+</div>
+
+<Technical>
+**Art. 22 c.p. (ergastolo)** — vedi testo integrale su Brocardi.  
+**Art. 23 c.p. (reclusione)** — vedi testo integrale su Brocardi.  
+**Art. 24 c.p. (multa)** — vedi testo integrale su Brocardi.  
+**Art. 25 c.p. (arresto)** — vedi testo integrale su Brocardi.  
+**Art. 26 c.p. (ammenda)** — vedi testo integrale su Brocardi.
+</Technical>
+
+<SectionTitle step={5} title="Pene accessorie: quando la condanna 'si porta dietro' effetti ulteriori">
+Molti pensano che la pena sia solo “carcere o soldi”. In realtà, la condanna può avere effetti che incidono su status, capacità, ruoli e diritti in modo aggiuntivo.
+</SectionTitle>
+
+<Concept title="Definizione (a prova di esame)">
+Le <GlossaryTerm id="pene-accessorie">pene accessorie</GlossaryTerm> sono conseguenze ulteriori che si aggiungono alla pena principale (es. interdizioni), secondo quanto stabilito dalla legge.
+</Concept>
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+  <CardBlock title="🔒 Logica">
+    Non “raddoppiano” la pena: producono effetti mirati collegati al tipo di condanna.
+    <span className="block mt-4"><Highlight color="blue">Effetti giuridici aggiuntivi</Highlight></span>
+  </CardBlock>
+
+  <CardBlock title="🧩 Dove le trovi">
+    Nel Codice penale, in particolare nel quadro delle pene accessorie (artt. 19 ss. c.p.) e nelle singole fattispecie.
+    <span className="block mt-4"><Highlight color="blue">Leggi sempre la norma fino in fondo</Highlight></span>
+  </CardBlock>
+
+  <CardBlock title="🎯 Perché contano">
+    Perché spesso incidono nella vita reale più della pena pecuniaria: possono limitare attività, ruoli e diritti.
+    <span className="block mt-4"><Highlight color="blue">“Conseguenze invisibili”</Highlight></span>
+  </CardBlock>
+</div>
+
+<SectionTitle step={6} title="Attenzione: pene vs misure di sicurezza (non confondere)">
+Questa distinzione è classica e spesso fa perdere punti: non è la stessa cosa “punire” e “prevenire” attraverso strumenti diversi.
+</SectionTitle>
+
+<Compare
+  aTitle="Pena"
+  aBody="Consegue alla condanna per un reato e risponde alle funzioni del sistema (inclusa la rieducazione)."
+  bTitle="Misura di sicurezza"
+  bBody="È uno strumento distinto, legato a esigenze di prevenzione e pericolosità sociale, con una logica diversa dalla pena."
+/>
+
+<SectionTitle step={7} title="Esempi pratici: leggere una pena senza confondersi">
+Qui facciamo una cosa semplice: leggere “etichette” e capire cosa significano, senza entrare in calcoli o casi complessi.
+</SectionTitle>
+
+<Row className="lg:grid-cols-2">
+  <Col>
+    <Example type="positive" title="Caso (lettura corretta: delitto → reclusione/multa)">
+      In una norma trovi scritto: “è punito con la <GlossaryTerm id="reclusione">reclusione</GlossaryTerm> da … a … e con la <GlossaryTerm id="multa">multa</GlossaryTerm>”.  
+      Primo riconoscimento: siamo nel campo dei <GlossaryTerm id="delitto">delitti</GlossaryTerm> (art. 17 c.p.), quindi la struttura della pena principale è chiara.
+    </Example>
+  </Col>
+
+  <Col>
+    <Example type="negative" title="Caso (errore tipico: multa ≠ ammenda)">
+      Leggi “<GlossaryTerm id="ammenda">ammenda</GlossaryTerm>” e la chiami “multa”.  
+      In realtà “ammenda” è la pena pecuniaria delle <GlossaryTerm id="contravvenzione">contravvenzioni</GlossaryTerm>, mentre “multa” è quella dei delitti (art. 17 c.p.): cambiare parola = cambiare categoria.
+    </Example>
+  </Col>
+</Row>
+
+<SectionTitle step={8} title="Mini-check: tre domande per capire subito una norma penale">
+Quando studi (o ripassi all’ultimo), fai sempre questo.
+</SectionTitle>
+
+<Steps>
+  <Step number="1" title="Che tipo di reato è?">
+    Guarda la specie di pena: <GlossaryTerm id="reclusione">reclusione</GlossaryTerm>/<GlossaryTerm id="multa">multa</GlossaryTerm> → <GlossaryTerm id="delitto">delitto</GlossaryTerm>.  
+    <GlossaryTerm id="arresto">arresto</GlossaryTerm>/<GlossaryTerm id="ammenda">ammenda</GlossaryTerm> → <GlossaryTerm id="contravvenzione">contravvenzione</GlossaryTerm>.
+  </Step>
+  <Step number="2" title="È pena principale o accessoria?">
+    Quella nel “cuore” della fattispecie è di solito la principale; poi cerca eventuali effetti aggiuntivi (pene accessorie).
+  </Step>
+  <Step number="3" title="Qual è la cornice costituzionale?">
+    Ricorda che la pena deve rispettare umanità e <GlossaryTerm id="funzione-rieducativa">rieducazione</GlossaryTerm> (art. 27 co. 3 Cost.).
+  </Step>
+</Steps>
+
+<SectionTitle step={10} title="Video suggerito">
+Solo se trovi una lezione universitaria/istituzionale su art. 27 Cost. e classificazione delle pene (autore identificabile, no promozione, no cronaca).
+</SectionTitle>
+
+{/* VIDEO PLACEHOLDER:
+  Search query: "funzione della pena art 27 comma 3 Costituzione pene principali accessorie diritto penale lezione universitaria"
+  Criteri: docente universitario / ente istituzionale; autore identificabile; niente promozione; niente cronaca nera.
+*/}
 
 ---
 
-## 1) Titolo sezione
+<QuizBlock />
 
-Contenuto...
-
-<Quiz />
-
-<Resources />
+<ResourceFooter
+  disclaimerLevel="elevated"
+  primarySources={[
+    { label: "Normattiva — Costituzione, art. 27", url: "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:costituzione:1947-12-27~art27=" },
+    { label: "Brocardi — Art. 17 c.p.", url: "https://www.brocardi.it/codice-penale/libro-primo/titolo-ii/capo-i/art17.html" },
+    { label: "Brocardi — Art. 22 c.p.", url: "https://www.brocardi.it/codice-penale/libro-primo/titolo-ii/capo-i/art22.html" },
+    { label: "Brocardi — Art. 23 c.p.", url: "https://www.brocardi.it/codice-penale/libro-primo/titolo-ii/capo-i/art23.html" },
+    { label: "Brocardi — Art. 24 c.p.", url: "https://www.brocardi.it/codice-penale/libro-primo/titolo-ii/capo-i/art24.html" },
+    { label: "Brocardi — Art. 25 c.p.", url: "https://www.brocardi.it/codice-penale/libro-primo/titolo-ii/capo-i/art25.html" },
+    { label: "Brocardi — Art. 26 c.p.", url: "https://www.brocardi.it/codice-penale/libro-primo/titolo-ii/capo-i/art26.html" },
+    { label: "Brocardi — Pene accessorie (artt. 19 ss. c.p.)", url: "https://www.brocardi.it/codice-penale/libro-primo/titolo-ii/capo-ii/" }
+  ]}
+>
+Questa lezione ha finalità esclusivamente didattiche. Le conseguenze penali e i loro effetti dipendono dai fatti, dalle norme applicabili e dalle decisioni dell’autorità giudiziaria: questo contenuto non è consulenza legale e non sostituisce un professionista.
+</ResourceFooter>

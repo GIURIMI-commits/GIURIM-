@@ -129,7 +129,7 @@ export function MobileLessonNav({ curriculum }: MobileLessonNavProps) {
         <div className="md:hidden">
             {/* Sticky Floating Button */}
             {!isOpen && (
-                <div className="fixed bottom-6 inset-x-0 mx-auto w-max z-40">
+                <div className="fixed bottom-6 left-1/2 -translate-x-1/2 w-max z-[100]">
                     <button
                         onClick={() => setIsOpen(true)}
                         className="flex items-center gap-2 px-5 py-3 bg-primary text-primary-foreground dark:bg-white dark:text-neutral-900 rounded-full shadow-[0_8px_30px_rgb(0,0,0,0.12)] font-semibold text-sm active:scale-95 transition-transform"

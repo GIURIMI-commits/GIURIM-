@@ -82,7 +82,7 @@ export function SidebarNav({ curriculum }: SidebarNavProps) {
 
     return (
         <aside className={cn(
-            "relative border-r border-neutral-200 dark:border-neutral-800 bg-neutral-50/50 dark:bg-neutral-950/50 hidden md:block h-[calc(100vh-4rem)] sticky top-16 transition-all duration-300",
+            "relative border-r border-neutral-200 dark:border-neutral-800 bg-neutral-50/50 dark:bg-neutral-950/50 hidden md:flex flex-col shrink-0 h-[calc(100vh-4rem)] sticky top-16 transition-all duration-300",
             isCollapsed ? "w-16" : "w-64"
         )}>
             {/* Toggle Button */}
@@ -95,7 +95,7 @@ export function SidebarNav({ curriculum }: SidebarNavProps) {
             </button>
 
             <div className={cn(
-                "h-full overflow-y-auto scrollbar-thin scrollbar-thumb-neutral-200 dark:scrollbar-thumb-neutral-800",
+                "h-full overflow-y-auto scrollbar-thin scrollbar-thumb-neutral-200 dark:scrollbar-thumb-neutral-800 w-full",
                 isCollapsed ? "hidden" : "p-4"
             )}>
                 <div className="font-semibold text-xs text-neutral-500 dark:text-neutral-400 uppercase tracking-widest mb-4">
