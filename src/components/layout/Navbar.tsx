@@ -53,7 +53,7 @@ export function Navbar() {
                             <button className="flex items-center gap-1 hover:text-foreground transition-colors font-medium">
                                 Esplora <ChevronDown className="h-4 w-4 opacity-70" />
                             </button>
-                            <div className="absolute top-full left-0 mt-2 w-48 rounded-xl border border-border bg-popover p-2 text-popover-foreground shadow-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all origin-top-left z-50">
+                            <div className="absolute top-full left-0 mt-2 w-48 rounded-xl border border-border bg-white dark:bg-neutral-950 p-2 text-foreground shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all origin-top-left z-50">
                                 <Link href="/learn" className="block px-3 py-2 text-sm hover:bg-muted rounded-md transition-colors">
                                     Lezioni
                                 </Link>
