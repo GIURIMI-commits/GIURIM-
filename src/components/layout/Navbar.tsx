@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Scale, Menu, X, ChevronDown, Search } from 'lucide-react';
+import { Menu, X, ChevronDown, Search } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import { useProfile } from '@/hooks/useProfile';
 import { GlobalSearch } from '@/components/ui/search/GlobalSearch';
@@ -38,7 +38,11 @@ export function Navbar() {
                     </button>
 
                     <Link href="/" className="flex items-center gap-2 font-serif text-xl font-bold tracking-tight">
-                        <Scale className="h-6 w-6" />
+                        <img
+                            src="https://auxbzlyvdjmdevffzhnn.supabase.co/storage/v1/object/public/GIURIMi/Gemini_Generated_Image_aldv1kaldv1kaldv.png"
+                            alt="GIURIMÌ Logo"
+                            className="h-8 w-auto object-contain rounded-md"
+                        />
                         <span>GUIRIMÌ</span>
                     </Link>
 
