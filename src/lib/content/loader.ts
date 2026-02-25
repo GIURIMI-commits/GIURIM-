@@ -2,25 +2,24 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import { AreaMeta, ModuleMeta, LessonMeta, Lesson } from '@/types/content';
-import { cache } from 'react';
 
 const CONTENT_DIR = path.join(process.cwd(), 'content');
 
-export const getAreas = cache(async (): Promise<AreaMeta[]> => {
+export async function getAreas(): Promise<AreaMeta[]> {
     const areasPath = path.join(CONTENT_DIR, 'areas.json');
     if (!fs.existsSync(areasPath)) return [];
 
     const fileContent = fs.readFileSync(areasPath, 'utf8');
     const areas = JSON.parse(fileContent) as AreaMeta[];
     return areas.sort((a, b) => a.order - b.order);
-});
+}
 
-export const getArea = cache(async (slug: string): Promise<AreaMeta | null> => {
+export async function getArea(slug: string): Promise<AreaMeta | null> {
     const areas = await getAreas();
     return areas.find((a) => a.slug === slug) || null;
-});
+}
 
-export const getModules = cache(async (areaSlug: string): Promise<ModuleMeta[]> => {
+export async function getModules(areaSlug: string): Promise<ModuleMeta[]> {
     const areaPath = path.join(CONTENT_DIR, areaSlug);
     if (!fs.existsSync(areaPath)) return [];
 
@@ -38,9 +37,9 @@ export const getModules = cache(async (areaSlug: string): Promise<ModuleMeta[]> 
     }
 
     return modules.sort((a, b) => a.order - b.order);
-});
+}
 
-export const getLessons = cache(async (areaSlug: string, moduleSlug: string): Promise<LessonMeta[]> => {
+export async function getLessons(areaSlug: string, moduleSlug: string): Promise<LessonMeta[]> {
     const modulePath = path.join(CONTENT_DIR, areaSlug, moduleSlug);
     if (!fs.existsSync(modulePath)) return [];
 
@@ -57,9 +56,9 @@ export const getLessons = cache(async (areaSlug: string, moduleSlug: string): Pr
     }
 
     return lessons.sort((a, b) => a.order - b.order);
-});
+}
 
-export const getLesson = cache(async (areaSlug: string, moduleSlug: string, lessonSlug: string): Promise<Lesson | null> => {
+export async function getLesson(areaSlug: string, moduleSlug: string, lessonSlug: string): Promise<Lesson | null> {
     const filePath = path.join(CONTENT_DIR, areaSlug, moduleSlug, `${lessonSlug}.mdx`);
 
     if (!fs.existsSync(filePath)) {
@@ -92,15 +91,15 @@ export const getLesson = cache(async (areaSlug: string, moduleSlug: string, less
         ...data,
         content,
     } as Lesson;
-});
+}
 
-export const getAllGlossaryTerms = cache(async () => {
+export async function getAllGlossaryTerms() {
     const termsPath = path.join(CONTENT_DIR, 'glossary', 'terms.json');
     if (!fs.existsSync(termsPath)) return [];
     return JSON.parse(fs.readFileSync(termsPath, 'utf8'));
-});
+}
 
-export const getCurriculum = cache(async (): Promise<AreaMeta[]> => {
+export async function getCurriculum(): Promise<AreaMeta[]> {
     const areas = await getAreas();
     const curriculum: AreaMeta[] = [];
 
@@ -123,4 +122,4 @@ export const getCurriculum = cache(async (): Promise<AreaMeta[]> => {
     }
 
     return curriculum;
-});
+}
