@@ -7,29 +7,199 @@ order: 3
 duration_minutes: 12
 prerequisites: ["lez-5.1.2"]
 next_lesson: "lez-5.2.1"
-last_verified: "2026-02-07"
+prev_lesson: "lez-5.1.2"
+last_verified: "2026-02-24"
 verified_by: "Da verificare"
 disclaimer_level: "standard"
-source_refs: []
-glossary_terms: []
+glossary_terms:
+  - "atto-amministrativo"
+  - "provvedimento"
+  - "validita"
+  - "vizio-di-legittimita"
+  - "incompetenza"
+  - "violazione-di-legge"
+  - "eccesso-di-potere"
+  - "annullabilita"
+  - "nullita"
 quiz:
-  questions: []
+  questions:
+    - type: "mcq"
+      prompt: "Quale tra questi è un vizio classico dell’atto amministrativo?"
+      choices:
+        - "Inadempimento contrattuale"
+        - "Eccesso di potere"
+        - "Mancanza di firma del lavoratore"
+      correctIndex: 1
+      feedback:
+        0: "No. L’inadempimento riguarda il diritto civile e i contratti."
+        1: "Corretto. L’eccesso di potere è uno dei tre vizi classici di legittimità."
+        2: "No. Non è un vizio tipico dell’atto amministrativo."
+    - type: "mcq"
+      prompt: "Se un Comune adotta un atto che spettava alla Regione, il vizio è:"
+      choices:
+        - "Incompetenza"
+        - "Violazione di legge tributaria"
+        - "Eccesso di velocità"
+      correctIndex: 0
+      feedback:
+        0: "Corretto. L’atto è adottato da un organo non competente."
+        1: "No. Non è questo il punto centrale."
+        2: "No. Non è un concetto giuridico amministrativo."
+    - type: "open"
+      prompt: "Spiega in poche righe la differenza tra nullità e annullabilità dell’atto amministrativo."
+      expected_points:
+        - "Nullità: vizio grave, atto radicalmente invalido"
+        - "Annullabilità: vizio di legittimità, atto efficace finché non annullato"
+        - "Collegamento ai tre vizi classici"
 ---
 
-<Hook>
-Inserisci qui il gancio iniziale...
-</Hook>
+<HookBlock>
+Il procedimento è finito. La PA ha deciso.  
+Ora hai in mano un documento che incide sulla tua vita: una multa, un diniego, un’autorizzazione.  
+La domanda è semplice: è valido?
+</HookBlock>
 
 <Objective>
-Inserisci qui l'obiettivo della lezione...
+Nella lezione precedente hai visto come nasce una decisione pubblica. Ora analizziamo il prodotto finale: l’<GlossaryTerm id="atto-amministrativo">atto amministrativo</GlossaryTerm>. Capirai quando è valido e quando è viziato, attraverso i tre vizi classici: <GlossaryTerm id="incompetenza">incompetenza</GlossaryTerm>, <GlossaryTerm id="violazione-di-legge">violazione di legge</GlossaryTerm> ed <GlossaryTerm id="eccesso-di-potere">eccesso di potere</GlossaryTerm>. Con un parallelo diretto alla nullità e annullabilità del contratto (Area 3).
 </Objective>
+
+<SectionTitle step={1} title="Cos’è un atto amministrativo">
+  Il punto finale del procedimento
+</SectionTitle>
+
+<Concept title="Definizione operativa">
+L’<GlossaryTerm id="atto-amministrativo">atto amministrativo</GlossaryTerm> è il provvedimento con cui la Pubblica Amministrazione esercita un potere pubblico producendo effetti giuridici verso destinatari determinati.
+</Concept>
+
+Non è una semplice comunicazione.  
+È un <GlossaryTerm id="provvedimento">provvedimento</GlossaryTerm> che modifica la tua sfera giuridica: concede, nega, impone, autorizza o sanziona.
+
+<Technical>
+**Art. 1, L. 241/1990.**  
+L’attività amministrativa persegue i fini determinati dalla legge ed è retta da criteri di economicità, efficacia, imparzialità, pubblicità e trasparenza secondo le modalità previste.
+</Technical>
+
+<SectionTitle step={2} title="Validità: quando l’atto è corretto">
+  Tre pilastri invisibili
+</SectionTitle>
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+  <CardBlock title="Competenza">
+    L’organo che firma deve avere il potere di farlo.
+    <span className="block mt-4"><Highlight color="blue">Chi decide?</Highlight></span>
+  </CardBlock>
+  <CardBlock title="Legalità">
+    L’atto deve rispettare norme e procedure.
+    <span className="block mt-4"><Highlight color="blue">Base normativa</Highlight></span>
+  </CardBlock>
+  <CardBlock title="Ragionevolezza">
+    La decisione deve essere coerente e non arbitraria.
+    <span className="block mt-4"><Highlight color="blue">Logica amministrativa</Highlight></span>
+  </CardBlock>
+</div>
+
+Se uno di questi pilastri cede, nasce un <GlossaryTerm id="vizio-di-legittimita">vizio di legittimità</GlossaryTerm>.
+
+<SectionTitle step={3} title="I tre vizi classici">
+  Lo schema che devi memorizzare
+</SectionTitle>
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+  <CardBlock title="Incompetenza">
+    L’atto è adottato da un’autorità che non aveva il potere.
+    <span className="block mt-4"><Highlight color="blue">Errore di organo</Highlight></span>
+  </CardBlock>
+  <CardBlock title="Violazione di legge">
+    Non sono state rispettate norme o procedure obbligatorie.
+    <span className="block mt-4"><Highlight color="blue">Errore normativo</Highlight></span>
+  </CardBlock>
+  <CardBlock title="Eccesso di potere">
+    Uso distorto del potere: decisione illogica, sproporzionata o contraddittoria.
+    <span className="block mt-4"><Highlight color="blue">Errore di funzione</Highlight></span>
+  </CardBlock>
+</div>
+
+<SectionTitle step={4} title="Parallelo con il contratto: nullità vs annullabilità">
+  Ponte con Area 3
+</SectionTitle>
+
+<Compare
+  aTitle="Nullità"
+  aBody="Vizio grave. L’atto è radicalmente invalido."
+  bTitle="Annullabilità"
+  bBody="Vizio di legittimità. L’atto produce effetti finché non viene annullato."
+/>
+
+Nel diritto amministrativo, molti atti viziati rientrano nella categoria dell’<GlossaryTerm id="annullabilita">annullabilità</GlossaryTerm>: restano efficaci finché non vengono annullati dal giudice o dalla stessa amministrazione.
+
+La <GlossaryTerm id="nullita">nullità</GlossaryTerm> riguarda invece ipotesi più gravi e tassative.
+
+<Technical>
+**Art. 21-octies, L. 241/1990.**  
+È annullabile il provvedimento amministrativo adottato in violazione di legge o viziato da eccesso di potere o incompetenza.
+</Technical>
+
+<Technical>
+**Art. 21-septies, L. 241/1990.**  
+È nullo il provvedimento amministrativo che manca degli elementi essenziali o è viziato nei casi espressamente previsti.
+</Technical>
+
+<SectionTitle step={5} title="Esempi concreti">
+  Dalla teoria alla vita reale
+</SectionTitle>
+
+<Row className="lg:grid-cols-2">
+  <Col>
+    <Example type="positive" title="Atto valido">
+      Il Comune nega un’autorizzazione motivando correttamente, citando la norma e rispettando la procedura.
+
+      Competenza, base legale e motivazione coerente: l’atto è legittimo anche se non ti piace.
+    </Example>
+  </Col>
+  <Col>
+    <Example type="negative" title="Atto viziato per incompetenza">
+      Un ufficio comunale adotta un provvedimento che spettava alla Regione.
+
+      Qui il problema non è il contenuto, ma chi ha esercitato il potere.
+    </Example>
+  </Col>
+</Row>
+
+<Row className="lg:grid-cols-2">
+  <Col>
+    <Example type="positive" title="Violazione di legge">
+      La PA non ti comunica l’avvio del procedimento quando era obbligatorio farlo.
+
+      L’atto può essere annullabile per violazione procedurale.
+    </Example>
+  </Col>
+  <Col>
+    <Example type="negative" title="Eccesso di potere">
+      Due casi identici vengono trattati in modo opposto senza motivazione.
+
+      Qui emerge un uso illogico o arbitrario del potere.
+    </Example>
+  </Col>
+</Row>
+
+<SectionTitle step={6} title="Video suggerito">
+  Vizi dell’atto amministrativo spiegazione universitaria
+</SectionTitle>
+
+{/* VIDEO PLACEHOLDER:
+  Search query: "vizi atto amministrativo incompetenza violazione di legge eccesso di potere lezione universitaria"
+  Criteri: docente universitario / ente istituzionale; autore identificabile; no promozione; spiegazione sistematica.
+*/}
 
 ---
 
-## 1) Titolo sezione
+<QuizBlock />
 
-Contenuto...
-
-<Quiz />
-
-<Resources />
+<ResourceFooter
+  disclaimerLevel="standard"
+  primarySources={[
+    { label: "Normattiva — L. 241/1990 (artt. 1, 21-septies, 21-octies)", url: "https://www.normattiva.it/" }
+  ]}
+>
+Questa lezione ha finalità didattica e non costituisce consulenza legale.
+</ResourceFooter>

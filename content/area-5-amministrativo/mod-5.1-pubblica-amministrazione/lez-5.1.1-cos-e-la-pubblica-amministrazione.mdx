@@ -7,29 +7,215 @@ order: 1
 duration_minutes: 10
 prerequisites: ["lez-4.4.2"]
 next_lesson: "lez-5.1.2"
-last_verified: "2026-02-07"
+prev_lesson: "lez-4.4.2"
+last_verified: "2026-02-24"
 verified_by: "Da verificare"
 disclaimer_level: "standard"
-source_refs: []
-glossary_terms: []
+glossary_terms:
+  - "pubblica-amministrazione"
+  - "amministrazione-pubblica"
+  - "interesse-pubblico"
+  - "potere-amministrativo"
+  - "atto-amministrativo"
+  - "provvedimento"
+  - "servizio-pubblico"
+  - "trasparenza"
+  - "imparzialita"
+  - "buon-andamento"
 quiz:
-  questions: []
+  questions:
+    - type: "mcq"
+      prompt: "Quando diciamo “Pubblica Amministrazione”, in genere intendiamo:"
+      choices:
+        - "Solo i politici eletti (Parlamento e Governo)"
+        - "L’insieme degli uffici/enti che applicano le leggi e gestiscono servizi e poteri pubblici"
+        - "Solo la polizia e i tribunali"
+      correctIndex: 1
+      feedback:
+        0: "No. I politici fanno indirizzo e decisione politica; la PA è soprattutto apparato amministrativo e uffici."
+        1: "Corretto. La PA è l’apparato di enti e uffici che gestisce servizi e poteri pubblici e applica la legge."
+        2: "No. Anche forze dell’ordine e giurisdizione sono rilevanti, ma la PA è più ampia e diversa dalla sola giustizia."
+    - type: "mcq"
+      prompt: "Il principio costituzionale chiave che guida la PA è:"
+      choices:
+        - "Buon andamento e imparzialità"
+        - "Libertà di stampa"
+        - "Indissolubilità del matrimonio"
+      correctIndex: 0
+      feedback:
+        0: "Corretto. Buon andamento e imparzialità sono i principi-cardine dell’azione amministrativa."
+        1: "No. È un principio costituzionale importante, ma non è quello tipico di riferimento per l’organizzazione PA."
+        2: "No. Non è pertinente."
+    - type: "open"
+      prompt: "Fai 2 esempi di “PA” nella tua vita quotidiana e spiega che tipo di decisione/servizio ti riguarda."
+      expected_points:
+        - "Esempi: Comune (anagrafe, permessi), ASL/Regione (sanità), INPS (prestazioni), scuola/università, Agenzia delle Entrate"
+        - "Distinzione tra servizio (erogazione) e potere (provvedimento)"
 ---
 
-<Hook>
-Inserisci qui il gancio iniziale...
-</Hook>
+<HookBlock>
+Ti arriva una PEC con scritto “si comunica l’avvio del procedimento”.  
+Oppure devi fare lo SPID per una pratica INPS.  
+In entrambi i casi stai entrando nel mondo della Pubblica Amministrazione — anche se non te ne accorgi.
+</HookBlock>
 
 <Objective>
-Inserisci qui l'obiettivo della lezione...
+In questa lezione capisci cos’è la <GlossaryTerm id="pubblica-amministrazione">Pubblica Amministrazione</GlossaryTerm>, perché non coincide con “la politica”, e cosa fa concretamente: servizi, controlli e decisioni che producono effetti giuridici. Ti porti via una mappa semplice per orientarti tra enti, uffici, <GlossaryTerm id="atto-amministrativo">atti amministrativi</GlossaryTerm> e principi di base (buon andamento, imparzialità, trasparenza).
 </Objective>
+
+<SectionTitle step={1} title="La PA in una frase">
+  Non è “lo Stato” in astratto: è chi decide e agisce ogni giorno
+</SectionTitle>
+
+<Concept title="Definizione pratica">
+La <GlossaryTerm id="pubblica-amministrazione">Pubblica Amministrazione</GlossaryTerm> è l’insieme di enti e uffici pubblici che, applicando la legge, gestiscono <GlossaryTerm id="servizio-pubblico">servizi pubblici</GlossaryTerm> e esercitano <GlossaryTerm id="potere-amministrativo">poteri amministrativi</GlossaryTerm> per perseguire l’<GlossaryTerm id="interesse-pubblico">interesse pubblico</GlossaryTerm>.
+</Concept>
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+  <CardBlock title="Politica ≠ Amministrazione">
+    La politica definisce obiettivi e indirizzo (cosa fare).  
+    La PA attua e gestisce (come farlo, con atti e servizi).
+    <span className="block mt-4"><Highlight color="blue">Decisione vs esecuzione</Highlight></span>
+  </CardBlock>
+  <CardBlock title="PA ≠ “ufficio del Comune” soltanto">
+    La PA include Comuni, Regioni, Ministeri, scuole, università, INPS, Agenzia delle Entrate e molti altri enti.
+    <span className="block mt-4"><Highlight color="blue">È molto più ampia</Highlight></span>
+  </CardBlock>
+</div>
+
+<Technical>
+**Art. 97 Cost.**  
+I pubblici uffici sono organizzati secondo disposizioni di legge, in modo che siano assicurati il buon andamento e l’imparzialità dell’amministrazione.
+</Technical>
+
+<SectionTitle step={2} title="Cosa fa la PA: due modalità (che devi distinguere)">
+  Servizi e poteri: se capisci questo, capisci il 70% del rapporto cittadino–PA
+</SectionTitle>
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+  <CardBlock title="Eroga servizi">
+    Ti fornisce prestazioni: sanità, scuola, trasporti, certificati, bonus e procedure digitali.
+    <span className="block mt-4"><Highlight color="blue">“Mi serve qualcosa”</Highlight></span>
+  </CardBlock>
+  <CardBlock title="Esercita poteri">
+    Controlla e decide con atti che incidono su di te: autorizza, vieta, sanziona, concede.
+    <span className="block mt-4"><Highlight color="blue">“Qualcuno decide su di me”</Highlight></span>
+  </CardBlock>
+</div>
+
+<Concept title="La bussola: chiediti sempre cosa stai vivendo">
+<span className="block">• Se stai “ottenendo” qualcosa (prestazione, certificato, bonus) → sei nell’area <Highlight color="blue">servizi</Highlight>.</span>
+<span className="block mt-2">• Se stai “subendo/ottenendo” un ok o un no (permesso, diniego, multa) → sei nell’area <Highlight color="blue">poteri</Highlight>.</span>
+</Concept>
+
+<SectionTitle step={3} title="Il linguaggio della PA: atto e provvedimento">
+  Quando una decisione diventa “reale”
+</SectionTitle>
+
+<Concept title="Atto amministrativo (senza burocratese)">
+Un <GlossaryTerm id="atto-amministrativo">atto amministrativo</GlossaryTerm> è un documento/decisione con cui la PA produce effetti giuridici: cambia la tua situazione, in meglio o in peggio.  
+Quando l’atto decide “in modo definitivo” su una posizione (concede/nega/sanziona), spesso lo chiamiamo <GlossaryTerm id="provvedimento">provvedimento</GlossaryTerm>.
+</Concept>
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+  <CardBlock title="Concede">
+    “Ti autorizzo” / “ti ammetto” / “ti riconosco un diritto”.
+    <span className="block mt-4"><Highlight color="blue">Effetto favorevole</Highlight></span>
+  </CardBlock>
+  <CardBlock title="Nega">
+    “La tua istanza è respinta” / “manca un requisito”.
+    <span className="block mt-4"><Highlight color="blue">Effetto sfavorevole</Highlight></span>
+  </CardBlock>
+  <CardBlock title="Sanziona">
+    “Ti contesto una violazione” / “ti irrogo una sanzione”.
+    <span className="block mt-4"><Highlight color="blue">Effetto punitivo</Highlight></span>
+  </CardBlock>
+</div>
+
+<Technical>
+**Art. 1, L. 241/1990.**  
+L’attività amministrativa persegue i fini determinati dalla legge ed è retta da criteri di economicità, efficacia, imparzialità, pubblicità e trasparenza secondo le modalità previste.
+</Technical>
+
+<SectionTitle step={4} title="I principi che ti proteggono (anche se non li vedi)">
+  Perché la PA non può fare “come le pare”
+</SectionTitle>
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+  <CardBlock title="Buon andamento">
+    La PA deve funzionare: tempi ragionevoli, efficienza, organizzazione.
+    <span className="block mt-4"><Highlight color="blue">Non sprecare risorse</Highlight></span>
+  </CardBlock>
+  <CardBlock title="Imparzialità">
+    Trattare casi uguali in modo uguale, senza favoritismi.
+    <span className="block mt-4"><Highlight color="blue">No arbitrarietà</Highlight></span>
+  </CardBlock>
+  <CardBlock title="Trasparenza">
+    Il cittadino deve poter capire e controllare: accesso, motivazione, pubblicità.
+    <span className="block mt-4"><Highlight color="blue">“Fammi vedere”</Highlight></span>
+  </CardBlock>
+</div>
+
+<Concept title="Cosa significa per te (tradotto)">
+<span className="block">• Se non capisci una decisione, spesso il problema è <Highlight color="blue">motivazione</Highlight> o trasparenza.</span>
+<span className="block mt-2">• Se la PA ti tratta diversamente da un caso identico, il tema è <Highlight color="blue">imparzialità</Highlight>.</span>
+<span className="block mt-2">• Se la pratica “sparisce” per mesi, entra in gioco il <Highlight color="blue">buon andamento</Highlight> (tempi e organizzazione).</span>
+</Concept>
+
+<SectionTitle step={5} title="Esempi quotidiani: dove incontri la PA senza accorgertene">
+  Una mini-mappa “vita reale”
+</SectionTitle>
+
+<Row className="lg:grid-cols-2">
+  <Col>
+    <Example type="positive" title="Servizio: INPS e prestazioni online">
+      Presenti una domanda tramite SPID, carichi documenti e segui lo stato della pratica.
+
+      Qui il focus è “ottenere una prestazione”: canali digitali, tempi, documentazione.
+    </Example>
+  </Col>
+  <Col>
+    <Example type="negative" title="Potere: diniego o sanzione">
+      Ricevi un diniego per una richiesta o una contestazione.
+
+      Qui il focus è “atto che incide su di te”: capire motivazione, requisiti e possibili rimedi.
+    </Example>
+  </Col>
+</Row>
+
+<Row className="lg:grid-cols-2">
+  <Col>
+    <Example type="positive" title="Comune: anagrafe e certificati">
+      Chiedi un certificato o fai un cambio residenza: tipico servizio amministrativo.
+    </Example>
+  </Col>
+  <Col>
+    <Example type="negative" title="Attività economica: permessi e controlli">
+      Vuoi aprire un’attività e devi presentare pratiche: qui la PA esercita poteri e controlli.
+    </Example>
+  </Col>
+</Row>
+
+<SectionTitle step={6} title="Video suggerito">
+  Cos’è la Pubblica Amministrazione (introduzione)
+</SectionTitle>
+
+{/* VIDEO PLACEHOLDER:
+  Search query: "cos'è la pubblica amministrazione art 97 costituzione lezione universitaria introduzione diritto amministrativo"
+  Criteri: docente universitario / ente istituzionale; autore identificabile; no promozione; chiaro per principianti.
+*/}
 
 ---
 
-## 1) Titolo sezione
+<QuizBlock />
 
-Contenuto...
-
-<Quiz />
-
-<Resources />
+<ResourceFooter
+  disclaimerLevel="standard"
+  primarySources={[
+    { label: "Normattiva — Costituzione (art. 97)", url: "https://www.normattiva.it/" },
+    { label: "Normattiva — L. 241/1990 (art. 1)", url: "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1990-08-07;241" },
+    { label: "Treccani — Pubblica amministrazione", url: "https://www.treccani.it/enciclopedia/pubblica-amministrazione/" }
+  ]}
+>
+Questa lezione ha finalità didattica e non costituisce consulenza legale. Per pratiche specifiche (SPID/PEC, modulistica e uffici competenti) verifica sempre sul sito istituzionale dell’ente (Comune, Regione, Ministero, INPS) e conserva ricevute/protocolli.
+</ResourceFooter>

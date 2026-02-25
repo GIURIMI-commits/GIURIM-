@@ -7,29 +7,221 @@ order: 2
 duration_minutes: 12
 prerequisites: ["lez-5.1.1"]
 next_lesson: "lez-5.1.3"
-last_verified: "2026-02-07"
+prev_lesson: "lez-5.1.1"
+last_verified: "2026-02-24"
 verified_by: "Da verificare"
 disclaimer_level: "standard"
-source_refs: []
-glossary_terms: []
+glossary_terms:
+  - "procedimento-amministrativo"
+  - "istanza"
+  - "avvio-del-procedimento"
+  - "responsabile-del-procedimento"
+  - "termine-del-procedimento"
+  - "partecipazione-procedimentale"
+  - "accesso-agli-atti"
+  - "motivazione"
+  - "provvedimento"
+  - "silenzio-amministrativo"
 quiz:
-  questions: []
+  questions:
+    - type: "mcq"
+      prompt: "La L. 241/1990 è spesso chiamata “magna carta” del rapporto cittadino–PA perché:"
+      choices:
+        - "È una legge penale che punisce la corruzione"
+        - "Stabilisce regole generali di procedimento, trasparenza e partecipazione"
+        - "Riguarda solo i contratti di lavoro pubblici"
+      correctIndex: 1
+      feedback:
+        0: "No. La 241/1990 è una legge sul procedimento e sui rapporti con la PA, non la principale norma penale anticorruzione."
+        1: "Corretto. È la base generale: avvio, tempi, responsabile, partecipazione, motivazione e accesso."
+        2: "No. Non riguarda solo il lavoro pubblico."
+    - type: "mcq"
+      prompt: "Quando presenti una domanda alla PA, la cosa più importante da ottenere/subito conservare è:"
+      choices:
+        - "Un post sui social che lo dimostri"
+        - "Una ricevuta/protocollo con data"
+        - "Un parere di un amico"
+      correctIndex: 1
+      feedback:
+        0: "No. Non è prova formale."
+        1: "Corretto. Protocollo/ricevuta con data è la base per termini, tracciamento e tutela."
+        2: "No. Non è un elemento oggettivo del procedimento."
+    - type: "open"
+      prompt: "Descrivi le 4 fasi base di un procedimento amministrativo come se fosse un viaggio (in 6 righe)."
+      expected_points:
+        - "Partenza: avvio (istanza o d’ufficio) + comunicazione"
+        - "Guida: responsabile del procedimento"
+        - "Tappe: istruttoria + partecipazione"
+        - "Arrivo: decisione (provvedimento) motivata e comunicata"
 ---
 
-<Hook>
-Inserisci qui il gancio iniziale...
-</Hook>
+<HookBlock>
+Presenti una domanda online, ti dicono “è in lavorazione”, poi silenzio per settimane.  
+Il procedimento amministrativo è questo: il “viaggio” che trasforma una richiesta in una decisione.
+</HookBlock>
 
 <Objective>
-Inserisci qui l'obiettivo della lezione...
+Nella lezione precedente hai visto cos’è la Pubblica Amministrazione. Ora capisci **come prende le decisioni**, passo dopo passo, secondo la <Highlight color="blue">L. 241/1990</Highlight>. Imparerai le 4 fasi essenziali del <GlossaryTerm id="procedimento-amministrativo">procedimento amministrativo</GlossaryTerm>, cosa controllare (tempi, responsabile, motivazione) e quali leve hai come cittadino (partecipazione, accesso, tracciabilità).
 </Objective>
+
+<SectionTitle step={1} title="Cos’è il procedimento amministrativo">
+  La “catena di montaggio” che produce un provvedimento
+</SectionTitle>
+
+<Concept title="Definizione semplice">
+Il <GlossaryTerm id="procedimento-amministrativo">procedimento amministrativo</GlossaryTerm> è la sequenza di atti e verifiche con cui la PA raccoglie fatti e documenti (istruttoria), ascolta i soggetti interessati (partecipazione) e arriva a una decisione finale: il <GlossaryTerm id="provvedimento">provvedimento</GlossaryTerm>.
+</Concept>
+
+<Technical>
+**L. 241/1990 — Principi generali (artt. 1 e ss.).**  
+La legge disciplina l’attività amministrativa e fissa regole di trasparenza, partecipazione, tempi e motivazione nei procedimenti.
+</Technical>
+
+<SectionTitle step={2} title="Metafora del viaggio: le 4 fasi che devi memorizzare">
+  Se sai dove sei, sai cosa pretendere
+</SectionTitle>
+
+<Steps>
+  <Step number="1" title="Partenza: avvio">
+    Il procedimento parte su <GlossaryTerm id="istanza">istanza</GlossaryTerm> (domanda del cittadino) o d’ufficio. Spesso ricevi una comunicazione di <GlossaryTerm id="avvio-del-procedimento">avvio del procedimento</GlossaryTerm>.
+  </Step>
+  <Step number="2" title="Guida: responsabile">
+    La PA individua un <GlossaryTerm id="responsabile-del-procedimento">responsabile del procedimento</GlossaryTerm>: è il riferimento operativo che gestisce istruttoria e tempi.
+  </Step>
+  <Step number="3" title="Tappe: istruttoria + partecipazione">
+    Si raccolgono documenti, pareri, verifiche. Se sei “interessato”, puoi partecipare: presentare memorie, chiarimenti, integrazioni.
+  </Step>
+  <Step number="4" title="Arrivo: decisione motivata">
+    La PA conclude con un provvedimento (accoglimento/diniego) che deve essere motivato e comunicato.
+  </Step>
+</Steps>
+
+<SectionTitle step={3} title="Fase 1: avvio (cosa devi fare bene tu)">
+  La pratica si vince spesso al protocollo
+</SectionTitle>
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+  <CardBlock title="Obiettivo pratico">
+    Avere prova certa di *cosa* hai inviato e *quando*.
+    <span className="block mt-4"><Highlight color="blue">Ricevuta / protocollo</Highlight></span>
+  </CardBlock>
+  <CardBlock title="Errore tipico">
+    Mandare documenti senza tracciabilità e poi “non so se è arrivato”.
+    <span className="block mt-4"><Highlight color="blue">Niente prova = problemi</Highlight></span>
+  </CardBlock>
+</div>
+
+<Concept title="Checklist minima (senza burocrazia)">
+<span className="block">• Conserva la ricevuta (PEC o portale) e il numero di protocollo.</span>
+<span className="block mt-2">• Salva il PDF inviato + allegati (stessa versione).</span>
+<span className="block mt-2">• Segna data/ora: ti servirà per il <GlossaryTerm id="termine-del-procedimento">termine del procedimento</GlossaryTerm>.</span>
+</Concept>
+
+<SectionTitle step={4} title="Fase 2–3: istruttoria e partecipazione">
+  Non è solo “attendere”: puoi incidere
+</SectionTitle>
+
+<Concept title="Partecipazione: la tua leva">
+La <GlossaryTerm id="partecipazione-procedimentale">partecipazione procedimentale</GlossaryTerm> significa che, in molte situazioni, puoi far arrivare alla PA documenti e osservazioni prima che decida. È il momento migliore per chiarire errori, integrare e “mettere in sicurezza” la tua posizione.
+</Concept>
+
+<Technical>
+**L. 241/1990 — Comunicazione e partecipazione (artt. 7 e ss.).**  
+La legge prevede regole sull’avvio e sulla partecipazione degli interessati, nei casi e modi stabiliti.
+</Technical>
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+  <CardBlock title="Integrazioni">
+    Se mancano documenti, meglio integrare subito e in modo ordinato.
+    <span className="block mt-4"><Highlight color="blue">Riduci il rischio diniego</Highlight></span>
+  </CardBlock>
+  <CardBlock title="Chiarimenti">
+    Se un requisito è ambiguo, puoi spiegare e documentare.
+    <span className="block mt-4"><Highlight color="blue">Prevenzione</Highlight></span>
+  </CardBlock>
+  <CardBlock title="Tracciabilità">
+    Ogni invio deve essere protocollato o ricevuto via canale ufficiale.
+    <span className="block mt-4"><Highlight color="blue">Prova</Highlight></span>
+  </CardBlock>
+</div>
+
+<SectionTitle step={5} title="Fase 4: decisione e motivazione">
+  Il provvedimento finale deve “spiegarsi”
+</SectionTitle>
+
+<Concept title="Motivazione = diritto a capire">
+La <GlossaryTerm id="motivazione">motivazione</GlossaryTerm> è ciò che ti permette di comprendere perché la PA ha detto sì o no: norme richiamate, fatti considerati, ragionamento seguito. Se manca o è illogica, spesso nasce un problema di legittimità.
+</Concept>
+
+<Technical>
+**L. 241/1990 — Obbligo di motivazione (art. 3).**  
+Ogni provvedimento amministrativo deve essere motivato, indicando presupposti di fatto e ragioni giuridiche, secondo quanto previsto.
+</Technical>
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+  <CardBlock title="Decisione corretta (anche se sfavorevole)">
+    Ti dice norme, fatti e cosa manca per ottenere l’esito positivo.
+    <span className="block mt-4"><Highlight color="blue">Comprensibilità</Highlight></span>
+  </CardBlock>
+  <CardBlock title="Decisione problematica">
+    Frasi generiche (“non sussistono i presupposti”) senza spiegazioni reali.
+    <span className="block mt-4"><Highlight color="blue">Motivazione debole</Highlight></span>
+  </CardBlock>
+</div>
+
+<SectionTitle step={6} title="Il silenzio della PA: non è sempre “normale”">
+  Capire cosa significa il non-rispondere
+</SectionTitle>
+
+<Concept title="Silenzio amministrativo: cosa osservare">
+Il <GlossaryTerm id="silenzio-amministrativo">silenzio amministrativo</GlossaryTerm> può avere significati diversi a seconda della procedura: a volte è un problema (inerzia), altre volte la legge collega effetti (es. silenzio-assenso in casi previsti). La regola pratica è: prima identifichi la procedura, poi capisci l’effetto del silenzio.
+</Concept>
+
+<Technical>
+**L. 241/1990 — Conclusione del procedimento (art. 2).**  
+La PA ha l’obbligo di concludere il procedimento entro un termine e di assicurare la certezza dei tempi, secondo quanto previsto.
+</Technical>
+
+<SectionTitle step={7} title="Esempi: il “viaggio” di una pratica reale">
+  Due esiti, stessa mappa
+</SectionTitle>
+
+<Row className="lg:grid-cols-2">
+  <Col>
+    <Example type="positive" title="Domanda completa e tracciata (pratica fluida)">
+      Invi un’istanza con allegati ordinati, ottieni protocollo, integri subito un documento richiesto.
+
+      La PA istruisce e decide: anche se l’esito è “no”, capisci il motivo e sai cosa correggere.
+    </Example>
+  </Col>
+  <Col>
+    <Example type="negative" title="Domanda confusa + nessuna prova (pratica che “sparisce”)">
+      Invi documenti in modo non tracciato, non hai protocollo, non sai quando decorrono i termini.
+
+      Se poi arriva un diniego o non arriva nulla, ti manca la base per muoverti in modo efficace.
+    </Example>
+  </Col>
+</Row>
+
+<SectionTitle step={8} title="Video suggerito">
+  L. 241/1990 e fasi del procedimento (schema chiaro)
+</SectionTitle>
+
+{/* VIDEO PLACEHOLDER:
+  Search query: "legge 241 1990 procedimento amministrativo fasi avvio istruttoria motivazione termine art 2 art 3 lezione universitaria"
+  Criteri: docente universitario / ente istituzionale; autore identificabile; no promozione; esempi pratici.
+*/}
 
 ---
 
-## 1) Titolo sezione
+<QuizBlock />
 
-Contenuto...
-
-<Quiz />
-
-<Resources />
+<ResourceFooter
+  disclaimerLevel="standard"
+  primarySources={[
+    { label: "Normattiva — L. 241/1990 (artt. 1, 2, 3, 7 e ss.)", url: "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1990-08-07;241" },
+    { label: "Brocardi — Legge 241/1990 (commento e testo)", url: "https://www.brocardi.it/leggi-speciali/l-241-1990/" }
+  ]}
+>
+Questa lezione ha finalità didattica e non costituisce consulenza legale. Per capire termini e modalità della tua pratica, verifica sempre procedura e modulistica sul sito dell’ente competente e conserva ricevute/protocolli.
+</ResourceFooter>
