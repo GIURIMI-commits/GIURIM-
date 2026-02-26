@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import { getCurriculum } from '@/lib/content/loader';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-    const baseUrl = process.env.NEXT_PUBLIC_APP_URL || 'https://giurimi.com';
+    const baseUrl = 'https://giurimi.com';
     const curriculum = await getCurriculum();
 
     const routes: MetadataRoute.Sitemap = [
